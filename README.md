@@ -1,1 +1,2 @@
-# law-newsroom
+# School of Law Newsroom
+

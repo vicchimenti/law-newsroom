@@ -1,6 +1,6 @@
 /* law/organizer/centerForIndianLawPolicy */
 
-var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Topics" output="normal" display_field="value" modifiers="htmlentities" delimiter=";" />');
+var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Category" output="normal" display_field="value" modifiers="htmlentities" delimiter=";" />');
 var optionToTestFor = "centerForIndianLawPolicy"; //edit this to change the option
 var contentTypeLayout   = 'output/categoryfeed'; //edit this to change the Content Layout to use for output
 

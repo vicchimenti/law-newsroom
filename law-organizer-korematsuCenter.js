@@ -1,6 +1,6 @@
 /* law/organizer/korematsuCenter */
 
-var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Categories" output="normal" display_field="value" modifiers="htmlentities" delimiter=";" />'); //edit the field name to change the field
+var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Category" output="normal" display_field="value" modifiers="htmlentities" delimiter=";" />'); //edit the field name to change the field
 var optionToTestFor = "korematsuCenter"; //edit this to change the option
 var contentTypeLayout   = 'output/categoryfeed'; //edit this to change the Content Layout to use for output
 

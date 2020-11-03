@@ -2,5 +2,7 @@
 
 ## To Do
 
-- Add Major Minor Feed to Content Type
-- Test Selector in law/organizer/news layout
+- [x] Add Major Minor Feed to Content Type
+- [x] Test Selector in law/organizer/news layout
+- [] Build Organizer for Newsroom
+- [] User New Organizer for dual column flex logic

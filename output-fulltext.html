@@ -1,0 +1,61 @@
+<div class="newsroomArticleWrapper" id="id<t4 type='meta' meta='content_id' />">
+    <t4 type="meta" meta="html_anchor" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <p class="newsroomArticleTopicsHeader">
+                    <t4 type="content" name="Topics" output="normal" display_field="name" modifiers="htmlentities"
+                        textual-name-separator=">" delimiter=" / " />
+                </p>
+                <h1 id="pageTitle" class="">
+                    <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="newsroomArticleByline col-md-12">
+                <t4 type="content" name="Author" output="selective-output" modifiers="" process-format="true"
+                    format="<div class=&quot;newsroomArticleAuthor&quot;><p>Written by $value</p></div>" />
+                <t4 type="content" name="Publish Date" output="selective-output" process-format="true"
+                    format="<div class=&quot;newsroomArticlePublishedDate&quot;><p>$value</p></div>"
+                    date_format="MMMM d, yyyy" />
+            </div><!-- end newsroomArticleByline -->
+        </div>
+    </div>
+    <div class="newsroomFeaturedImageWrapper">
+        <t4 type="content" name="Media Library Image" output="selective-output" alt-element="Alt Text"
+            process-format="true" format="$value" formatter="image/*" />
+        <t4 type="content" name="Image" output="image" alt-element="Alt Text" />
+        <div class="newsroomFeaturedImageAttributes container">
+            <div class="row">
+                <t4 type="content" name="Image Credit" output="selective-output" process-format="true"
+                    format="<div class=&quot;newsroomFeaturedImageCredit col-md-3&quot;><p>Image credit: $value</p></div>" />
+                <t4 type="content" name="Image Caption" output="selective-output" process-format="true"
+                    format="<div class=&quot;newsroomFeaturedImageCaption col-md-9&quot;><p>$value</p></div>" />
+            </div>
+        </div><!-- end newsroomFeaturedImageAttributes -->
+    </div><!-- end newsroomFeaturedImageWrapper -->
+    <div class="newsroomArticleMain container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="newsroomArticleShare">
+                    <h3>Share this</h3>
+                    <div class="addthis_inline_share_toolbox"></div>
+                </div><!-- end newsroomArticleShare -->
+            </div>
+            <div class="newsroomArticleBody col-md-8">
+                <t4 type="content" name="Article Subhead" output="selective-output" modifiers="" process-format="true"
+                    format="<h2 class='newsroomArticleLead'>$value</h2>" />
+                <div class="articleText standardContent">
+                    <t4 type="content" name="News Article" output="normal" modifiers="medialibrary,nav_sections" />
+                </div>
+            </div><!-- end newsroomArticleBody -->
+        </div>
+        <div class="row">
+            <div class="newsroomArticleShare col-md-8 offset-md-3">
+                <h3>Share this</h3>
+                <div class="addthis_inline_share_toolbox"></div>
+            </div>
+        </div> <!-- end newsroomArticleShare -->
+    </div><!-- end newsroomArticleMain -->
+</div><!-- end newsroomArticleWrapper -->

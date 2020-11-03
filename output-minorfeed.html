@@ -1,4 +1,4 @@
-<!--  output/minorFeed  -->
+<!--  output/minorfeed  -->
 
 
 <!--  Minor Feed Article Layout for Law Newsroom  -->
@@ -12,14 +12,16 @@
 
     <t4 type="meta" meta="html_anchor" />
 
-    <h2 class="newsroomArticleTitle">
+    <h3 class="newsroomArticleTitle">
         <a href="<t4 type='content' name='Article Title' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">
             <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
         </a>
-    </h2>
+    </h3>
 
     <p class="newsroomArticleLead">
-        <t4 type='content' name='Article Setup' output='normal' modifiers='striptags,htmlentities' />
+        <t4 type="content" name="Abstract" output="normal" modifiers="striptags" />
+        <!-- <t4 type="content" name="Abstract" output="normal" modifiers="htmlentities,encode_emails" />
+        <t4 type='content' name='Article Setup' output='normal' modifiers='striptags,htmlentities' /> -->
     </p>
     
     <p class="newsroomArticlePublishedDate">

@@ -1,24 +1,56 @@
-<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb contentItem hideThis lazy" data-loader="lazyShow"
-    id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneA" data-position-selected="ZoneA">
+<!--  output/majorfeed  -->
+
+
+<!--  Major Feed Article Layout for Law Newsroom  -->
+
+
+<div    class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb contentItem hideThis lazy"
+        data-loader="lazyShow"
+        id="id<t4 type='meta' meta='content_id' />"
+        data-position-default="ZoneA"
+        data-position-selected="ZoneA">
+
     <t4 type="meta" meta="html_anchor" />
+
+
     <span class="newsroomImageWrapper">
-        <t4 type="content" name="Media Library Image" output="selective-output" alt-element="Alt Text"
-            process-format="true" format="$value" formatter="image/newsroomFeed" class="lazy" />
-        <t4 type="content" name="Alt text" output="selective-output" process-format="true"
-            format="<img src=&quot;data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=&quot; data-src=&quot;<t4 type='content' name='Image' output='imageurl' />&quot; alt=&quot;<t4 type='content' name='Alt text' output='normal' modifiers='striptags,htmlentities' />&quot; class=&quot;lazy&quot; />" />
+
+        <t4 type="content"
+            name="Media Library Image"
+            output="selective-output"
+            alt-element="Alt Text"
+            process-format="true"
+            format="$value"
+            formatter="image/newsroomFeed"
+            class="lazy" />
+
+        <t4 type="content"
+            name="Alt text"
+            output="selective-output"
+            process-format="true"
+            format="<img src=&quot;data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=&quot; data-src=&quot;
+            <t4 type='content' name='Image' output='imageurl' />&quot; alt=&quot;
+            <t4 type='content' name='Alt text' output='normal' modifiers='striptags,htmlentities' />&quot; class=&quot;lazy&quot; />" />
+
     </span>
+
     <div class="newsroomArticleBlurb container">
         <div class="row">
-            <h2 class="newsroomArticleTitle"><a
-                    href="<t4 type='content' name='Article Title' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">
-                    <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" /></a>
-            </h2>
+
+            <h3 class="newsroomArticleTitle">
+                <a href="<t4 type='content' name='Article Title' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">
+                    <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
+                </a>
+            </h3>
+
             <p class="newsroomArticleLead">
                 <t4 type='content' name='Article Setup' output='normal' modifiers='striptags,htmlentities' />
             </p>
+
             <p class="newsroomArticlePublishedDate">
                 <t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />
             </p>
+
         </div>
     </div>
 </div>

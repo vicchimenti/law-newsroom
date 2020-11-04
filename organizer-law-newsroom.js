@@ -12,7 +12,7 @@ function readMedia(mediaID) {
 
 try {
 	// Import Organizer base from media library
-	var base = readMedia(526090);
+	var base = readMedia(1607015);
 	eval(String(base));
 	// Set content wrapper, if any
 	var header, midder, footer;

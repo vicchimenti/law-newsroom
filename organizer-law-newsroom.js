@@ -12,7 +12,9 @@ function readMedia(mediaID) {
 
 try {
 	// Import Organizer base from media library
-	var base = readMedia(1607015);
+	var base = readMedia(526090);
+	// This is the original media library file for the edu newsroom 526090
+	// This is the media library file for the new organizer 1607015
 	eval(String(base));
 	// Set content wrapper, if any
 	var header, midder, footer;

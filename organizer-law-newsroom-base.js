@@ -260,7 +260,7 @@ function main(header, midder, footer) {
   // gets the title
   var title = content.hasElement("Title") ? content.get("Title") : "";
   // users choice for the content type to sort
-  var choice = content.get("Content type and layout").publish();
+  var choice = content.get("Article type").publish();
   // parses out the content id that references the content type in the media library
   var CID = new java.lang.Integer(choice.split(";")[0]);
   // parses layout options from the content type choice

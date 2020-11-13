@@ -1,4 +1,4 @@
-// NewsroomOrganizerBase.js
+// Law-Newsroom-Organizer-Base.js
 // 
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -50,7 +50,7 @@ function byDate(cid, elem) {
             case 5166:
                 elem = 'Publish Date';
                 break; 
-          case 544:
+            case 544:
                 elem = 'Publish Date';
                 break; 
             case 550:

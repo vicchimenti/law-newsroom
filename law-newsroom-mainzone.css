@@ -1,0 +1,13 @@
+#id900943 h2.newsroomArticleTitle{
+    color: #000000;
+}
+@media screen and (min-width: 992px) {
+  #id547719 {
+    top: -15em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #id547719 {
+    top: -10rem;
+  }
+}

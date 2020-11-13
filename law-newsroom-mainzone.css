@@ -18,7 +18,7 @@
    Last revised 05/21/19 by ab
 ************************************************************ */
 
-#id547718 {
+#id1889348 {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  #id547718 {
+  #id1889348 {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%;

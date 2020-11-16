@@ -2,12 +2,12 @@
     color: #000000;
 }
 @media screen and (min-width: 992px) {
-  #id1889349 {
+  #id1897987 {
     top: -15em;
   }
 }
 @media screen and (min-width: 1200px) {
-  #id1889349 {
+  #id1897987 {
     top: -10rem;
   }
 } */
@@ -18,7 +18,7 @@
    Last revised 05/21/19 by ab
 ************************************************************ */
 
-#id1889348 {
+#id1897986 {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  #id1889348 {
+  #id1897986 {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
@@ -39,7 +39,7 @@
    Content Type: #5150, #5155
    Last revised 05/29/19 by ab
 ************************************************************ */
-#id1889349 {
+#id1897987 {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -48,7 +48,7 @@
     
 }
 @media screen and (min-width: 992px) {
-  #id1889349 {
+  #id1897987 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
@@ -60,34 +60,34 @@
   }
 }
 /* @media screen and (min-width: 1200px) {
-  #id1889349 {
+  #id1897987 {
     top: -16rem;
   }
 }
-#id1889349 .organizerTitle {
+#id1897987 .organizerTitle {
     font-family: Oswald, sans-serif;
     border-top: 8px solid #000;
     padding-top: 2rem;
   color:#000;
 }
-#id1889349 .newsroomBlurb { 
+#id1897987 .newsroomBlurb { 
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-#id1889349 .newsroomArticleTitle {
+#id1897987 .newsroomArticleTitle {
   font-size:2rem;
 }
 
 @media screen and (min-width: 768px) {
-  #id1889349 .newsroomArticleLead {
+  #id1897987 .newsroomArticleLead {
     font-size: 1.4rem;
   }
 }
-#id1889349 .newsroomBlurb .newsroomArticleTitle:after {
+#id1897987 .newsroomBlurb .newsroomArticleTitle:after {
   content:none;
 }
 .newsroomSUInTheNews .newsroomArticleTitle:after,
-#id1889349 .newsroomSUInTheNews .newsroomArticleTitle:after {
+#id1897987 .newsroomSUInTheNews .newsroomArticleTitle:after {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDEyLjg4LDI2MS40NjRjLTExLjQyMywwLTIwLjY4Miw5LjI1OS0yMC42ODIsMjAuNjgydjE1Ni44NzljMCwxNy40My0xNC4xODEsMzEuNjExLTMxLjYxMiwzMS42MTFINzIuOTc1ICAgIGMtMTcuNDMsMC0zMS42MTEtMTQuMTgxLTMxLjYxMS0zMS42MTFWMTUxLjQxNGMwLTE3LjQzLDE0LjE4MS0zMS42MTEsMzEuNjExLTMxLjYxMWgxNTYuODc5YzExLjQyMiwwLDIwLjY4Mi05LjI2LDIwLjY4Mi0yMC42ODIgICAgYzAtMTEuNDIyLTkuMjYtMjAuNjgyLTIwLjY4Mi0yMC42ODJINzIuOTc1QzMyLjczNyw3OC40MzksMCwxMTEuMTc2LDAsMTUxLjQxNHYyODcuNjExQzAsNDc5LjI2NCwzMi43MzcsNTEyLDcyLjk3NSw1MTJoMjg3LjYxICAgIGM0MC4yMzksMCw3Mi45NzYtMzIuNzM2LDcyLjk3Ny03Mi45NzVWMjgyLjE0NkM0MzMuNTYyLDI3MC43MjMsNDI0LjMwMywyNjEuNDY0LDQxMi44OCwyNjEuNDY0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRUY0MTM1IiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDkxLjMxOCwwSDMzNC40MzljLTExLjQyMywwLTIwLjY4Miw5LjI2LTIwLjY4MiwyMC42ODJjMCwxMS40MjIsOS4yNTksMjAuNjgyLDIwLjY4MiwyMC42ODJoMTM2LjE5N3YxMzYuMTk3ICAgIGMwLDExLjQyMiw5LjI1OSwyMC42ODIsMjAuNjgyLDIwLjY4MmMxMS40MjMsMCwyMC42ODItOS4yNiwyMC42ODItMjAuNjgyVjIwLjY4MkM1MTIsOS4yNiw1MDIuNzQxLDAsNDkxLjMxOCwweiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRUY0MTM1IiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTA1Ljk0Miw2LjA1OGMtOC4wNzctOC4wNzYtMjEuMTcyLTguMDc2LTI5LjI0OSwwTDE4OS4wODIsMjkzLjY2OGMtOC4wNzcsOC4wNzctOC4wNzcsMjEuMTcyLDAsMjkuMjQ5ICAgIGM0LjAzOCw0LjAzOSw5LjMzMiw2LjA1OCwxNC42MjUsNi4wNThjNS4yOTQsMCwxMC41ODctMi4wMiwxNC42MjUtNi4wNThMNTA1Ljk0MiwzNS4zMDcgICAgQzUxNC4wMTksMjcuMjMsNTE0LjAxOSwxNC4xMzUsNTA1Ljk0Miw2LjA1OHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0VGNDEzNSIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTwvZz4KPC9nPjwvZz4gPC9zdmc+");
     background-size: 30px 14px;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@
     width: 32px; 
 }
 .newsroomMediaOutlet, .standardContent .newsroomMediaOutlet,
-#id1889349 .newsroomMediaOutlet {
+#id1897987 .newsroomMediaOutlet {
   font-size: 1.4rem;
   padding-top: 0;
 } */

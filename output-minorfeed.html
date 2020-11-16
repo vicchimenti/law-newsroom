@@ -4,12 +4,14 @@
 <!--  Minor Feed Article Layout for Law Newsroom  -->
 
 
-<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb contentItem" id="id<t4 type='meta' meta='content_id' />">
+<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb contentItem hideThis lazy" data-loader="lazyShow"
+    id="id<t4 type='meta' meta='content_id' />" data-position-default="MainZone" data-position-selected="MainZone">
 
     <t4 type="meta" meta="html_anchor" />
 
     <h3 class="newsroomArticleTitle">
-        <a href="<t4 type='content' name='Article Title' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">
+        <a
+            href="<t4 type='content' name='Article Title' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">
             <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
         </a>
     </h3>
@@ -17,7 +19,7 @@
     <p class="newsroomArticleLead">
         <t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />
     </p>
-    
+
     <p class="newsroomArticlePublishedDate">
         <t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />
     </p>

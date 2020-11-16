@@ -23,7 +23,7 @@ try {
 	switch (choice) {
 	default:
 		header = '\
-			<div class="newsroomOrganizerWrapper contentItem col-xs-12 col-md-4 col-md-pull-8" id="id' + content.getID() + '">\
+			<div class="newsroomOrganizerWrapper contentItem col-xs-12 col-md-4 col-md-pull-8 order-md-first" id="id' + content.getID() + '">\
 				<div class="newsroomOrganizer standardContent">\
                   <div class="newsroomOrganizerExtra"></div>\
 		';

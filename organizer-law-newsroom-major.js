@@ -18,12 +18,13 @@ try {
 	// This is the media library file for the new law newsroom organizer 1889354
 	eval(String(base));
 	// Set content wrapper, if any
+	// rm contentItem class
 	var header, midder, footer;
 	var choice = String(content.get('Article type').publish());
 	switch (choice) {
 	default:
 		header = '\
-			<div class="newsroomOrganizerWrapper contentItem col-xs-12 col-md-8 col-md-push-4 order-md-2" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+			<div class="newsroomOrganizerWrapper col-xs-12 col-md-8 col-md-push-4 order-md-2" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
 				<div class="newsroomOrganizer standardContent">\
                   <div class="newsroomOrganizerExtra"></div>\
 		';

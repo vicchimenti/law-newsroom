@@ -64,7 +64,7 @@ try {
         for (let i = 0; i < arrayOfTags.length; i++) {
             listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
         }
-        listOfTags = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listOfTags + '</ul></div>';
+        listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listOfTags + '</ul></div>';
     }
 
 
@@ -96,11 +96,11 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('<p class="newsroomArticleLead">' + articleSummary + '</p>');
+    document.write('<span class="newsroomArticleLead">' + articleSummary + '</span>');
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
 
     document.write(listOfTags);
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
     document.write('</div></div>'); // close newsroomArticleBlurb and row
     document.write(endingHTML);
 

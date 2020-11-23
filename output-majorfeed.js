@@ -78,7 +78,7 @@ try {
 
     /* determine which link, if any, goes on the image */
 
-    thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage" alt="' + frontPageImagCaption + '" /></div>';
+    thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage" alt="' + frontPageImagCaption + '" /></span>';
 
     //   if (externalLink == "") {
     //       thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage" alt="' + frontPageImagCaption + '" /></div>';

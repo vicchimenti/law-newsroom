@@ -80,21 +80,16 @@
 
 
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
 
 
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
 
-      //   document.write('<span class="newsroomImageWrapper">' + articleTitle + '</span>');
+
+      document.write('<div class="newsroomArticleBlurb container"><div class="row">');
+      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
 
 
 
-
-
-
-
-
-      document.write('<div class="articleSummary">');
       document.write('<div class="summary"><p>' + articleSummary + '</p></div>')
       document.write(listOfTags);
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));

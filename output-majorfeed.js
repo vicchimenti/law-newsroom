@@ -1,20 +1,19 @@
   /***
    *     @author Victor Chimenti, MSCS-SE '20
-   *     @file v9-fulltext.js
+   *     @file output-majorfeed.js
+   *     @see Seattle University School of Law Newsroom
    *
-   *     This new content type is a hybrid being adapted from the knowledge base
-   *     content type used by IT Services and the News type available to all departments.
-   *     It is intended to provide a searchable, sortable group of articles that can be
-   *     exported to and used by any department when they need a summary and image to
-   *     align responsively in an organizer layout.
+   *     This new content type layout is a smart layout for all items in the
+   *     major newsfeed used by the School of Law Newsroom. This content type
+   *     ensures that images, headlines, by-lines, tags and the abstract
+   *     summary layout as expected.
    *
-   *     This specific project is intended for the CDLI Gadget Finder.
-   *
-   *     This content layout will be the full text layout that the organizer layout links to.
+   *     This content layout will be the organizer layout and will link to the
+   *     full text layout to reveal the full article.
    *
    *     Document will write once when the page loads
    *
-   *     @version 1.4
+   *     @version 2.0
    */
 
   try {

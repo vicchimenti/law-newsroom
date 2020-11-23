@@ -32,8 +32,8 @@
 
 
       /* -- Prepare all the things -- */
-      var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>"><article class="newsArticle">';
-      var endingHTML = '</article></div>';
+      var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+      var endingHTML = '</div>';
 
 
       /* parse the list of tags, add <li> tags*/

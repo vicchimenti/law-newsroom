@@ -48,18 +48,28 @@
 
       /* determine which link, if any, goes on the image */
       if (externalLink == "") {
-          featureImageString = '<div class="newsArticleFeatureImage"><img src="' + featureImage + '" class="articleImage" alt="' + altFeatureImage + '" /></div>';
+          featureImageString = '<span class="newsroomImageWrapper"><img src="' + featureImage + '" class="articleImage" alt="' + altFeatureImage + '" /></span>';
       } else {
-          featureImageString = '<div class="newsArticleFeatureImage"><a href="' + externalLink + '" target="_blank"><img src="' + featureImage + '" class="articleImage" alt="' + altFeatureImage + '" /></a></div>';
+          featureImageString = '<span class="newsroomImageWrapper"><a href="' + externalLink + '" target="_blank"><img src="' + featureImage + '" class="articleImage" alt="' + altFeatureImage + '" /></a></span>';
       }
 
 
       /* -- Write all the things -- */
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+
+
+
+      document.write('<span class="newsroomImageWrapper">' + articleTitle + '</span>');
+
+
+
+
       document.write('<div class="newsArticleHeader"><h2 id="pageTitle">' + articleTitle + '</h2></div>');
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, featureImageString));
       document.write('<div class="articleText standardContent">' + articleFullBody + '</div>');
+
+
       document.write(listOfTags);
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
       document.write(endingHTML);

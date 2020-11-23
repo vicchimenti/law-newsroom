@@ -46,8 +46,10 @@
       var featureImageString = "";
 
 
-      var beginningHTML = '<div class="newsItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="newsItem standardContent">';
-      var endingHTML = '</div></div>';
+
+      var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+      var endingHTML = '</div>';
+
 
 
       /* parse the list of tags, add <li> tags*/
@@ -70,36 +72,12 @@
 
       /* determine which link, if any, goes on the image */
       if (externalLink == "") {
-          thumbNailString = '<div class="newsImage"><img src="' + thumbnailImage + '" class="articleImage" alt="' + altThumbnailImage + '" /></div>';
+          thumbNailString = '<span class="newsroomImageWrapper"><img src="' + thumbnailImage + '" class="articleImage" alt="' + altThumbnailImage + '" /></div>';
       } else {
-          thumbNailString = '<div class="newsImage"><a href="' + externalLink + '" target="_blank"><img src="' + thumbnailImage + '" class="articleImage" alt="' + altThumbnailImage + '" /></a></div>';
+          thumbNailString = '<span class="newsroomImageWrapper"><a href="' + externalLink + '" target="_blank"><img src="' + thumbnailImage + '" class="articleImage" alt="' + altThumbnailImage + '" /></a></div>';
       }
 
 
-
-
-
-      /* -- Prepare all the things -- */
-      var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-      var endingHTML = '</div>';
-
-
-      /* parse the list of tags, add <li> tags*/
-      if (fieldTags != "") {
-          var arrayOfTags = fieldTags.split(',');
-          for (let i = 0; i < arrayOfTags.length; i++) {
-              listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
-          }
-          listOfTags = '<div class="knowledgeBaseItem"><ul>' + listOfTags + '</ul></div>';
-      }
-
-
-      /* determine which link, if any, goes on the image */
-      if (externalLink == "") {
-          featureImageString = '<span class="newsroomImageWrapper"><img src="' + featureImage + '" class="articleImage" alt="' + altFeatureImage + '" /></span>';
-      } else {
-          featureImageString = '<span class="newsroomImageWrapper"><a href="' + externalLink + '" target="_blank"><img src="' + featureImage + '" class="articleImage" alt="' + altFeatureImage + '" /></a></span>';
-      }
 
 
       /* -- Write all the things -- */
@@ -107,7 +85,19 @@
 
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+
+
       document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
+
+      document.write('<span class="newsroomImageWrapper">' + articleTitle + '</span>');
+
+
+
+
+
+
+
+
       document.write('<div class="articleSummary">');
       document.write('<div class="summary"><p>' + articleSummary + '</p></div>')
       document.write(listOfTags);
@@ -116,27 +106,6 @@
       document.write(endingHTML);
 
 
-
-
-
-      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-
-
-
-      document.write('<span class="newsroomImageWrapper">' + articleTitle + '</span>');
-
-
-
-
-      document.write('<div class="newsArticleHeader"><h2 id="pageTitle">' + articleTitle + '</h2></div>');
-      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, featureImageString));
-      document.write('<div class="articleText standardContent">' + articleFullBody + '</div>');
-
-
-      document.write(listOfTags);
-      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
-      document.write(endingHTML);
 
 
   } catch (err) {

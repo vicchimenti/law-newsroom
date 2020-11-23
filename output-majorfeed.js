@@ -32,7 +32,7 @@
 
 
       /* -- Prepare all the things -- */
-      var beginningHTML = '<div class="newsArticleWrapper contentItem" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneA" data-position-selected="ZoneA"/>"><article class="newsArticle">';
+      var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>"><article class="newsArticle">';
       var endingHTML = '</article></div>';
 
 

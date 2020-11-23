@@ -12,6 +12,7 @@
   }
 } */
 
+
 /* *********************************************************
    Newsroom homepage major feed
    Content Type: #5150, #5155
@@ -26,39 +27,44 @@
 }
 
 @media screen and (min-width: 992px) {
-  #id1897986 {
-    -ms-flex: 0 0 66.666667%;
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
-    order: 2;
-    padding-left: 6rem;
-  }
+    #id1897986 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+        order: 2;
+        padding-left: 6rem;
+    }
 }
+
+
 /* *********************************************************
    Newsroom homepage minor feed
    Content Type: #5150, #5155
    Last revised 05/29/19 by ab
 ************************************************************ */
+
 #id1897987 {
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     /* -ms-flex-order: -1; */
-    
 }
+
 @media screen and (min-width: 992px) {
-  #id1897987 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    order: 1;
-    padding-right: 5rem;
-    border-right: 1px solid #eaeaea;
-    position: relative;
-    /* top: -23rem; */
-  }
+    #id1897987 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        order: 1;
+        padding-right: 5rem;
+        border-right: 1px solid #eaeaea;
+        position: relative;
+        /* top: -23rem; */
+    }
 }
+
+
 /* @media screen and (min-width: 1200px) {
   #id1897987 {
     top: -16rem;

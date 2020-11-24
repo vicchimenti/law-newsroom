@@ -4,4 +4,9 @@ div#MainZone div.container {
 
 div.newsroomArticle ul li.tag {
     display: inline-block;
+    padding-right: 1rem;
+}
+
+.standardContent ul li:before {
+    content: none;
 }

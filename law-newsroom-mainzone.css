@@ -4,7 +4,19 @@ div#MainZone div.container {
 
 div.newsroomArticle ul li.tag {
     display: inline-block;
-    padding-right: 1rem;
+    padding: 1px 10px;
+    padding-top: 1px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    background: #f7f7f7;
+    background-color: rgb(247, 247, 247);
+    margin-right: 5px;
+    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .standardContent ul li:before {

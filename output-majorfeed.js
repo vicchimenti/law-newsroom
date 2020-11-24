@@ -73,12 +73,13 @@ try {
         titleLink = '<h3 class="newsroomArticleTitle"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
     }
 
+
     /* determine which link, if any, goes in the title */
-    if (articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle">' + articleTitle + '</h3>';
-    } else {
-        titleLink = '<h3 class="newsroomArticleTitle"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
-    }
+    // if (articleFullBody == "") {
+    //     titleLink = '<h3 class="newsroomArticleTitle">' + articleTitle + '</h3>';
+    // } else {
+    //     titleLink = '<h3 class="newsroomArticleTitle"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
+    // }
 
 
     /* display byline only when provided */

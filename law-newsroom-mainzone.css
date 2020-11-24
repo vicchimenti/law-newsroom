@@ -1,6 +1,11 @@
+/** Wraps Major Feed Overflow within container **/
+
 div#MainZone div.container {
     display: contents;
 }
+
+
+/** Overrides law style for list items **/
 
 div.newsroomArticle ul li.tag {
     display: inline-block;

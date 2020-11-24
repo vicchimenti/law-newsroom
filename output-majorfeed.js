@@ -20,6 +20,7 @@ try {
 
     /* -- Assign all the things -- */
     var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Title' output='normal' display_field='value' />");
+    var headline = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='normal' display_field='value' />");
     var frontPageImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Media Library Image' output='normal' formatter='path/*' />");
     var frontPageImagCaption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Media Library Image Caption' output='normal' modifiers='striptags,htmlentities' />");
     var frontPageImagCredit = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Media Library Image Credit' output='normal' modifiers='striptags,htmlentities' />");
@@ -55,6 +56,22 @@ try {
         listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listOfTags + '</ul></div>';
     }
 
+
+    /***
+     *  determine which link, if any, goes in the title
+     *  and determine if a unique headline was added
+     *  if no headline is added then use the title
+     * 
+     * */
+    if (headline == "" && articleFullBody == "") {
+        titleLink = '<h3 class="newsroomArticleTitle">' + articleTitle + '</h3>';
+    } else if (articleFullBody == "") {
+        titleLink = '<h3 class="newsroomArticleTitle">' + headline + '</h3>';
+    } else if (headline == "") {
+        titleLink = '<h3 class="newsroomArticleTitle"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
+    } else {
+        titleLink = '<h3 class="newsroomArticleTitle"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
+    }
 
     /* determine which link, if any, goes in the title */
     if (articleFullBody == "") {

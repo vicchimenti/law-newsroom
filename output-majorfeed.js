@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.1
+ *     @version 2.2
  */
 
 try {
@@ -30,7 +30,6 @@ try {
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
     var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage" alt="' + frontPageImagCaption + '" /></span>';
-    // var lastModified = '<div class="lastModified" style="display:inline-block"><p>Article Updated: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></p></div>';
     var listOfTags = "";
     var titleLink = "";
     var authorByLine = "";
@@ -38,6 +37,13 @@ try {
     var endingHTML = '</div>';
 
 
+
+    /***
+     *      Reserved for fulltext layout
+     *      var articleSubTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Subtitle' output='normal' display_field='value' />");
+     *      var lastModified = '<div class="lastModified" style="display:inline-block"><p>Article Updated: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></p></div>';
+     *
+     */
 
 
     /* parse the list of tags, add <li> tags*/

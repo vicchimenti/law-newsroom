@@ -115,15 +115,3 @@ try {
 } catch (err) {
     document.write(err.message);
 }
-
-
-
-
-
-/***
- *      Reserved for fulltext layout
- *      var articleSubTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Subtitle' output='normal' display_field='value' />");
- *      var lastModified = '<div class="lastModified" style="display:inline-block"><p>Article Updated: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></p></div>';
- *      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
- *
- * */

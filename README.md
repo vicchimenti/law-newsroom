@@ -8,5 +8,6 @@
 - [x] Use New Organizer for dual column flex logic
 - [x] Build organizer for major feed
 - [x] Build organizer for minor feed
-- [] Add Lazy -f necessary
+- [] Add Lazy if necessary
 - [] Add logic to organizer new major to check for image requirements
+- [] Update all new organizer layouts to check for correct

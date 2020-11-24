@@ -95,7 +95,7 @@ try {
 
 
     /***
-     *  Write the document
+     *  Write the document once
      * 
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));

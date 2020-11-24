@@ -18,7 +18,10 @@
 
 try {
 
-    /* -- Assign all the things -- */
+    /***
+     *  Assign local variables from the content type's fields
+     * 
+     * */
     var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Title' output='normal' display_field='value' />");
     var headline = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='normal' display_field='value' />");
     var frontPageImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Media Library Image' output='normal' formatter='path/*' />");
@@ -30,6 +33,14 @@ try {
     var publishedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publish Date' output='normal' date_format='EEEE, MMMM d, yyyy' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
     var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
+
+
+
+
+    /***
+     *  Declare/Assign local variables with base formatting
+     * 
+     * */
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage" alt="' + frontPageImagCaption + '" /></span>';
     var listOfTags = "";
     var titleLink = "";
@@ -39,15 +50,11 @@ try {
 
 
 
+
     /***
-     *      Reserved for fulltext layout
-     *      var articleSubTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Subtitle' output='normal' display_field='value' />");
-     *      var lastModified = '<div class="lastModified" style="display:inline-block"><p>Article Updated: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></p></div>';
-     *
-     */
-
-
-    /* parse the list of tags, add <li> tags*/
+     *  parse the list of tags, add <li> tags
+     * 
+     * */
     if (fieldTags != "") {
         var arrayOfTags = fieldTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
@@ -74,15 +81,10 @@ try {
     }
 
 
-    /* determine which link, if any, goes in the title */
-    // if (articleFullBody == "") {
-    //     titleLink = '<h3 class="newsroomArticleTitle">' + articleTitle + '</h3>';
-    // } else {
-    //     titleLink = '<h3 class="newsroomArticleTitle"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
-    // }
-
-
-    /* display byline only when provided */
+    /***
+     *  display byline only when provided 
+     * 
+     * */
     if (author == "") {
         authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
@@ -92,7 +94,10 @@ try {
 
 
 
-    /* -- Write all the things -- */
+    /***
+     *  Write the document
+     * 
+     * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container"><div class="row">');
@@ -101,8 +106,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
     document.write(listOfTags);
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
-    document.write('</div></div>'); // close newsroomArticleBlurb and row
+    document.write('</div></div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);
 
 
@@ -111,3 +115,15 @@ try {
 } catch (err) {
     document.write(err.message);
 }
+
+
+
+
+
+/***
+ *      Reserved for fulltext layout
+ *      var articleSubTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Subtitle' output='normal' display_field='value' />");
+ *      var lastModified = '<div class="lastModified" style="display:inline-block"><p>Article Updated: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></p></div>';
+ *      document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
+ *
+ * */

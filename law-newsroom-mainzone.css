@@ -4,6 +4,15 @@ div#MainZone div.container {
     display: contents;
 }
 
+div.newsroomOrganizerWrapper.col-md-8 {
+    border: #f7f7f7;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-style: solid;
+    /* border-left: 1px solid; */
+}
+
 hr.articleBorderBottom {
     color: #f7f7f7;
     margin-left: 20px;

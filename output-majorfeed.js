@@ -46,7 +46,7 @@ try {
     var listOfTags = "";
     var titleLink = "";
     var authorByLine = "";
-    var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb panel card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
@@ -72,13 +72,13 @@ try {
      * 
      * */
     if (headline == "" && articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + articleTitle + '</h3>';
+        titleLink = '<h3 class="newsroomArticleTitle panel-heading card-title">' + articleTitle + '</h3>';
     } else if (articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
+        titleLink = '<h3 class="newsroomArticleTitle panel-heading card-title">' + headline + '</h3>';
     } else if (headline == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
+        titleLink = '<h3 class="newsroomArticleTitle panel-heading card-title"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
     } else {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
+        titleLink = '<h3 class="newsroomArticleTitle panel-heading card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
     }
 
 
@@ -101,7 +101,7 @@ try {
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
+    document.write('<div class="newsroomArticleBlurb container panel-body card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<span class="newsroomArticleLead card-text">' + articleSummary + '</span>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));

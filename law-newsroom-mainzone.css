@@ -32,3 +32,10 @@ div.newsroomArticle ul li.tag {
 .standardContent ul li:before {
     content: none;
 }
+
+
+/** Address major feed image style **/
+
+img {
+    min-width: -webkit-fill-available;
+}

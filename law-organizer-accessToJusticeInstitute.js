@@ -1,18 +1,23 @@
-/* law/organizer/accessToJusticeInstitute */
+/***
+ *  law/organizer/accessToJusticeInstitute
+ * 
+ */
 
 
+/***
+ *  declare and assign topic layout
+ * 
+ */
 var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Category" output="normal" display_field="value" delimiter=";" />');
-
-
 var optionToTestFor = "accessToJusticeInstitute"; //edit this to change the option
 var contentTypeLayout = 'output/categoryfeed'; //edit this to change the Content Layout to use for output
-
 var n = fieldToBeEvaluated.indexOf(optionToTestFor); /* determines starting character of string */
 
-//document.write('<p>fieldToBeEvaluated: ' + fieldToBeEvaluated + "<br>");
-//document.write('n: ' + n + "<br>");
 
-
+/***
+ *  send correct layout to the document
+ * 
+ */
 try {
     if ((n >= 0)) { /* if it's there, it'll start at 0 or later, so process this */
         var sw = new java.io.StringWriter();

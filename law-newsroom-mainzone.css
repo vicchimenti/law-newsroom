@@ -10,6 +10,7 @@ div#MainZone div.container {
 div.newsroomOrganizerWrapper.col-md-8 {
     border-left: 1rem;
     border-color: #000000;
+    height: 100%;
 }
 
 
@@ -49,13 +50,4 @@ div.newsroomArticle ul li.tag {
 
 img {
     min-width: -webkit-fill-available;
-}
-
-
-/** Add a verticle rule between minor/major feeds **/
-
-hr.verticleRule {
-    display: inline-block;
-    height: 20px;
-    width: 1px;
 }

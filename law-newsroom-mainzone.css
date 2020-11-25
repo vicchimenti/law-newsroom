@@ -4,6 +4,11 @@ div#MainZone div.container {
     display: contents;
 }
 
+hr.articleBorderBottom {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 
 /* * Adds Verticle Rule to left of major feed on full screen * */
 

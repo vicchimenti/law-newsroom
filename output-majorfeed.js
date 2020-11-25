@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.2
+ *     @version 2.3
  */
 
 try {

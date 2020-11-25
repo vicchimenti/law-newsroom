@@ -4,6 +4,17 @@ div#MainZone div.container {
     display: contents;
 }
 
+
+/** Adds Verticle Rule to left of major feed on full screen **/
+
+div.newsroomOrganizerWrapper.col-md-8 {
+    border-left: 1rem;
+    border-color: #000000;
+}
+
+
+/** Aligns news summary with the image **/
+
 div.newsroomArticleBlurb.container div.row {
     margin-left: 0;
     padding-left: 20px;

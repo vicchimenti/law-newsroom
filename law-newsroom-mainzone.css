@@ -10,6 +10,8 @@ div.newsroomOrganizerWrapper.col-md-8 {
     border-right: 0;
     border-bottom: 0;
     border-style: solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
     /* border-left: 1px solid; */
 }
 
@@ -19,9 +21,10 @@ hr.articleBorderBottom {
     margin-right: 20px;
 }
 
-.panel-group .panel {
+
+/* .panel-group .panel {
     border-radius: 0;
-}
+} */
 
 h3.newsroomArticleTitle.panel-heading {
     padding-left: 0;

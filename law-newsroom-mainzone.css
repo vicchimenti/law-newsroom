@@ -39,3 +39,12 @@ div.newsroomArticle ul li.tag {
 img {
     min-width: -webkit-fill-available;
 }
+
+
+/** Add a verticle rule between minor/major feeds **/
+
+hr.verticleRule {
+    display: inline-block;
+    height: 20px;
+    width: 1px;
+}

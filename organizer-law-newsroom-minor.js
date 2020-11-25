@@ -34,7 +34,6 @@ try {
 			</div>\
 			<div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div>\
 		</div>\
-		<hr class="verticleRule">\
  		';
     }
     // Write content

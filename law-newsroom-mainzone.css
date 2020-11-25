@@ -4,6 +4,9 @@ div#MainZone div.container {
     display: contents;
 }
 
+
+/** border for organizer left on full page **/
+
 div.newsroomOrganizerWrapper.col-md-8 {
     border: #f7f7f7;
     border-top: 0;
@@ -12,22 +15,15 @@ div.newsroomOrganizerWrapper.col-md-8 {
     border-style: solid;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* border-left: 1px solid; */
 }
+
+
+/** horizontal rule between articles **/
 
 hr.articleBorderBottom {
     color: #f7f7f7;
     margin-left: 20px;
     margin-right: 20px;
-}
-
-
-/* .panel-group .panel {
-    border-radius: 0;
-} */
-
-h3.newsroomArticleTitle.panel-heading {
-    padding-left: 0;
 }
 
 
@@ -38,6 +34,10 @@ div.newsroomArticleBlurb.container div.row {
     margin-right: 1px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+h3.newsroomArticleTitle.panel-heading {
+    padding-left: 0;
 }
 
 
@@ -67,6 +67,7 @@ div.newsroomArticle ul li.tag {
 
 /** Address major feed image style **/
 
-img {
+img.articleImage {
     min-width: -webkit-fill-available;
+    padding-top: 0;
 }

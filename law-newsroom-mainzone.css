@@ -9,6 +9,10 @@ hr.articleBorderBottom {
     margin-right: 20px;
 }
 
+h3.newsroomArticleTitle.panel-heading {
+    padding-left: 0;
+}
+
 
 /* * Adds Verticle Rule to left of major feed on full screen * */
 

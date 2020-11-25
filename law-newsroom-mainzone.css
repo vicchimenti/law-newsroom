@@ -5,6 +5,7 @@ div#MainZone div.container {
 }
 
 hr.articleBorderBottom {
+    color: #f7f7f7;
     margin-left: 20px;
     margin-right: 20px;
 }

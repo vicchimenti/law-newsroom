@@ -24,17 +24,15 @@ try {
     switch (choice) {
         default: header = '\
 			<div class="newsroomOrganizerWrapper col-xs-12 order-xs-1 col-md-8 col-md-push-4 order-md-2" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
-				<span class="border-left">\
-					<div class="newsroomOrganizer standardContent">\
+					<div class="newsroomOrganizer standardContent card-group">\
                   		<div class="newsroomOrganizerExtra"></div>\
 		';
         midder = '\
                   <span></span>\
  		';
         footer = '\
-				</div>\
-				<div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div>\
-			</span>\
+            </div>\
+            <div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div>\
 		</div>\
  		';
     }

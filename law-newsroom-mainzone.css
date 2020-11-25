@@ -9,6 +9,11 @@ hr.articleBorderBottom {
     margin-right: 20px;
 }
 
+.panel-group .panel {
+    border-radius: 0;
+    border-bottom-color: #f7f7f7;
+}
+
 h3.newsroomArticleTitle.panel-heading {
     padding-left: 0;
 }
@@ -31,6 +36,7 @@ h3.newsroomArticleTitle.panel-heading {
 div.newsroomArticleBlurb.container div.row {
     margin-left: 0;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 

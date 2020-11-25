@@ -47,7 +47,7 @@ try {
     var titleLink = "";
     var authorByLine = "";
     var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb panel card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-    var endingHTML = '</div>';
+    var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
 

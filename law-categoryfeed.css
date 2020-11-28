@@ -14,3 +14,7 @@
     max-width: 1170px;
     margin: 0 auto;
 }
+
+div.articleSummary {
+    padding-bottom: 20px;
+}

@@ -1,0 +1,16 @@
+.newsItemWrapper {
+    padding: 0 0 0 15px;
+    border-left: 2px solid #04a9c5;
+    margin: 30px 0;
+}
+
+.newsItem .newsImage {
+    float: left;
+    margin-right: 15px;
+    max-width: 25%;
+}
+
+.standardContent {
+    max-width: 1170px;
+    margin: 0 auto;
+}

@@ -18,9 +18,9 @@ try {
 	// Set content wrappers
 	var header, midder, footer;
   
-    var titleHTML
+    var titleHTML = '<h2 class="organizerTitle hidden"></h2>';
     var title = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Title" output="normal" modifiers="htmlentities" />');
-  if (title){ titleHTML = '<h2 class="organizerTitle">' + title + '</h2>'; }
+  	if (title){ titleHTML = '<h2 class="organizerTitle">' + title + '</h2>'; }
 
 	//var choice = String(content.get('Article type').publish());
 	//switch (choice) {
@@ -28,7 +28,9 @@ try {
 		header = '\
 			<div class="newsroomOrganizerWrapper col-xs-12 col-md-6" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
 				<div class="newsroomOrganizer standardContent card-group">\
-                  <div class="newsroomOrganizerExtra"></div>' + titleHTML;
+				  <div class="newsroomOrganizerExtra"></div>\
+					" ' + titleHTML + ' "\
+						';
         midder = '\
                   <span></span>\
  		';
@@ -43,7 +45,7 @@ try {
   	// Delegate header/footer writing to main method
   	// (paginator doesn't display them in publish on pages >1, only preview)
 	//if (header) document.write(header);
-	document.write(header);
+	// document.write(header);
   main(header, midder, footer);
 	//if (footer) document.write(footer);
   

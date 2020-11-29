@@ -1,20 +1,78 @@
-.newsItemWrapper {
-    padding: 0 0 0 15px;
-    border-left: 2px solid #04a9c5;
-    margin: 30px 0;
+/** Wraps Major Feed Overflow within container **/
+
+div#MainZone div.container {
+    display: contents;
 }
 
-.newsItem .newsImage {
-    float: left;
-    margin-right: 15px;
-    max-width: 25%;
+
+/** border for organizer left on full page **/
+
+div.newsroomOrganizerWrapper.col-md-8 {
+    border: #f7f7f7;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-style: solid;
+    margin: 20px 0 20px 0;
 }
 
-.standardContent {
-    max-width: 1170px;
-    margin: 0 auto;
+/** left right padding and margin to control image size **/
+
+div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
 }
 
-div.articleSummary {
-    padding-bottom: 20px;
+/** horizontal rule between articles **/
+
+hr.articleBorderBottom {
+    color: #f7f7f7;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/** Aligns news summary with the image **/
+
+div.newsroomArticleBlurb.container div.row {
+    margin-left: 0;
+    margin-right: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h3.newsroomArticleTitle.panel-heading {
+    padding-left: 0;
+}
+
+
+/** Overrides law style for list items **/
+
+div.newsroomArticle ul li.tag {
+    display: inline-block;
+    padding: 1px 10px;
+    padding-top: 1px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    background: #f7f7f7;
+    background-color: rgb(247, 247, 247);
+    margin-right: 5px;
+    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.standardContent ul li:before {
+    content: none;
+}
+
+
+/** Address major feed image style **/
+
+img.articleImage {
+    min-width: -webkit-fill-available;
+    padding-top: 0;
 }

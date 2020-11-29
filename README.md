@@ -1,6 +1,6 @@
 # School of Law Newsroom
 
-## To Do
+## ToDo
 
 - [x] Add Major Minor Feed to Content Type
 - [x] Test Selector in law/organizer/news layout
@@ -9,5 +9,6 @@
 - [x] Build organizer for major feed
 - [x] Build organizer for minor feed
 - [] Add Lazy if necessary
-- [] Add logic to organizer new major to check for image requirements
-- [] Update all new organizer layouts to check for correct
+- [] Clean up category feed
+- [] Add Grid Organizer
+- [] Adjust sort algo for new fields

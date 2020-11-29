@@ -38,8 +38,8 @@ try {
 	//if (footer) document.write(footer);
   
     	
-	document.write(midder);
-	document.write(footer);
+	// document.write(midder);
+	// document.write(footer);
 }
 
 catch (err) {

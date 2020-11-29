@@ -16,7 +16,7 @@ div.newsroomOrganizerWrapper.col-md-8 {
     margin: 20px 0 20px 0;
 }
 
-/** border for organizer left on full page **/
+/** left right padding and margin to control image size **/
 
 div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
     margin: 0 20px 0 20px;
@@ -24,7 +24,7 @@ div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
 }
 
 div.newsroomOrganizerWrapper.col-md-4 div.newsroomMinorFeedItem {
-    padding: 0 10px 0 0;
+    padding: 0 0 0 0;
 }
 
 /** horizontal rule between articles **/

@@ -13,7 +13,7 @@ function readMedia(mediaID) {
 
 try {
 	// Import Organizer base from media library
-	var base = readMedia(947649);
+	var base = readMedia(1889354);
 	eval(String(base));
 	// Set content wrappers
 	var header, midder, footer;
@@ -26,7 +26,7 @@ try {
 	//switch (choice) {
 	//default:
 		header = '\
-			<div class="newsroomOrganizerWrapper contentItem" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+			<div class="newsroomOrganizerWrapper col-xs-12 col-md-8 contentItem" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
 				<div class="newsroomOrganizer standardContent">\
                   <div class="newsroomOrganizerExtra"></div>' + titleHTML;
         midder = '\

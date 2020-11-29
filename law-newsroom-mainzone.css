@@ -16,6 +16,13 @@ div.newsroomOrganizerWrapper.col-md-8 {
     margin: 20px 0 20px 0;
 }
 
+/** border for organizer left on full page **/
+
+div.newsroomMajorFeedItem {
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
+}
+
 
 /** horizontal rule between articles **/
 

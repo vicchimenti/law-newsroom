@@ -26,8 +26,8 @@ try {
 	//switch (choice) {
 	//default:
 		header = '\
-			<div class="newsroomOrganizerWrapper col-xs-12 col-md-8 contentItem" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
-				<div class="newsroomOrganizer standardContent">\
+			<div class="newsroomOrganizerWrapper col-xs-12 col-md-6" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+				<div class="newsroomOrganizer standardContent card-group">\
                   <div class="newsroomOrganizerExtra"></div>' + titleHTML;
         midder = '\
                   <span></span>\

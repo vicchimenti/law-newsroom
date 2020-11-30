@@ -6,9 +6,9 @@
 
 
 
-var fieldToBeEvaluated = content.get("Category").publish(); //edit this to change the field
+// var fieldToBeEvaluated = content.get("Category").publish(); //edit this to change the field
 
-// var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Category" output="normal" display_field="value" delimiter=";" />');
+var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Category" output="normal" display_field="value" delimiter=";" />');
 var optionToTestFor = "academic"; //edit this to change the option
 var contentTypeLayout   = 'output/gridfeed'; //edit this to change the Content Layout to use for output
 // var n = fieldToBeEvaluated.indexOf(optionToTestFor); /* determines starting character of string */

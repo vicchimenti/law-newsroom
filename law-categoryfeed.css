@@ -20,6 +20,11 @@ div.gridFeedItem {
    max-width: 360px;
 }
 
+div.gridOrganizerWrapper {
+    background-color: #e6efff;
+    opacity: 90%;
+}
+
 /** border for organizer left on full page **/
 
 div.newsroomOrganizerWrapper.col-md-8 {

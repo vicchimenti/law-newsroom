@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.3
+ *     @version 3.4
  */
 
 try {
@@ -27,6 +27,7 @@ try {
     var frontPageImagCaption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Media Library Image Caption' output='normal' modifiers='striptags,htmlentities' />");
     var frontPageImagCredit = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Media Library Image Credit' output='normal' modifiers='striptags,htmlentities' />");
     var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Abstract' output='normal' display_field='value' />");
+    var articleSubtitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Abstract' output='normal' display_field='value' />");
     var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Body' output='normal' display_field='value' />");
     var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' display_field='value' />");
     var publishedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publish Date' output='normal' date_format='MMMM d, yyyy' />");
@@ -41,6 +42,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
+    var cardText = "";
     var listOfTags = "";
     var titleLink = "";
     var authorByLine = "";
@@ -92,6 +94,17 @@ try {
     }
 
 
+    /***
+     *  verify subtitle 
+     * 
+     * */
+    if (articleSubtitle == "") {
+        cardText = '<span class="newsroomArticleLead card-text">' + articleSubtitle + '</span>';
+    } else {
+        cardText = '<span class="newsroomArticleLead card-text">' + articleSummary + '</span>';
+    }
+
+
 
 
     /***
@@ -102,7 +115,9 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('<span class="newsroomArticleLead card-text">' + articleSummary + '</span>');
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
+
+    // document.write('<span class="newsroomArticleLead card-text">' + articleSummary + '</span>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
     document.write(listOfTags);

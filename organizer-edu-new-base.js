@@ -374,7 +374,7 @@ function main(header, midder, footer) {
   if (!midder) midder = "";
   if (!footer) footer = "";
   if (title != "")
-    header = header + '<h2 class="organizerTitle">' + title + "</h2>";
+    header = header + '<div class="titleWrapper col-xs-12"><h2 class="organizerTitle">' + title + "</h2></div>";
   if (bViewAll) {
     var href = BrokerUtils.processT4Tags(
       dbStatement,

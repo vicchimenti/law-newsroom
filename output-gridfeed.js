@@ -99,9 +99,9 @@ try {
      * 
      * */
     if (articleSubtitle == "") {
-        cardText = '<span class="newsroomArticleLead card-text">' + articleSubtitle + '</span>';
+        cardText = '<span class="newsroomArticleLead card-text summary">' + articleSummary + '</span>';
     } else {
-        cardText = '<span class="newsroomArticleLead card-text">' + articleSummary + '</span>';
+        cardText = '<span class="newsroomArticleLead card-text subtitle">' + articleSubtitle + '</span>';
     }
 
 

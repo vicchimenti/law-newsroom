@@ -46,7 +46,7 @@ try {
     var listOfTags = "";
     var titleLink = "";
     var authorByLine = "";
-    var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var beginningHTML = '<div class="gridFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 

@@ -1,9 +1,17 @@
-/** Wraps Major Feed Overflow within container **/
+/** Wraps Overflow within container **/
 
 div#MainZone div.container {
     display: contents;
 }
 
+
+/** enforces a masonry grid **/
+
+.gridOrganizer.standardContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /** border for organizer left on full page **/
 

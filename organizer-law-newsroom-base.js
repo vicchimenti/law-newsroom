@@ -1,6 +1,6 @@
 /***
  *     @author Victor Chimenti, MSCS-SE 2020
- *     @file newOrganizerBase.js
+ *     @file lawNewsroomOrganizerBase.js
  *
  *     This new content type is being created to solve a sorting problem.
  *     The new Course Item content type requires sorting by multiple input fields

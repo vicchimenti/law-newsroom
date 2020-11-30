@@ -1,12 +1,11 @@
 /***
  *     @author Victor Chimenti, MSCS-SE '20
- *     @file output-categoryfeed.js
+ *     @file output-gridfeed.js
  *     @see Seattle University School of Law Newsroom
  *
- *     This new content type layout is a smart layout for all items in the
- *     category newsfeed used by the School of Law Newsroom. This content type
- *     ensures that images, headlines, by-lines, tags and the abstract
- *     summary layout as expected.
+ *     This new content type layout is a smart layout for news items that must obey
+ *     a masonry grid layout. In its first iteration this layout will be dedicated
+ *     to the category news pages.
  *
  *     This content layout will be the organizer layout and will link to the
  *     full text layout to reveal the full article.

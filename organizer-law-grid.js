@@ -25,7 +25,7 @@ try {
                             <div class="gridOrganizerExtra"></div>';
     midder = '<span></span>';
     footer = '</div>\
-                    <div class="gridOrganizerToggleExtra boxlinks" style="display:none">Show More</div>\
+                    <div class="gridOrganizer ToggleExtra boxlinks" style="display:none">Show More</div>\
                         </div>';
 
     // Write content

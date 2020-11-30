@@ -17,7 +17,7 @@ div.gridFeedItem {
    flex: 1 1 calc(100% - 30px);
    align-self: flex-start;
    margin: 15px;
-   max-width: 467px;
+   max-width: 360px;
 }
 
 /** border for organizer left on full page **/

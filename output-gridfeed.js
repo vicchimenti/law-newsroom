@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.4
+ *     @version 3.7
  */
 
 try {
@@ -101,7 +101,7 @@ try {
     if (articleSubtitle == "") {
         cardText = '<span class="newsroomArticleLead card-text summary">' + articleSummary + '</span>';
     } else {
-        cardText = '<span class="newsroomArticleLead card-text subtitle">' + articleSubtitle + '</span>';
+        cardText = '<span class="newsroomArticleLead card-text subtitle"><p>' + articleSubtitle + '</p></span>';
     }
 
 

@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.2
+ *     @version 3.3
  */
 
 try {
@@ -60,7 +60,7 @@ try {
         for (let i = 0; i < arrayOfTags.length; i++) {
             listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
         }
-        listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listOfTags + '</ul></div>';
+        listOfTags = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listOfTags + '</ul></div>';
     }
 
 

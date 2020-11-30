@@ -10,7 +10,7 @@
 - [x] Build organizer for minor feed
 - [] Add Lazy if necessary
 - [x] Clean up category feed
-- [] Add Grid Organizer
+- [x] Add Grid Organizer
 - [] Adjust sort algo for new fields
 - [] Add mobile layout category
 - [] Add mobile layout major minor

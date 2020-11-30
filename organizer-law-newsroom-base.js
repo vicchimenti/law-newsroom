@@ -12,7 +12,7 @@
  *
  *     Adapted from the existing organizer organizer.js media library id 163514
  *
- *     @version 2.15
+ *     @version 2.16
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -374,7 +374,7 @@ function main(header, midder, footer) {
     if (!midder) midder = "";
     if (!footer) footer = "";
     if (title != "")
-        header = header + '<h2 class="organizerTitle">' + title + "</h2>";
+        header = header + '<div class="titleWrapper col-xs-12"><h2 class="organizerTitle">' + title + "</h2></div>";
     if (bViewAll) {
         var href = BrokerUtils.processT4Tags(
             dbStatement,

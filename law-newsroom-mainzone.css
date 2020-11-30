@@ -73,7 +73,6 @@ div.newsroomArticle ul li.tag {
 /** Address major feed image style **/
 
 img.articleImage {
-    object-fit: scale-down;
-    /* min-width: -webkit-fill-available; */
+    min-width: -webkit-fill-available;
     padding-top: 0;
 }

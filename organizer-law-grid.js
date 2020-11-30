@@ -19,7 +19,7 @@ try {
     var header, midder, footer;
 
     // declare content wrappers
-    header = '<div class="gridOrganizerWrapper contentItem" id="id' + content.getID() +
+    header = '<div class="gridOrganizerWrapper" id="id' + content.getID() +
                     '" data-position-default="Main" data-position-selected="Main">\
                         <div class="gridOrganizer standardContent card-group">\
                             <div class="gridOrganizerExtra"></div>';

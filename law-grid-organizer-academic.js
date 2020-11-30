@@ -23,7 +23,7 @@ try {
 
 
         document.write(output);
-    }
+    } else {}
 
 
 } catch(err) {

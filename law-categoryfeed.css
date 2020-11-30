@@ -13,7 +13,7 @@ div#MainZone div.container {
     justify-content: center;
 }
 
-div.facultyListItemWrapper {
+div.newsroomCategoryFeedItem {
    flex: 1 1 calc(100% - 30px);
    align-self: flex-start;
    margin: 15px;

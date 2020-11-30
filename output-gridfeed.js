@@ -116,8 +116,6 @@ try {
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
-
-    // document.write('<span class="newsroomArticleLead card-text">' + articleSummary + '</span>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
     document.write(listOfTags);

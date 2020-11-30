@@ -98,7 +98,7 @@ try {
      *  determine if minor feed
      * 
      * */
-    if (isMajor == "1") {
+    if (isMajor == "major") {
         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImagCaption + '" /></span>';
     } else {
         thumbNailString = '<span class="newsroomImageWrapper hidden"></span>';

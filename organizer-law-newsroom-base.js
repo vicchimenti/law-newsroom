@@ -12,7 +12,7 @@
  *
  *     Adapted from the existing organizer organizer.js media library id 163514
  *
- *     @version 2.16
+ *     @version 2.17
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -346,7 +346,7 @@ function main(header, midder, footer) {
         var item = {
             Content: oCM.get(mirrorContent[i].ID, language),
             CachedContent: mirrorContent[i],
-            index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID)),
+            index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
         };
         if (item.Content.getContentTypeID() == CID) {
             validContent.push(item);

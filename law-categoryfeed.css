@@ -21,7 +21,8 @@ div.gridFeedItem {
 }
 
 div.gridOrganizerWrapper {
-    background-color: #e6efff;
+    background-color: #f7f7f7;
+    /* background-color: #e6efff; */
     opacity: 90%;
 }
 

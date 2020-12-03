@@ -249,6 +249,9 @@ function dynamicSort(elem) {
     };
 }
 
+
+
+
 /**
  * Parse Custom Sort Field for multiple fields
  * Called only when there is any custom field entered
@@ -261,11 +264,10 @@ function dynamicSort(elem) {
  */
 function tagSort(tag, elem) {
 
-    // assign values from the element to a string for boolean comparison
-    let boolA = a.Content.get(elem).publish();
-    let boolB = b.Content.get(elem).publish();
-
     return function(a, b) {
+        // assign values from the element to a string for boolean comparison
+        let boolA = a.Content.get(elem).publish();
+        let boolB = b.Content.get(elem).publish();
 
         if (boolA == tag && boolB != tag) {
             return 1;

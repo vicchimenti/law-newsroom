@@ -264,6 +264,8 @@ function byCustomElements(CID, elements) {
             // iterate through each element
             let currentElement = customElements[i].trim();
 
+            
+
             // check currentElement agains publish date fields
             if (currentElement != "Publish Date") {
                 // sort the content items by alpabetic order
@@ -279,6 +281,12 @@ function byCustomElements(CID, elements) {
         return result;
     };
 }
+
+/***
+ * check custom element === Category Pin
+ * and then if the pin === choice
+ * if so assign logic value to the result or create new byPin function
+ */
 
 /* Main method */
 

@@ -229,6 +229,8 @@ function getMode(isPreview) {
     else return CachedContent.APPROVED;
 }
 
+
+
 /**
  * Parse Custom Sort Field for multiple fields
  * Called only when there is any custom field entered
@@ -465,6 +467,8 @@ function main(header, midder, footer) {
         arrayOfElements = sElement.split(",");
         // In cases where we must match to the original layout or content item
         var boolMatch = choice;
+        log("boolMatch" + boolMatch);
+        log("choice" + choice);
         validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
     } else {
         // when the user only sorts by the default options

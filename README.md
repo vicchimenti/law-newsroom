@@ -11,6 +11,7 @@
 - [] Add Lazy if necessary
 - [x] Clean up category feed
 - [x] Add Grid Organizer
-- [] Adjust sort algo for new fields
+- [x] Adjust sort algo for new date fields
+- [] Adjust sort algo for radio button fields
 - [] Add mobile layout category
 - [] Add mobile layout major minor

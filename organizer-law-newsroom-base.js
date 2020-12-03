@@ -234,7 +234,8 @@ function getMode(isPreview) {
  * Called only when there is any custom field entered
  *
  * @param elem is a value assigned from an array like object of custom Elements to sort by
- * @param elements array like object of custom sort elements parsed from the user input in the Custom element
+ * 
+ * Dynamic Sort will sort two strings alphabetically
  */
 function dynamicSort(elem) {
     return function(a, b) {
@@ -248,10 +249,54 @@ function dynamicSort(elem) {
     };
 }
 
-// calls dynamic sort and sends one element at a time from the array of custom elements
-function byCustomElements(CID, elements) {
+/**
+ * Parse Custom Sort Field for multiple fields
+ * Called only when there is any custom field entered
+ *
+ * @param elem is a value assigned from an array like object of custom Elements to sort by
+ * @param tag is the content item that is being sorted, in some cases this item will match a tag
+ * 
+ * Tag Sort will compare both items for an exact match to the choice
+ * In most cases this will fit radio buttons that must match
+ */
+function tagSort(tag, elem) {
+
+    // assign values from the element to a string for boolean comparison
+    let boolA = a.Content.get(elem).publish();
+    let boolB = b.Content.get(elem).publish();
+
+    return function(a, b) {
+
+        if (boolA == tag && boolB != tag) {
+            return 1;
+        } else if (boolA != tag && boolB == tag) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+}
+
+
+/**
+ * Parse Custom Sort Field for multiple fields
+ * Called only when there is any custom field entered
+ *
+ * @param cid The content type ID
+ * @param elem is a value assigned from an array like object of custom Elements to sort by
+ * @param tag is the content item that is being sorted, in some cases this item will match a tag
+ * 
+ * By Custom Elements calls differnt sort functions depending on the specific custom elements entered
+ * With each function call Custom Elements will take the array and pass one item to the helper function
+ * 
+ * Helper Functions:
+ *      Dynamic Sort for alphabetic sorting
+ *      Tag Sort for matching tags to layouts
+ *      By Date for handling any date field entered
+ */
+function byCustomElements(cid, elem, tag) {
     // assign the array of custom elements to a local scope
-    let customElements = elements;
+    let customElements = elem;
     return function(a, b) {
         // number of elements is the number of custom sort elements entered by the user
         let i = 0,
@@ -264,16 +309,30 @@ function byCustomElements(CID, elements) {
             // iterate through each element
             let currentElement = customElements[i].trim();
 
+            if (currentElement) {
+                switch (currentElement) {
+                    case "Publish Date":
+                        result = byDate(cid, currentElement)(a, b);
+                        break;
+                    case "Category Pin":
+                        result = tagSort(tag, currentElement)(a, b);
+                        break;
+                    default:
+                        result = dynamicSort(currentElement)(a, b);
+                        break;
+                }
+            }
+
             
 
-            // check currentElement agains publish date fields
-            if (currentElement != "Publish Date") {
-                // sort the content items by alpabetic order
-                result = dynamicSort(currentElement)(a, b);
-            } else {
-                // sort the content items by date
-                result = byDate(CID, currentElement)(a, b);
-            }
+            // // check currentElement agains publish date fields
+            // if (currentElement != "Publish Date") {
+            //     // sort the content items by alpabetic order
+            //     result = dynamicSort(currentElement)(a, b);
+            // } else {
+            //     // sort the content items by date
+            //     result = byDate(CID, currentElement)(a, b);
+            // }
 
 
             i++;
@@ -398,10 +457,13 @@ function main(header, midder, footer) {
      * Sort content
      */
     if (sElement != "") {
+
         // when the user selects any custom sort element
         var arrayOfElements = [];
         arrayOfElements = sElement.split(",");
-        validContent.sort(byCustomElements(CID, arrayOfElements));
+        // In cases where we must match to the original layout or content item
+        var boolMatch = choice;
+        validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
     } else {
         // when the user only sorts by the default options
         validContent.sort(eval(sortMethod + "(" + CID + ", sElement);"));

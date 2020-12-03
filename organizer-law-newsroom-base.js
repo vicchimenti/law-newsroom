@@ -61,6 +61,7 @@ function log(message) {
  * Defaults to using the last modified date.
  */
 function byDate(cid, elem) {
+
     if (!elem) {
         switch (cid) {
             case 208:
@@ -87,13 +88,19 @@ function byDate(cid, elem) {
                 break;
         }
     }
+
     return function(a, b) {
+
+        // asssign a b values
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
+
         // No date gets least recent treatment
         if (dateA && !dateB) return -1;
         if (!dateA && dateB) return 1;
         if (!dateA && !dateB) return 0;
+
+        // compare valid dates
         return dateB.compareTo(dateA);
     };
 }
@@ -134,13 +141,18 @@ function byName(cid, elem) {
                 break;
         }
     }
+
     return function(a, b) {
+
         var strA = String(a.Content.get(elem))
             .replace(/[^\w\s]/gi, "")
             .toLowerCase();
+
         var strB = String(b.Content.get(elem))
             .replace(/[^\w\s]/gi, "")
             .toLowerCase();
+
+        // compare string a to string b    
         return strA.localeCompare(strB);
     };
 }
@@ -248,6 +260,7 @@ function byCustomElements(elements) {
 
         // if the result is zero then the value of a and b are equal
         while (result === 0 && i < numberOfElements) {
+            
             // iterate through each element
             let currentElement = customElements[i].trim();
 

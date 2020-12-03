@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.0
+ *      @version 3.1
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -249,7 +249,7 @@ function dynamicSort(elem) {
 }
 
 // calls dynamic sort and sends one element at a time from the array of custom elements
-function byCustomElements(elements) {
+function byCustomElements(CID, elements) {
     // assign the array of custom elements to a local scope
     let customElements = elements;
     return function(a, b) {
@@ -260,12 +260,20 @@ function byCustomElements(elements) {
 
         // if the result is zero then the value of a and b are equal
         while (result === 0 && i < numberOfElements) {
-            
+
             // iterate through each element
             let currentElement = customElements[i].trim();
 
-            // sort the content items by the current custom element
-            result = dynamicSort(currentElement)(a, b);
+            // check currentElement agains publish date fields
+            if (currentElement != "Publish Date") {
+                // sort the content items by alpabetic order
+                result = dynamicSort(currentElement)(a, b);
+            } else {
+                // sort the content items by date
+                result = byDate(CID, currentElement)(a, b);
+            }
+
+
             i++;
         }
         return result;
@@ -385,7 +393,7 @@ function main(header, midder, footer) {
         // when the user selects any custom sort element
         var arrayOfElements = [];
         arrayOfElements = sElement.split(",");
-        validContent.sort(byCustomElements(arrayOfElements));
+        validContent.sort(byCustomElements(CID, arrayOfElements));
     } else {
         // when the user only sorts by the default options
         validContent.sort(eval(sortMethod + "(" + CID + ", sElement);"));

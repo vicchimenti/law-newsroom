@@ -51,6 +51,8 @@ function log(message) {
  * @param elem The element to use for sorting
  */
 
+
+
 /**
  * Sorts content by date, from most recent to least recent.
  * If these is no date, content is treated as least recent.
@@ -63,6 +65,9 @@ function byDate(cid, elem) {
                 elem = "Published";
                 break;
             case 82:
+                elem = "Publish Date";
+                break;
+            case 5296:
                 elem = "Publish Date";
                 break;
             default:
@@ -91,6 +96,8 @@ function byDate(cid, elem) {
     };
 }
 
+
+
 /**
  * Sorts content alphabetically, from A to Z. Ignores special characters
  * (anything that isn't a word or space).
@@ -116,6 +123,9 @@ function byName(cid, elem) {
                 break;
             case 548:
                 elem = "Degree Name";
+                break;
+            case 5296:
+                elem = "Headline";
                 break;
             default:
                 elem = "Name";

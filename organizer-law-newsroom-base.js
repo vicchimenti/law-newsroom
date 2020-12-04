@@ -298,6 +298,9 @@ function tagSort(tag, elem) {
             strB = "b";
         }
 
+        log("strA: " + strA);
+        log("strB: " + strB);
+
         return strA > strB ? 1 : strA < strB ? -1 : 0;
 
     }
@@ -335,7 +338,7 @@ function byCustomElements(cid, elem, tag) {
             // iterate through each element
             let currentElement = customElements[i].trim();
 
-            log("currentElement: " + currentElement);
+            // log("currentElement: " + currentElement);
 
             switch (currentElement) {
                 case "Publish Date":
@@ -349,10 +352,10 @@ function byCustomElements(cid, elem, tag) {
                     break;
             }
 
-            log("i: " + i);
+            // log("i: " + i);
             log("result: " + result);
             i = i + 1;
-            log("i: " + i);
+            // log("i: " + i);
 
         }
         return result;

@@ -97,8 +97,8 @@ function byDate(cid, elem) {
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
 
-        log("dateA: " + dateA);
-        log("dateB: " + dateB);
+        // log("dateA: " + dateA);
+        // log("dateB: " + dateB);
 
 
 
@@ -343,6 +343,7 @@ function byCustomElements(cid, elem, tag) {
             log("i: " + i);
             log("result: " + result);
             i = i + 1;
+            log("i: " + i);
 
         }
         return result;

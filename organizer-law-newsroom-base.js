@@ -316,7 +316,7 @@ function byCustomElements(cid, elem, tag) {
     let customElements = elem;
     return function(a, b) {
         // number of elements is the number of custom sort elements entered by the user
-        let i = 0,
+        var i = 0,
             result = 0,
             numberOfElements = customElements.length;
 

@@ -270,6 +270,11 @@ function tagSort(tag, elem) {
         // assign values from the element to a string for boolean comparison
         let boolA = a.Content.get(elem).publish();
         let boolB = b.Content.get(elem).publish();
+        log("boolA: " + boolA);
+        log("boolB: " + boolB);
+        log("tag: " + tag);
+
+
 
         if (boolA == tag && boolB != tag) {
             return 1;
@@ -326,6 +331,7 @@ function byCustomElements(cid, elem, tag) {
                         break;
                 }
             }
+            log("result: " + result);
 
             
 

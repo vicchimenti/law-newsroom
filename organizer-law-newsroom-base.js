@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.7
+ *      @version 3.8
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -91,7 +91,7 @@ function byDate(cid, elem) {
 
     return function(a, b) {
 
-        log("elem: " + elem);
+        // log("elem: " + elem);
 
         // asssign a b values
         var dateA = a.Content.get(elem).getValue();
@@ -301,8 +301,8 @@ function tagSort(tag, elem) {
             strB = "b";
         }
 
-        log("strA: " + strA);
-        log("strB: " + strB);
+        // log("strA: " + strA);
+        // log("strB: " + strB);
 
         // the assigned values from the bool results are compared
         return strA > strB ? 1 : strA < strB ? -1 : 0;
@@ -357,7 +357,7 @@ function byCustomElements(cid, elemArray, tag) {
             }
 
             // log("i: " + i);
-            log("result: " + result);
+            // log("result: " + result);
             i = i + 1;
             // log("i: " + i);
 

@@ -19,19 +19,9 @@ try {
 	// Set content wrappers
 	var header, midder, footer;
   
-		header = '\
-			<div class="newsroomOrganizerWrapper col-xs-12 col-md-6 col-md-offset-3 offset-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
-				<div class="newsroomOrganizer standardContent card-group">\
-				  <div class="newsroomOrganizerExtra"></div>\
-				  	';
-        midder = '\
-                  <span></span>\
- 		';
-        footer = '\
-			</div>\
-			<div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div>\
-		</div>\
- 		';
+	header = '<div class="newsroomOrganizerWrapper col-xs-12 col-md-6 col-md-offset-3 offset-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main"><div class="newsroomOrganizer standardContent card-group"><div class="newsroomOrganizerExtra"></div>';
+	midder = '<span></span>';
+	footer = '</div><div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div></div>';
         
 	// Write content
   	main(header, midder, footer);

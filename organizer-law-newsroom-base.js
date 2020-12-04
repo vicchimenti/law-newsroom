@@ -91,9 +91,16 @@ function byDate(cid, elem) {
 
     return function(a, b) {
 
+        log("elem: " + elem);
+
         // asssign a b values
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
+
+        log("dateA: " + dateA);
+        log("dateB: " + dateB);
+
+
 
         // No date gets least recent treatment
         if (dateA && !dateB) return -1;
@@ -278,10 +285,11 @@ function tagSort(tag, elem) {
 
         if (boolA == tag && boolB != tag) {
             return 1;
-        } else if (boolA != tag && boolB == tag) {
+        }
+        if (boolA != tag && boolB == tag) {
             return -1;
         } else {
-            return dynamicSort(elem)(a, b);
+            return 0;
         }
     }
 }
@@ -318,6 +326,7 @@ function byCustomElements(cid, elem, tag) {
             // iterate through each element
             let currentElement = customElements[i].trim();
 
+            log("currentElement: " + currentElement);
 
             switch (currentElement) {
                 case "Publish Date":

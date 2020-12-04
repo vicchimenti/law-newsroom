@@ -342,7 +342,7 @@ function byCustomElements(cid, elem, tag) {
 
             log("i: " + i);
             log("result: " + result);
-            i++;
+            i = i + 1;
 
         }
         return result;

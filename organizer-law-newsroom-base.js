@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.2
+ *      @version 3.3
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -281,7 +281,7 @@ function tagSort(tag, elem) {
         } else if (boolA != tag && boolB == tag) {
             return -1;
         } else {
-            return 0;
+            return dynamicSort(elem)(a, b);
         }
     }
 }

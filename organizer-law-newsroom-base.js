@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.4
+ *      @version 3.5
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -310,7 +310,7 @@ function byCustomElements(cid, elem, tag) {
         // number of elements is the number of custom sort elements entered by the user
         let i = 0,
             result = 0,
-            nullString = ""
+            nullString = "",
             numberOfElements = customElements.length;
 
         // if the result is zero then the value of a and b are equal

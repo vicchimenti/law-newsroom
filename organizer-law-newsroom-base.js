@@ -310,6 +310,7 @@ function byCustomElements(cid, elem, tag) {
         // number of elements is the number of custom sort elements entered by the user
         let i = 0,
             result = 0,
+            nullString = ""
             numberOfElements = customElements.length;
 
         // if the result is zero then the value of a and b are equal
@@ -321,7 +322,7 @@ function byCustomElements(cid, elem, tag) {
             if (currentElement) {
                 switch (currentElement) {
                     case "Publish Date":
-                        result = byDate(cid, currentElement)(a, b);
+                        result = byDate(cid, nullString)(a, b);
                         break;
                     case "Category Pin":
                         result = tagSort(tag, currentElement)(a, b);
@@ -332,20 +333,8 @@ function byCustomElements(cid, elem, tag) {
                 }
             }
             log("result: " + result);
-
-            
-
-            // // check currentElement agains publish date fields
-            // if (currentElement != "Publish Date") {
-            //     // sort the content items by alpabetic order
-            //     result = dynamicSort(currentElement)(a, b);
-            // } else {
-            //     // sort the content items by date
-            //     result = byDate(CID, currentElement)(a, b);
-            // }
-
-
             i++;
+            log("i: " + i);
         }
         return result;
     };
@@ -473,6 +462,7 @@ function main(header, midder, footer) {
         arrayOfElements = sElement.split(",");
         // In cases where we must match to the original layout or content item
         var boolMatch = choice;
+        log("CID: " + CID);
         validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
     } else {
         // when the user only sorts by the default options

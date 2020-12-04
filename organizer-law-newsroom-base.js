@@ -275,8 +275,11 @@ function tagSort(tag, elem) {
 
     return function(a, b) {
         // assign values from the element to a string for boolean comparison
-        let valueA = a.Content.get(elem).publish();
-        let valueB = b.Content.get(elem).publish();
+        let valueA = a.Content.get(elem).getValue();
+        let valueB = b.Content.get(elem).getValue();
+
+        // let valueA = a.Content.get(elem).publish();
+        // let valueB = b.Content.get(elem).publish();
         log("valueA: " + valueA);
         log("valueB: " + valueB);
         log("tag: " + tag);

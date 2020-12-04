@@ -312,7 +312,7 @@ function tagSort(tag, elem) {
  * Called only when there is any custom field entered
  *
  * @param cid The content type ID
- * @param elem is a value assigned from an array like object of custom Elements to sort by
+ * @param elemArray is an array like object of custom Elements to sort by
  * @param tag is the content item that is being sorted, in some cases this item will match a tag
  * 
  * By Custom Elements calls differnt sort functions depending on the specific custom elements entered
@@ -323,9 +323,9 @@ function tagSort(tag, elem) {
  *      Tag Sort for matching tags to layouts
  *      By Date for handling any date field entered
  */
-function byCustomElements(cid, elem, tag) {
+function byCustomElements(cid, elemArray, tag) {
     // assign the array of custom elements to a local scope
-    let customElements = elem;
+    let customElements = elemArray;
     return function(a, b) {
         // number of elements is the number of custom sort elements entered by the user
         var i = 0,
@@ -484,6 +484,7 @@ function main(header, midder, footer) {
         arrayOfElements = sElement.split(",");
         // In cases where we must match to the original layout or content item
         var boolMatch = choice;
+        log("boolMatch: " + boolMatch);
         log("CID: " + CID);
         validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
     } else {

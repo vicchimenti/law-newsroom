@@ -275,24 +275,24 @@ function tagSort(tag, elem) {
 
     return function(a, b) {
         // assign values from the element to a string for boolean comparison
-        let boolA = a.Content.get(elem).publish();
-        let boolB = b.Content.get(elem).publish();
-        log("boolA: " + boolA);
-        log("boolB: " + boolB);
+        let valueA = a.Content.get(elem).publish();
+        let valueB = b.Content.get(elem).publish();
+        log("valueA: " + valueA);
+        log("valueB: " + valueB);
         log("tag: " + tag);
         let strA = "";
         let strB = "";
         // let tagResult = 0;
 
 
-
-        if (boolA == tag) {
+        // based on boolean comparison the strings are assigned values
+        if (valueA == tag) {
             strA = "a";
         } else {
             strA = "b";
         }
 
-        if (boolB == tag) {
+        if (valueB == tag) {
             strB = "a";
         } else {
             strB = "b";
@@ -301,6 +301,7 @@ function tagSort(tag, elem) {
         log("strA: " + strA);
         log("strB: " + strB);
 
+        // the assigned values from the bool results are compared
         return strA > strB ? 1 : strA < strB ? -1 : 0;
 
     }

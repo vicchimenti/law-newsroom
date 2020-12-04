@@ -310,7 +310,6 @@ function byCustomElements(cid, elem, tag) {
         // number of elements is the number of custom sort elements entered by the user
         let i = 0,
             result = 0,
-            nullString = "",
             numberOfElements = customElements.length;
 
         // if the result is zero then the value of a and b are equal
@@ -319,22 +318,23 @@ function byCustomElements(cid, elem, tag) {
             // iterate through each element
             let currentElement = customElements[i].trim();
 
-            if (currentElement) {
-                switch (currentElement) {
-                    case "Publish Date":
-                        result = byDate(cid, nullString)(a, b);
-                        break;
-                    case "Category Pin":
-                        result = tagSort(tag, currentElement)(a, b);
-                        break;
-                    default:
-                        result = dynamicSort(currentElement)(a, b);
-                        break;
-                }
+
+            switch (currentElement) {
+                case "Publish Date":
+                    result = byDate(cid, currentElement)(a, b);
+                    break;
+                case "Category Pin":
+                    result = tagSort(tag, currentElement)(a, b);
+                    break;
+                default:
+                    result = dynamicSort(currentElement)(a, b);
+                    break;
             }
+
+            log("i: " + i);
             log("result: " + result);
             i++;
-            log("i: " + i);
+
         }
         return result;
     };

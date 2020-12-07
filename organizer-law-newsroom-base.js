@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.9
+ *      @version 3.11
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -289,13 +289,14 @@ function tagSort(tag, elem) {
 
 
         // based on boolean comparison the strings are assigned values
-        if (strA == tag) {
+        str.includes("world");
+        if (strA.includes(tag)) {
             valueA = "a";
         } else {
             valueA = "b";
         }
 
-        if (strB == tag) {
+        if (strB.includes(tag)) {
             valueB = "a";
         } else {
             valueB = "b";
@@ -327,7 +328,6 @@ function tagSort(tag, elem) {
  *      Tag Sort for matching tags to layouts
  *      By Date for handling any date field entered
  */
-(CID, arrayOfElements, boolMatch)
 function byCustomElements(cid, elemArray, tag) {
     // assign the array of custom elements to a local scope
     let customElements = elemArray;

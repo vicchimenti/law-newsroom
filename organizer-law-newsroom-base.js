@@ -283,6 +283,8 @@ function tagSort(tag, elem) {
         log("strA: " + strA);
         log("strB: " + strB);
         log("tag: " + tag);
+        let isMatchA = (tag.includes(strA));
+        let isMatchB = (tag.includes(strB));
         // let valueA = "";
         // let valueB = "";
         // let tagResult = 0;
@@ -305,7 +307,9 @@ function tagSort(tag, elem) {
         // log("strA: " + strA);
         // log("strB: " + strB);
 
-        return ((tag.includes(strA)) && (!tag.includes(strB))) ? 1 : ((!tag.includes(strA)) && (tag.includes(strB))) ? -1 : 0;
+        return isMatchA && !isMatchB ? 1 : !isMatchA && isMatchB ? -1 : 0;
+
+        // return ((tag.includes(strA)) && (!tag.includes(strB))) ? 1 : ((!tag.includes(strA)) && (tag.includes(strB))) ? -1 : 0;
 
         // the assigned values from the bool results are compared
         // return valueA > valueB ? 1 : valueA < valueB ? -1 : 0;

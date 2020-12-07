@@ -19,15 +19,17 @@ var n = fieldToBeEvaluated.indexOf(optionToTestFor); /* determines starting char
  * 
  */
 try {
-    if ((n >= 0)) { /* if it's there, it'll start at 0 or later, so process this */
+
+    /* if content exists, it'll start at 0 or later, so process this */
+    if ((n >= 0)) {
         var sw = new java.io.StringWriter();
         var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
         new com.terminalfour.publish.ContentPublisher().write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview);
         output = sw.toString();
 
+        // write to page document
         document.write(output);
-
-    } else {}
+    }
 
 
 } catch (err) {

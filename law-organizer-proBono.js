@@ -1,5 +1,5 @@
 /***
- *  law/grid/organizer/proBono
+ *  law/organizer/proBono
  * 
  */
 

@@ -9,7 +9,7 @@
  * 
  */
 var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Category" output="normal" display_field="value" delimiter=";" />');
-var optionToTestFor = "accessToJusticeInstitute"; //edit this to change the option
+var optionToTestFor = "admission"; //edit this to change the option
 var contentTypeLayout = 'output/gridfeed'; //edit this to change the Content Layout to use for output
 var n = fieldToBeEvaluated.indexOf(optionToTestFor); /* determines starting character of string */
 
@@ -27,10 +27,9 @@ try {
 
         document.write(output);
 
-    } else {
-        //document.write("else<br>");
-    }
-    //document.write("</p>");
+    } else {}
+
+
 } catch (err) {
     document.write(err.message);
 }

@@ -283,30 +283,32 @@ function tagSort(tag, elem) {
         log("strA: " + strA);
         log("strB: " + strB);
         log("tag: " + tag);
-        let valueA = "";
-        let valueB = "";
+        // let valueA = "";
+        // let valueB = "";
         // let tagResult = 0;
 
 
         // based on boolean comparison the strings are assigned values
         // str.includes("world");
-        if (tag.includes(strA)) {
-            valueA = "a";
-        } else {
-            valueA = "b";
-        }
+        // if (tag.includes(strA)) {
+        //     valueA = "a";
+        // } else {
+        //     valueA = "b";
+        // }
 
-        if (tag.includes(strB)) {
-            valueB = "a";
-        } else {
-            valueB = "b";
-        }
+        // if (tag.includes(strB)) {
+        //     valueB = "a";
+        // } else {
+        //     valueB = "b";
+        // }
 
         // log("strA: " + strA);
         // log("strB: " + strB);
 
+        return ((tag.includes(strA)) && (!tag.includes(strB))) ? 1 : ((!tag.includes(strA)) && (tag.includes(strB))) ? -1 : 0;
+
         // the assigned values from the bool results are compared
-        return valueA > valueB ? 1 : valueA < valueB ? -1 : 0;
+        // return valueA > valueB ? 1 : valueA < valueB ? -1 : 0;
 
     }
 }

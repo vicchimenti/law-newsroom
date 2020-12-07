@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.13
+ *      @version 3.14
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -307,7 +307,7 @@ function tagSort(tag, elem) {
         // log("strA: " + strA);
         // log("strB: " + strB);
 
-        return isMatchA && !isMatchB ? 1 : !isMatchA && isMatchB ? -1 : 0;
+        return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
 
         // return ((tag.includes(strA)) && (!tag.includes(strB))) ? 1 : ((!tag.includes(strA)) && (tag.includes(strB))) ? -1 : 0;
 

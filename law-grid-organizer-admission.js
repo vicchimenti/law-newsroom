@@ -1,5 +1,5 @@
 /***
- *  law/organizer/admission
+ *  law/grid/organizer/admission
  * 
  */
 

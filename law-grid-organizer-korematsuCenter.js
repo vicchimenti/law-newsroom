@@ -29,7 +29,7 @@ try {
 
         // write to page document
         document.write(output);
-    } else {}
+    }
 
 
 } catch (err) {

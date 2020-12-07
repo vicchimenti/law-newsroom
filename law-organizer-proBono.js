@@ -3,7 +3,6 @@
  * 
  */
 
-
 /***
  *  declare and assign topic layout
  * 

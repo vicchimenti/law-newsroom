@@ -278,34 +278,34 @@ function tagSort(tag, elem) {
         // let valueA = a.Content.get(elem).getValue();
         // let valueB = b.Content.get(elem).getValue();
 
-        var valueA = a.Content.get(elem).publish();
-        var valueB = b.Content.get(elem).publish();
-        log("valueA: " + valueA);
-        log("valueB: " + valueB);
+        let strA = a.Content.get(elem).publish();
+        let strB = b.Content.get(elem).publish();
+        log("strA: " + strA);
+        log("strB: " + strB);
         log("tag: " + tag);
-        let strA = "";
-        let strB = "";
+        let valueA = "";
+        let valueB = "";
         // let tagResult = 0;
 
 
         // based on boolean comparison the strings are assigned values
-        if (valueA == tag) {
-            strA = "a";
+        if (strA == tag) {
+            valueA = "a";
         } else {
-            strA = "b";
+            valueA = "b";
         }
 
-        if (valueB == tag) {
-            strB = "a";
+        if (strB == tag) {
+            valueB = "a";
         } else {
-            strB = "b";
+            valueB = "b";
         }
 
         // log("strA: " + strA);
         // log("strB: " + strB);
 
         // the assigned values from the bool results are compared
-        return strA > strB ? 1 : strA < strB ? -1 : 0;
+        return valueA > valueB ? 1 : valueA < valueB ? -1 : 0;
 
     }
 }
@@ -327,6 +327,7 @@ function tagSort(tag, elem) {
  *      Tag Sort for matching tags to layouts
  *      By Date for handling any date field entered
  */
+(CID, arrayOfElements, boolMatch)
 function byCustomElements(cid, elemArray, tag) {
     // assign the array of custom elements to a local scope
     let customElements = elemArray;
@@ -487,7 +488,7 @@ function main(header, midder, footer) {
         var arrayOfElements = [];
         arrayOfElements = sElement.split(",");
         // In cases where we must match to the original layout or content item
-        var boolMatch = choice;
+        var boolMatch = LAYOUT;
         log("boolMatch: " + boolMatch);
         log("CID: " + CID);
         validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));

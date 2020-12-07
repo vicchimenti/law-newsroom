@@ -289,14 +289,14 @@ function tagSort(tag, elem) {
 
 
         // based on boolean comparison the strings are assigned values
-        str.includes("world");
-        if (strA.includes(tag)) {
+        // str.includes("world");
+        if (tag.includes(strA)) {
             valueA = "a";
         } else {
             valueA = "b";
         }
 
-        if (strB.includes(tag)) {
+        if (tag.includes(strB)) {
             valueB = "a";
         } else {
             valueB = "b";
@@ -358,7 +358,7 @@ function byCustomElements(cid, elemArray, tag) {
             }
 
             // log("i: " + i);
-            // log("result: " + result);
+            log("result: " + result);
             i = i + 1;
             // log("i: " + i);
 

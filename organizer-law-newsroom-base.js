@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.8
+ *      @version 3.9
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);

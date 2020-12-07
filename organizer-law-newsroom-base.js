@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.14
+ *      @version 3.15
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -275,45 +275,12 @@ function tagSort(tag, elem) {
 
     return function(a, b) {
         // assign values from the element to a string for boolean comparison
-        // let valueA = a.Content.get(elem).getValue();
-        // let valueB = b.Content.get(elem).getValue();
-
         let strA = a.Content.get(elem).publish();
         let strB = b.Content.get(elem).publish();
-        log("strA: " + strA);
-        log("strB: " + strB);
-        log("tag: " + tag);
         let isMatchA = (tag.includes(strA));
         let isMatchB = (tag.includes(strB));
-        // let valueA = "";
-        // let valueB = "";
-        // let tagResult = 0;
-
-
-        // based on boolean comparison the strings are assigned values
-        // str.includes("world");
-        // if (tag.includes(strA)) {
-        //     valueA = "a";
-        // } else {
-        //     valueA = "b";
-        // }
-
-        // if (tag.includes(strB)) {
-        //     valueB = "a";
-        // } else {
-        //     valueB = "b";
-        // }
-
-        // log("strA: " + strA);
-        // log("strB: " + strB);
 
         return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
-
-        // return ((tag.includes(strA)) && (!tag.includes(strB))) ? 1 : ((!tag.includes(strA)) && (tag.includes(strB))) ? -1 : 0;
-
-        // the assigned values from the bool results are compared
-        // return valueA > valueB ? 1 : valueA < valueB ? -1 : 0;
-
     }
 }
 
@@ -346,11 +313,8 @@ function byCustomElements(cid, elemArray, tag) {
         // if the result is zero then the value of a and b are equal
         while (result === 0 && i < numberOfElements) {
 
-            // iterate through each element
+            // switch through each element
             let currentElement = customElements[i].trim();
-
-            // log("currentElement: " + currentElement);
-
             switch (currentElement) {
                 case "Publish Date":
                     result = byDate(cid, currentElement)(a, b);
@@ -363,11 +327,8 @@ function byCustomElements(cid, elemArray, tag) {
                     break;
             }
 
-            // log("i: " + i);
-            log("result: " + result);
-            i = i + 1;
-            // log("i: " + i);
-
+            // increment index
+            i++;
         }
         return result;
     };
@@ -495,8 +456,7 @@ function main(header, midder, footer) {
         arrayOfElements = sElement.split(",");
         // In cases where we must match to the original layout or content item
         var boolMatch = LAYOUT;
-        log("boolMatch: " + boolMatch);
-        log("CID: " + CID);
+        // sort the valid content by the custom elements
         validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
     } else {
         // when the user only sorts by the default options

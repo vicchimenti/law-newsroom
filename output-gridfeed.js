@@ -44,6 +44,7 @@ try {
      * 
      * */
     var cardText = "";
+    var listItems = "";
     var listOfTags = "";
     var titleLink = "";
     var authorByLine = "";
@@ -61,9 +62,9 @@ try {
     if (fieldTags != "") {
         var arrayOfTags = fieldTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
-            listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
+            listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
         }
-        listOfTags = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listOfTags + '</ul></div>';
+        listOfTags = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listItems + '</ul></div>';
     }
 
 
@@ -100,7 +101,7 @@ try {
      * 
      * */
     if (articleSubtitle == "") {
-        cardText = '<span class="newsroomArticleLead card-text summary">' + articleSummary + '</span>';
+        cardText = '<span class="newsroomArticleLead card-text summary"><p>' + articleSummary + '</p></span>';
     } else {
         cardText = '<span class="newsroomArticleLead card-text subtitle"><p>' + articleSubtitle + '</p></span>';
     }

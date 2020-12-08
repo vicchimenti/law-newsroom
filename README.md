@@ -16,3 +16,4 @@
 - [] Add mobile layout category
 - [] Add mobile layout major minor
 - [] Address numeric sorting layout
+- [] Track Category List Bug

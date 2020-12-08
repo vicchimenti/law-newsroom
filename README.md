@@ -12,6 +12,7 @@
 - [x] Clean up category feed
 - [x] Add Grid Organizer
 - [x] Adjust sort algo for new date fields
-- [] Adjust sort algo for radio button fields
+- [x] Adjust sort algo for radio button fields
 - [] Add mobile layout category
 - [] Add mobile layout major minor
+- [] Address numeric sorting layout

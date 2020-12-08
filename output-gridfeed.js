@@ -47,9 +47,10 @@ try {
      * 
      * */
     var cardText = "";
+    var titleLink = "";
     var listItems = "";
     var listOfTags = "";
-    var titleLink = "";
+    var photoCredit = "";
     var authorByLine = "";
     var thumbNailString = "";
     var beginningHTML = '<div class="gridFeedItem newsroomArticleWrapper newsroomBlurb card col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
@@ -89,17 +90,6 @@ try {
 
 
     /***
-     *  display byline only when provided 
-     * 
-     * */
-    if (author == "") {
-        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    } else {
-        authorByLine = '<p class="byLine">By ' + author + '</p>';
-    }
-
-
-    /***
      *  verify subtitle 
      * 
      * */
@@ -111,18 +101,46 @@ try {
 
 
     /***
-     *  verify 8x10 image 
+     *  display byline only when provided 
      * 
      * */
-    if (articleSubtitle == "") {
-        cardText = '<span class="newsroomArticleLead card-text summary"><p>' + articleSummary + '</p></span>';
+    if (author == "") {
+        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
-        cardText = '<span class="newsroomArticleLead card-text subtitle"><p>' + articleSubtitle + '</p></span>';
+        authorByLine = '<p class="byLine">By ' + author + '</p>';
     }
 
 
-        var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    /***
+     *  display photo credit only when provided 
+     * 
+     * */
+    if (author == "") {
+        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
+    } else {
+        authorByLine = '<p class="byLine">Written by ' + author + '</p>';
+    }
 
+
+    /***
+     *  verify 8x10 image and photo credits
+     * 
+     * */
+    if (gridImage == "") {
+        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+            if (frontPageImageCredit == "") {
+                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+            } else {
+                photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
+        }
+    } else {
+        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + gridImage + '" class="articleImage card-img-top" alt="' + gridImageCaption + '" /></span>';
+            if (gridImageCredit == "") {
+                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+            } else {
+                photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
+        }
+    }
 
 
 
@@ -133,6 +151,7 @@ try {
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));

@@ -102,6 +102,13 @@ img.articleImage {
 
 
 /** Responsive Media Querys **/
-h2.organizerTitle {
-    padding: 0 15px 0 15px;
+@media screen and (max-width: 767.999px) {
+    h2.organizerTitle {
+        padding: 0 15px 0 15px;
+    }
+
+    div.newsroomCategoryFeedItem {
+        margin: 15px;
+    }
 }
+

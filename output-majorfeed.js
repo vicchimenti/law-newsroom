@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.7
+ *     @version 2.8
  */
 
 try {
@@ -101,22 +101,22 @@ try {
 
 
     /***
-     *  verify 8x10 image and photo credits
+     *  verify 16x9 image and photo credits
      * 
      * */
-    if (gridImage == "") {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-            if (frontPageImageCredit == "") {
-                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-            } else {
-                photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
+    if (frontPageImage == "") {
+        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + gridImage + '" class="articleImage card-img-top" alt="' + gridImageCaption + '" /></span>';
+        if (gridImageCredit == "") {
+            photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+        } else {
+            photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
         }
     } else {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + gridImage + '" class="articleImage card-img-top" alt="' + gridImageCaption + '" /></span>';
-            if (gridImageCredit == "") {
-                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-            } else {
-                photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
+        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+        if (frontPageImageCredit == "") {
+            photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+        } else {
+            photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
         }
     }
 

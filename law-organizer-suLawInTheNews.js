@@ -1,5 +1,5 @@
 /***
- *  law/organizer/student
+ *  law/organizer/suLawInTheNews
  * 
  */
 

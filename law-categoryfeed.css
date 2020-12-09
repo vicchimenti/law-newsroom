@@ -98,3 +98,10 @@ img.articleImage {
     min-width: -webkit-fill-available;
     padding-top: 0;
 }
+
+
+
+/** Responsive Media Querys **/
+h2.organizerTitle {
+    padding: 0 15px 0 15px;
+}

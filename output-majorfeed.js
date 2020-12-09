@@ -43,10 +43,13 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImagCaption + '" /></span>';
     var listOfTags = "";
     var titleLink = "";
+    var listItems = "";
+    var listOfTags = "";
+    var photoCredit = "";
     var authorByLine = "";
+    var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImagCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 

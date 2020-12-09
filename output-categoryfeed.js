@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.8
+ *     @version 3.9
  */
 
 try {
@@ -54,7 +54,7 @@ try {
     var photoCredit = "";
     var authorByLine = "";
     var thumbNailString = "";
-    var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomArticleWrapper newsroomBlurb card col-xs-12" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 

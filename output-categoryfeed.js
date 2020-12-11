@@ -102,28 +102,23 @@ try {
 
 
     /***
-     *  determine if minor feed
+     *  determine if major feed
      * 
      * */
     if (isMajor == "major") {
-
-        // default to a Main image
+        // ensure that an image was provided with the major feed
         if (frontPageImage == "") {
-            thumbNailString = '<span class="newsroomImageWrapper"><img src="' + gridImage + '" class="articleImage card-img-top" alt="' + gridImageCaption + '" /></span>';
-            if (gridImageCredit == "") {
-                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-            } else {
-                photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
-            }
+            thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
         } else {
             thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-            if (frontPageImageCredit == "") {
-                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-            } else {
-                photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
-            }
         }
-
+        // ensure that an image credit was provided
+        if (photoCredit == "") {
+            photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+        } else {
+            photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
+        }
+    // if it's a minor article ignore any image provided in this feed
     } else {
         thumbNailString = '<span class="newsroomImageWrapper hidden"></span>';
     }

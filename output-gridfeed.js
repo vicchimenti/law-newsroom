@@ -111,7 +111,8 @@ try {
     if (author == "") {
         authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
-        authorByLine = '<p class="byLine">By ' + author + '</p>';
+        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
+        // authorByLine = '<p class="byLine">By ' + author + '</p>';
     }
 
 

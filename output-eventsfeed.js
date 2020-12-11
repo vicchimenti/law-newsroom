@@ -36,9 +36,9 @@ try {
     var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
     var isMajor = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Major or Minor' output='normal' display_field='value' />");
     var catPin = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category Pin' output='normal' display_field='value' />");
-    var gridImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image' output='normal' formatter='path/*' />");
-    var gridImageCaption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Caption' output='normal' modifiers='striptags,htmlentities' />");
-    var gridImageCredit = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Credit' output='normal' modifiers='striptags,htmlentities' />");    
+    // var gridImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image' output='normal' formatter='path/*' />");
+    // var gridImageCaption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Caption' output='normal' modifiers='striptags,htmlentities' />");
+    // var gridImageCredit = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Credit' output='normal' modifiers='striptags,htmlentities' />");    
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
 
 
@@ -105,28 +105,28 @@ try {
      *  determine if minor feed
      * 
      * */
-    if (isMajor == "major") {
+    // if (isMajor == "major") {
 
-        // default to a Main image
-        if (frontPageImage == "") {
-            thumbNailString = '<span class="newsroomImageWrapper"><img src="' + gridImage + '" class="articleImage card-img-top" alt="' + gridImageCaption + '" /></span>';
-            if (gridImageCredit == "") {
-                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-            } else {
-                photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
-            }
-        } else {
-            thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-            if (frontPageImageCredit == "") {
-                photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-            } else {
-                photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
-            }
-        }
+    //     // default to a Main image
+    //     if (frontPageImage == "") {
+    //         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + gridImage + '" class="articleImage card-img-top" alt="' + gridImageCaption + '" /></span>';
+    //         if (gridImageCredit == "") {
+    //             photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    //         } else {
+    //             photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
+    //         }
+    //     } else {
+    //         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    //         if (frontPageImageCredit == "") {
+    //             photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    //         } else {
+    //             photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
+    //         }
+    //     }
 
-    } else {
-        thumbNailString = '<span class="newsroomImageWrapper hidden"></span>';
-    }
+    // } else {
+    //     thumbNailString = '<span class="newsroomImageWrapper hidden"></span>';
+    // }
 
 
 

@@ -106,6 +106,7 @@ try {
      * 
      * */
     if (isMajor == "major") {
+        
         /***
          *  verify Main image and photo credits
          * 

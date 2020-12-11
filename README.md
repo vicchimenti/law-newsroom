@@ -19,5 +19,6 @@
 - [] Track Category List Bug
 - [] Add Centerpiece layout
 - [] Add Centerpiece logic
-- [] Add Events layout
-- [] Add Announcements layout
+- [x] Add Events layout
+- [x] Add Announcements layout
+- [x] SU Law in the News layout

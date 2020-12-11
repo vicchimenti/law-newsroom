@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 4.0
+ *     @version 4.1
  */
 
 try {
@@ -154,7 +154,7 @@ try {
 
 
 
-    
+
     /***
      *  Write the document once
      * 

@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.13
+ *     @version 3.14
  */
 
 
@@ -111,7 +111,7 @@ try {
     if (author == "") {
         authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
-        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
+        authorByLine = '<p class="byLine hidden">' + author + '</p>';
         // authorByLine = '<p class="byLine">By ' + author + '</p>';
     }
 
@@ -121,9 +121,9 @@ try {
      * 
      * */
     if (author == "") {
-        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
+        photoCredit = '<p class="byLine hidden">No Author Provided</p>';
     } else {
-        authorByLine = '<p class="byLine">Written by ' + author + '</p>';
+        photoCredit = '<p class="byLine hidden">Written by ' + frontPageImageCredit + '</p>';
     }
 
 
@@ -155,11 +155,11 @@ try {
      * */
     if (frontPageImage == "") {
         thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
-        photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+        // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
 
     } else {
         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-        photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+        // photoCredit = '<p class="byLine hidden">' + frontPageImageCredit + '</p>';
     }
 
 

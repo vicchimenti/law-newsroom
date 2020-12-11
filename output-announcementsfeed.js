@@ -1,6 +1,6 @@
 /***
  *     @author Victor Chimenti, MSCS-SE '20
- *     @file output-announcements.js
+ *     @file output-announcementsfeed.js
  *     @see Seattle University School of Law Newsroom
  *
  *     This new content type layout is a smart layout for all items in the

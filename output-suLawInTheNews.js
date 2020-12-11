@@ -102,7 +102,7 @@ try {
 
 
     /***
-     *  determine if minor feed
+     *  determine if major feed
      * 
      * */
     if (isMajor == "major") {

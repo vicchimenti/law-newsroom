@@ -34,9 +34,9 @@ try {
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
     var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
     var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
-    var gridImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image' output='normal' formatter='path/*' />");
-    var gridImageCaption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Caption' output='normal' modifiers='striptags,htmlentities' />");
-    var gridImageCredit = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Credit' output='normal' modifiers='striptags,htmlentities' />");    
+    // var gridImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image' output='normal' formatter='path/*' />");
+    // var gridImageCaption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Caption' output='normal' modifiers='striptags,htmlentities' />");
+    // var gridImageCredit = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image Credit' output='normal' modifiers='striptags,htmlentities' />");    
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
 
 
@@ -105,20 +105,28 @@ try {
      * 
      * */
     if (frontPageImage == "") {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + gridImage + '" class="articleImage card-img-top" alt="' + gridImageCaption + '" /></span>';
-        if (gridImageCredit == "") {
-            photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-        } else {
-            photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
-        }
+        thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
+        photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
     } else {
         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-        if (frontPageImageCredit == "") {
-            photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-        } else {
-            photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
-        }
+        photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
     }
+
+
+
+    //     if (gridImageCredit == "") {
+    //         photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    //     } else {
+    //         photoCredit = '<p class="byLine">Image credit: ' + gridImageCredit + '</p>';
+    //     }
+    // } else {
+    //     thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    //     if (frontPageImageCredit == "") {
+    //         photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    //     } else {
+    //         photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
+    //     }
+    // }
 
 
 

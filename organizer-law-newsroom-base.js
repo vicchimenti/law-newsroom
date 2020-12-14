@@ -574,6 +574,8 @@ function main(header, midder, footer) {
         var oCP = new ContentPublisher();
         // prepare for first content item
         first = true;
+        log("writing content - validContent.length: " + validContent.length);
+
         for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
             log("i: " + i);
             log("Limit: " + LIMIT);

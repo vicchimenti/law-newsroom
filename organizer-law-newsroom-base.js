@@ -366,21 +366,28 @@ function main(header, midder, footer) {
     var sElement = String(content.get("Custom element"));
     // the reverse order option
     var bReverse = !content.get("Reverse order").isNull();
+
+
+
     // the paginate option to display items on multiple pages
     var bPaginate = content.hasElement("Paginate?") ?
-        !content.get("Paginate?").isNull() :
-        null;
+            !content.get("Paginate?").isNull() : null;
+
     // the number of items to display on each page when pagination is true
     var nPerPage = content.hasElement("Total number of items to display per page") ?
-        content.get("Total number of items to display per page") :
-        0;
+            content.get("Total number of items to display per page") : 0;
+
+
+
     // the number of items to display
     var LIMIT = content.get("Total number of items to display");
+    console.log("LIMIT: " + LIMIT);
+
     // user has the option of beginning their display at any item rather than the first
-    var nStart =
-        content.get("Start Number") && content.get("Start Number") > 0 ?
-        content.get("Start Number") :
-        1;
+    var nStart = content.get("Start Number") && content.get("Start Number") > 0 ?
+            content.get("Start Number") : 1;
+    console.log("nStart: " + nStart);
+
 
     // the logic to determine layouts and links that were available to the user
     var bViewAll = content.hasElement("Show link to original section") ?
@@ -390,10 +397,16 @@ function main(header, midder, footer) {
         content.get("Link to original section text") :
         "";
     if (sViewAllText == "") sViewAllText = "View All";
+
+
+    // occurs only in cases where the organizer is sorting a News Article with a Summary Link in edu
     var bSummFirst = LAYOUT == "v9/organizer/newsArticleSummary/Link";
     if (bSummFirst) {
         LAYOUT = "v9/organizer/newsArticleSummary";
     }
+
+
+
 
     /**
      * Get section
@@ -445,6 +458,7 @@ function main(header, midder, footer) {
             validContent.push(item);
         }
     }
+    console.log("validContent.length: " + validContent.length);
 
     /**
      * Sort content
@@ -484,11 +498,7 @@ function main(header, midder, footer) {
         );
         midder =
             midder +
-            '<div class="boxlinkItem viewAll"><a href="' +
-            href +
-            '">' +
-            sViewAllText +
-            "</a></div>";
+            '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + "</a></div>";
     }
 
     /**
@@ -558,9 +568,9 @@ function main(header, midder, footer) {
         var oCP = new ContentPublisher();
         // prepare for first content item
         first = true;
-        for (
-            var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++
-        ) {
+        for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
+            console.log("i: " + i);
+            console.log("Limit: " + LIMIT);
             // if first print content item completely
             if (first) {
                 oLayout = LAYOUT;

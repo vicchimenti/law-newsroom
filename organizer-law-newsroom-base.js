@@ -590,12 +590,20 @@ function main(header, midder, footer) {
             }
             log("oLayout: " + oLayout);
 
-            var tci = new TargetContentInfo (
-                validContent[i].CachedContent,
-                oSection,
-                language
-            );
+       // for (var i = 0; i < mirrorContent.length; i++) {
+            var item = {
+                Content: oCM.get(validContent[i].ID, language),
+                CachedContent: validContent[i],
+                index: dSequence.get(new java.lang.Integer(validContent[i].ID))
+            };
+            // if (item.Content.getContentTypeID() == CID) {
+            //     validContent.push(item);
+            // }
             parsedContent.push(tci);
+
+        }
+        // log("validContent.length: " + validContent.length);
+            // parsedContent.push(tci);
             // parsedContent[i] = validContent[i].Content;
 
             // oCP.write(

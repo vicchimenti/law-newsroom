@@ -233,7 +233,7 @@ function reorganizeContentItems(){
 		}
 		else{ /* menu is in the topzone or otherwise nonexistent */
 			if ((SidebarZoneContentItems.length == 0)){ /* no zone C content, no zone B content */
-				$("#MainZone").append(zoneAContentItems).addClass("col-md-12");
+				$("#MainZone").append(MainZoneContentItems).addClass("col-md-12");
 				$("#SidebarZone").hide();
             	//$("#zoneC").hide(); 
 			}

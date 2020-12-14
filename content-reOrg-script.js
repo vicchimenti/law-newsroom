@@ -231,7 +231,7 @@ function reorganizeContentItems(){
 		}
 		else{ /* menu is in the topzone or otherwise nonexistent */
 			if ((SidebarZoneContentItems.length == 0)){ /* no zone C content, no zone B content */
-				$("#zoneA").append(zoneAContentItems).addClass("col-md-12");
+				$("#MainZone").append(zoneAContentItems).addClass("col-md-12");
 				$("#SidebarZone").hide();
             	//$("#zoneC").hide(); 
 			}
@@ -242,7 +242,7 @@ function reorganizeContentItems(){
               //    $("#zoneC").show().addClass("col-md-3").append(zoneCContentItems);	
               //}
               //else{
-                  $("#zoneA").addClass("col-md-9");
+                  $("#MainZone").addClass("col-md-9");
               //    $("#SidebarZone").append(SidebarZoneContentItems);	
               //} 	
             }

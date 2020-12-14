@@ -517,12 +517,15 @@ function main(header, midder, footer) {
         for (
             var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++
         ) {
-            var tci = new TargetContentInfo(
-                validContent[i].CachedContent,
-                oSection,
-                language
-            );
-            contentInfo.push(tci);
+         var item = {
+            Content: oCM.get(mirrorContent[i].ID, language),
+            CachedContent: mirrorContent[i],
+            index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
+        };
+        // if (item.Content.getContentTypeID() == CID) {
+        //     validContent.push(item);
+        // }
+            contentInfo.push(item);
         }
         var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
         var sectionPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(

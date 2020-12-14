@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.16
+ *      @version 3.17
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -436,6 +436,9 @@ function main(header, midder, footer) {
     var mode = getMode(isPreview);
     var aSCI = oSection.getContent(oChannel, language, mode);
     var mirrorContent = [];
+
+
+    // var item????
     for (var i = 0; i < aSCI.length; i++) {
         var item = aSCI[i].getContent();
         mirrorContent.push(item);
@@ -447,6 +450,9 @@ function main(header, midder, footer) {
     var oCM = ApplicationContextProvider.getBean(
         com.terminalfour.content.IContentManager
     );
+
+
+    // var item????
     var validContent = [];
     for (var i = 0; i < mirrorContent.length; i++) {
         var item = {

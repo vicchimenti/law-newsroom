@@ -7,7 +7,9 @@
  
   Based on contentOrganization.js for v9.
 
-  Runs on Law Detail page layout. 
+  Runs on Law pages with a footer. 
+
+  Media Library ID: 848732
  
 */
 

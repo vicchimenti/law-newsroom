@@ -381,12 +381,12 @@ function main(header, midder, footer) {
 
     // the number of items to display
     var LIMIT = content.get("Total number of items to display");
-    console.log("LIMIT: " + LIMIT);
+    log("LIMIT: " + LIMIT);
 
     // user has the option of beginning their display at any item rather than the first
     var nStart = content.get("Start Number") && content.get("Start Number") > 0 ?
             content.get("Start Number") : 1;
-    console.log("nStart: " + nStart);
+    log("nStart: " + nStart);
 
 
     // the logic to determine layouts and links that were available to the user
@@ -458,7 +458,7 @@ function main(header, midder, footer) {
             validContent.push(item);
         }
     }
-    console.log("validContent.length: " + validContent.length);
+    log("validContent.length: " + validContent.length);
 
     /**
      * Sort content
@@ -569,8 +569,8 @@ function main(header, midder, footer) {
         // prepare for first content item
         first = true;
         for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
-            console.log("i: " + i);
-            console.log("Limit: " + LIMIT);
+            log("i: " + i);
+            log("Limit: " + LIMIT);
             // if first print content item completely
             if (first) {
                 oLayout = LAYOUT;

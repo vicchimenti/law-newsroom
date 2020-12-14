@@ -574,7 +574,7 @@ function main(header, midder, footer) {
         var oCP = new ContentPublisher();
         // prepare for first content item
         first = true;
-        log("writing content - validContent.length: " + validContent.length);
+        // log("writing content - validContent.length: " + validContent.length);
 
         var parsedContent = [];
         for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
@@ -589,7 +589,14 @@ function main(header, midder, footer) {
                 oLayout = bSummFirst ? LAYOUT + "/Link" : LAYOUT;
             }
             log("oLayout: " + oLayout);
-            parsedContent[i] = validContent[i].Content;
+
+            var tci = new TargetContentInfo (
+                validContent[i].CachedContent,
+                oSection,
+                language
+            );
+            parsedContent.push(tci);
+            // parsedContent[i] = validContent[i].Content;
 
             // oCP.write(
             //     oT4SW,
@@ -601,6 +608,7 @@ function main(header, midder, footer) {
             //     isPreview
             // );
         }
+        log("parsedContent.length: " + parsedContent.length);
 
         for (var i = nStart - 1; i < parsedContent.length && !isLimitPassed(i, LIMIT); i++) {
             log("i: " + i);

@@ -587,6 +587,8 @@ function main(header, midder, footer) {
             } else {
                 oLayout = bSummFirst ? LAYOUT + "/Link" : LAYOUT;
             }
+            log("oLayout: " + oLayout);
+
             oCP.write(
                 oT4SW,
                 dbStatement,

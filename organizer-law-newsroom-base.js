@@ -576,7 +576,33 @@ function main(header, midder, footer) {
         first = true;
         log("writing content - validContent.length: " + validContent.length);
 
+        var parsedContent = [];
         for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
+            log("i: " + i);
+            log("Limit: " + LIMIT);
+            // if first print content item completely
+            if (first) {
+                oLayout = LAYOUT;
+                first = false;
+                // if not first print link version if requested but normally otherwise
+            } else {
+                oLayout = bSummFirst ? LAYOUT + "/Link" : LAYOUT;
+            }
+            log("oLayout: " + oLayout);
+            parsedContent[i] = validContent[i].Content;
+
+            // oCP.write(
+            //     oT4SW,
+            //     dbStatement,
+            //     publishCache,
+            //     oSection,
+            //     validContent[i].Content,
+            //     oLayout,
+            //     isPreview
+            // );
+        }
+
+        for (var i = nStart - 1; i < parsedContent.length && !isLimitPassed(i, LIMIT); i++) {
             log("i: " + i);
             log("Limit: " + LIMIT);
             // if first print content item completely
@@ -594,7 +620,7 @@ function main(header, midder, footer) {
                 dbStatement,
                 publishCache,
                 oSection,
-                validContent[i].Content,
+                parsedContent[i].Content,
                 oLayout,
                 isPreview
             );

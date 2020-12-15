@@ -10,6 +10,7 @@ div#MainZone div.container {
 div.heroOrganizer.standardContent {
     margin: 0;
     min-width: -webkit-fill-available;
+    padding-right: 25px;
 }
 
 div.newsroomHeroFeedItem.col-xs-12 {
@@ -92,4 +93,15 @@ div.newsroomArticle ul li.tag {
 img.articleImage {
     min-width: -webkit-fill-available;
     padding-top: 0;
+}
+
+
+/** Media Queries  **/
+
+/** Responsive Media Querys **/
+@media screen and (max-width: 767.999px) {
+div.heroOrganizer.standardContent {
+    margin-left: 20px;
+    padding-left: 20px;
+}
 }

@@ -4,6 +4,15 @@ div#MainZone div.container {
     display: contents;
 }
 
+div.heroOrganizer.standardContent {
+    margin: 0;
+    min-width: -webkit-fill-available;
+}
+
+div.newsroomHeroFeedItem.col-xs-12 {
+    padding-left: 0;
+}
+
 
 /** border for organizer left on full page **/
 

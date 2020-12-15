@@ -17,7 +17,7 @@
 - [] Add mobile layout major minor
 - [] Address numeric sorting layout
 - [] Track Category List Bug
-- [] Add Centerpiece layout
+- [x] Add Centerpiece layout
 - [] Add Centerpiece logic
 - [x] Add Events layout
 - [x] Add Announcements layout

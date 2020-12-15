@@ -4,12 +4,19 @@ div#MainZone div.container {
     display: contents;
 }
 
+
+/** Hero Feed  **/
+
 div.heroOrganizer.standardContent {
     margin: 0;
     min-width: -webkit-fill-available;
 }
 
 div.newsroomHeroFeedItem.col-xs-12 {
+    padding-left: 0;
+}
+
+div.heroOrganizerWrapper.col-xs-12 {
     padding-left: 0;
 }
 

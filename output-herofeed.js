@@ -56,7 +56,7 @@ try {
     var photoCredit = "";
     var authorByLine = "";
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var beginningHTML = '<div class="newsroomHeroFeedItem newsroomArticleWrapper newsroomBlurb card col-xs-12" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
@@ -150,11 +150,11 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
-    document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
-    document.write(listOfTags);
-    document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
+    // document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
+    // document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
+    // document.write(listOfTags);
+    // document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
     document.write('</div></div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);
 

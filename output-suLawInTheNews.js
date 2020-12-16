@@ -101,9 +101,9 @@ try {
      * 
      * */
     if (author == "") {
-        authorByLine = '<span class="byLine hidden">No Author Provided</span>';
+        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
-        authorByLine = '<span class="byLine">By ' + author + '</span>';
+        authorByLine = '<p class="byLine">By ' + author + '</p>';
     }
 
 
@@ -138,7 +138,7 @@ try {
     if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
         externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     } else {
-        externalLinkString = '<span class="externalLink">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank">' + inTheNewsLinkTitle + '</a></span>';
+        externalLinkString = '<p class="externalLink">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank">' + inTheNewsLinkTitle + '</a></p>';
     }
 
 

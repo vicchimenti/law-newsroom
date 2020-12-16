@@ -40,6 +40,13 @@ div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
     padding: 0 20px 0 20px;
 }
 
+/** whitespace between items **/
+
+div.newsroomMajorFeedItem {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
 /** horizontal rule between articles **/
 
 hr.articleBorderBottom {
@@ -104,7 +111,8 @@ p.credits {
 /** background colors for special categories **/
 
 div.lawInTheNews {
-    background-color: #FDB913;
+    background-color: #FFFFDF;
+    /* background-color: #FDB913; */
 }
 
 

@@ -87,6 +87,10 @@ div.newsroomArticle ul li.tag {
     margin-right: 5px;
 }
 
+p.credits {
+    margin-bottom: 0.5rem;
+}
+
 .standardContent ul li:before {
     content: none;
 }

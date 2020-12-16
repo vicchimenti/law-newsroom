@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 4.3
+ *     @version 4.4
  */
 
 
@@ -103,7 +103,7 @@ try {
     if (author == "") {
         authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
-        authorByLine = '<p class="byLine">By ' + author + '</p>';
+        authorByLine = '<p class="byLine credits">By ' + author + '</p>';
     }
 
 
@@ -121,7 +121,7 @@ try {
             if (frontPageImageCredit == "") {
                 photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
             } else {
-                photoCredit = '<p class="byLine">Image credit: ' + frontPageImageCredit + '</p>';
+                photoCredit = '<p class="byLine credits">Image credit: ' + frontPageImageCredit + '</p>';
             }
         }
     // if it's a minor article ignore any image provided in this feed
@@ -138,7 +138,7 @@ try {
     if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
         externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     } else {
-        externalLinkString = '<p class="externalLink">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank">' + inTheNewsLinkTitle + '</a></p>';
+        externalLinkString = '<p class="externalLink credits">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link">' + inTheNewsLinkTitle + '</a></p>';
     }
 
 
@@ -153,10 +153,12 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
+    document.write('<span class="newsroomArticleLead card-subtitle"><p>' + articleSummary + '</p></span>');
+    document.write('<div class="creditsWrapper card-text">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, externalLinkString));
+    document.write('</div>'); // close credits div
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
     document.write(listOfTags);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');

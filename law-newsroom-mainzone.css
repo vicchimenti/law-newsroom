@@ -95,6 +95,10 @@ img.articleImage {
     padding-top: 0;
 }
 
+p.credits {
+    margin-bottom: 0.5rem;
+}
+
 
 /** Media Queries  **/
 

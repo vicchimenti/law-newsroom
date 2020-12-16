@@ -76,7 +76,14 @@ try {
         for (let i = 0; i < arrayOfTags.length; i++) {
             listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
         }
+
+        // Print any tags that were selected
         listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
+        
+        // when tags exist check for Special Categories
+        if (fieldTags.includes("SU Law in the News") {
+            beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawInTheNews" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+        }
     }
 
 

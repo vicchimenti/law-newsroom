@@ -144,6 +144,17 @@ try {
     // }
 
 
+        /***
+     *  Parse for external link
+     * 
+     * */
+    if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
+        externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
+    } else {
+        externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
+    }
+
+
 
 
     /***

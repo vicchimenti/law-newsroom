@@ -92,7 +92,7 @@ div.newsroomArticle ul li.tag {
 
 img.articleImage {
     min-width: -webkit-fill-available;
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 /** layout for byline and credits **/

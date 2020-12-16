@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 4.1
+ *     @version 4.2
  */
 
 
@@ -138,7 +138,7 @@ try {
     if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
         externalLinkString = '<p class="externalLink hidden">No Proper Link Provided</p>';
     } else {
-        externalLinkString = '<p class="externalLink">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank">Original Article: ' + inTheNewsLinkTitle + '</a></p>';
+        externalLinkString = '<p class="externalLink">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank">' + inTheNewsLinkTitle + '</a></p>';
     }
 
 

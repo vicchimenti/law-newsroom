@@ -166,6 +166,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, externalLinkString));
     document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');

@@ -40,6 +40,7 @@ try {
     var isMajor = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Major or Minor' output='normal' display_field='value' />");
     var catPin = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category Pin' output='normal' display_field='value' />");
     var inTheNewsLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='SU Law in the News External Link' output='normal' modifiers='htmlentities,js-var' />");
+    var inTheNewsLinkTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='SU Law in the News Link Title' output='normal' display_field='value' />");    
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
 
 
@@ -58,6 +59,7 @@ try {
     var photoCredit = "";
     var authorByLine = "";
     var thumbNailString = "";
+    var externalLinkString = "";
     var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomArticleWrapper newsroomBlurb card col-xs-12" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
@@ -127,6 +129,17 @@ try {
         thumbNailString = '<span class="newsroomImageWrapper hidden"></span>';
     }
 
+
+
+    /***
+     *  Parse for external link
+     * 
+     * */
+    if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
+        externalLinkString = '<p class="externalLink hidden">No Proper Link Provided</p>';
+    } else {
+        externalLinkString = '<p class="externalLink">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank">Original Article: ' + inTheNewsLinkTitle + '</a></p>';
+    }
 
 
 

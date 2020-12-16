@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 4.4
+ *     @version 4.6
  */
 
 
@@ -138,7 +138,7 @@ try {
     if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
         externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     } else {
-        externalLinkString = '<p class="externalLink credits">Original Article: <a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link">' + inTheNewsLinkTitle + '</a></p>';
+        externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
     }
 
 
@@ -153,11 +153,11 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, externalLinkString));
     document.write('<span class="newsroomArticleLead card-subtitle"><p>' + articleSummary + '</p></span>');
-    document.write('<div class="creditsWrapper card-text">');
+    document.write('<div class="creditsWrapper card-text hidden">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, externalLinkString));
     document.write('</div>'); // close credits div
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
     document.write(listOfTags);

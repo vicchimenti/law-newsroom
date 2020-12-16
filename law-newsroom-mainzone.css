@@ -104,8 +104,8 @@ p.credits {
 
 /** Responsive Media Querys **/
 @media screen and (max-width: 767.999px) {
-div.heroOrganizer.standardContent {
-    margin-left: 20px;
-    padding-left: 20px;
-}
+    div.heroOrganizer.standardContent {
+        margin-left: 20px;
+        padding-left: 20px;
+    }
 }

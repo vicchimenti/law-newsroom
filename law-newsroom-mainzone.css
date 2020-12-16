@@ -95,8 +95,14 @@ img.articleImage {
     padding-top: 0;
 }
 
+/** layout for byline and credits **/
+
 p.credits {
     margin-bottom: 0.5rem;
+}
+
+div.lawInTheNews {
+    background-color: #f7f7f7;
 }
 
 

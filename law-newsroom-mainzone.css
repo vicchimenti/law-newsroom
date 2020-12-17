@@ -111,17 +111,23 @@ p.credits {
 /** background colors for special categories **/
 
 div.lawInTheNews {
-    background-color: #FFFFDF;
+    /* 40% Shade of SU Secondary Yellow */
+    background-color: #FFFF79;
+    /* SU Secondary Yellow */
     /* background-color: #FDB913; */
 }
 
 div.lawAnnouncements {
-    background-color: #EF4135;
+    /* 40% Shade of SU Secondary Orange/Red */
+    background-color: #FFA79B;
+    /* SU Secondary Orange/Red */
     /* background-color: #EF4135; */
 }
 
 div.lawEvents {
-    background-color: #088099;
+    /* 40% Shade of SU Secondary Blue */
+    background-color: #6EE6FF;
+    /* SU Secondary Blue */
     /* background-color: #088099; */
 }
 

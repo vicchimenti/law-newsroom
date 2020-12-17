@@ -72,6 +72,10 @@ try {
 
     /***
      *  parse the list of tags, add <li> tags
+     *  whenever there is tag we check for special topics
+     *      events, announcements and su law in the news
+     * 
+     *  when a special topic is present we parse for valid links
      * 
      * */
     if (fieldTags != "") {
@@ -83,25 +87,44 @@ try {
         // Print any tags that were selected
         listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
         
-        // when tags exist check for Special Categories
+        // when tags exist check for Special Categories - SU Law in the News
         if (fieldTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawInTheNews" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law in the News</h3>';
+
+            // parse law in news for external link to original story
+            if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
+                externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
+            } else {
+                externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
+            }
+
+        // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawAnnouncements" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</h3>';
+
+            // parse announcements for internal link to origin
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                // internalLinkString = internalLink;
                 internalLinkString = '<span class="internalLink credits"><em>' + internalLink + '</em></span>';
             }
+
+        // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawEvents" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Event</h3>';
+
+            // parse events for internal link to origin
+            if (internalLink == "") {
+                internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+            } else {
+                internalLinkString = '<span class="internalLink credits"><em>' + internalLink + '</em></span>';
+            }
         }
     }
 
@@ -160,11 +183,11 @@ try {
      *  Parse for external link
      * 
      * */
-    if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
-        externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-    } else {
-        externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
-    }
+    // if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
+    //     externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
+    // } else {
+    //     externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
+    // }
 
 
 

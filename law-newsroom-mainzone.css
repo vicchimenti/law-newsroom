@@ -131,6 +131,10 @@ div.lawEvents {
     /* background-color: #088099; */
 }
 
+h3.newsroomArticleSubTitle {
+    padding-top: 1rem;
+}
+
 
 /** Media Queries  **/
 

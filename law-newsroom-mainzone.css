@@ -111,22 +111,22 @@ p.credits {
 /** background colors for special categories **/
 
 div.lawInTheNews {
-    /* 40% Shade of SU Secondary Yellow */
-    background-color: #FFFF79;
+    /* 70% Shade of SU Secondary Yellow */
+    background-color: #FFFFC6;
     /* SU Secondary Yellow */
     /* background-color: #FDB913; */
 }
 
 div.lawAnnouncements {
-    /* 40% Shade of SU Secondary Orange/Red */
-    background-color: #FFA79B;
+    /* 70% Shade of SU Secondary Orange/Red */
+    background-color: #FFF4E8;
     /* SU Secondary Orange/Red */
     /* background-color: #EF4135; */
 }
 
 div.lawEvents {
-    /* 40% Shade of SU Secondary Blue */
-    background-color: #6EE6FF;
+    /* 70% Shade of SU Secondary Blue */
+    background-color: #BBFFFF;
     /* SU Secondary Blue */
     /* background-color: #088099; */
 }

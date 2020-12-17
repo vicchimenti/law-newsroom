@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.15
+ *     @version 2.16
  */
 
 
@@ -39,8 +39,8 @@ try {
     var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
     var inTheNewsLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link' output='normal' modifiers='htmlentities,js-var' />");
     var inTheNewsLinkTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link Title' output='normal' display_field='value' />");    
-    var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
     var internalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='normal' modifiers='nav_sections' />");
+    var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
 
 
     // var gridImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='8x10 Image' output='normal' formatter='path/*' />");
@@ -60,6 +60,8 @@ try {
     var listOfTags = "";
     var photoCredit = "";
     var authorByLine = "";
+    var externalLinkString = "";
+    var internalLinkString = "";
     var subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle hidden"></h3>';
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
@@ -90,6 +92,11 @@ try {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawAnnouncements" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</h3>';
+            if (internalLink == "") {
+                internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+            } else {
+                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></a></span>';
+            }
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawEvents" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';

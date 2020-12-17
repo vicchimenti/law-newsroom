@@ -179,6 +179,7 @@ try {
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, externalLinkString));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, internalLinkString));
     document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
     document.write('<div class="creditsWrapper card-text hidden">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));

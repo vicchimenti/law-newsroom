@@ -115,6 +115,16 @@ div.lawInTheNews {
     /* background-color: #FDB913; */
 }
 
+div.lawAnnouncements {
+    background-color: #EF4135;
+    /* background-color: #EF4135; */
+}
+
+div.lawEvents {
+    background-color: #088099;
+    /* background-color: #088099; */
+}
+
 
 /** Media Queries  **/
 

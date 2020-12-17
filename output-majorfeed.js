@@ -95,7 +95,8 @@ try {
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"></a></span>';
+                // internalLinkString = internalLink;
+                internalLinkString = '<span class="internalLink credits"><em>' + internalLink + '</em></span>';
             }
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawEvents" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';

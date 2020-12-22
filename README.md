@@ -22,4 +22,4 @@
 - [x] Add Events layout
 - [x] Add Announcements layout
 - [x] SU Law in the News layout
-- [x] Remove contentItem class from organizers
+- [] Remove contentItem class from organizers

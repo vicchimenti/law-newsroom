@@ -33,6 +33,7 @@ div.newsroomOrganizerWrapper.col-md-8 {
     margin: 20px 0 20px 0;
 }
 
+
 /** left right padding and margin to control image size **/
 
 div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
@@ -40,12 +41,14 @@ div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
     padding: 0 20px 0 20px;
 }
 
+
 /** whitespace between items **/
 
 div.newsroomMajorFeedItem {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
 }
+
 
 /** horizontal rule between articles **/
 
@@ -86,7 +89,8 @@ div.newsroomArticle ul li.tag {
     padding-right: 10px;
     padding-bottom: 1px;
     padding-left: 10px;
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
+    ;
     margin-right: 5px;
 }
 
@@ -102,11 +106,13 @@ img.articleImage {
     padding-top: 2rem;
 }
 
+
 /** layout for byline and credits **/
 
 p.credits {
     margin-bottom: 0.5rem;
 }
+
 
 /** background colors for special categories **/
 
@@ -118,8 +124,10 @@ div.lawInTheNews {
 }
 
 div.lawAnnouncements {
+    /* 95% Shade of SU Secondary Orange/Red */
+    background-color: #fde9e7;
     /* 70% Shade of SU Secondary Orange/Red */
-    background-color: #FFF4E8;
+    /* background-color: #FFF4E8; */
     /* SU Secondary Orange/Red */
     /* background-color: #EF4135; */
 }
@@ -138,7 +146,9 @@ h3.newsroomArticleSubTitle {
 
 /** Media Queries  **/
 
+
 /** Responsive Media Querys **/
+
 @media screen and (max-width: 767.999px) {
     div.heroOrganizer.standardContent {
         margin-left: 20px;

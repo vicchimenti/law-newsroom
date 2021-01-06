@@ -133,8 +133,10 @@ div.lawAnnouncements {
 }
 
 div.lawEvents {
+    /* 95% Shade of SU Secondary Blue */
+    background-color: #e7fafe;
     /* 70% Shade of SU Secondary Blue */
-    background-color: #BBFFFF;
+    /* background-color: #BBFFFF; */
     /* SU Secondary Blue */
     /* background-color: #088099; */
 }

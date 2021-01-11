@@ -1,6 +1,140 @@
-#header-2 {
-    margin-bottom: -8rem;
-    overflow: visible;
-    position: relative;
-    z-index: 2;
+/* *********************************************************
+   top nav bar
+   Last revised 06/6/19 by ab
+************************************************************ */
+.navbar {
+    padding: 0;
+}
+#globalNav {
+  background: #000;
+  padding: 0;
+}
+#globalNav .navbar-brand {
+  padding: .5rem 1.5rem;
+}
+#globalNav .navbar-brand svg {
+    height: 16px;
+}
+#globalNav .navbar-brand svg .logo-seattle {
+    fill: #fff;
+}
+#globalNav .navbar-brand svg .logo-u {
+    fill: #aa0000;
+}
+#newsroomNav {
+ background: #000;
+ padding: 0 1rem 0 0;
+}
+@media only screen and (min-width: 768px) {
+ #newsroomNav {
+   background:rgba(0,0,0,.7);
+ }
+}
+#newsroomNav .navbar-brand {
+   padding: 1rem 1rem 1rem 1.5rem;
+}
+@media screen and (min-width:768px) {
+  #newsroomNav .navbar-brand {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+}
+#newsroomNav .navbar-brand svg {
+  height: 30px;
+}
+
+#newsroomNav .navbar-brand svg .logo-thenewsroom,
+#newsroomNav .navbar-brand svg path,
+#newsroomNav .navbar-brand svg rect {
+  fill:#fff;
+}
+#newsroomNav .navbar-toggler {
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Oswald",sans-serif;
+  font-size: 1.6rem;
+    float: right;
+    padding-top: 1.5rem;
+}
+.navbar-brand {
+  padding: 0;
+}
+.navbar-brand svg { 
+  height:22px;
+}
+#navbarSupportedContent {
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  #navbarSupportedContent {
+    padding-top: 0px;
+  }
+  #navbarSupportedContent .navbar-nav {
+    margin-top: 0;
+  }
+}
+
+.dropdown-toggle {
+    font-size: 1.8rem;
+    font-family: Oswald,sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1;
+    padding: 2rem 3rem;
+    margin: 0 ;
+}
+.dropdown-toggle:focus, .dropdown-toggle:hover {
+  background: #000;
+  color:#088099;
+}
+.dropdown-toggle[aria-expanded="true"] {
+    background: #000;
+    color: #088099;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+  padding:2rem 3rem;
+}
+.dropdown-item {
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 2rem 0 .25rem 0;
+    line-height: 1.2;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    float: left;
+    width: auto;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom: 2px solid #088099;
+}
+.dropdown-toggle::after {
+  content: none;
+}
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 1rem 3rem 3rem 3rem;
+  background:#000;
+  left:0;
+}
+.navbar-nav .dropdown-menu {
+  float:left;
+}
+.navbar>.container, .navbar>.container-fluid {
+   display:block;
+}
+.header-nav {
+  position: relative;
+}
+.header-nav:before, .header-nav:after {
+  content: '';
+  display: table;
+}
+.header-nav:after {
+  clear: both;
 }

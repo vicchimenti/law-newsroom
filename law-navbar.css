@@ -138,3 +138,16 @@
 .header-nav:after {
   clear: both;
 }
+
+
+/* law custom */
+header#header-2 {
+  border-radius: unset;
+  padding: 0;
+  width: -webkit-fill-available;
+}
+
+.newsrooNav#navbar {
+  border-radius: 0%;
+}
+

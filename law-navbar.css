@@ -156,3 +156,7 @@ nav#newsroomNav.navbar {
     display: none
   }
 }
+
+#BannerZoneWrapper {
+  margin-top: -0.25rem;
+}

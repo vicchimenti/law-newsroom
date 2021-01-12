@@ -147,13 +147,13 @@ header#header-2 {
   width: -webkit-fill-available;
 }
 
+
 nav#newsroomNav.navbar {
   border-radius: 0;
 }
 
 @media screen and (max-width: 767.999px) {
-  .navbar-toggler {
+  #newsroomNav .navbar-toggler {
     display: none
   }
 }
-

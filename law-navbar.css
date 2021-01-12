@@ -142,7 +142,6 @@
 
 /* law custom */
 header#header-2 {
-  border-radius: unset;
   padding: 0;
   width: -webkit-fill-available;
 }

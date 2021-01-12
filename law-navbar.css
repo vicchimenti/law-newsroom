@@ -148,6 +148,9 @@ header#header-2 {
 }
 
 .newsrooNav#navbar {
-  border-radius: 0%;
+  border-radius: 0;
 }
 
+.navbar-toggler {
+  display: none
+}

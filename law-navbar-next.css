@@ -1,3 +1,7 @@
 body {
     padding-top: 0;
   }
+
+  .header.container {
+    max-width: none;
+  }

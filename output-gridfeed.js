@@ -151,10 +151,11 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
-    document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
+    document.write('</div>'); // close row
+    document.write('<div class="card-footer"><small class="text-muted newsroomArticlePublishedDate">' + publishedDate + '</small></div>');
     document.write(listOfTags);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
-    document.write('</div></div>'); // close newsroomArticleBlurb and row divs
+    document.write('</div>'); // close newsroomArticleBlurb
     document.write(endingHTML);
 
 

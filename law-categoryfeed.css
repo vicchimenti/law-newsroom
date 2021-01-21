@@ -26,6 +26,10 @@ div.gridOrganizerWrapper {
     opacity: 90%;
 }
 
+div.gridFeedItem .articleImage {
+    padding: 0%;
+}
+
 /** border for organizer left on full page **/
 
 div.newsroomOrganizerWrapper.col-md-8 {

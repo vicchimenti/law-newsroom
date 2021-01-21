@@ -138,8 +138,10 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
+    document.write('<div class="card-footer">');
     document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
     document.write(listOfTags);
+    document.write('</div>');
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
     document.write('</div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);

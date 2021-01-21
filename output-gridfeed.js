@@ -91,11 +91,12 @@ try {
 
 
     /***
-     *  verify subtitle 
+     *  verify subtitle
+     *  hide summary in doc if no subtitle
      * 
      * */
     if (articleSubtitle == "") {
-        cardText = '<span class="newsroomArticleLead card-text summary"><p>' + articleSummary + '</p></span>';
+        cardText = '<span class="newsroomArticleLead card-text summary hidden"><p>' + articleSummary + '</p></span>';
     } else {
         cardText = '<span class="newsroomArticleLead card-text subtitle"><p>' + articleSubtitle + '</p></span>';
     }
@@ -109,7 +110,6 @@ try {
         authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
         authorByLine = '<p class="byLine hidden">' + author + '</p>';
-        // authorByLine = '<p class="byLine">By ' + author + '</p>';
     }
 
 

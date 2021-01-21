@@ -71,8 +71,9 @@ div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
 
 hr.articleBorderBottom {
     color: #f7f7f7;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px 0 20px 0;
+    /* margin-left: 20px;
+    margin-right: 20px; */
 }
 
 
@@ -130,6 +131,10 @@ div.newsroomCategoryFeedItem h3 {
 
 div.newsroomCategoryFeedItem p {
     line-height: inherit;
+}
+
+div.newsroomCategoryFeedItem ul {
+    margin-bottom: 0;
 }
 
 

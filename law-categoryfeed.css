@@ -135,5 +135,9 @@ img.articleImage {
         margin: 15px;
         max-width: 360px;
     }
+
+    div.gridFeedItem {
+        max-width: 100%;
+     }
 }
 

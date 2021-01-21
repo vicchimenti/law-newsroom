@@ -5,3 +5,7 @@ body {
   .header.container {
     max-width: none;
   }
+
+  div.newsroomOrganizer.card-group {
+    flex-direction: column;
+  }

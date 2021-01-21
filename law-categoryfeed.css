@@ -17,6 +17,7 @@ div#MainZone div.container {
 div.gridFeedItem {
     margin: 15px;
     max-width: 288px;
+    padding: 0%;
 }
 
 div.gridOrganizerWrapper {

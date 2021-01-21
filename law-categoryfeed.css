@@ -9,15 +9,12 @@ div#MainZone div.container {
 
 .gridOrganizer.standardContent {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex: 0 0 100%;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
 div.gridFeedItem {
-    display: flex;
-    flex: 0 0 100%;
-    flex-flow: row wrap;
-    align-self: flex-start;
     margin: 15px;
     max-width: 360px;
 }

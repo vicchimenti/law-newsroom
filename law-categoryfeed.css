@@ -30,7 +30,9 @@ div.gridFeedItem .articleImage {
     padding: 0%;
 }
 
-div.gridFeedItem.newsroomArticleBlurb.container div.row {
+div.gridFeedItem div.newsroomArticleBlurb.container div.row {
+    margin-left: 0;
+    margin-right: 1px;
     padding-left: 0;
     padding-right: 0;
 }

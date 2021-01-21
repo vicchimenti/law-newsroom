@@ -30,6 +30,11 @@ div.gridFeedItem .articleImage {
     padding: 0%;
 }
 
+div.gridFeedItem.newsroomArticleBlurb.container div.row {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /** border for organizer left on full page **/
 
 div.newsroomOrganizerWrapper.col-md-8 {

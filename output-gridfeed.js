@@ -124,7 +124,6 @@ try {
     }
 
 
-
     /***
      *  verify Main image and photo credits
      * 

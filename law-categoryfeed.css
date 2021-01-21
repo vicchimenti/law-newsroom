@@ -129,7 +129,7 @@ img.articleImage {
 
 /* *****  category feed customizations ***** */
 
-span.newsroomImageWrapper .standardContent img {
+span.newsroomImageWrapper img.articleImage {
     padding: 0;
 }
 

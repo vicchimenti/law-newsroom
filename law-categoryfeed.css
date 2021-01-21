@@ -124,6 +124,10 @@ div.newsroomCategoryFeedItem div.newsroomArticleBlurb.card-body {
     padding: 0%;
 }
 
+div.newsroomCategoryFeedItem h3 {
+    margin-bottom: 10px;
+}
+
 div.newsroomCategoryFeedItem p {
     line-height: inherit;
 }

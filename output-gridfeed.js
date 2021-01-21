@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 5.3
+ *     @version 5.4
  */
 
 
@@ -152,10 +152,10 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('</div>'); // close row
-    document.write('<div class="card-footer"><small class="text-muted newsroomArticlePublishedDate">' + publishedDate + '</small></div>');
+    document.write('<div class="card-footer"><small class="text-muted newsroomArticlePublishedDate">' + publishedDate + '</small>');
     document.write(listOfTags);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
-    document.write('</div>'); // close newsroomArticleBlurb
+    document.write('</div></div>'); // close newsroomArticleBlurb and card-footer
     document.write(endingHTML);
 
 

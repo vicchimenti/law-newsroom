@@ -6,14 +6,3 @@ body {
 .header.container {
   max-width: none;
 }
-
-
-
-/* *****  tune flex for category layout on topics pages  ***** */
-div.newsroomOrganizer.card-group {
-  flex-direction: column;
-}
-
-div.newsroomOrganizer.card-group .card {
-  border: none;
-}

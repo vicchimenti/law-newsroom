@@ -51,21 +51,21 @@ div.gridFeedItem p {
 
 /** border for organizer left on full page **/
 
-div.newsroomOrganizerWrapper.col-md-8 {
+/* div.newsroomOrganizerWrapper.col-md-8 {
     border: #f7f7f7;
     border-top: 0;
     border-right: 0;
     border-bottom: 0;
     border-style: solid;
     margin: 20px 0 20px 0;
-}
+} */
 
 /** left right padding and margin to control image size **/
 
-div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
+/* div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
     margin: 0 20px 0 20px;
     padding: 0 20px 0 20px;
-}
+} */
 
 /** horizontal rule between articles **/
 
@@ -73,6 +73,16 @@ hr.articleBorderBottom {
     color: #1B1B1B;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+
+/* *****  tune flex for category layout on topics pages  ***** */
+div.newsroomOrganizer.card-group {
+    flex-direction: column;
+  }
+  
+div.newsroomOrganizer.card-group .card {
+border: none;
 }
 
 
@@ -150,4 +160,3 @@ div.newsroomCategoryFeedItem ul {
         max-width: 100%;
      }
 }
-

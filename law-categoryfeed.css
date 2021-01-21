@@ -133,6 +133,10 @@ span.newsroomImageWrapper img.articleImage {
     padding: 0;
 }
 
+div.newsroomCategoryFeedItem div.newsroomArticleBlurb.card-body {
+    padding: 0%;
+}
+
 
 
 

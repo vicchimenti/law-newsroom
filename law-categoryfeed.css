@@ -138,11 +138,6 @@ div.newsroomCategoryFeedItem p {
         padding: 0 15px 0 15px;
     }
 
-    div.newsroomCategoryFeedItem {
-        margin: 15px;
-        max-width: 360px;
-    }
-
     div.gridFeedItem {
         max-width: 100%;
      }

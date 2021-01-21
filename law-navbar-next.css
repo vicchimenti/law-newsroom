@@ -3,6 +3,7 @@ body {
   padding-top: 0;
 }
 
-.header.container {
+header.header {
+  background-color: #ffffff;
   max-width: none;
 }

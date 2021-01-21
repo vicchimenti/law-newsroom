@@ -131,11 +131,9 @@ try {
      * */
     if (frontPageImage == "") {
         thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
-        // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
 
     } else {
         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-        // photoCredit = '<p class="byLine hidden">' + frontPageImageCredit + '</p>';
     }
 
 

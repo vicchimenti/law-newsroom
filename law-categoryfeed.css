@@ -5,8 +5,9 @@ div#MainZone div.container {
 }
 
 
-/** enforces a masonry grid **/
+/* *****  Grid Organizer customizations  **** */
 
+/** enforces a masonry grid **/
 .gridOrganizer.standardContent {
     display: flex;
     flex: 0 0 100%;
@@ -45,6 +46,8 @@ div.gridFeedItem h3 {
 div.gridFeedItem p {
     line-height: inherit;
 }
+
+
 
 /** border for organizer left on full page **/
 

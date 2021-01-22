@@ -12,6 +12,11 @@ nav#newscenterNav .container {
   width: -webkit-fill-available;
 }
 
+nav#newscenterNav .row {
+  max-width: none;
+  width: -webkit-fill-available;
+}
+
 /* *****  nav borders and background  ***** */
 nav#newscenterNav {
   background-color: #ffffff;

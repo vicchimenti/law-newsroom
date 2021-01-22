@@ -9,8 +9,8 @@ header#newscenterHeader {
 
 nav#newscenterNav {
   background-color: #ffffff;
-  border-top: 0.5rem solid #AA0000;
-  border-bottom:  0.5rem solid #AA0000;
+  border-top: 0.1rem solid #AA0000;
+  border-bottom:  0.1rem solid #AA0000;
   border-radius: 0;
   border-right: none;
   border-left: none;

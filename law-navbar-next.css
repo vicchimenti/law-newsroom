@@ -9,6 +9,9 @@ header#newscenterHeader {
 
 header#newscenterHeader.container {
   max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
 }
 
 nav#newscenterNav .container {

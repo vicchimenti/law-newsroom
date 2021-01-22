@@ -16,6 +16,6 @@ nav#newscenterNav {
   border-left: none;
 }
 
-/* nav.border-bottom.border-top {
-  color: #AA0000;
-} */
+nav#newscenterNav .container {
+  max-width: none;
+}

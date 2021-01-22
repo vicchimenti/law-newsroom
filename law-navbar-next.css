@@ -18,4 +18,5 @@ nav#newscenterNav {
 
 nav#newscenterNav .container {
   max-width: none;
+  width: -webkit-fill-available;
 }

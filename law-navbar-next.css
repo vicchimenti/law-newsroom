@@ -21,3 +21,14 @@ nav#newscenterNav {
   border-right: none;
   border-left: none;
 }
+
+
+
+/* *****  nav styles  ***** */
+a.navbar-brand {
+  color: #AA0000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding: 1rem;
+  margin: 1rem;
+}

@@ -1,12 +1,18 @@
-/* *****  full width nav banner  ***** */
 body {
   padding-top: 0;
 }
 
+/* *****  full width nav banner  ***** */
 header#newscenterHeader {
   max-width: none;
 }
 
+nav#newscenterNav .container {
+  max-width: none;
+  width: -webkit-fill-available;
+}
+
+/* *****  nav borders and background  ***** */
 nav#newscenterNav {
   background-color: #ffffff;
   border-top: 0.1rem solid #AA0000;
@@ -14,9 +20,4 @@ nav#newscenterNav {
   border-radius: 0;
   border-right: none;
   border-left: none;
-}
-
-nav#newscenterNav .container {
-  max-width: none;
-  width: -webkit-fill-available;
 }

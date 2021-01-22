@@ -7,6 +7,10 @@ header#newscenterHeader {
   max-width: none;
 }
 
+header#newscenterHeader.container {
+  max-width: none;
+}
+
 nav#newscenterNav .container {
   max-width: none;
   width: -webkit-fill-available;

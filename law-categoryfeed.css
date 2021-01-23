@@ -16,21 +16,22 @@ div.gridOrganizerWrapper {
     opacity: 90%;
 }
 
-.gridOrganizer.standardContent {
+div.gridOrganizer.standardContent {
     display: flex;
     flex: 0 0 100%;
     flex-flow: row wrap;
     justify-content: center;
 }
 
+
+div.gridOrganizer div.titleWrapper {
+    width: 100%;
+}
+
 div.gridFeedItem {
     margin: 15px;
     max-width: 260px;
     padding: 0%;
-}
-
-div.gridOrganizer div.titleWrapper {
-    width: 100%;
 }
 
 /* div.gridFeedItem.card {
@@ -166,8 +167,12 @@ div.newsroomCategoryFeedItem ul {
         font-size: 2rem;
         margin-left: 10px;
         margin-right: 10px;
-        padding-left: 10px;
+        padding-left: 15px;
         padding-right: 10px;
+    }
+
+    div.gridOrganizerWrapper {
+        padding-left: 15px;
     }
 
     div.gridFeedItem {
@@ -189,7 +194,7 @@ div.newsroomCategoryFeedItem ul {
     div.newsroomCategoryFeedItem {
         margin-left: 10px;
         margin-right: 10px;
-        padding-left: 10px;
+        padding-left: 15px;
         padding-right: 15px;
     }
 

@@ -166,13 +166,17 @@ div.newsroomCategoryFeedItem ul {
     }
 
     div.gridFeedItem {
+        font-size: 1rem;
+        font-weight: 400;
         max-width: 100%;
      }
 
      div.newsroomCategoryFeedItem.card  {
-         padding-left: 10px;
-         padding-right: 10px;
-         margin-left: 10px;
-         margin-right: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
      }
 }

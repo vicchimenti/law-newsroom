@@ -13,6 +13,7 @@ header#newscenterHeader {
 
 header#newscenterHeader.container {
   max-width: none;
+  padding-bottom: 0.25rem;
   padding-left: 0;
   padding-right: 0;
   width: auto;

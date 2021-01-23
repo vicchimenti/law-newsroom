@@ -5,6 +5,10 @@ div#MainZone div.container {
 }
 
 
+
+
+
+
 /* *****  Grid Organizer customizations  **** */
 
 div.gridOrganizerWrapper {
@@ -59,26 +63,6 @@ div.gridFeedItem p {
     line-height: inherit;
 }
 
-
-
-/** border for organizer left on full page **/
-
-/* div.newsroomOrganizerWrapper.col-md-8 {
-    border: #f7f7f7;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-style: solid;
-    margin: 20px 0 20px 0;
-} */
-
-/** left right padding and margin to control image size **/
-
-/* div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
-    margin: 0 20px 0 20px;
-    padding: 0 20px 0 20px;
-} */
-
 /** horizontal rule between articles **/
 
 hr.articleBorderBottom {
@@ -88,14 +72,7 @@ hr.articleBorderBottom {
 }
 
 
-/* *****  tune flex for category layout on topics pages  ***** */
-div.newsroomOrganizer.card-group {
-    flex-direction: column;
-  }
-  
-div.newsroomOrganizer.card-group .card {
-    border: none;
-}
+
 
 
 
@@ -128,6 +105,9 @@ p.credits {
 }
 
 
+
+
+
 /** Address major feed image style **/
 
 img.articleImage {
@@ -136,7 +116,18 @@ img.articleImage {
 }
 
 
+
+
+
 /* *****  category feed customizations ***** */
+
+div.newsroomOrganizer.card-group {
+    flex-direction: column;
+}
+  
+div.newsroomOrganizer.card-group .card {
+    border: none;
+}
 
 span.newsroomImageWrapper img.articleImage {
     padding: 0;

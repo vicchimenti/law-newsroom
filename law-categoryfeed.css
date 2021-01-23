@@ -161,7 +161,9 @@ div.newsroomCategoryFeedItem ul {
 
 /** Responsive Media Querys **/
 @media screen and (max-width: 767.999px) {
+    
     h2.organizerTitle {
+        font-size: 2rem;
         padding: 0 15px 0 15px;
     }
 

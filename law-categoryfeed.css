@@ -1,5 +1,4 @@
-/** Wraps Overflow within container **/
-
+/* ****** Wraps Overflow within container ****** */
 div#MainZone div.container {
     display: contents;
 }
@@ -145,9 +144,9 @@ div.newsroomCategoryFeedItem h3 {
 }
 
 div.newsroomCategoryFeedItem p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 450;
-    line-height: inherit;
+    line-height: 1.75rem;
 }
 
 div.newsroomCategoryFeedItem ul {

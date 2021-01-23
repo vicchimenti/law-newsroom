@@ -150,6 +150,8 @@ div.newsroomCategoryFeedItem p {
 }
 
 div.newsroomCategoryFeedItem ul {
+    font-size: 1.25rem;
+    font-weight: 450;
     margin-bottom: 0;
 }
 

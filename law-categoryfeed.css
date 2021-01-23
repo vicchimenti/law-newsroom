@@ -168,4 +168,9 @@ div.newsroomCategoryFeedItem ul {
     div.gridFeedItem {
         max-width: 100%;
      }
+
+     div.newsroomOrganizerWrapper {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
 }

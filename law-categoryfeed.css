@@ -94,7 +94,7 @@ div.newsroomOrganizer.card-group {
   }
   
 div.newsroomOrganizer.card-group .card {
-border: none;
+    border: none;
 }
 
 
@@ -147,10 +147,15 @@ div.newsroomCategoryFeedItem div.newsroomArticleBlurb.card-body {
 }
 
 div.newsroomCategoryFeedItem h3 {
+    font-size: 1.75rem;
+    font-weight: 450;
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 div.newsroomCategoryFeedItem p {
+    font-size: 1.5rem;
+    font-weight: 450;
     line-height: inherit;
 }
 

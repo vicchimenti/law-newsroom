@@ -2,6 +2,10 @@ body {
   padding-top: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 /* *****  full width nav banner  ***** */
 header#newscenterHeader {
   max-width: none;

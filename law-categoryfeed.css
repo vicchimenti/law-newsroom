@@ -7,7 +7,12 @@ div#MainZone div.container {
 
 /* *****  Grid Organizer customizations  **** */
 
-/** enforces a masonry grid **/
+div.gridOrganizerWrapper {
+    /* background-color: #f7f7f7; */
+    background-color: #e6efff;
+    opacity: 90%;
+}
+
 .gridOrganizer.standardContent {
     display: flex;
     flex: 0 0 100%;
@@ -21,10 +26,12 @@ div.gridFeedItem {
     padding: 0%;
 }
 
-div.gridOrganizerWrapper {
-    background-color: #f7f7f7;
-    /* background-color: #e6efff; */
-    opacity: 90%;
+div.gridOrganizer div.titleWrapper {
+    width: 100%;
+}
+
+div.gridFeedItem.card {
+    flex: 1;
 }
 
 div.gridFeedItem .articleImage {

@@ -171,6 +171,10 @@ div.newsroomCategoryFeedItem ul {
         padding-left: 15px;
     }
 
+    div.gridOrganizerWrapper h2.organizerTitle{
+        padding-left: 10px;
+    }
+
     div.gridFeedItem {
         font-size: 1rem;
         font-weight: 400;

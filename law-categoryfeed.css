@@ -33,9 +33,9 @@ div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
 
-div.gridFeedItem.card {
+/* div.gridFeedItem.card {
     flex: 1;
-}
+} */
 
 div.gridFeedItem .articleImage {
     padding: 0%;

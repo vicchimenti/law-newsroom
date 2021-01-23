@@ -169,8 +169,10 @@ div.newsroomCategoryFeedItem ul {
         max-width: 100%;
      }
 
-     div.newsroomOrganizerWrapper {
+     div.newsroomCategoryFeedItem.card  {
          padding-left: 10px;
          padding-right: 10px;
+         margin-left: 10px;
+         margin-right: 10px;
      }
 }

@@ -14,6 +14,7 @@ div.gridOrganizerWrapper {
     /* background-color: #f7f7f7; */
     background-color: #e6efff;
     opacity: 90%;
+    padding-bottom: 50px;
 }
 
 div.gridOrganizer.standardContent {
@@ -167,13 +168,7 @@ div.newsroomCategoryFeedItem ul {
 
 
 /* ***** Mobile Up ***** */
-@media screen and (min-width: 767.999px) {
-
-    div.gridOrganizerWrapper {
-        padding-bottom: 50px;
-    }
-
-}
+@media screen and (min-width: 767.999px) {}
 
 
 /* ***** Desktop down ***** */
@@ -188,6 +183,7 @@ div.newsroomCategoryFeedItem ul {
     }
 
     div.gridOrganizerWrapper {
+        padding-bottom: 15px;
         padding-left: 15px;
     }
 

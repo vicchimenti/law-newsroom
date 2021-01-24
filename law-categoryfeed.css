@@ -14,6 +14,8 @@ div.gridOrganizerWrapper {
     /* background-color: #f7f7f7; */
     background-color: #e6efff;
     opacity: 90%;
+    /* If Bootstrap 5 only */
+    /* padding-bottom: 50px; */
 }
 
 div.gridOrganizer.standardContent {
@@ -31,8 +33,7 @@ div.gridOrganizer div.titleWrapper {
 div.gridFeedItem {
     margin: 15px;
     max-width: 260px;
-    /* If Bootstrap 5 only */
-    /* padding-bottom: 50px; */
+    padding: 0;
 }
 
 div.gridFeedItem .articleImage {

@@ -14,7 +14,6 @@ div.gridOrganizerWrapper {
     /* background-color: #f7f7f7; */
     background-color: #e6efff;
     opacity: 90%;
-    padding-bottom: 50px;
 }
 
 div.gridOrganizer.standardContent {
@@ -32,7 +31,8 @@ div.gridOrganizer div.titleWrapper {
 div.gridFeedItem {
     margin: 15px;
     max-width: 260px;
-    padding: 0%;
+    /* If Bootstrap 5 only */
+    /* padding-bottom: 50px; */
 }
 
 div.gridFeedItem .articleImage {
@@ -168,10 +168,30 @@ div.newsroomCategoryFeedItem ul {
 
 
 /* ***** Mobile Up ***** */
-@media screen and (min-width: 767.999px) {}
+@media screen and (min-width: 576px) {
+    /* If Bootstrap 4 only */
+    div.gridFeedItem {
+        flex: auto;
+    }
+}
+
+@media screen and (min-width: 767.999px) {
+    /* If Bootstrap 4 only */
+    div.gridOrganizerWrapper {
+        padding: 0 50px 50px 50px;
+    }
+}
 
 
 /* ***** Desktop down ***** */
+
+@media screen and (max-width: 1200px) {
+    /* If Bootstrap 4 only */
+    .card-deck div.gridFeedItem.card {
+        flex: auto;
+    }
+}
+
 @media screen and (max-width: 767.999px) {
 
     h2.organizerTitle {

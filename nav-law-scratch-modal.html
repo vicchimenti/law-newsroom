@@ -1,94 +1,101 @@
-<div class="container">
-    <div class="page-header">
-    <h1>Navbar with Full Screen Modal Search Form</h1>
-  </div><!--  /page-header  -->
-  
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <a class="navbar-brand" href="#">Brand</a>
-      </div>
+<header id="newscenterHeader" class="header container sticky-top">
+  <nav id="newscenterNav" class="navbar navbar-expand-md header-nav" role="navigation" aria-label="Site Menu">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <a class="navbar-brand" href="#" title="Link to The News Center homepage" aria-label="Link to The News Center homepage">
+                      <span class="newscenter-brand">News Center</span>
+                  </a>
+                  <!-- end newsroom logo -->
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-          <li>
-
-
-            <!-- Button trigger modal -->
-            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default navbar-btn">
-         <span class="glyphicon glyphicon-search" aria-hidden="true" ></span>
-</button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-                  </div>
-                  <div class="modal-body">
-
-                    <h1>Search</h1>
-                    <form class="navbar-form " role="search">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                      </div>
-                      <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-
-
-                  </div>
-
-
-                </div>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
               </div>
-            </div>
+              <!-- end .col-md-3 -->
 
 
-          </li>
-        </ul>
+              <div class="col-md-8">
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+
+
+                      <ul class="navbar-nav mr-auto menu">
+                          <li class="nav-item">
+                              <a class="nav-link" href="#navbarDropdownCategoriesModal" id="navbarDropdownCategories" role="button" data-toggle="modal" data-target="#navbarDropdownCategoriesModal">Categories</a>
+                              <div class="modal fade" id="navbarDropdownCategoriesModal" tabindex="-1" role="dialog" aria-labelledby="navbarDropdownCategoriesModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5 class="modal-title" id="navbarDropdownCategoriesModalLabel">Categories</h5>
+                                              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="container-fluid">
+                                                  <p>Menu goes here.</p>
+                                              </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                              <button type="button" class="btn btn-primary">Save changes</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
+                              <a class="dropdown-item" href="/newscenter/academic/faculty">Faculty</a>
+                              <a class="dropdown-item" href="/newscenter/academic/law-clinic">Law Clinic</a>
+                              <a class="dropdown-item" href="/newscenter/academic/legal-writing">Legal Writing</a>
+                              <a class="dropdown-item" href="/newscenter/academic/student">Student</a>
+                          </div> -->
+
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCommons" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Centers and Institutes</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownCommons">
+                                  <a class="dropdown-item" href="/newscenter/centers-and-institutes/berle-center">Berle Center</a>
+                                  <a class="dropdown-item" href="/newscenter/centers-and-institutes/center-for-indian-law-policy">Center for Indian Law Policy</a>
+                                  <a class="dropdown-item" href="/newscenter/centers-and-institutes/civility-center-for-law">Civility Center for Law</a>
+                                  <a class="dropdown-item" href="/newscenter/centers-and-institutes/judicial-institute">Judicial Institute</a>
+                                  <a class="dropdown-item" href="/newscenter/centers-and-institutes/access-to-justice-institute">Access to Justice Institute</a>
+                                  <a class="dropdown-item" href="/newscenter/centers-and-institutes/korematsu-center">Korematsu Center</a>
+                              </div>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Campus</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+                                  <a class="dropdown-item" href="/newscenter/campus/admission">Admission</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/alumni">Alumni</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/announcements">Announcements</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/careers">Careers</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/diversity">Diversity</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/inside-seattleu">Events</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/su-law-in-the-news">SU Law in the News</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/media-outreach">Media Outreach</a>
+                                  <a class="dropdown-item" href="/newscenter/campus/archives">Archives</a>
+                              </div>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMagazine" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lawyer Magazine</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMagazine">
+                                  <a class="dropdown-item" href="/newscenter/lawyer-magazine/current-issue">Current Issue</a>
+                                  <a class="dropdown-item" href="/newscenter/lawyer-magazine/recent-issues">Recent Issues</a>
+                                  <a class="dropdown-item" href="/newscenter/lawyer-magazine/all-issues">All Issues</a>
+                                  <a class="dropdown-item" href="/newscenter/lawyer-magazine/subscribe">Subscribe</a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- end #navbarSupportedContent -->
+              </div>
+              <!-- end .col-md-9 -->
+          </div>
+                  <!-- end row -->
       </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
+              <!-- end container -->
   </nav>
-
-</div>
+  <!-- end #newsroomNav -->
+</header>

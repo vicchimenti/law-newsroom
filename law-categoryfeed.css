@@ -156,7 +156,27 @@ div.newsroomCategoryFeedItem ul {
 
 
 
-/** Responsive Media Querys **/
+
+
+
+/*********************
+*
+*   Responsive Media Querys
+*
+**/
+
+
+/* ***** Mobile Up ***** */
+@media screen and (min-width: 767.999px) {
+
+    div.gridOrganizerWrapper {
+        padding-bottom: 50px;
+    }
+
+}
+
+
+/* ***** Desktop down ***** */
 @media screen and (max-width: 767.999px) {
 
     h2.organizerTitle {

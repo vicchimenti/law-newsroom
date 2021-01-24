@@ -80,3 +80,7 @@ ul.menu {
 .modal-backdrop {
   z-index: auto;
 }
+
+div.container-fluid#navbarModalTopicsMenu {
+  padding: 0;
+}

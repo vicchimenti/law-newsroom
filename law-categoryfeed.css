@@ -146,6 +146,8 @@ div.newsroomCategoryFeedItem p {
     font-size: 1.25rem;
     font-weight: 450;
     line-height: 1.75rem;
+    /* If not Bootstrap 4 review margin bottom */
+    margin-bottom: 0;
 }
 
 div.newsroomCategoryFeedItem ul {

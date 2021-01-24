@@ -25,20 +25,36 @@
 
                         <ul class="navbar-nav mr-auto menu">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTopics" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTopics" role="button" data-toggle="modal" data-target="#navbarModalTopics" aria-haspopup="true" aria-expanded="false">Categories</a>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                                     Launch demo modal
-                                </button>
+                                </button> -->
 
-                                
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownTopics">
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ...
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="dropdown-menu" id="navbarModalTopics" aria-labelledby="navbarDropdownTopics">
                                     <a class="dropdown-item" href="/newscenter/academic/">Academic</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
                                     <hr class="dropdown-divider">
                                     <a class="dropdown-item" href="/newscenter/academic/faculty">Faculty</a>
                                     <a class="dropdown-item" href="/newscenter/academic/law-clinic">Law Clinic</a>

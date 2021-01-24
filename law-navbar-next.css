@@ -6,6 +6,11 @@ body {
   display: none;
 }
 
+
+
+
+
+
 /* *****  full width nav banner  ***** */
 header#newscenterHeader {
   max-width: none;
@@ -29,6 +34,11 @@ nav#newscenterNav .row {
   width: -webkit-fill-available;
 }
 
+
+
+
+
+
 /* *****  nav borders and background  ***** */
 nav#newscenterNav {
   background-color: #ffffff;
@@ -38,6 +48,9 @@ nav#newscenterNav {
   border-right: none;
   border-left: none;
 }
+
+
+
 
 
 
@@ -55,4 +68,15 @@ ul.menu {
   color: #AA0000;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+}
+
+
+
+
+
+
+
+/* *****  modal customizations  ***** */
+.modal-backdrop {
+  z-index: auto;
 }

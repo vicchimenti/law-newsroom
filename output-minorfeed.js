@@ -50,11 +50,11 @@ try {
     // var listOfTags = "";
     // var photoCredit = "";
     // var authorByLine = "";
-    // var externalLinkString = "";
-    // var internalLinkString = "";
+    var externalLinkString = "";
+    var internalLinkString = "";
     var subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle hidden"></h3>';
     // var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
@@ -75,11 +75,11 @@ try {
         }
 
         // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
+        listOfTags = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listItems + '</ul></div>';
         
         // when tags exist check for Special Categories - SU Law in the News
         if (fieldTags.includes("SU Law in the News")) {
-            beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawInTheNews" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+            beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card lawInTheNews" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law in the News</h3>';
 
@@ -92,7 +92,7 @@ try {
 
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Announcements")) {
-            beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawAnnouncements" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+            beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card lawAnnouncements" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</h3>';
 
@@ -105,7 +105,7 @@ try {
 
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {
-            beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawEvents" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+            beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card lawEvents" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Event</h3>';
 

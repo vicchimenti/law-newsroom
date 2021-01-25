@@ -76,7 +76,7 @@ ul.menu {
 }
 
 li.nav-item a.nav-link {
-  color:#AA0000
+  color: #000000
 }
 
 
@@ -88,6 +88,10 @@ li.nav-item a.nav-link {
 /* *****  modal customizations  ***** */
 .modal-backdrop {
   z-index: auto;
+}
+
+.modal-body {
+  
 }
 
 div.container-fluid#navbarModalTopicsMenu {

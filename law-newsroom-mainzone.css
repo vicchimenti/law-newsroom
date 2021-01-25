@@ -150,6 +150,12 @@ div.newsroomMinorFeedItem h3.newsroomArticleSubTitle.card-subtitle {
     padding-left: 20px;
 }
 
+div.newsroomMinorFeedItem div.lawEvents, div.newsroomMinorFeedItem div.lawAnnouncements, div.newsroomMinorFeedItem div.lawInTheNews {
+    margin-bottom: 25px;
+}
+
+
+
 
 /** Media Queries  **/
 

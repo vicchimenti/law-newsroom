@@ -1,5 +1,6 @@
 body {
   padding-top: 0;
+  background-color: #f7f7f7;
 }
 
 .hidden {
@@ -41,9 +42,9 @@ nav#newscenterNav .row {
 
 /* *****  nav borders and background  ***** */
 nav#newscenterNav {
-  /* background: linear-gradient(0.5turn, #000000, #f7f7f7, #f7f7f7, #f7f7f7, #AA0000); */
-  background-color: #f7f7f7;
-  /* background-color: #ffffff; */
+  /* background: linear-gradient(0.5turn, #f7f7f7, #ffffff, #ffffff, #f7f7f7); */
+  /* background-color: #f7f7f7; */
+  background-color: #ffffff;
   border-top: 0.1rem solid #AA0000;
   border-bottom:  0.1rem solid #AA0000;
   border-radius: 0;

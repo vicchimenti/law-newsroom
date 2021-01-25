@@ -41,7 +41,7 @@ nav#newscenterNav .row {
 
 /* *****  nav borders and background  ***** */
 nav#newscenterNav {
-  background: linear-gradient(0.45turn, #ffffff, #f7f7f7, #f7f7f7, #000000);
+  background: linear-gradient(0.5turn, #000000, #f7f7f7, #f7f7f7, #f7f7f7, #AA0000);
   /* background-color: #f7f7f7; */
   /* background-color: #ffffff; */
   border-top: 0.1rem solid #AA0000;

@@ -41,6 +41,9 @@ div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
     padding: 0 20px 0 20px;
 }
 
+div.newsroomOrganizer div.titleWrapper {
+    background-color: white;
+}
 
 /** whitespace between items **/
 
@@ -167,6 +170,14 @@ div.newsroomMinorFeedItem.lawEvents {
     margin-bottom: 25px;
 }
 
+
+/* ***** COntact Box ***** */
+address {
+    color: #333333;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 400;
+}
 
 
 

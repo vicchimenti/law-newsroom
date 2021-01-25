@@ -1,24 +1,3 @@
-<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type='meta' meta='content_id' />" data-position-default="Main" data-position-selected="Main">
-
-    <t4 type="meta" meta="html_anchor" />
-
-    <h3 class="newsroomArticleTitle">
-        <a href="<t4 type='content' name='Headline' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">
-            <t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />
-        </a>
-    </h3>
-
-    <p class="newsroomArticleLead">
-        <t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />
-    </p>
-
-    <p class="newsroomArticlePublishedDate">
-        <t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />
-    </p>
-    <hr class="minorBorderBottom">
-</div>
-
-
 /***
  *     @author Victor Chimenti, MSCS-SE '20
  *     @file output-minorfeed.js
@@ -86,7 +65,7 @@ try {
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
-
+{/* <div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type='meta' meta='content_id' />" data-position-default="Main" data-position-selected="Main"> */}
 
     /***
      *  parse the list of tags, add <li> tags

@@ -47,13 +47,13 @@ try {
     var listOfTags = "";
     var titleLink = "";
     var listItems = "";
-    var listOfTags = "";
-    var photoCredit = "";
-    var authorByLine = "";
-    var externalLinkString = "";
-    var internalLinkString = "";
+    // var listOfTags = "";
+    // var photoCredit = "";
+    // var authorByLine = "";
+    // var externalLinkString = "";
+    // var internalLinkString = "";
     var subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle hidden"></h3>';
-    var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    // var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 

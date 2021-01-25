@@ -41,7 +41,9 @@ nav#newscenterNav .row {
 
 /* *****  nav borders and background  ***** */
 nav#newscenterNav {
-  background-color: #ffffff;
+  background: linear-gradient(0.45turn, #ffffff, #f7f7f7, #f7f7f7, #000000);
+  /* background-color: #f7f7f7; */
+  /* background-color: #ffffff; */
   border-top: 0.1rem solid #AA0000;
   border-bottom:  0.1rem solid #AA0000;
   border-radius: 0;
@@ -117,6 +119,6 @@ div.container-fluid#navbarModalTopicsMenu {
 
 @media screen and (max-width: 767.999px) {
   .modal-body {
-    font-size: small;
+    font-size: x-small;
   }
 }

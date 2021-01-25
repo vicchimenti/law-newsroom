@@ -70,6 +70,15 @@ ul.menu {
   font-weight: 300;
 }
 
+#newscenterNav ul.menu {
+  font-size: medium;
+  font-weight: 400;
+}
+
+li.nav-item a.nav-link {
+  color:#AA0000
+}
+
 
 
 

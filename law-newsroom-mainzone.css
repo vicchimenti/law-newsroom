@@ -146,6 +146,10 @@ h3.newsroomArticleSubTitle {
     padding-top: 20px;
 }
 
+div.newsroomMinorFeedItem h3.newsroomArticleSubTitle.card-subtitle {
+    padding-left: 20px;
+}
+
 
 /** Media Queries  **/
 

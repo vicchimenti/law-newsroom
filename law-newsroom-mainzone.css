@@ -115,6 +115,10 @@ p.credits {
 
 /** background colors for special categories **/
 
+h3.newsroomArticleSubTitle {
+    padding-top: 20px;
+}
+
 div.lawInTheNews {
     /* 95% Shade of SU Secondary Yellow */
     background-color: #fff8e6;
@@ -142,15 +146,24 @@ div.lawEvents {
     /* background-color: #088099; */
 }
 
-h3.newsroomArticleSubTitle {
-    padding-top: 20px;
-}
+
+
+
+/* ***** customizations for minor feed ***** */
 
 div.newsroomMinorFeedItem h3.newsroomArticleSubTitle.card-subtitle {
     padding-left: 20px;
 }
 
-div.newsroomMinorFeedItem div.lawEvents, div.newsroomMinorFeedItem div.lawAnnouncements, div.newsroomMinorFeedItem div.lawInTheNews {
+div.newsroomMinorFeedItem div.lawInTheNews {
+    margin-bottom: 25px;
+}
+
+div.newsroomMinorFeedItem div.lawAnnouncements {
+    margin-bottom: 25px;
+}
+
+div.newsroomMinorFeedItem div.lawEvents {
     margin-bottom: 25px;
 }
 

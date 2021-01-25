@@ -155,15 +155,15 @@ div.newsroomMinorFeedItem h3.newsroomArticleSubTitle.card-subtitle {
     padding-left: 20px;
 }
 
-div.newsroomMinorFeedItem div.lawInTheNews {
+div.newsroomMinorFeedItem.lawInTheNews {
     margin-bottom: 25px;
 }
 
-div.newsroomMinorFeedItem div.lawAnnouncements {
+div.newsroomMinorFeedItem.lawAnnouncements {
     margin-bottom: 25px;
 }
 
-div.newsroomMinorFeedItem div.lawEvents {
+div.newsroomMinorFeedItem.lawEvents {
     margin-bottom: 25px;
 }
 

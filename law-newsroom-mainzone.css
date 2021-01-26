@@ -191,4 +191,8 @@ address {
         margin-left: 20px;
         padding-left: 20px;
     }
+
+    div.newsroomOrganizerWrapper div.newsroonewsroomMinorFeedItem {
+        margin: 0 20px 20px 20px;
+        padding: 0 20px 0 20px;
 }

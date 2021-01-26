@@ -24,3 +24,4 @@
 - [x] SU Law in the News layout
 - [] Remove contentItem class from organizers
 - [] Build Banner
+- [] Fix internal link bug on major and minor feeds

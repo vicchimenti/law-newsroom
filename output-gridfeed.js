@@ -47,12 +47,10 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>' + articleSubtitle + '</p></span>";
+    var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>" + articleSubtitle + "</p></span>";
     var titleLink = "";
     var listItems = "";
     var listOfTags = "";
-    // var photoCredit = "";
-    // var authorByLine = "";
     var thumbNailString = "";
     var beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
     var endingHTML = '</div>';
@@ -73,21 +71,7 @@ try {
     }
 
 
-    /***
-     *  determine which link, if any, goes in the title
-     *  and determine if a unique headline was added
-     *  if no headline is added then use the title
-     * 
-     * */
-    // if (headline == "" && articleFullBody == "") {
-    //     titleLink = '<h3 class="newsroomArticleTitle card-title">' + articleTitle + '</h3>';
-    // } else if (articleFullBody == "") {
-    //     titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
-    // } else if (headline == "") {
-    //     titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
-    // } else {
-    //     titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
-    // }
+
 
     /***
      *  determine if the article contains full text content
@@ -100,38 +84,6 @@ try {
     }
 
 
-    /***
-     *  verify subtitle
-     *  hide summary in doc if no subtitle
-     * 
-     * */
-    // if (articleSubtitle == "") {
-    //     cardText = '<span class="newsroomArticleLead card-text summary hidden"><p>' + articleSummary + '</p></span>';
-    // } else {
-    //     cardText = '<span class="newsroomArticleLead card-text subtitle"><p>' + articleSubtitle + '</p></span>';
-    // }
-
-
-    /***
-     *  display byline only when provided 
-     * 
-     * */
-    // if (author == "") {
-    //     authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    // } else {
-    //     authorByLine = '<p class="byLine hidden">' + author + '</p>';
-    // }
-
-
-    /***
-     *  display photo credit only when provided 
-     * 
-     * */
-    // if (author == "") {
-    //     photoCredit = '<p class="byLine hidden">No Author Provided</p>';
-    // } else {
-    //     photoCredit = '<p class="byLine hidden">Written by ' + frontPageImageCredit + '</p>';
-    // }
 
 
     /***
@@ -159,7 +111,7 @@ try {
     document.write('<div class="newsroomArticleBlurb card-body">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('</div>'); // close newsroomArticleBlurb
     document.write('<div class="card-footer"><medium class="text-muted newsroomArticlePublishedDate">' + publishedDate + '</medium></div>');
     document.write(listOfTags);

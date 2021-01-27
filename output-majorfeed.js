@@ -200,7 +200,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
     document.write('</div>'); // close credits div
     document.write(dateline);
-    document.write(listOfTags);
+    document.write('<div class="hidden">' + listOfTags + '</div>');
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
     document.write('</div></div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);

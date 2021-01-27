@@ -127,9 +127,9 @@ img.articleImage {
 
 /* *****  category feed customizations ***** */
 
-div.newsroomOrganizer, div.newsroomCategoryFeedItem  {
+/* div.newsroomOrganizer, div.newsroomCategoryFeedItem  {
     background-color: #f7f7f7;
-  }
+} */
 
 div.newsroomOrganizer.card-deck {
     flex-direction: column;

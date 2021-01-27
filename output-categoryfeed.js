@@ -67,7 +67,7 @@ try {
     if (fieldTags != "") {
         var arrayOfTags = fieldTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
-            listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
+            listItems += '<li class="tag rounded-pill">' + arrayOfTags[i] + '</li>';
         }
         listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
     }

@@ -11,12 +11,12 @@ div#MainZone div.container {
 /* *****  Grid Organizer customizations  **** */
 
 div.gridOrganizerWrapper {
-    /* background-color: #f7f7f7; */
-    background-color: #e6efff;
-    opacity: 90%;
+    background-color: #f7f7f7;
+    /* background-color: #e6efff; */
+    /* opacity: 90%; */
     /* If Bootstrap 5 only */
-    /* padding-bottom: 50px; */
-}
+    padding-bottom: 50px;
+} 
 
 div.gridOrganizer.standardContent {
     display: flex;

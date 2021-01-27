@@ -50,9 +50,9 @@ try {
     var titleLink = "";
     var listItems = "";
     var hyphen = " - ";
-    var suLawInTheNews = "SU Law in the News";
-    var announcements = "Announcements";
     var events = "Events";
+    var announcements = "Announcements";
+    var suLawInTheNews = "SU Law in the News";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
     var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
     var beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';

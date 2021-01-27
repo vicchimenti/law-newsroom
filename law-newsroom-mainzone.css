@@ -150,7 +150,9 @@ div.newsroomMinorFeedItem span.newsroomArticleSpecialCategory {
 
 span.credits a.card-link {
     color: #088099;
-    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 

@@ -41,7 +41,7 @@ try {
 
 
 
-    
+
     /***
      *  Declare/Assign local variables with base formatting
      * 
@@ -104,7 +104,7 @@ try {
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></span>';
+                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></span>';
             }
 
             // assign link value for publishing
@@ -119,7 +119,7 @@ try {
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></a></span>';
+                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
             }
 
             // assign link value for publishing

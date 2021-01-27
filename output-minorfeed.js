@@ -48,19 +48,15 @@ try {
     var titleLink = "";
     var listItems = "";
     var suLawInTheNews = " - SU Law in the News"
-    // var listOfTags = "";
-    // var photoCredit = "";
-    // var authorByLine = "";
+
     var externalLinkString = "";
     var internalLinkString = "";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
     var subTitleString = '<span class="newsroomArticleSubTitle card-subtitle hidden"></span>';
-    // var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
-{/* <div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb" id="id<t4 type='meta' meta='content_id' />" data-position-default="Main" data-position-selected="Main"> */}
 
     /***
      *  parse the list of tags, add <li> tags

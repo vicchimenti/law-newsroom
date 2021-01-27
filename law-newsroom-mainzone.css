@@ -7,9 +7,12 @@ div#MainZone div.container {
 
 /** news article customizations **/
 
+p.newsroomArticlePublishedDate {
+    font-size: 1.5rem;
+}
+
 div.card span.newsroomArticleSpecialCategory {
     color: #aa0000;
-    font-size: 1.25rem;
 }
 
 
@@ -138,7 +141,7 @@ h3.newsroomArticleSubTitle {
 span.credits a.card-link {
     color: #088099;
     font-family: 'Montserrat';
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 

@@ -45,14 +45,14 @@ try {
      * 
      * */
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    var externalLinkString = "";
+    var internalLinkString = "";
     var titleLink = "";
     var listItems = "";
     var hyphen = " - ";
     var suLawInTheNews = "SU Law in the News";
     var announcements = "Announcements";
     var events = "Events";
-    var externalLinkString = "";
-    var internalLinkString = "";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
     var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
     var beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
@@ -80,8 +80,6 @@ try {
         // when tags exist check for Special Categories - SU Law in the News
         if (fieldTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
-            // endingHTML = '</div>';
-            // specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law in the News</span>';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
             // parse law in news for external link to original story
@@ -94,8 +92,6 @@ try {
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
-            // endingHTML = '</div>';
-            // specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</span>';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
             // parse announcements for internal link to origin
@@ -108,8 +104,6 @@ try {
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
-            // endingHTML = '</div>';
-            // specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Event</span>';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 
 

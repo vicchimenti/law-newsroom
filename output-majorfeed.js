@@ -39,7 +39,8 @@ try {
     var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
     var inTheNewsLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link' output='normal' modifiers='htmlentities,js-var' />");
     var inTheNewsLinkTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link Title' output='normal' display_field='value' />");    
-    var internalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='normal' modifiers='nav_sections' />");
+    var internalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linkurl' modifiers='nav_sections' />");
+    var internalLinkTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linktext' modifiers='nav_sections' />");
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
 
 
@@ -49,14 +50,18 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var listOfTags = "";
+    var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
     var listItems = "";
-    var listOfTags = "";
     var photoCredit = "";
     var authorByLine = "";
     var externalLinkString = "";
     var internalLinkString = "";
+    var publishedLink = "";
+    var hyphen = " - ";
+    var events = "Events";
+    var announcements = "Announcements";
+    var suLawInTheNews = "SU Law in the News";
     var subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle hidden"></h3>';
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';

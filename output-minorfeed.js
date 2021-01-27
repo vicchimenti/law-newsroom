@@ -47,11 +47,11 @@ try {
      * 
      * */
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    var titleLink = "";
+    var listItems = "";
     var externalLinkString = "";
     var internalLinkString = "";
     var publishedLink = "";
-    var titleLink = "";
-    var listItems = "";
     var hyphen = " - ";
     var events = "Events";
     var announcements = "Announcements";

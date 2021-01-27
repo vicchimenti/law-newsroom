@@ -47,6 +47,7 @@ try {
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
     var listItems = "";
+    var hyphen = " - ";
     var suLawInTheNews = "SU Law in the News"
 
     var externalLinkString = "";
@@ -80,7 +81,7 @@ try {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card lawInTheNews" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
             subTitleString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law in the News</span>';
-            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + ' - '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
+            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
             // parse law in news for external link to original story
             if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {

@@ -48,7 +48,9 @@ try {
     var titleLink = "";
     var listItems = "";
     var hyphen = " - ";
-    var suLawInTheNews = "SU Law in the News"
+    var suLawInTheNews = "SU Law in the News";
+    var announcements = "Announcements";
+    var events = "Events";
 
     var externalLinkString = "";
     var internalLinkString = "";
@@ -80,7 +82,7 @@ try {
         if (fieldTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
             // endingHTML = '</div>';
-            specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law in the News</span>';
+            // specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law in the News</span>';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
             // parse law in news for external link to original story
@@ -94,7 +96,8 @@ try {
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
             // endingHTML = '</div>';
-            specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</span>';
+            // specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</span>';
+            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
             // parse announcements for internal link to origin
             if (internalLink == "") {
@@ -107,7 +110,9 @@ try {
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
             // endingHTML = '</div>';
-            specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Event</span>';
+            // specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Event</span>';
+            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+
 
             // parse events for internal link to origin
             if (internalLink == "") {

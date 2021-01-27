@@ -123,12 +123,8 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (headline == "" && articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + articleTitle + '</h3>';
-    } else if (articleFullBody == "") {
+    if (articleFullBody == "") {
         titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
-    } else if (headline == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
     } else {
         titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
     }

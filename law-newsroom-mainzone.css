@@ -127,22 +127,6 @@ h3.newsroomArticleSubTitle {
 
 /* ***** customizations for minor feed ***** */
 
-/* div.newsroomMinorFeedItem h3.newsroomArticleSubTitle.card-subtitle {
-    padding-left: 20px;
-}
-
-div.newsroomMinorFeedItem.lawInTheNews {
-    margin-bottom: 25px;
-}
-
-div.newsroomMinorFeedItem.lawAnnouncements {
-    margin-bottom: 25px;
-}
-
-div.newsroomMinorFeedItem.lawEvents {
-    margin-bottom: 25px;
-} */
-
 div.newsroomMinorFeedItem span.newsroomArticleSpecialCategory {
     color: #aa0000;
     font-size: 1.25rem;

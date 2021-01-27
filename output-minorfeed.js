@@ -136,48 +136,7 @@ try {
     }
 
 
-    /***
-     *  display byline only when provided 
-     * 
-     * */
-    // if (author == "") {
-    //     authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    // } else {
-    //     authorByLine = '<p class="byLine credits">By ' + author + '</p>';
-    // }
-    // if (photoCredit == "") {
-    //     photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-    // } else {
-    //     photoCredit = '<p class="byLine credits">Image credit: ' + frontPageImageCredit + '</p>';
-    // }
 
-
-
-    /***
-     *  verify Main image and photo credits
-     * 
-     * */
-    // if (frontPageImage == "") {
-    //     thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
-    //     // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-
-    // } else {
-    //     thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    //     // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-    // }
-
-
-
-
-    /***
-     *  Parse for external link
-     * 
-     * */
-    // if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
-    //     externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-    // } else {
-    //     externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
-    // }
 
 
 

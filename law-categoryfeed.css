@@ -63,6 +63,12 @@ div.gridFeedItem p {
     margin-bottom: 0;
 }
 
+div.gridFeedItem .newsroomArticlePublishedDate {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
 /** horizontal rule between articles **/
 
 hr.articleBorderBottom {

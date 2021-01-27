@@ -47,7 +47,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var cardText = "";
+    var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>' + articleSubtitle + '</p></span>";
     var titleLink = "";
     var listItems = "";
     var listOfTags = "";
@@ -95,11 +95,11 @@ try {
      *  hide summary in doc if no subtitle
      * 
      * */
-    if (articleSubtitle == "") {
-        cardText = '<span class="newsroomArticleLead card-text summary hidden"><p>' + articleSummary + '</p></span>';
-    } else {
-        cardText = '<span class="newsroomArticleLead card-text subtitle"><p>' + articleSubtitle + '</p></span>';
-    }
+    // if (articleSubtitle == "") {
+    //     cardText = '<span class="newsroomArticleLead card-text summary hidden"><p>' + articleSummary + '</p></span>';
+    // } else {
+    //     cardText = '<span class="newsroomArticleLead card-text subtitle"><p>' + articleSubtitle + '</p></span>';
+    // }
 
 
     /***

@@ -92,7 +92,7 @@ try {
         if (fieldTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             // endingHTML = '</div>';
-            subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law in the News</h3>';
+            specialCatString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law in the News</h3>';
 
             // parse law in news for external link to original story
             if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
@@ -105,7 +105,7 @@ try {
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             // endingHTML = '</div>';
-            subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</h3>';
+            specialCatString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</h3>';
 
             // parse announcements for internal link to origin
             if (internalLink == "") {
@@ -118,7 +118,7 @@ try {
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             // endingHTML = '</div>';
-            subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Event</h3>';
+            specialCatString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Event</h3>';
 
             // parse events for internal link to origin
             if (internalLink == "") {
@@ -184,7 +184,7 @@ try {
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, subTitleString));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, specialCatString));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));

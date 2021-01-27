@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.4
+ *     @version 1.5
  */
 
 
@@ -51,7 +51,6 @@ try {
     var suLawInTheNews = "SU Law in the News";
     var announcements = "Announcements";
     var events = "Events";
-
     var externalLinkString = "";
     var internalLinkString = "";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';

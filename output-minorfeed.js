@@ -47,6 +47,7 @@ try {
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var externalLinkString = "";
     var internalLinkString = "";
+    var publishedLink = "";
     var titleLink = "";
     var listItems = "";
     var hyphen = " - ";
@@ -89,6 +90,9 @@ try {
                 externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
             }
 
+            // assign link value for publishing
+            publishedLink = externalLinkString;
+
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
@@ -101,11 +105,13 @@ try {
                 internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></span>';
             }
 
+            // assign link value for publishing
+            publishedLink = internalLinkString;
+
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
-
 
             // parse events for internal link to origin
             if (internalLink == "") {
@@ -113,6 +119,9 @@ try {
             } else {
                 internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></span>';
             }
+
+            // assign link value for publishing
+            publishedLink = internalLinkString;
         }
     }
 
@@ -140,8 +149,8 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, externalLinkString));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, internalLinkString));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, publishedLink));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, internalLinkString));
     document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
     document.write(dateline);
     document.write(listOfTags);

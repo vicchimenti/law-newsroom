@@ -53,7 +53,7 @@ try {
     var externalLinkString = "";
     var internalLinkString = "";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    var subTitleString = '<span class="newsroomArticleSubTitle card-subtitle hidden"></span>';
+    var specialCatString = '<span class="newsroomArticleSpecialCategory hidden"></span>';
     var beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
@@ -80,7 +80,7 @@ try {
         if (fieldTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card lawInTheNews" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
-            subTitleString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law in the News</span>';
+            specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law in the News</span>';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
             // parse law in news for external link to original story
@@ -94,7 +94,7 @@ try {
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card lawAnnouncements" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
-            subTitleString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</span>';
+            specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</span>';
 
             // parse announcements for internal link to origin
             if (internalLink == "") {
@@ -107,7 +107,7 @@ try {
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card lawEvents" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             endingHTML = '</div>';
-            subTitleString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Event</span>';
+            specialCatString = '<span class="newsroomArticleSubTitle card-subtitle">SU Law Event</span>';
 
             // parse events for internal link to origin
             if (internalLink == "") {
@@ -147,8 +147,6 @@ try {
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, subTitleString));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, externalLinkString));

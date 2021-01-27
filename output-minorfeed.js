@@ -117,10 +117,10 @@ try {
     }
 
 
+
+
     /***
-     *  determine which link, if any, goes in the title
-     *  and determine if a unique headline was added
-     *  if no headline is added then use the title
+     *  determine if the article contains full text content
      * 
      * */
     if (headline == "" && articleFullBody == "") {

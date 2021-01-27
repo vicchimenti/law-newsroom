@@ -95,6 +95,7 @@ try {
             // assign link value for publishing
             publishedLink = externalLinkString;
 
+
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
@@ -109,6 +110,7 @@ try {
 
             // assign link value for publishing
             publishedLink = internalLinkString;
+            
 
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {

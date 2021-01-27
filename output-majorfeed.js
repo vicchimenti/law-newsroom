@@ -103,6 +103,7 @@ try {
 
             // assign link value for publishing
             publishedLink = externalLinkString;
+            
 
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Announcements")) {
@@ -114,8 +115,12 @@ try {
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                internalLinkString = '<span class="internalLink credits"><em>' + internalLink + '</em></span>';
+                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
             }
+
+            // assign link value for publishing
+            publishedLink = internalLinkString;
+
 
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {

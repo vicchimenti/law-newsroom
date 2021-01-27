@@ -54,7 +54,7 @@ try {
     var internalLinkString = "";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
     var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
-    var beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" title="' + articleTitle + '" />">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 

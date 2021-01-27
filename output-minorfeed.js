@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.5
+ *     @version 1.6
  */
 
 
@@ -128,9 +128,6 @@ try {
     } else {
         titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
     }
-
-
-
 
 
 

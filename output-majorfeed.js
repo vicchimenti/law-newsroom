@@ -63,7 +63,7 @@ try {
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
+    // var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
@@ -92,7 +92,7 @@ try {
         if (fieldTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             // endingHTML = '</div>';
-            specialCatString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law in the News</h3>';
+            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
             // parse law in news for external link to original story
             if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
@@ -105,7 +105,7 @@ try {
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             // endingHTML = '</div>';
-            specialCatString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</h3>';
+            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
             // parse announcements for internal link to origin
             if (internalLink == "") {
@@ -118,7 +118,7 @@ try {
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             // endingHTML = '</div>';
-            specialCatString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Event</h3>';
+            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 
             // parse events for internal link to origin
             if (internalLink == "") {
@@ -184,7 +184,7 @@ try {
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, specialCatString));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, specialCatString));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
@@ -195,7 +195,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
     document.write('</div>'); // close credits div
-    document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>');
+    document.write(dateline);
     document.write(listOfTags);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
     document.write('</div></div>'); // close newsroomArticleBlurb and row divs

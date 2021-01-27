@@ -5,6 +5,14 @@ div#MainZone div.container {
 }
 
 
+/** news article customizations **/
+
+div.card span.newsroomArticleSpecialCategory {
+    color: #aa0000;
+    font-size: 1.25rem;
+}
+
+
 /** Hero Feed  **/
 
 div.heroOrganizer.standardContent {
@@ -126,11 +134,6 @@ h3.newsroomArticleSubTitle {
 
 
 /* ***** customizations for minor feed ***** */
-
-div.newsroomMinorFeedItem span.newsroomArticleSpecialCategory {
-    color: #aa0000;
-    font-size: 1.25rem;
-}
 
 span.credits a.card-link {
     color: #088099;

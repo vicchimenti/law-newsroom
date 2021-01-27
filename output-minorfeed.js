@@ -117,7 +117,7 @@ try {
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></span>';
+                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></a></span>';
             }
 
             // assign link value for publishing

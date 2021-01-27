@@ -143,6 +143,10 @@ div.newsroomMinorFeedItem.lawEvents {
     margin-bottom: 25px;
 }
 
+div.newsroomMinorFeedItem span.newsroomArticleSpecialCategory {
+    color: #aa0000;
+}
+
 
 /* ***** Contact Box ***** */
 address {

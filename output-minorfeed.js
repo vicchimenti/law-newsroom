@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.6
+ *     @version 1.7
  */
 
 
@@ -98,7 +98,7 @@ try {
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                internalLinkString = '<span class="internalLink credits"><em>' + internalLink + '</em></span>';
+                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></span>';
             }
 
         // when tags exist check for Special Categories - Announcements
@@ -111,7 +111,7 @@ try {
             if (internalLink == "") {
                 internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
             } else {
-                internalLinkString = '<span class="internalLink credits"><em>' + internalLink + '</em></span>';
+                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLink + '" target="_blank" class="card-link"><em>' + internalLink + '</em></span>';
             }
         }
     }

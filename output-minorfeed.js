@@ -110,7 +110,7 @@ try {
 
             // assign link value for publishing
             publishedLink = internalLinkString;
-            
+
 
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {

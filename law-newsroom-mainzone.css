@@ -141,14 +141,18 @@ span.credits a.card-link {
 
 
 /* ***** Contact Box ***** */
-address {
+div.titleWrapper address {
     color: #333333;
     font-family: 'Montserrat';
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-address a {
+div.titleWrapper address strong {
+    font-weight: 700;
+}
+
+div.titleWrapper address a {
     color: #088099;
 }
 

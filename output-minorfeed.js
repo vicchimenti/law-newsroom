@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.2
+ *     @version 1.3
  */
 
 
@@ -53,7 +53,7 @@ try {
     var externalLinkString = "";
     var internalLinkString = "";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    var specialCatString = '<span class="newsroomArticleSpecialCategory hidden"></span>';
+    var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
     var beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 

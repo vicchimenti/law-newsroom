@@ -52,7 +52,8 @@ try {
     // var authorByLine = "";
     var externalLinkString = "";
     var internalLinkString = "";
-    var subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle hidden"></h3>';
+    var dateline = "<p class='newsroomArticlePublishedDate'>' + publishedDate + '</p>";
+    var subTitleString = '<span class="newsroomArticleSubTitle card-subtitle hidden"></span>';
     // var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMinorFeedItem newsroomArticleWrapper newsroomBlurb card" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
@@ -158,7 +159,7 @@ try {
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
     // document.write('</div>'); // close credits div
-    document.write('<p class="newsroomArticlePublishedDate">' + publishedDate + ' - ' + subTitleString + '</p>');
+    document.write(dateline);
     document.write(listOfTags);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
     document.write('</div></div>'); // close newsroomArticleBlurb and row divs

@@ -62,7 +62,8 @@ try {
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
-    var subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle hidden"></h3>';
+    var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
+    var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';

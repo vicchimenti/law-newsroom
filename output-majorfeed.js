@@ -85,7 +85,7 @@ try {
         // when tags exist check for Special Categories - SU Law in the News
         if (fieldTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawInTheNews" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            endingHTML = '</div>';
+            // endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law in the News</h3>';
 
             // parse law in news for external link to original story
@@ -98,7 +98,7 @@ try {
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawAnnouncements" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            endingHTML = '</div>';
+            // endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Announcement</h3>';
 
             // parse announcements for internal link to origin
@@ -111,7 +111,7 @@ try {
         // when tags exist check for Special Categories - Announcements
         } else if (fieldTags.includes("Events")) {
             beginningHTML = '<div class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb card lawEvents" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            endingHTML = '</div>';
+            // endingHTML = '</div>';
             subTitleString = '<h3 class="newsroomArticleSubTitle card-subtitle">SU Law Event</h3>';
 
             // parse events for internal link to origin

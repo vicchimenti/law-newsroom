@@ -106,22 +106,22 @@ try {
      *  display byline only when provided 
      * 
      * */
-    if (author == "") {
-        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    } else {
-        authorByLine = '<p class="byLine hidden">' + author + '</p>';
-    }
+    // if (author == "") {
+    //     authorByLine = '<p class="byLine hidden">No Author Provided</p>';
+    // } else {
+    //     authorByLine = '<p class="byLine hidden">' + author + '</p>';
+    // }
 
 
     /***
      *  display photo credit only when provided 
      * 
      * */
-    if (author == "") {
-        photoCredit = '<p class="byLine hidden">No Author Provided</p>';
-    } else {
-        photoCredit = '<p class="byLine hidden">Written by ' + frontPageImageCredit + '</p>';
-    }
+    // if (author == "") {
+    //     photoCredit = '<p class="byLine hidden">No Author Provided</p>';
+    // } else {
+    //     photoCredit = '<p class="byLine hidden">Written by ' + frontPageImageCredit + '</p>';
+    // }
 
 
     /***
@@ -145,7 +145,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
     document.write('<div class="newsroomArticleBlurb card-body">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));

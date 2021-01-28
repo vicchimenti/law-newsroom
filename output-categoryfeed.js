@@ -54,7 +54,7 @@ try {
     var photoCredit = "";
     var authorByLine = "";
     var thumbNailString = "";
-    var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomArticleWrapper newsroomBlurb card col-xs-12" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
+    var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb card col-xs-12" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 

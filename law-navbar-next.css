@@ -95,7 +95,7 @@ ul.menu {
 
 #newscenterNav ul.menu {
   font-size: medium;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 li.nav-item a.nav-link {
@@ -143,12 +143,20 @@ div.modal-body ul.list-group a {
 @media screen and (max-width: 1200px) {}
 
 @media screen and (max-width: 767.999px) {
-  
+
   .modal-body {
     font-size: x-small;
   }
 
   div.modal-body ul.list-group h4 {
     font-size: 1rem;
+  }
+
+  div.modal-body ul.list-group a strong {
+    font-size: .7rem;
+  }
+
+  div.modal-body ul.list-group a small {
+    font-size: .65rem;
   }
 }

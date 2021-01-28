@@ -142,6 +142,7 @@ div.modal-body ul.list-group a {
 
 @media screen and (max-width: 1200px) {}
 
+
 @media screen and (max-width: 767.999px) {
 
   .modal-body {
@@ -160,3 +161,19 @@ div.modal-body ul.list-group a {
     font-size: .65rem;
   }
 }
+
+@media screen and (max-width: 576px) {
+
+  div.modal-body ul.list-group h4 {
+    font-size: 0.9rem;
+  }
+
+  div.modal-body ul.list-group a strong {
+    font-size: .65rem;
+  }
+
+  div.modal-body ul.list-group a small {
+    font-size: .6rem;
+  }
+}
+

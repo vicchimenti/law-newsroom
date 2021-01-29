@@ -1,0 +1,183 @@
+body {
+  /* background-color: #f7f7f7; */
+  padding-top: 0;
+}
+
+body.law-newscenterMain-2077081 {
+  max-width: none;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+/* *****  full width nav banner  ***** */
+header#newscenterHeader {
+  max-width: none;
+}
+
+header#newscenterHeader.container {
+  max-width: none;
+  padding-bottom: 0.25rem;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+}
+
+nav#newscenterNav .container {
+  max-width: none;
+  width: -webkit-fill-available;
+}
+
+nav#newscenterNav .row {
+  max-width: none;
+  width: -webkit-fill-available;
+}
+
+
+
+
+
+
+/* *****  nav borders and background  ***** */
+nav#newscenterNav {
+  /* background: linear-gradient(0.5turn, #f7f7f7, #ffffff, #ffffff, #f7f7f7); */
+  /* background-color: #f7f7f7; */
+  background-color: #ffffff;
+  border-top: 0.1rem solid #AA0000;
+  border-bottom:  0.1rem solid #AA0000;
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+}
+
+nav#newscenterNav h2.nav-link {
+  color: #000000;
+  font-size: 1rem;
+}
+
+
+
+
+
+
+/* *****  nav styles  ***** */
+a.navbar-brand {
+  color: #AA0000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  /* padding: 1rem; */
+  text-shadow: #000000 0.1rem 0.1rem 0.2rem;
+}
+
+a.navbar-brand h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: unset;
+}
+
+a.navbar-brand span {
+  font-size: 1.5rem;
+  /* line-height: unset; */
+}
+
+
+ul.menu {
+  color: #AA0000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+#newscenterNav ul.menu {
+  font-size: medium;
+  font-weight: 500;
+}
+
+li.nav-item a.nav-link {
+  color: #000000
+}
+
+
+
+
+
+
+
+/* *****  modal customizations  ***** */
+.modal-backdrop {
+  z-index: auto;
+}
+
+div.container-fluid#navbarModalTopicsMenu {
+  padding: 0;
+}
+
+div.modal-body ul.list-group a {
+  color: #000000;
+}
+
+div.modal-body div.js-elements-container {
+  color: #000000;
+}
+
+
+
+
+
+/*********************
+*
+*   Responsive Media Querys
+*
+**/
+
+
+/* ***** Mobile Up ***** */
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 767.999px) {}
+
+
+/* ***** Desktop down ***** */
+
+@media screen and (max-width: 1200px) {}
+
+
+@media screen and (max-width: 767.999px) {
+
+  .modal-body {
+    font-size: x-small;
+  }
+
+  div.modal-body ul.list-group h4 {
+    font-size: 1rem;
+  }
+
+  div.modal-body ul.list-group a strong {
+    font-size: .7rem;
+  }
+
+  div.modal-body ul.list-group a small {
+    font-size: .65rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  div.modal-body ul.list-group h4 {
+    font-size: 0.9rem;
+  }
+
+  div.modal-body ul.list-group a strong {
+    font-size: .5rem;
+  }
+
+  div.modal-body ul.list-group a small {
+    font-size: .5rem;
+  }
+}
+

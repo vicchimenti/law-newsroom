@@ -175,8 +175,7 @@ try {
      * 
      * */
     if (frontPageImage == "") {
-        thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
-
+        thumbNailString = '<span class="newsroomImageWrapper hidden">No Valid Image Content Provided</span>';
     } else {
         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     }

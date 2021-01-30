@@ -135,6 +135,33 @@ div.modal-body div.js-elements-container {
 *
 **/
 
+/* Galaxy Fold (less than 280px) */
+@media (max-width: 280px) {}
+
+/* iPhone X (less than 376px) */
+@media (max-width: 376px) {}
+
+/* Surface Duo (less than 540px) */
+@media (max-width: 540px) {}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* iPad Pro (iPad Pro, 1024px to 1200) */
+@media (min-width: 1024px) and (max-width: 1199.98px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
 
 /* ***** Mobile Up ***** */
 @media screen and (min-width: 576px) {}
@@ -147,6 +174,8 @@ div.modal-body div.js-elements-container {
 @media screen and (max-width: 1200px) {}
 
 
+
+/* ***** Max Width 767 ***** */
 @media screen and (max-width: 767.999px) {
 
   .modal-body {
@@ -166,6 +195,7 @@ div.modal-body div.js-elements-container {
   }
 }
 
+/* ***** Max Width 576 ***** */
 @media screen and (max-width: 576px) {
 
   div.modal-body ul.list-group h4 {

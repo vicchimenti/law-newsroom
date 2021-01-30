@@ -137,11 +137,11 @@ div.modal-body div.js-elements-container {
 @media screen and (min-width: 1200px) and (max-width: 1366px) {
 
   nav#desktop-newscenterNav h2.nav-link {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   a.navbar-brand h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   
   a.navbar-brand span {
@@ -154,11 +154,11 @@ div.modal-body div.js-elements-container {
 @media screen and (min-width: 992px) and (max-width: 1199.99px) {
 
   nav#desktop-newscenterNav h2.nav-link {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   a.navbar-brand h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   a.navbar-brand span {
@@ -170,11 +170,11 @@ div.modal-body div.js-elements-container {
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
 
   nav#desktop-newscenterNav h2.nav-link {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 
   a.navbar-brand h1 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
   
   a.navbar-brand span {
@@ -186,16 +186,9 @@ div.modal-body div.js-elements-container {
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
 
   nav#desktop-newscenterNav h2.nav-link {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 
-  a.navbar-brand h1 {
-    font-size: 1.6rem;
-  }
-  
-  a.navbar-brand span {
-    font-size: 1.1rem;
-  }
 }
 
 

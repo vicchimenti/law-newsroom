@@ -137,7 +137,9 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 992 Max Width 1200 ***** */
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-
+  nav#desktop-newscenterNav h2.nav-link {
+    font-size: 0.8rem;
+  }
 }
 
 

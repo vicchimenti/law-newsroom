@@ -17,11 +17,11 @@ body.law-newscenterMain-2077081 {
 
 
 /* *****  full width nav banner  ***** */
-header#newscenterHeader {
+header#desktop-newscenterHeader {
   max-width: none;
 }
 
-header#newscenterHeader.container {
+header#desktop-newscenterHeader.container {
   max-width: none;
   padding-bottom: 0.25rem;
   padding-left: 0;
@@ -29,12 +29,12 @@ header#newscenterHeader.container {
   width: auto;
 }
 
-nav#newscenterNav .container {
+nav#desktop-newscenterNav .container {
   max-width: none;
   width: -webkit-fill-available;
 }
 
-nav#newscenterNav .row {
+nav#desktop-newscenterNav .row {
   max-width: none;
   width: -webkit-fill-available;
 }
@@ -45,7 +45,7 @@ nav#newscenterNav .row {
 
 
 /* *****  nav borders and background  ***** */
-nav#newscenterNav {
+nav#desktop-newscenterNav {
   /* background: linear-gradient(0.5turn, #f7f7f7, #ffffff, #ffffff, #f7f7f7); */
   /* background-color: #f7f7f7; */
   background-color: #ffffff;
@@ -56,7 +56,7 @@ nav#newscenterNav {
   border-left: none;
 }
 
-nav#newscenterNav h2.nav-link {
+nav#desktop-newscenterNav h2.nav-link {
   color: #000000;
   font-size: 1rem;
 }
@@ -93,7 +93,7 @@ ul.menu {
   font-weight: 300;
 }
 
-#newscenterNav ul.menu {
+#desktop-newscenterNav ul.menu {
   font-size: medium;
   font-weight: 500;
 }
@@ -135,44 +135,10 @@ div.modal-body div.js-elements-container {
 *
 **/
 
-/* Galaxy Fold (less than 280px) */
-@media only screen and (max-width: 280px) {}
+/* ***** Min Width 992 Max Width 1200 ***** */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
 
-/* iPhone X (less than 376px) */
-@media only screen and (max-width: 376px) {}
-
-/* Surface Duo (less than 540px) */
-@media only screen and (max-width: 540px) {}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media only screen and (max-width: 575.98px) {}
-
-/* Small devices (landscape phones, 576px and up) */
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {}
-
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) and (max-width: 991.98px) {}
-
-/* iPad Pro (iPad Pro, 1024px to 1200) */
-@media screen and (min-width: 1024px) and (max-width: 1199.98px) {}
-
-/* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {}
-
-
-/* ***** Mobile Up ***** */
-@media only screen and (min-width: 576px) {}
-
-@media screen and (min-width: 767.999px) {}
-
-
-/* ***** Desktop down ***** */
-
-@media screen and (max-width: 1200px) {}
-
+}
 
 
 /* ***** Max Width 767 ***** */
@@ -211,3 +177,56 @@ div.modal-body div.js-elements-container {
   }
 }
 
+
+
+
+
+/*********************
+*
+*   Reference Breakpoints
+*
+**/
+
+/* Galaxy Fold (less than 280px) */
+@media only screen and (max-width: 280px) {}
+
+/* iPhone X (less than 376px) */
+@media only screen and (max-width: 376px) {}
+
+/* Surface Duo (less than 540px) */
+@media only screen and (max-width: 540px) {}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {}
+
+/* iPad Pro (iPad Pro, 1024px to 1200) */
+@media screen and (min-width: 1024px) and (max-width: 1199.98px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {}
+
+/* X Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1366px) {}
+
+/* XX Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1920px) {}
+
+/* XXX Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 2560px) {}
+
+/* ***** Mobile Up ***** */
+@media only screen and (min-width: 576px) {}
+
+@media screen and (min-width: 767.999px) {}
+
+/* ***** Desktop down ***** */
+@media screen and (max-width: 1200px) {}

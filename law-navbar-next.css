@@ -135,24 +135,31 @@ div.modal-body div.js-elements-container {
 *
 **/
 
-/* ***** Min Width 992 Max Width 1200 ***** */
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+/* ***** Min Width 1200 Max Width 1366 ***** */
+@media screen and (min-width: 1200px) and (max-width: 1366px) {
   nav#desktop-newscenterNav h2.nav-link {
     font-size: 0.9rem;
+  }
+}
+
+/* ***** Min Width 992 Max Width 1200 ***** */
+@media screen and (min-width: 992px) and (max-width: 1199.99px) {
+  nav#desktop-newscenterNav h2.nav-link {
+    font-size: 0.8rem;
   }
 }
 
 /* ***** Min Width 769 Max Width 991 ***** */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   nav#desktop-newscenterNav h2.nav-link {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
 /* ***** Min Width 576 Max Width 767 ***** */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   nav#desktop-newscenterNav h2.nav-link {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 

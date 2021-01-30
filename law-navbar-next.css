@@ -136,19 +136,19 @@ div.modal-body div.js-elements-container {
 **/
 
 /* Galaxy Fold (less than 280px) */
-@media screen and (max-width: 280px) {}
+@media only screen and (max-width: 280px) {}
 
 /* iPhone X (less than 376px) */
-@media screen and (max-width: 376px) {}
+@media only screen and (max-width: 376px) {}
 
 /* Surface Duo (less than 540px) */
-@media screen and (max-width: 540px) {}
+@media only screen and (max-width: 540px) {}
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media screen and (max-width: 575.98px) {}
+@media only screen and (max-width: 575.98px) {}
 
 /* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) and (max-width: 767.98px) {}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {}
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {}
@@ -164,7 +164,7 @@ div.modal-body div.js-elements-container {
 
 
 /* ***** Mobile Up ***** */
-@media screen and (min-width: 576px) {}
+@media only screen and (min-width: 576px) {}
 
 @media screen and (min-width: 767.999px) {}
 
@@ -176,7 +176,7 @@ div.modal-body div.js-elements-container {
 
 
 /* ***** Max Width 767 ***** */
-@media screen and (max-width: 767.999px) {
+@media only screen and (max-width: 767.999px) {
 
   .modal-body {
     font-size: x-small;
@@ -196,7 +196,7 @@ div.modal-body div.js-elements-container {
 }
 
 /* ***** Max Width 576 ***** */
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
 
   div.modal-body ul.list-group h4 {
     font-size: 0.9rem;

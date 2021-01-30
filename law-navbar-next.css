@@ -227,6 +227,10 @@ div.modal-body div.js-elements-container {
     display: none;
   }
 
+  hr.mobile-categories {
+    color: #000000;
+  }
+
   div.modal-body ul.list-group h4 {
     font-size: 0.9rem;
   }

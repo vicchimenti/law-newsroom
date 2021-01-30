@@ -25,4 +25,3 @@
 - [] Remove contentItem class from organizers
 - [] Build Banner
 - [] Fix internal link bug on major and minor feeds
-- [] Change centerpiece headline to h2

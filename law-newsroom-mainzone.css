@@ -36,7 +36,7 @@ div.heroOrganizerWrapper.col-xs-12 {
 /** border for organizer left on full page **/
 
 div.newsroomOrganizerWrapper.col-md-8 {
-    border: #f7f7f7;
+    border: #000000;
     border-top: 0;
     border-right: 0;
     border-bottom: 0;
@@ -63,9 +63,9 @@ div.newsroomMajorFeedItem {
     padding-bottom: 1rem;
 }
 
-div.newsroomMajorFeedItem .border-start {
+/* div.newsroomMajorFeedItem .border-start {
     color: #000000;
-}
+} */
 
 
 /** horizontal rule between articles **/

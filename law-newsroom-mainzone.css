@@ -17,7 +17,7 @@ div.newsroomOrganizerWrapper p {
     line-height: 1.35;
 }
 
-p.newsroomArticlePublishedDate {
+div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
     font-size: 1.25rem;
 }
 

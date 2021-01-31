@@ -53,7 +53,7 @@ try {
     var photoCredit = "";
     var authorByLine = "";
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    var beginningHTML = '<div class="newsroomHeroFeedItem newsroomArticleWrapper newsroomBlurb col-12 col-xs-12 card border-0" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var beginningHTML = '<div class="newsroomHeroFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 

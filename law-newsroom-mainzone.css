@@ -7,13 +7,18 @@ div#MainZone div.container {
 
 /** news article customizations **/
 
+div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
+    font-size: 1.6rem;
+    margin: 15px 0 15px 0;
+}
+
 div.newsroomOrganizerWrapper p {
     font-size: 1.5rem;
     line-height: 1.35;
 }
 
 p.newsroomArticlePublishedDate {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 div.card span.newsroomArticleSpecialCategory {
@@ -89,9 +94,9 @@ div.newsroomArticleBlurb.container div.row {
     padding-right: 20px;
 }
 
-h3.newsroomArticleTitle.panel-heading {
+/* h3.newsroomArticleTitle.panel-heading {
     padding-left: 0;
-}
+} */
 
 
 /** Overrides law style for list items **/
@@ -136,9 +141,9 @@ p.credits {
 
 /** background colors for special categories **/
 
-h3.newsroomArticleSubTitle {
+/* h3.newsroomArticleSubTitle {
     padding-top: 20px;
-}
+} */
 
 
 

@@ -233,7 +233,8 @@ div.modal-body div.js-elements-container {
 
   div.mobile-categories h3 {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    padding-bottom: 1rem;
   }
 
   div.modal-body ul.list-group a small {

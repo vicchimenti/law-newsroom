@@ -223,10 +223,6 @@ div.modal-body div.js-elements-container {
 /* ***** Max Width 576 ***** */
 @media screen and (max-width: 576px) {
 
-  div.mobile-categories {
-    display: none;
-  }
-
   div.modal-body ul.list-group a small {
     font-size: .5rem;
   }
@@ -250,6 +246,10 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 576 ***** */
 @media screen and (min-width: 576px) {
+
+  div.mobile-categories {
+    display: none;
+  }
 
   li.nav-item.mobile-categories {
     display: none;

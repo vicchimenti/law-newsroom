@@ -189,9 +189,9 @@ div.newsroomCategoryFeedItem ul {
 }
 
 @media screen and (min-width: 767.999px) {
-    /* If Bootstrap 4 only modified and may remove 20210130*/
+    /* If Bootstrap 4 only */
     div.gridOrganizerWrapper {
-        padding: 0 8px 20px 8px;
+        padding: 0 50px 50px 50px;
     }
 }
 

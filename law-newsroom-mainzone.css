@@ -4,6 +4,11 @@ div#MainZone div.container {
     display: contents;
 }
 
+/* div.card-body div.row {
+    padding-left: 0;
+    padding-right: 0;
+} */
+
 
 /** news article customizations **/
 

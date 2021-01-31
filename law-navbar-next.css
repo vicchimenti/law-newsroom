@@ -227,7 +227,7 @@ div.modal-body div.js-elements-container {
     font-size: 1rem;
   }
 
-  div.mobile-categories address {
+  div.mobile-categories address a {
     color: #088099;
   }
 

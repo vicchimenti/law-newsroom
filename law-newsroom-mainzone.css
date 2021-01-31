@@ -7,6 +7,11 @@ div#MainZone div.container {
 
 /** news article customizations **/
 
+div.newsroomOrganizerWrapper p {
+    font-size: 1.5rem;
+    line-height: 1.35;
+}
+
 p.newsroomArticlePublishedDate {
     font-size: 1.5rem;
 }

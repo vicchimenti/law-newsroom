@@ -17,11 +17,11 @@ body.law-newscenterMain-2077081 {
 
 
 /* *****  full width nav banner  ***** */
-header#desktop-newscenterHeader {
+header#newscenterHeader {
   max-width: none;
 }
 
-header#desktop-newscenterHeader.container {
+header#newscenterHeader.container {
   max-width: none;
   padding-bottom: 0.25rem;
   padding-left: 0;
@@ -29,12 +29,12 @@ header#desktop-newscenterHeader.container {
   width: auto;
 }
 
-nav#desktop-newscenterNav .container {
+nav#newscenterNav .container {
   max-width: none;
   width: -webkit-fill-available;
 }
 
-nav#desktop-newscenterNav .row {
+nav#newscenterNav .row {
   max-width: none;
   width: -webkit-fill-available;
 }
@@ -45,7 +45,7 @@ nav#desktop-newscenterNav .row {
 
 
 /* *****  nav borders and background  ***** */
-nav#desktop-newscenterNav {
+nav#newscenterNav {
   /* background: linear-gradient(0.5turn, #f7f7f7, #ffffff, #ffffff, #f7f7f7); */
   /* background-color: #f7f7f7; */
   background-color: #ffffff;
@@ -56,7 +56,7 @@ nav#desktop-newscenterNav {
   border-left: none;
 }
 
-nav#desktop-newscenterNav h2.nav-link {
+nav#newscenterNav h2.nav-link {
   color: #000000;
   font-size: 1rem;
 }
@@ -99,7 +99,7 @@ ul.menu {
   font-weight: 300;
 }
 
-#desktop-newscenterNav ul.menu {
+#newscenterNav ul.menu {
   font-size: medium;
   font-weight: 500;
 }
@@ -144,7 +144,7 @@ div.modal-body div.js-elements-container {
 /* ***** Min Width 1200 Max Width 1366 ***** */
 @media screen and (min-width: 1200px) and (max-width: 1366px) {
 
-  nav#desktop-newscenterNav h2.nav-link {
+  nav#newscenterNav h2.nav-link {
     font-size: 0.95rem;
   }
 
@@ -161,7 +161,7 @@ div.modal-body div.js-elements-container {
 /* ***** Min Width 992 Max Width 1200 ***** */
 @media screen and (min-width: 992px) and (max-width: 1199.99px) {
 
-  nav#desktop-newscenterNav h2.nav-link {
+  nav#newscenterNav h2.nav-link {
     font-size: 0.85rem;
   }
 
@@ -177,7 +177,7 @@ div.modal-body div.js-elements-container {
 /* ***** Min Width 769 Max Width 991 ***** */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
 
-  nav#desktop-newscenterNav h2.nav-link {
+  nav#newscenterNav h2.nav-link {
     font-size: 0.75rem;
   }
 
@@ -193,7 +193,7 @@ div.modal-body div.js-elements-container {
 /* ***** Min Width 576 Max Width 767 ***** */
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
 
-  nav#desktop-newscenterNav h2.nav-link {
+  nav#newscenterNav h2.nav-link {
     font-size: 0.65rem;
   }
 

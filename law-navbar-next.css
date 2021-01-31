@@ -223,24 +223,28 @@ div.modal-body div.js-elements-container {
 /* ***** Max Width 576 ***** */
 @media screen and (max-width: 576px) {
 
-  li.nav-item.desktop-categories {
+  div.mobile-categories {
     display: none;
   }
 
-  hr.mobile-categories {
-    color: #000000;
-  }
-
-  div.modal-body ul.list-group h4 {
-    font-size: 0.9rem;
+  div.modal-body ul.list-group a small {
+    font-size: .5rem;
   }
 
   div.modal-body ul.list-group a strong {
     font-size: .5rem;
   }
 
-  div.modal-body ul.list-group a small {
-    font-size: .5rem;
+  div.modal-body ul.list-group h4 {
+    font-size: 0.9rem;
+  }
+
+  hr.mobile-categories {
+    color: #000000;
+  }
+
+  li.nav-item.desktop-categories {
+    display: none;
   }
 }
 

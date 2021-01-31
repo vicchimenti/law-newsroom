@@ -4,12 +4,6 @@ div#MainZone div.container {
     display: contents;
 }
 
-/* div.card-body div.row {
-    padding-left: 0;
-    padding-right: 0;
-} */
-
-
 /** news article customizations **/
 
 div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
@@ -103,9 +97,7 @@ div.newsroomArticleBlurb.container div.row {
     padding-right: 20px;
 }
 
-/* h3.newsroomArticleTitle.panel-heading {
-    padding-left: 0;
-} */
+
 
 
 /** Overrides law style for list items **/
@@ -137,8 +129,10 @@ div.newsroomArticle ul li.tag {
 
 img.articleImage {
     min-width: -webkit-fill-available;
-    padding-top: 2rem;
+    padding: 8px 16px 0 16px;
 }
+
+
 
 
 /** layout for byline and credits **/
@@ -146,13 +140,6 @@ img.articleImage {
 p.credits {
     margin-bottom: 0.5rem;
 }
-
-
-/** background colors for special categories **/
-
-/* h3.newsroomArticleSubTitle {
-    padding-top: 20px;
-} */
 
 
 

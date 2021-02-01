@@ -76,13 +76,13 @@ try {
      *  parse the list of tags, add <li> tags
      * 
      * */
-    if (fieldTags != "") {
-        var arrayOfTags = fieldTags.split(',');
-        for (let i = 0; i < arrayOfTags.length; i++) {
-            listItems += '<li class="tag rounded-pill">' + arrayOfTags[i] + '</li>';
-        }
-        listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
-    }
+    // if (fieldTags != "") {
+    //     var arrayOfTags = fieldTags.split(',');
+    //     for (let i = 0; i < arrayOfTags.length; i++) {
+    //         listItems += '<li class="tag rounded-pill">' + arrayOfTags[i] + '</li>';
+    //     }
+    //     listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
+    // }
 
 
     /***

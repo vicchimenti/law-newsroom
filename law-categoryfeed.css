@@ -25,7 +25,6 @@ div.gridOrganizer.standardContent {
     justify-content: center;
 }
 
-
 div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
@@ -166,6 +165,14 @@ div.newsroomCategoryFeedItem ul {
     margin-bottom: 0;
 }
 
+div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
+    font-size: 1.25rem;
+}
+
+div.card span.newsroomArticleSpecialCategory {
+    color: #aa0000;
+}
+
 
 
 
@@ -260,5 +267,9 @@ div.newsroomCategoryFeedItem ul {
     div.newsroomCategoryFeedItem ul {
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
+        font-size: 1rem;
     }
 }

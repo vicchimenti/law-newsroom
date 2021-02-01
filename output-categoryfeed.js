@@ -48,7 +48,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var titleLink = "";
+    var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var listItems = "";
     var listOfTags = "";
     var photoCredit = "";

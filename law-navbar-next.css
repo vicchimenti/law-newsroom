@@ -269,6 +269,10 @@ div.modal-body div.js-elements-container {
     display: none;
   }
 
+  li.dropdown-menu {
+    border: none;
+  }
+
   a.navbar-brand h1 {
     font-size: 1.15rem;
   }

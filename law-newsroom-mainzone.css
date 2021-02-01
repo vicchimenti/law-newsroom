@@ -43,7 +43,9 @@ div.heroOrganizerWrapper.col-xs-12 {
 
 div.heroOrganizerWrapper h3.newsroomArticleTitle {
     font-size: 1.6rem;
+    padding-left: 16px;
 }
+
 
 
 /** border for organizer left on full page **/

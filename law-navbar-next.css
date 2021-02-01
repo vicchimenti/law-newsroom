@@ -84,12 +84,16 @@ button.navbar-toggler {
 
 a.navbar-brand h1 {
   font-weight: 400;
-  font-size: 1.25rem;
-  line-height: unset;
+  font-size: 2rem;
+  /* line-height: unset; */
+  white-space: pre-wrap;
+  word-break: break-word;
+  /* overflow-wrap: break-word;
+  word-wrap: break-word; */
 }
 
 a.navbar-brand span {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 
@@ -148,13 +152,13 @@ div.modal-body div.js-elements-container {
     font-size: 0.95rem;
   }
 
-  /* a.navbar-brand h1 {
-    font-size: 1.8rem;
+  a.navbar-brand h1 {
+    font-size: 1.75rem;
   }
   
   a.navbar-brand span {
     font-size: 1.4rem;
-  } */
+  }
 
 }
 
@@ -165,13 +169,13 @@ div.modal-body div.js-elements-container {
     font-size: 0.85rem;
   }
 
-  /* a.navbar-brand h1 {
-    font-size: 1.6rem;
+  a.navbar-brand h1 {
+    font-size: 1.5rem;
   }
   
   a.navbar-brand span {
-    font-size: 1.3rem;
-  } */
+    font-size: 1.25rem;
+  }
 }
 
 /* ***** Min Width 769 Max Width 991 ***** */
@@ -181,13 +185,13 @@ div.modal-body div.js-elements-container {
     font-size: 0.75rem;
   }
 
-  /* a.navbar-brand h1 {
+  a.navbar-brand h1 {
     font-size: 1.4rem;
   }
   
   a.navbar-brand span {
-    font-size: 1.2rem;
-  } */
+    font-size: 1.15rem;
+  }
 }
 
 /* ***** Min Width 576 Max Width 767 ***** */
@@ -195,6 +199,14 @@ div.modal-body div.js-elements-container {
 
   nav#newscenterNav h2.nav-link {
     font-size: 0.65rem;
+  }
+
+  a.navbar-brand h1 {
+    font-size: 1.25rem;
+  }
+  
+  a.navbar-brand span {
+    font-size: 1.1rem;
   }
 
 }
@@ -255,6 +267,14 @@ div.modal-body div.js-elements-container {
 
   li.nav-item.desktop-categories {
     display: none;
+  }
+
+  a.navbar-brand h1 {
+    font-size: 1.15rem;
+  }
+  
+  a.navbar-brand span {
+    font-size: 1.05rem;
   }
 }
 

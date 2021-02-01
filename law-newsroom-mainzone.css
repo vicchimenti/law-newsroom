@@ -183,6 +183,10 @@ div.titleWrapper address a {
 /** Responsive Media Querys **/
 
 @media screen and (max-width: 767.999px) {
+
+    div.newsroomOrganizerWrapper.col-md-8 {
+        border: none;
+    }
     div.heroOrganizer.standardContent {
         margin-left: 20px;
         padding-left: 20px;

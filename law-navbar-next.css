@@ -148,13 +148,13 @@ div.modal-body div.js-elements-container {
     font-size: 0.95rem;
   }
 
-  a.navbar-brand h1 {
+  /* a.navbar-brand h1 {
     font-size: 1.8rem;
   }
   
   a.navbar-brand span {
     font-size: 1.4rem;
-  }
+  } */
 
 }
 
@@ -165,13 +165,13 @@ div.modal-body div.js-elements-container {
     font-size: 0.85rem;
   }
 
-  a.navbar-brand h1 {
+  /* a.navbar-brand h1 {
     font-size: 1.6rem;
   }
   
   a.navbar-brand span {
     font-size: 1.3rem;
-  }
+  } */
 }
 
 /* ***** Min Width 769 Max Width 991 ***** */
@@ -181,13 +181,13 @@ div.modal-body div.js-elements-container {
     font-size: 0.75rem;
   }
 
-  a.navbar-brand h1 {
+  /* a.navbar-brand h1 {
     font-size: 1.4rem;
   }
   
   a.navbar-brand span {
     font-size: 1.2rem;
-  }
+  } */
 }
 
 /* ***** Min Width 576 Max Width 767 ***** */

@@ -84,12 +84,12 @@ button.navbar-toggler {
 
 a.navbar-brand h1 {
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.25rem;
   line-height: unset;
 }
 
 a.navbar-brand span {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 

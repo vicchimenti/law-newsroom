@@ -1,0 +1,35 @@
+<div class="popupVideoWrapper" id="id<t4 type='meta' meta='content_id' />">
+  <div class="popupVideo">
+    <a class="media-helper" target="_blank" id="video<t4 type='meta' meta='content_id' />">
+      <img class="img-responsive media-thumbnail" alt="" id="image<t4 type='meta' meta='content_id' />">
+    <i class="fa fa-5x fa-play-circle-o play-button"></i> </a>
+    <p><t4 type="content" name="Video Description" output="normal" modifiers="striptags,htmlentities" /></p>
+  </div>
+  <div class="sidebottom"></div>
+</div>
+
+<script>
+(function(){
+  var youtubeID = "<t4 type='content' name='Youtube Video ID' output='normal' modifiers='striptags,htmlentities' />",
+      vimeoID = "<t4 type='content' name='Vimeo Video ID' output='normal' modifiers='striptags,htmlentities' />",
+      href = '',
+      src = '';
+  if (youtubeID) {
+  	href = '//www.youtube.com/watch?v=' + youtubeID;
+    src = '//img.youtube.com/vi/' + youtubeID + '/mqdefault.jpg';
+    addAttr();
+  }
+  else if (vimeoID) {
+    href = '//www.vimeo.com/' + vimeoID;
+    $.getJSON('//vimeo.com/api/v2/video/' + vimeoID + '.json?callback=?', function(data) {
+      src = data[0].thumbnail_large;
+      addAttr();
+    });
+  }
+  
+  function addAttr() {
+    document.getElementById("video<t4 type='meta' meta='content_id' />").setAttribute('href', href);
+    document.getElementById("image<t4 type='meta' meta='content_id' />").setAttribute('src', src);
+  }
+})();
+</script>

@@ -6,20 +6,20 @@
  */
 
 
-var fieldToBeEvaluated = content.get("Major or Minor").publish(); //edit this to change the field
+var fieldToBeEvaluated = content.get("Newscenter Homepage").publish(); //edit this to change the field
 var optionToTestFor = "major"; //edit this to change the option
-var contentTypeLayout   = 'output/majorfeed'; //edit this to change the Content Layout to use for output
+var contentTypeLayout = 'output/majorfeed'; //edit this to change the Content Layout to use for output
 
 try {
-  if (fieldToBeEvaluated == optionToTestFor){
-	var sw = new java.io.StringWriter();
-	var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
-	new com.terminalfour.publish.ContentPublisher().write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview); 
-	output = sw.toString();
+    if (fieldToBeEvaluated == optionToTestFor) {
+        var sw = new java.io.StringWriter();
+        var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
+        new com.terminalfour.publish.ContentPublisher().write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview);
+        output = sw.toString();
 
-	document.write(output);
-  }
+        document.write(output);
+    }
 
-} catch(err) {
-	document.write(err.message);
+} catch (err) {
+    document.write(err.message);
 }

@@ -23,8 +23,8 @@ try {
     var choice = String(content.get('Article type').publish());
     switch (choice) {
         default: header = '\
-			<div class="newsroomOrganizerWrapper col-xs-12 order-xs-2 col-md-8 col-md-push-4 order-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
-					<div class="newsroomOrganizer standardContent card-group border border-left border-dark">\
+			<div class="newsroomOrganizerWrapper major-feed add col-12 col-xs-12 order-xs-2 col-md-8 col-md-push-4 order-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+					<div class="newsroomOrganizer standardContent card-deck border-0 border-start">\
                   		<div class="newsroomOrganizerExtra"></div>\
 		';
         midder = '\

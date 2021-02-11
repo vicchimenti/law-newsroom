@@ -4,11 +4,20 @@ div#MainZone div.container {
     display: contents;
 }
 
-
 /** news article customizations **/
 
-p.newsroomArticlePublishedDate {
+div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
+    font-size: 1.6rem;
+    margin: 15px 0 15px 0;
+}
+
+div.newsroomOrganizerWrapper p {
     font-size: 1.5rem;
+    line-height: 1.35;
+}
+
+div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
+    font-size: 1.25rem;
 }
 
 div.card span.newsroomArticleSpecialCategory {
@@ -32,11 +41,17 @@ div.heroOrganizerWrapper.col-xs-12 {
     padding-left: 0;
 }
 
+div.heroOrganizerWrapper h3.newsroomArticleTitle {
+    font-size: 1.6rem;
+    padding-left: 16px;
+}
+
+
 
 /** border for organizer left on full page **/
 
 div.newsroomOrganizerWrapper.col-md-8 {
-    border: #f7f7f7;
+    border: #e5e5e5;
     border-top: 0;
     border-right: 0;
     border-bottom: 0;
@@ -67,9 +82,11 @@ div.newsroomMajorFeedItem {
 /** horizontal rule between articles **/
 
 hr.articleBorderBottom {
-    color: #f7f7f7;
+    color: #e5e5e5;
+    height: 3px;
     margin-left: 20px;
     margin-right: 20px;
+    opacity: unset;
 }
 
 
@@ -82,9 +99,7 @@ div.newsroomArticleBlurb.container div.row {
     padding-right: 20px;
 }
 
-h3.newsroomArticleTitle.panel-heading {
-    padding-left: 0;
-}
+
 
 
 /** Overrides law style for list items **/
@@ -116,21 +131,16 @@ div.newsroomArticle ul li.tag {
 
 img.articleImage {
     min-width: -webkit-fill-available;
-    padding-top: 2rem;
+    padding: 8px 16px 0 16px;
 }
+
+
 
 
 /** layout for byline and credits **/
 
 p.credits {
     margin-bottom: 0.5rem;
-}
-
-
-/** background colors for special categories **/
-
-h3.newsroomArticleSubTitle {
-    padding-top: 20px;
 }
 
 
@@ -141,7 +151,7 @@ h3.newsroomArticleSubTitle {
 span.credits a.card-link {
     color: #088099;
     font-family: 'Montserrat';
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
@@ -173,6 +183,10 @@ div.titleWrapper address a {
 /** Responsive Media Querys **/
 
 @media screen and (max-width: 767.999px) {
+
+    div.newsroomOrganizerWrapper.col-md-8 {
+        border: none;
+    }
     div.heroOrganizer.standardContent {
         margin-left: 20px;
         padding-left: 20px;
@@ -181,5 +195,21 @@ div.titleWrapper address a {
     div.newsroomMinorFeedItem.card {
         margin: 0 20px 20px 20px;
         padding: 0 20px 0 20px;
+    }
+
+    div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
+        font-size: 1.4rem;
+    }
+
+    div.heroOrganizerWrapper h3.newsroomArticleTitle {
+        font-size: 1.4rem;
+    }
+    
+    div.newsroomOrganizerWrapper p {
+        font-size: 1.25rem;
+    }
+    
+    div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
+        font-size: 1rem;
     }
 }

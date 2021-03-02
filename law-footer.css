@@ -1,0 +1,4 @@
+footer #footerInner {
+    display: flex;
+    flex-wrap: wrap;
+}

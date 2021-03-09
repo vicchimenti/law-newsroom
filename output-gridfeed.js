@@ -1,7 +1,7 @@
 /***
  *     @author Victor Chimenti, MSCS-SE '20
  *     @file output-gridfeed.js
- *     @see Seattle University School of Law Newsroom
+ *     @see Seattle University School of Law Newsroom - output/gridfeed
  *
  *     This new content type layout is a smart layout for news items that must obey
  *     a masonry grid layout. In its first iteration this layout will be dedicated

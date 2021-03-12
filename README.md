@@ -14,15 +14,16 @@
 - [x] Adjust sort algo for new date fields
 - [x] Adjust sort algo for radio button fields
 - [] Add mobile layout category
-- [] Add mobile layout major minor
+- [x] Add mobile layout major minor
 - [] Address numeric sorting layout
 - [] Track Category List Bug
 - [x] Add Centerpiece layout
-- [] Add Centerpiece logic
+- [x] Add Centerpiece logic
 - [x] Add Events layout
 - [x] Add Announcements layout
 - [x] SU Law in the News layout
 - [] Remove contentItem class from organizers
-- [] Build Banner
+- [x] Build Banner
 - [] Fix internal link bug on major and minor feeds
 - [] Adjust mobile nav to and account foir archives
+- [] Add aria-label or title field to fulltext link

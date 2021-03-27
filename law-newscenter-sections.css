@@ -136,9 +136,9 @@ div.newsroomOrganizer.card-deck .card {
     border: none;
 }
 
-span.newsroomImageWrapper img.articleImage {
+/* span.newsroomImageWrapper img.articleImage {
     padding: 0;
-}
+} */
 
 div.newsroomCategoryFeedItem div.newsroomArticleBlurb.card-body {
     padding: 0%;

@@ -20,9 +20,6 @@ div#MainZone div.container {
 
 div.gridOrganizerWrapper {
     background-color: #f7f7f7;
-    /* background-color: #e6efff; */
-    /* opacity: 90%; */
-    /* If Bootstrap 5 only */
     padding-bottom: 50px;
 } 
 
@@ -66,7 +63,6 @@ div.gridFeedItem p {
     font-size: 1rem;
     font-weight: 450;
     line-height: inherit;
-    /* If not Bootstrap 4 review margin bottom */
     margin-bottom: 0;
 }
 

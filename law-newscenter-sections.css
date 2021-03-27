@@ -124,9 +124,6 @@ p.credits {
 
 /* *****  category feed customizations ***** */
 
-/* div.newsroomOrganizer, div.newsroomCategoryFeedItem  {
-    background-color: #f7f7f7;
-} */
 
 div.newsroomOrganizer.card-deck {
     flex-direction: column;
@@ -135,10 +132,6 @@ div.newsroomOrganizer.card-deck {
 div.newsroomOrganizer.card-deck .card {
     border: none;
 }
-
-/* span.newsroomImageWrapper img.articleImage {
-    padding: 0;
-} */
 
 div.newsroomCategoryFeedItem div.newsroomArticleBlurb.card-body {
     padding: 0%;

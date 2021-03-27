@@ -144,6 +144,11 @@ div.newsroomArticle ul li.tag {
 */
 
 
+.newsroomMajorFeedItem img.articleImage {
+    padding: 8px 16px 0 16px;
+}
+
+
 /** layout for byline and credits **/
 
 p.credits {

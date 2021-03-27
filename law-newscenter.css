@@ -6,6 +6,11 @@
 
 
 
+/** Global header override **/
+
+#globalHeader {
+  position: unset;
+}
 
 
 /** Wraps Major Feed Overflow within container **/

@@ -466,6 +466,10 @@ h1#pageTitle {
       font-size: 1.15rem;
     }
   }
+
+
+
+
   
   /* ***** Min Width 576 Max Width 767 ***** */
   @media screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -487,6 +491,15 @@ h1#pageTitle {
   
   /* ***** Max Width 767 ***** */
   @media screen and (max-width: 767.999px) {
+
+    .law-newscenter-2268929 #pageContentWrapper {
+      background-color: #ffffff;
+      border-bottom:  none;
+      border-left: none;
+      border-radius: 0;
+      border-right: none;
+      border-top: 0.1rem solid #AA0000;
+    }
   
     div#navbarSupportedContent {
       margin-left: 0;

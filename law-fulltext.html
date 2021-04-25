@@ -1,47 +1,91 @@
-<div class="newsroomArticleWrapper" id="id<t4 type='meta' meta='content_id' />">
+<div class="newsroomArticleWrapper px-4" id="id<t4 type='meta' meta='content_id' />">
     <t4 type="meta" meta="html_anchor" />
-    
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-12 offset-xxl-1 col-xxl-10">
                 <p class="newsroomArticleTopicsHeader">
                     <t4 type="content" name="Topics" output="normal" display_field="name" modifiers="htmlentities"
                         textual-name-separator=">" delimiter=" / " />
                 </p>
-                <h1 id="pageTitle" class="">
+                <h1 id="pageTitle" class="mx-0">
                     <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
                 </h1>
             </div>
         </div>
         <div class="row">
-            <div class="newsroomArticleByline col-md-12">
-                <t4 type="content" name="Author" output="selective-output" modifiers="" process-format="true"
-                    format="<div class=&quot;newsroomArticleAuthor&quot;><p>Written by $value</p></div>" />
+
+            <div class="newsroomArticleByline col-12 offset-xxl-1 col-xxl-10">
                 <t4 type="content" name="Publish Date" output="selective-output" process-format="true"
-                    format="<div class=&quot;newsroomArticlePublishedDate&quot;><p>$value</p></div>"
-                    date_format="MMMM d, yyyy" />
-            </div><!-- end newsroomArticleByline -->
+                    format="<span class='newsroomArticlePublishedDate'>$value</span>" date_format="MMMM d, yyyy" />
+                <t4 type="content" name="Author" output="selective-output" modifiers="" process-format="true"
+                    format="<span class='newsroomArticleAuthor'> &centerdot; By $value</span>" />
+            </div><!-- end newsroomArticleByline • -->
+
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center">
+                <figure class="image-wrapper">
+                    <t4 type="content" name="Main Image" output="selective-output" format="$value"
+                        formatter="image/*" />
+                    <figcaption>
+                        <span class="image-caption">
+                            <t4 type="content" name="Main Image Caption" output="selective-output" format="$value"
+                                modifiers="striptags,htmlentities" />
+                        </span>
+                        <span class="image-credit">
+                            <t4 type="content" name="Main Image Credit" output="selective-output" format="$value"
+                                modifiers="striptags,htmlentities" />
+                        </span>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </div>
-    <div class="newsroomFeaturedImageWrapper">
-        <t4 type="content" name="Media Library Image" output="selective-output" alt-element="Alt Text"
-            process-format="true" format="$value" formatter="image/*" />
-        <t4 type="content" name="Image" output="image" alt-element="Alt Text" />
-        <div class="newsroomFeaturedImageAttributes container">
-            <div class="row">
-                <t4 type="content" name="Image Credit" output="selective-output" process-format="true"
-                    format="<div class=&quot;newsroomFeaturedImageCredit col-md-3&quot;><p>Image credit: $value</p></div>" />
-                <t4 type="content" name="Image Caption" output="selective-output" process-format="true"
-                    format="<div class=&quot;newsroomFeaturedImageCaption col-md-9&quot;><p>$value</p></div>" />
-            </div>
-        </div><!-- end newsroomFeaturedImageAttributes -->
-    </div><!-- end newsroomFeaturedImageWrapper -->
     <div class="newsroomArticleMain container">
         <div class="row">
-            <div class="col-md-3">
+            <!-- 1 empty column to center content + 10 content columns (no 12th column) -->
+            <div class="col-md-2 offset-xxl-1">
                 <div class="newsroomArticleShare">
                     <h3>Share this</h3>
-                    <div class="addthis_inline_share_toolbox"></div>
+                    <div class="addthis_inline_share_toolbox">
+                        <ul class="social nav upper-social-icons flex-row flex-md-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/" target="_blank"
+                                    title="Facebook (opens in a new tab)" aria-label="Share to Facebook">
+                                    <span class="icon fab fa-facebook-f fa-2x fa-fw"><span
+                                            class="icon-text">Facebook</span></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.twitter.com/" target="_blank"
+                                    title="Twitter (opens in a new tab)" aria-label="Share to Twitter">
+                                    <span class="icon fab fa-twitter fa-2x fa-fw"><span
+                                            class="icon-text">Twitter</span></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.linkedin.com" target="_blank"
+                                    title="LinkedIn (opens in a new tab)" aria-label="Share to LinkedIn">
+                                    <span class="icon fab fa-linkedin fa-2x fa-fw"><span
+                                            class="icon-text">LinkedIn</span></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/" target="_blank"
+                                    title="Instagram (opens in a new tab)" aria-label="Share to Instagram">
+                                    <span class="icon fab fa-instagram fa-2x fa-fw"><span
+                                            class="icon-text">Instagram</span></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_blank" title="Email (opens in a new tab)"
+                                    aria-label="Share to Email">
+                                    <span class="icon far fa-envelope fa-2x fa-fw"><span
+                                            class="icon-text">Email</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- end .addthis_inline_share_toolbox-->
                 </div><!-- end newsroomArticleShare -->
             </div>
             <div class="newsroomArticleBody col-md-8">
@@ -53,10 +97,54 @@
             </div><!-- end newsroomArticleBody -->
         </div>
         <div class="row">
-            <div class="newsroomArticleShare col-md-8 offset-md-3">
-                <h3>Share this</h3>
+            <div class="newsroomArticleShare offset-md-3 col-md-9">
+                <h3>Font Awesome with custom CSS</h3>
+                <div class="addthis_inline_share_toolbox">
+                    <ul class="social nav list-inline lower-social-icons">
+                        <li class="nav-item list-inline-item">
+                            <a class="nav-link ps-xxl-0" href="https://www.facebook.com/" target="_blank"
+                                title="Facebook (opens in a new tab)" aria-label="Share to Facebook">
+                                <span class="icon fab fa-facebook-f fa-2x fa-fw"><span
+                                        class="icon-text">Facebook</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item list-inline-item">
+                            <a class="nav-link" href="https://www.twitter.com/" target="_blank"
+                                title="Twitter (opens in a new tab)" aria-label="Share to Twitter">
+                                <span class="icon fab fa-twitter fa-2x fa-fw"><span
+                                        class="icon-text">Twitter</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item list-inline-item">
+                            <a class="nav-link" href="https://www.linkedin.com" target="_blank"
+                                title="LinkedIn (opens in a new tab)" aria-label="Share to LinkedIn">
+                                <span class="icon fab fa-linkedin fa-2x fa-fw"><span
+                                        class="icon-text">LinkedIn</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item list-inline-item">
+                            <a class="nav-link" href="https://www.instagram.com/" target="_blank"
+                                title="Instagram (opens in a new tab)" aria-label="Share to Instagram">
+                                <span class="icon fab fa-instagram fa-2x fa-fw"><span
+                                        class="icon-text">Instagram</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item list-inline-item">
+                            <a class="nav-link" href="" target="_blank" title="Email (opens in a new tab)"
+                                aria-label="Share to Email">
+                                <span class="icon far fa-envelope fa-2x fa-fw"><span
+                                        class="icon-text">Email</span></span>
+                            </a>
+                        </li>
+                    </ul> <!-- end .lower-social-icons -->
+                </div> <!-- end .addthis_inline_share_toolbox-->
+            
+                <h3>AddThis</h3>
                 <div class="addthis_inline_share_toolbox"></div>
-            </div>
-        </div> <!-- end newsroomArticleShare -->
+                <h3>sharethis</h3>
+                <div class="sharethis-inline-share-buttons"></div>
+                
+            </div> <!-- end .newsroomArticleShare -->
+        </div> <!-- end .row -->
     </div><!-- end newsroomArticleMain -->
 </div><!-- end newsroomArticleWrapper -->

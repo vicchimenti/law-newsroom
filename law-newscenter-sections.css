@@ -76,10 +76,9 @@ div.gridFeedItem .newsroomArticlePublishedDate {
 
 /** horizontal rule between articles **/
 
-hr.articleBorderBottom {
-    color: #1B1B1B;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.law-newscenterSections-2077081 hr.articleBorderBottom {
+    color: #f7f7f7;
+    margin: 10px 0 20px 0;
 }
 
 

@@ -1,5 +1,5 @@
 /***
- *  law/grid/organizer/centerForIndianLawPolicy
+ *  law/grid/organizer/indiaCenterForJustice
  * 
  */
 

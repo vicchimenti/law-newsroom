@@ -1,5 +1,5 @@
 /***
- *  law/organizer/centerForIndianLawPolicy
+ *  law/organizer/cindiaCenterForJustice
  * 
  */
 

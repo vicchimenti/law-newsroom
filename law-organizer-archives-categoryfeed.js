@@ -1,20 +1,20 @@
 /***
  *      @author Victor Chimenti, MSCS-SE '20
  *      @file law-organizer-archives-categoryfeed.js
- *      @see Seattle University School of Law Newsroom
+ *      @see Seattle University School of Law Newsroom Archives
  *      law/organizer/archives/categoryfeed
  *
- *      This new content type layout is a smart layout for all items in the
+ *      This new content type layout is a smart layout for archived items in the
  *      category newsfeed used by the School of Law Newsroom. This content type
  *      ensures that images, headlines, by-lines, tags and the abstract
  *      summary layout as expected.
  *
- *      This content layout will be the organizer layout and will link to the
+ *      This content layout will link to the
  *      full text layout to reveal the full article.
  *
  *      Document will write once when the page loads
  *
- *      @version 5.5
+ *      @version 6.0
  */
 
 

@@ -1,18 +1,19 @@
 /***
- *     @author Victor Chimenti, MSCS-SE '20
- *     @file output-gridfeed.js
- *     @see Seattle University School of Law Newsroom - output/gridfeed
+ *      @author Victor Chimenti, MSCS-SE '20
+ *      @file law-organizer-archives-gridfeed.js
+ *      @see Seattle University School of Law Newsroom Archives
+ *      law/organizer/archives/gridfeed
  *
- *     This new content type layout is a smart layout for news items that must obey
- *     a masonry grid layout. In its first iteration this layout will be dedicated
- *     to the category news pages.
+ *      This new content type layout is a smart layout for news items that must obey
+ *      a masonry grid layout. In this iteration the layout will be specific
+ *      to the archive news pages that use the Grid Organizer.
  *
- *     This content layout will be the organizer layout and will link to the
- *     full text layout to reveal the full article.
+ *      This content layout will link to the
+ *      full text layout to reveal the full article.
  *
- *     Document will write once when the page loads
+ *      Document will write once when the page loads
  *
- *     @version 5.9
+ *      @version 6.0
  */
 
 

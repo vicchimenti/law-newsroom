@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 6.0
+ *     @version 6.1
  */
 
 
@@ -53,6 +53,7 @@ try {
     var listOfTags = "";
     var publishedLink = "";
     var thumbNailString = "";
+    var hyphen = " - ";
     var beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
     var endingHTML = '</div>';
 

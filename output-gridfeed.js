@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 6.2
+ *     @version 6.3
  */
 
 
@@ -98,7 +98,7 @@ try {
     
     // when tags exist check for Special Categories - SU Law in the News
     if (fieldTags.includes("SU Law in the News")) {
-        beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
+        beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
         // parse law in news for external link to original story
@@ -110,11 +110,10 @@ try {
 
         // assign link value for publishing
         publishedLink = externalLinkString;
-
-
+        
     // when tags exist check for Special Categories - Announcements
     } else if (fieldTags.includes("Announcements")) {
-        beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card border-0 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
+        beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
         // parse announcements for internal link to origin
@@ -126,11 +125,10 @@ try {
 
         // assign link value for publishing
         publishedLink = internalLinkString;
-
-
+        
     // when tags exist check for Special Categories - Announcements
     } else if (fieldTags.includes("Events")) {
-        beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card border-0 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
+        beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 
         // parse events for internal link to origin

@@ -346,13 +346,11 @@ h1#pageTitle {
   }
   
   a.navbar-brand h1 {
+    display: inline;
     font-weight: 400;
-    font-size: 2rem;
-    /* line-height: unset; */
+    font-size: 1.5rem;
     white-space: pre-wrap;
     word-break: break-word;
-    /* overflow-wrap: break-word;
-    word-wrap: break-word; */
   }
   
   a.navbar-brand span {

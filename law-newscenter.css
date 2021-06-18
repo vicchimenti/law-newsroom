@@ -294,10 +294,10 @@ h1#pageTitle {
     width: auto;
   }
   
-  nav#newscenterNav .container {
+  /* nav#newscenterNav .container {
     max-width: none;
     width: -webkit-fill-available;
-  }
+  } */
   
   nav#newscenterNav .row {
     max-width: none;

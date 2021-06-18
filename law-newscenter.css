@@ -378,7 +378,7 @@ h1#pageTitle {
   }
 
 
-  #breadcrumbsWrapper .breadcrumb li+li:before, #breadcrumbsWrapper .breadcrumb .active:before {
+  #newscenterNav .breadcrumb li+li:before, #newscenterNav .breadcrumb .active:before {
     color: #088099;
     content: " \003E\00a0";
     padding: 0 7px;

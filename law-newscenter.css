@@ -347,8 +347,8 @@ h1#pageTitle {
   
   a.navbar-brand h1 {
     display: inline;
-    font-weight: 400;
     font-size: 1.5rem;
+    font-weight: 400;
     white-space: pre-wrap;
     word-break: break-word;
   }
@@ -377,6 +377,8 @@ h1#pageTitle {
   nav#newscenterNav ol.breadcrumb li+li:before {
     color: #088099;
     content: " \003E\00a0";
+    font-size: 1.5rem;
+    font-weight: 400;
     padding: 0 7px;
 }
   

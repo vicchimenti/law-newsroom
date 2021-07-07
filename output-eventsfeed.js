@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 4.1
+ *     @version 4.2
  */
 
 
@@ -70,7 +70,8 @@ try {
     if (fieldTags != "") {
         var arrayOfTags = fieldTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
-            listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
+            let currentItem = arrayOfTags[i].trim();
+            listItems += '<li class="tag">' + currentItem + '</li>';
         }
         listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
     }

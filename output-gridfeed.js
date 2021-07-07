@@ -90,7 +90,8 @@ try {
     if (fieldTags != "") {
     var arrayOfTags = fieldTags.split(',');
     for (let i = 0; i < arrayOfTags.length; i++) {
-        listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
+        let currentItem = arrayOfTags[i].trim();
+        listItems += '<li class="tag">' + currentItem + '</li>';
     }
 
     // Print any tags that were selected

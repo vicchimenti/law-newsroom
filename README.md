@@ -27,3 +27,4 @@
 - [] Fix internal link bug on major and minor feeds
 - [] Adjust mobile nav to and account foir archives
 - [] Add aria-label or title field to fulltext link
+- [] Trim whitespace from announcement feed

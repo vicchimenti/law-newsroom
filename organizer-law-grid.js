@@ -15,16 +15,19 @@ try {
     var base = readMedia(1889354);
     eval(String(base));
 
+    var titleField = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="" />');
+
+
     // declare content wrappers
     var header, midder, footer;
 
     // declare content wrappers
     header = '<div class="gridOrganizerWrapper contentItem" id="id' + content.getID() + '" \
                 data-position-default="Main" data-position-selected="Main"> \
-                <div class="gridOrganizer standardContent card-deck"> \
-                <div class="gridOrganizerExtra"></div>';
-    midder = '<span></span>';
-    footer = '</div><div class="gridOrganizer ToggleExtra boxlinks" style="display:none">Show More</div></div>';
+                <div class="titleWrapper col-xs-12"><h2 class="organizerTitle">' + titleField + '</h2></div> \
+                <div class="gridOrganizer standardContent card-deck">';
+    midder = '';
+    footer = '</div></div>';
 
     // Write content
     main(header, midder, footer);

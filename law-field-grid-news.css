@@ -1,3 +1,16 @@
+div.gridOrganizerWrapper div.titleWrapper {
+    width: 100%;
+}
+
+div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
+    color: #aa0000;
+}
+
+div.gridFeedItem {
+    margin: 0;
+}
+
+
 /* 1100px and up */
 
 @media screen and (min-width: 1100px) {

@@ -1,19 +1,55 @@
+div.gridOrganizerWrapper {
+
+    padding: 0 0 50px 0;
+    
+}
+
 div.gridOrganizerWrapper div.titleWrapper {
+
     padding: 1rem 0 1rem 0;
     width: 100%;
+
 }
 
 div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
+
     color: #aa0000;
+
 }
 
-div.gridFeedItem {
-    margin: 0;
+
+/* ***  Large min Defaults   *** */
+
+@media screen and (min-width: 992px) {
+
+    div.gridOrganizer.standardContent {
+
+        justify-content: start;
+        flex-flow: unset;
+        flex-direction: row;
+        gap: 1rem;
+    
+      }
+    
+    div.gridFeedItem {
+    
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .gridOrganizer.standardContent.card-deck > * + * {
+    
+        margin-left: 1rem;
+    
+    }
 }
 
-div.gridOrganizer.standardContent {
+
+
+/* div.gridOrganizer.standardContent {
     justify-content: space-between;
-}
+} */
 
 
 /* 1100px and up */

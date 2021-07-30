@@ -351,7 +351,7 @@ function main(header, midder, footer) {
      */
 
     // gets the title
-    var title = content.hasElement("Title") ? content.get("Title") : "";
+    // var title = content.hasElement("Title") ? content.get("Title") : "";
     // users choice for the content type to sort
     var choice = content.get("Article type").publish();
     // parses out the content id that references the content type in the media library
@@ -381,12 +381,12 @@ function main(header, midder, footer) {
 
     // the number of items to display
     var LIMIT = content.get("Total number of items to display");
-    log("LIMIT: " + LIMIT);
+    // log("LIMIT: " + LIMIT);
 
     // user has the option of beginning their display at any item rather than the first
     var nStart = content.get("Start Number") && content.get("Start Number") > 0 ?
             content.get("Start Number") : 1;
-    log("nStart: " + nStart);
+    // log("nStart: " + nStart);
 
 
     // the logic to determine layouts and links that were available to the user
@@ -464,7 +464,7 @@ function main(header, midder, footer) {
             validContent.push(item);
         }
     }
-    log("validContent.length: " + validContent.length);
+    // log("validContent.length: " + validContent.length);
 
     /**
      * Sort content
@@ -490,8 +490,8 @@ function main(header, midder, footer) {
     if (!header) header = "";
     if (!midder) midder = "";
     if (!footer) footer = "";
-    if (title != "")
-        header = header + '<div class="titleWrapper col-xs-12"><h2 class="organizerTitle">' + title + "</h2></div>";
+    // if (title != "")
+        // header = header + '<div class="titleWrapper col-xs-12"><h2 class="organizerTitle">' + title + "</h2></div>";
     if (bViewAll) {
         var href = BrokerUtils.processT4Tags(
             dbStatement,
@@ -577,8 +577,8 @@ function main(header, midder, footer) {
         // log("writing content - validContent.length: " + validContent.length);
 
         for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
-            log("i: " + i);
-            log("Limit: " + LIMIT);
+            // log("i: " + i);
+            // log("Limit: " + LIMIT);
             // if first print content item completely
             if (first) {
                 oLayout = LAYOUT;
@@ -587,7 +587,7 @@ function main(header, midder, footer) {
             } else {
                 oLayout = bSummFirst ? LAYOUT + "/Link" : LAYOUT;
             }
-            log("oLayout: " + oLayout);
+            // log("oLayout: " + oLayout);
 
             oCP.write(
                 oT4SW,

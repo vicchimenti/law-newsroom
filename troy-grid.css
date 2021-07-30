@@ -1,0 +1,53 @@
+/* headline and extra-content should not be flex items */
+/* possibly remove extra-content */
+/* possibly remove bootstrap classes */
+/* Need to get rid of the empty span tag at the end */
+
+/* Next steps: clean up CT layout, remove lobotomized owl, use gap with wrap, test */
+
+div.gridOrganizer.standardContent {
+    background-color: black;
+    /* justify-content: space-between; */
+    justify-content: start;
+    flex-flow: unset;
+    flex-direction: row;
+    /* flex-flow: row wrap; /* use when content type layout is cleaned up */ /*
+    /* gap: 1rem; */
+  }
+  
+  div.gridOrganizer div.titleWrapper {
+    width: unset;
+    background-color: fuchsia;
+  }
+  
+  .gridOrganizerExtra {
+    background-color: cyan;
+  }
+  
+  div.gridFeedItem {
+    /* max-width: 260px; */ /* set this to control how many cards */
+    background-color: yellowgreen;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* .gridOrganizerWrapper  > * {
+    background-color: steelblue;
+    width: 100%;
+  /* } */
+  
+  /* Adds a margin on the left side of each flex items except the first flex item */
+  /* this won't work when wrapping unless we add negative margins or a media query */
+  .gridOrganizer.standardContent.card-deck > * + * {
+    margin-left: 1rem;
+    background-color: orange;
+  }
+  
+  @media screen and (min-width: 576px) {
+    div.gridFeedItem {
+      /* margin: 0 !important; */
+      max-width: 100%;
+      padding: 0;
+    }
+  }

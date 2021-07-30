@@ -10,6 +10,10 @@ div.gridFeedItem {
     margin: 0;
 }
 
+div.gridOrganizer.standardContent {
+    justify-content: space-between;
+}
+
 
 /* 1100px and up */
 

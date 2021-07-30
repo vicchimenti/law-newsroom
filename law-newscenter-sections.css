@@ -1,6 +1,7 @@
 /*********************
 *
 *   News Center Sections
+*   Media ID: 2268766
 *
 **/
 
@@ -30,8 +31,12 @@ div.gridOrganizer.standardContent {
     justify-content: center;
 }
 
-div.gridOrganizer div.titleWrapper {
+div.gridOrganizerWrapper div.titleWrapper {
     width: 100%;
+}
+
+div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
+    color: #aa0000;
 }
 
 div.gridFeedItem {

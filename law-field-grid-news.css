@@ -1,7 +1,145 @@
-.gridOrganizerWrapper h2.organizerTitle {
-    padding-left: 25px;
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media screen and (min-width: 1200px) {
+    .gridOrganizerWrapper h2.organizerTitle {
+        padding-left: 2rem;
+    }
+    
+    div.gridFeedItem {
+        max-width: 360px;
+    }
 }
 
-div.gridFeedItem {
-    max-width: 430px;
+
+/* X Large devices (large desktops, 1400px and up) */
+
+@media screen and (min-width: 1400px) {
+
+    .gridOrganizerWrapper h2.organizerTitle {
+        padding-left: 3rem;
+    }
+    
+    div.gridFeedItem {
+        max-width: 380px;
+    }
 }
+
+
+/* (large desktops, 1500px and up) */
+
+@media screen and (min-width: 1500px) {
+    
+    div.gridFeedItem {
+        max-width: 400px;
+    }
+}
+
+
+/* XX Large devices (large desktops, 1920px and up) */
+
+@media screen and (min-width: 1920px) {
+
+    div.gridFeedItem {
+        max-width: 500px;
+    }
+}
+
+
+
+
+/*********************
+*
+*   Reference Breakpoints
+*
+**/
+
+
+/* Galaxy Fold (less than 280px) */
+
+@media only screen and (max-width: 279.99px) {}
+
+
+/* iPhone X (less than 376px) */
+
+@media only screen and (max-width: 375.99px) {}
+
+
+/* Surface Duo (less than 540px) */
+
+@media only screen and (max-width: 539.99px) {}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media only screen and (max-width: 575.99px) {}
+
+
+/* ***** Desktop down ***** */
+
+@media screen and (max-width: 1199.99px) {}
+
+
+/* ***** XL Desktop down ***** */
+
+@media screen and (max-width: 1399.99px) {}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media screen and (min-width: 576px) and (max-width: 767.99px) {}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media screen and (min-width: 768px) and (max-width: 991.99px) {}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media screen and (min-width: 992px) and (max-width: 1199.99px) {}
+
+
+/* iPad Pro (iPad Pro, 1024px to 1200) */
+
+@media screen and (min-width: 1024px) and (max-width: 1199.99px) {}
+
+
+/* Responsice range from 1200 to 1366 */
+
+@media screen and (min-width: 1200px) and (max-width: 1365.99px) {}
+
+
+/* ***** Mobile Up ***** */
+
+@media screen and (min-width: 576px) {}
+
+
+/* ***  Medium min Defaults   *** */
+
+@media screen and (min-width: 768px) {}
+
+
+/* ***  Large min Defaults   *** */
+
+@media screen and (min-width: 992px) {}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media screen and (min-width: 1200px) {}
+
+
+/* X Large devices (large desktops, 1400px and up) */
+
+@media screen and (min-width: 1400px) {}
+
+
+/* XX Large devices (large desktops, 1920px and up) */
+
+@media screen and (min-width: 1920px) {}
+
+
+/* XXX Large devices (large desktops, 2560px and up) */
+
+@media screen and (min-width: 2560px) {}

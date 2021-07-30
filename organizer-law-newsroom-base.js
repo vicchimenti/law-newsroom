@@ -1,7 +1,7 @@
 /***
  *      @author Victor Chimenti, MSCS-SE 2020
  *      @file lawNewsroomOrganizerBase.js
- *      @see Media Library ID: 1889354
+ *      @see Media Library ID: 2686600
  *      
  *
  *      This new content type is being created to solve a sorting problem.

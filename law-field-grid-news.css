@@ -1,10 +1,21 @@
+/* 1100px and up */
+
+@media screen and (min-width: 1100px) {
+
+    .gridOrganizerWrapper h2.organizerTitle {
+        padding-left: 1rem;
+    }
+    
+    div.gridFeedItem {
+        max-width: 290px;
+    }
+}
+
+
 
 /* Large devices (large desktops, 1200px and up) */
 
 @media screen and (min-width: 1200px) {
-    .gridOrganizerWrapper h2.organizerTitle {
-        padding-left: 1rem;
-    }
     
     div.gridFeedItem {
         max-width: 330px;

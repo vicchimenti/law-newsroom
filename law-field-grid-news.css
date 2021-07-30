@@ -1,7 +1,7 @@
 div.gridOrganizerWrapper {
 
     padding: 0 0 50px 0;
-    
+
 }
 
 div.gridOrganizerWrapper div.titleWrapper {
@@ -17,8 +17,14 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
 
 }
 
+div.gridFeedItem {
+    
+    max-width: 100%;
 
-/* ***  Large min Defaults   *** */
+}
+
+
+/* ***  Large min Defaults min 992   *** */
 
 @media screen and (min-width: 992px) {
 
@@ -33,7 +39,6 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     
     div.gridFeedItem {
     
-        max-width: 100%;
         margin: 0;
         padding: 0;
     }
@@ -44,6 +49,12 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     
     }
 }
+
+
+
+/* Small screens below 991 breakpoint */
+
+@media screen and (max-width: 991.99px) {}
 
 
 

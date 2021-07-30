@@ -3,8 +3,18 @@
 
 @media screen and (min-width: 1200px) {
     .gridOrganizerWrapper h2.organizerTitle {
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
+    
+    div.gridFeedItem {
+        max-width: 330px;
+    }
+}
+
+
+/* (large desktops, 1300px and up) */
+
+@media screen and (min-width: 1300px) {
     
     div.gridFeedItem {
         max-width: 360px;

@@ -24,7 +24,7 @@ try {
     // declare content wrappers
     header = '<div class="gridOrganizerWrapper contentItem" id="id' + content.getID() + '" \
                 data-position-default="Main" data-position-selected="Main"> \
-                <div class="titleWrapper col-xs-12"><h2 class="organizerTitle">' + titleField + '</h2></div> \
+                <div class="titleWrapper col-xs-12"><h2 class="organizerTitle text-center">' + titleField + '</h2></div> \
                 <div class="gridOrganizer standardContent card-deck">';
     midder = '';
     footer = '</div></div>';

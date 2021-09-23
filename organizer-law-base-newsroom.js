@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.2
+ *      @version 5.3
  */
 
 
@@ -30,7 +30,7 @@
  importClass(com.terminalfour.publish.ContentPublisher);
  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
-//  importClass(com.terminalfour.content.element.ContentElement);
+ importClass(com.terminalfour.content.element.ContentElement);
  
  
  
@@ -435,14 +435,14 @@
              };
 
              var itemID = item.CachedContent.getID();
-             var cats = item.Content.get('Category').publish();
+            //  var cats = itemID.ContentElement.get('Category');
             // var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
 
             // var cats = item.content.get('Category').publish();
 
             // var catsObj = item.getValue()
             log("itemID: " + itemID);
-            log("cats: " + cats);
+            // log("cats: " + cats);
 
 
 

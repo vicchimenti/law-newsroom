@@ -18,7 +18,7 @@
 /***
  *      Import T4 Utilities
  */
- importClass(com.terminalfour.media.IMediaManager);
+//  importClass(com.terminalfour.media.IMediaManager);
 //  importClass(com.terminalfour.spring.ApplicationContextProvider);
 //  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -433,12 +433,14 @@
                  CachedContent: mirrorContent[i],
                  index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
              };
+
+             var itemID = item.CachedContent.getID();
             // var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
 
             // var cats = item.content.get('Category').publish();
 
             // var catsObj = item.getValue()
-            // log("cats: " + cats);
+            log("itemID: " + itemID);
              if (item.Content.getContentTypeID() == CID) {
                  validContent.push(item);
              }

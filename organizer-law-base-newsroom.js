@@ -435,12 +435,17 @@
              };
 
              var itemID = item.CachedContent.getID();
+             var cats = item.Content.get('Category').publish();
             // var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
 
             // var cats = item.content.get('Category').publish();
 
             // var catsObj = item.getValue()
             log("itemID: " + itemID);
+            log("cats: " + cats);
+
+
+
              if (item.Content.getContentTypeID() == CID) {
                  validContent.push(item);
              }

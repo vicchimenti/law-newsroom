@@ -359,7 +359,7 @@
          var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
          var LIMIT = content.get('Total number of items to display');
          var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
-         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Sorting method" output="normal" display_field="name" />');
+         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
          
  
@@ -428,7 +428,7 @@
 
             var cats = item.content.get('Category').publish();
 
-            getValue()
+            // var catsObj = item.getValue()
             log("cats: " + cats);
              if (item.Content.getContentTypeID() == CID) {
                  validContent.push(item);

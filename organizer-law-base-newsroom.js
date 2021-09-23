@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 4.2
+ *      @version 5.0
  */
 
  importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -21,6 +21,7 @@
  importClass(com.terminalfour.publish.ContentPublisher);
  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+ importClass(com.terminalfour.content.element.ContentElement);
  
  
  
@@ -358,7 +359,8 @@
          var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
          var LIMIT = content.get('Total number of items to display');
          var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
- 
+         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Sorting method" output="normal" display_field="name" />');
+
          
  
  
@@ -413,12 +415,21 @@
           */
          var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
          var validContent = [];
+         
+         log("categoryName: " + categoryName);
+
          for (var i = 0; i < mirrorContent.length; i++) {
              var item = {
                  Content: oCM.get(mirrorContent[i].ID, language),
                  CachedContent: mirrorContent[i],
                  index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
              };
+            // var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
+
+            var cats = item.content.get('Category').publish();
+
+            getValue()
+            log("cats: " + cats);
              if (item.Content.getContentTypeID() == CID) {
                  validContent.push(item);
              }

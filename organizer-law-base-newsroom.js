@@ -30,7 +30,9 @@
  importClass(com.terminalfour.publish.ContentPublisher);
  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+ 
  importClass(com.terminalfour.content.element.ContentElement);
+ importClass(com.terminalfour.content.element.MultiSelectListContentElement);
  
  
  
@@ -451,13 +453,17 @@
              }
          }
 
+         
          let categoryValue = "";
          for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            categoryValue = String(validContent[contentItem].Content.get(categoryName));
+            if(validContent[contentItem].isStreamable()) {
+                let itemStream = validContent[contentItem].getStream();
+                categoryValue = String(itemStream);
+            }
             log("categoryValue: " + categoryValue);
 
          }
-         log("categoryValue: " + categoryValue);
+         log("categoryValue after: " + categoryValue);
 
  
  

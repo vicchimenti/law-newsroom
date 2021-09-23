@@ -3,18 +3,11 @@
  *      @file organizerLawBaseNewsroom.js
  *      @see Media Library ID: 1889354
  *      organizer law base newsroom
- *      
- *      This new content type is being created to solve a sorting problem.
- *      The new Course Item content type requires sorting by multiple input fields
- *      such as Course Number, Course Section, Course Name. These fields need to be
- *      combined into one field and then sorted by the organizer.
  *
- *      Since the Organizer already allows a Custom Sort Field, we will add logic to
- *      allow multiple Fields to be entered in this Custom Sort.
+ *      Foundation for Law News Center Organizers
+ *          Major, Minor, Centerpiece, Category
  *
- *      Adapted from the existing organizer organizer.js media library id 163514
- *
- *      @version 3.17
+ *      @version 3.18
  */
 
  importClass(com.terminalfour.sitemanager.cache.CachedContent);

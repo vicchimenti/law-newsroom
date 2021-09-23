@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.19
+ *      @version 3.20
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -480,7 +480,7 @@ function main(header, midder, footer) {
         validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
     } else {
         // when the user only sorts by the default options
-        validContent.sort(sortMethod + "(" + CID + ", sElement);");
+        validContent.sort(eval(sortMethod + "(" + CID + ", sElement);"));
     }
     if (bReverse) validContent.reverse();
 

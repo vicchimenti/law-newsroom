@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.3
+ *      @version 5.4
  */
 
 
@@ -449,6 +449,11 @@
              if (item.Content.getContentTypeID() == CID) {
                  validContent.push(item);
              }
+         }
+
+         for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
+            let categoryValue = contentItem.Content.get(categoryName).publish();
+            log("categoryValue: " + categoryValue);
          }
  
  

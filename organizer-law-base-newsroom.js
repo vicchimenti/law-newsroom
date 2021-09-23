@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 4.1
+ *      @version 4.2
  */
 
  importClass(com.terminalfour.sitemanager.cache.CachedContent);
@@ -523,7 +523,10 @@
              let start = nStart <= validContent.length ? nStart - 1 : 0;
              let iterations = 0;
  
- 
+            log("start: " + start);
+            log("iterations: " + iterations);
+            log("maxIterations: " + maxIterations);
+            log("validContent.length: " + validContent.length);
  
              /**
               * loop through valid content and write only items requested
@@ -536,6 +539,10 @@
              } while (start < validContent.length && iterations < maxIterations);
  
  
+             log("start: " + start);
+             log("iterations: " + iterations);
+             log("maxIterations: " + maxIterations);
+             log("validContent.length: " + validContent.length);
  
  
              /**

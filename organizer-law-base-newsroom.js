@@ -452,7 +452,7 @@
          }
 
          for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            let categoryValue = validContent[contentItem].get(categoryName).publish();
+            let categoryValue = validContent[contentItem].Content.get(categoryName).publish();
             log("categoryValue: " + categoryValue);
          }
  

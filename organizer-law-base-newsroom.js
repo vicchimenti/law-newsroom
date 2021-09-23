@@ -5,7 +5,9 @@
  *      organizer law base newsroom
  *
  *      Foundation for Law News Center Organizers
- *          Major, Minor, Centerpiece, Category
+ *          Major, Minor, Centerpiece, Hero,
+ *          Category, Events, Announcements,
+ *          and In the News
  *
  *      @version 3.18
  */

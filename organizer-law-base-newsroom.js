@@ -288,7 +288,7 @@
                      result = byDate(cid, currentElement)(a,b);
                      break;
                 case "Category Pin":
-                    result = tagSort(tag, currentElement)(a, b);
+                    result = byBoolean(cid, currentElement)(a, b);
                     break;
                  case 'Article Title':
                      result = byName(cid, currentElement)(a,b);

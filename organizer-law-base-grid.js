@@ -1,6 +1,6 @@
 /***
  *      @author Victor Chimenti, MSCS-SE 2020
- *      @file lawNewsroomOrganizerBase.js
+ *      @file organizerLawBaseGrid.js
  *      @see Media Library ID: 2686600
  *      
  *

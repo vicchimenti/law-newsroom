@@ -13,7 +13,7 @@ function readMedia(mediaID) {
 try {
     // Import Organizer base from media library
     var base = readMedia(2686600);
-    eval(String(base));
+    // eval(String(base));
 
     var titleField = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="$value" />');
 

@@ -9,9 +9,18 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.0
+ *      @version 5.1
  */
 
+
+
+
+/***
+ *      Import T4 Utilities
+ */
+ importClass(com.terminalfour.media.IMediaManager);
+//  importClass(com.terminalfour.spring.ApplicationContextProvider);
+//  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.sitemanager.cache.CachedContent);
  importClass(com.terminalfour.navigation.ServerSideLinkManager);
  importClass(com.terminalfour.spring.ApplicationContextProvider);
@@ -21,7 +30,7 @@
  importClass(com.terminalfour.publish.ContentPublisher);
  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
- importClass(com.terminalfour.content.element.ContentElement);
+//  importClass(com.terminalfour.content.element.ContentElement);
  
  
  
@@ -426,10 +435,10 @@
              };
             // var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
 
-            var cats = item.content.get('Category').publish();
+            // var cats = item.content.get('Category').publish();
 
             // var catsObj = item.getValue()
-            log("cats: " + cats);
+            // log("cats: " + cats);
              if (item.Content.getContentTypeID() == CID) {
                  validContent.push(item);
              }

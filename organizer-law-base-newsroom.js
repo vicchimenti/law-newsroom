@@ -219,6 +219,31 @@
  
      return limit > 0 ? i >= limit : false;
  }
+
+
+
+  /**
+  * Parse Custom Sort Field for multiple fields
+  * Called only when there is any custom field entered
+  *
+  * @param elem is a value assigned from an array like object of custom Elements to sort by
+  * @param tag is the content item that is being sorted, in some cases this item will match a tag
+  * 
+  * Tag Sort will compare both items for an exact match to the choice
+  * In most cases this will fit radio buttons that must match
+  */
+   function tagSort(tag, elem) {
+ 
+    return function(a, b) {
+        // assign values from the element to a string for boolean comparison
+        let strA = a.Content.get(elem).publish();
+        let strB = b.Content.get(elem).publish();
+        let isMatchA = (tag.includes(strA));
+        let isMatchB = (tag.includes(strB));
+
+        return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
+    }
+}
  
  
  

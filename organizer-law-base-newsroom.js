@@ -435,8 +435,8 @@
              };
 
              var itemID = item.CachedContent.getID();
-            //  var cats = itemID.ContentElement.get('Category');
-            // var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
+            //  var cats = item.Content.hasElement​('Category') ? item.Content.get('Category') : null;
+            // var cats = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, item, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
 
             // var cats = item.content.get('Category').publish();
 

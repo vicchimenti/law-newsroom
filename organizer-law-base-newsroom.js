@@ -319,7 +319,7 @@
           * 
           */
          var title = content.hasElement('Title') ? content.get('Title') : null;
-         var choice = content.get('Content type and layout').publish();
+         var choice = content.get('Article type').publish();
          var CID = new java.lang.Integer(choice.split(";")[0]);
          var LAYOUT = choice.split(";")[1];
          var SSID = String(content.get('Section')).match(/sslink_id="(\d+)"/)[1];

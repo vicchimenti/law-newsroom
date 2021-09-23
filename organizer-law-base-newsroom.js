@@ -30,7 +30,7 @@
  importClass(com.terminalfour.publish.ContentPublisher);
  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
- 
+
  importClass(com.terminalfour.content.element.ContentElement);
  importClass(com.terminalfour.content.element.MultiSelectListContentElement);
  
@@ -456,8 +456,8 @@
          
          let categoryValue = "";
          for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            if(validContent[contentItem].isStreamable()) {
-                let itemStream = validContent[contentItem].getStream();
+            if(validContent[contentItem].ContentElement.isStreamable()) {
+                let itemStream = validContent[contentItem].ContentElement.getStream();
                 categoryValue = String(itemStream);
             }
             log("categoryValue: " + categoryValue);

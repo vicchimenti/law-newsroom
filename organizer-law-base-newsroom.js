@@ -1,9 +1,9 @@
 /***
  *      @author Victor Chimenti, MSCS-SE 2020
- *      @file lawNewsroomOrganizerBase.js
+ *      @file organizerLawBaseNewsroom.js
  *      @see Media Library ID: 1889354
+ *      organizer law base newsroom
  *      
- *
  *      This new content type is being created to solve a sorting problem.
  *      The new Course Item content type requires sorting by multiple input fields
  *      such as Course Number, Course Section, Course Name. These fields need to be

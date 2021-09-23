@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 3.19
+ *      @version 4.1
  */
 
  importClass(com.terminalfour.sitemanager.cache.CachedContent);

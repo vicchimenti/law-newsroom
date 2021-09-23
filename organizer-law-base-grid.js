@@ -480,7 +480,7 @@ function main(header, midder, footer) {
         validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
     } else {
         // when the user only sorts by the default options
-        validContent.sort(eval(sortMethod + "(" + CID + ", sElement);"));
+        validContent.sort(sortMethod + "(" + CID + ", sElement);");
     }
     if (bReverse) validContent.reverse();
 

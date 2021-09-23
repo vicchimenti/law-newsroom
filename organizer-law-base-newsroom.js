@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.4
+ *      @version 5.5
  */
 
 
@@ -18,9 +18,6 @@
 /***
  *      Import T4 Utilities
  */
-//  importClass(com.terminalfour.media.IMediaManager);
-//  importClass(com.terminalfour.spring.ApplicationContextProvider);
-//  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.sitemanager.cache.CachedContent);
  importClass(com.terminalfour.navigation.ServerSideLinkManager);
  importClass(com.terminalfour.spring.ApplicationContextProvider);
@@ -435,18 +432,9 @@
                  CachedContent: mirrorContent[i],
                  index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
              };
-
+             
+            //  I can get the id of the content item
              var itemID = item.CachedContent.getID();
-            //  var cats = item.Content.hasElement​('Category') ? item.Content.get('Category') : null;
-            // var cats = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, item, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
-
-            // var cats = item.content.get('Category').publish();
-
-            // var catsObj = item.getValue()
-            // log("itemID: " + itemID);
-            // log("cats: " + cats);
-
-
 
              if (item.Content.getContentTypeID() == CID) {
                  validContent.push(item);
@@ -454,16 +442,12 @@
          }
 
          
-         let categoryValue = "";
-         for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            if(validContent[contentItem].ContentElement.isStreamable()) {
-                let itemStream = validContent[contentItem].ContentElement.getStream();
-                categoryValue = String(itemStream);
-            }
-            log("categoryValue: " + categoryValue);
 
+         for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
+            let categoryValue = validContent[contentItem].Content.get("Category").getValue();
+            log("categoryValue: " + categoryValue);
          }
-         log("categoryValue after: " + categoryValue);
+
 
  
  

@@ -441,7 +441,7 @@
             // var cats = item.content.get('Category').publish();
 
             // var catsObj = item.getValue()
-            log("itemID: " + itemID);
+            // log("itemID: " + itemID);
             // log("cats: " + cats);
 
 
@@ -451,11 +451,14 @@
              }
          }
 
+         let categoryValue = "";
          for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            let categoryValue = validContent[contentItem].Content.get(categoryName).publish();
+            categoryValue = String(validContent[contentItem].Content.get(categoryName));
             log("categoryValue: " + categoryValue);
+
          }
- 
+         log("categoryValue: " + categoryValue);
+
  
  
  

@@ -2,8 +2,8 @@
  *      @author Victor Chimenti, MSCS-SE 2020
  *      @file organizerLawBaseGrid.js
  *      @see Media Library ID: 2686600
+ *      organizer law base grid
  *      
- *
  *      This new content type is being created to solve a sorting problem.
  *      The new Course Item content type requires sorting by multiple input fields
  *      such as Course Number, Course Section, Course Name. These fields need to be
@@ -14,7 +14,7 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.17
+ *      @version 3.18
  */
 
 importClass(com.terminalfour.sitemanager.cache.CachedContent);

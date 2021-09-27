@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.5
+ *      @version 5.6
  */
 
 
@@ -367,9 +367,9 @@ function main(header, midder, footer) {
         var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
+
         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
-
-
+        log("categoryName: " + categoryName);
 
 
         // the logic to determine layouts and links that were available to the user
@@ -424,8 +424,6 @@ function main(header, midder, footer) {
         var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
         var validContent = [];
 
-        log("categoryName: " + categoryName);
-
         for (var i = 0; i < mirrorContent.length; i++) {
             var item = {
                 Content: oCM.get(mirrorContent[i].ID, language),
@@ -435,6 +433,7 @@ function main(header, midder, footer) {
 
             //  I can get the id of the content item
             var itemID = item.CachedContent.getID();
+            log("itemID: " + itemID);
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);

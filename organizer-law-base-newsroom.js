@@ -28,6 +28,8 @@ importClass(com.terminalfour.publish.ContentPublisher);
 importClass(com.terminalfour.publish.utils.BrokerUtils);
 importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
 
+
+
 importClass(com.terminalfour.content.element.ContentElement);
 importClass(com.terminalfour.content.element.MultiSelectListContentElement);
 
@@ -96,10 +98,10 @@ function byDate(cid, elem) {
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
 
-        return (dateA && !dateB) ? -1 :
-            (!dateA && dateB) ? 1 :
-            (!dateA && !dateB) ? 0 :
-            dateB.compareTo(dateA);
+        return  (dateA && !dateB) ? -1 :
+                (!dateA && dateB) ? 1 :
+                (!dateA && !dateB) ? 0 :
+                dateB.compareTo(dateA);
     }
 
     return result;
@@ -190,9 +192,9 @@ function byBoolean(cid, elem) {
         var boolA = !a.Content.get(elem).isNull();
         var boolB = !b.Content.get(elem).isNull();
 
-        return (boolA && !boolB) ? 1 :
-            (!boolA && boolB) ? -1 :
-            byOrder(cid, elem)(a, b);
+        return  (boolA && !boolB) ? 1 :
+                (!boolA && boolB) ? -1 :
+                byOrder(cid, elem)(a, b);
     }
 
     return result;
@@ -209,9 +211,8 @@ function byOrder(cid, elem) {
 
     let result = (a, b) => {
 
-        return (a.index > b.index) ? 1 :
-            (a.index < b.index) ? -1 :
-            0;
+        return  (a.index > b.index) ? 1 :
+                (a.index < b.index) ? -1 : 0;
     }
 
     return result;
@@ -434,6 +435,7 @@ function main(header, midder, footer) {
             //  I can get the id of the content item
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
+
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);

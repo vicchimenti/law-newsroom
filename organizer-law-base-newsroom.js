@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.5
+ *      @version 5.6
  */
 
 
@@ -27,6 +27,8 @@ importClass(com.terminalfour.utils.T4StreamWriter);
 importClass(com.terminalfour.publish.ContentPublisher);
 importClass(com.terminalfour.publish.utils.BrokerUtils);
 importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+
+
 
 importClass(com.terminalfour.content.element.ContentElement);
 importClass(com.terminalfour.content.element.MultiSelectListContentElement);
@@ -96,10 +98,10 @@ function byDate(cid, elem) {
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
 
-        return (dateA && !dateB) ? -1 :
-            (!dateA && dateB) ? 1 :
-            (!dateA && !dateB) ? 0 :
-            dateB.compareTo(dateA);
+        return  (dateA && !dateB) ? -1 :
+                (!dateA && dateB) ? 1 :
+                (!dateA && !dateB) ? 0 :
+                dateB.compareTo(dateA);
     }
 
     return result;
@@ -190,9 +192,9 @@ function byBoolean(cid, elem) {
         var boolA = !a.Content.get(elem).isNull();
         var boolB = !b.Content.get(elem).isNull();
 
-        return (boolA && !boolB) ? 1 :
-            (!boolA && boolB) ? -1 :
-            byOrder(cid, elem)(a, b);
+        return  (boolA && !boolB) ? 1 :
+                (!boolA && boolB) ? -1 :
+                byOrder(cid, elem)(a, b);
     }
 
     return result;
@@ -209,9 +211,8 @@ function byOrder(cid, elem) {
 
     let result = (a, b) => {
 
-        return (a.index > b.index) ? 1 :
-            (a.index < b.index) ? -1 :
-            0;
+        return  (a.index > b.index) ? 1 :
+                (a.index < b.index) ? -1 : 0;
     }
 
     return result;
@@ -367,9 +368,9 @@ function main(header, midder, footer) {
         var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
+
         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
-
-
+        log("categoryName: " + categoryName);
 
 
         // the logic to determine layouts and links that were available to the user
@@ -424,8 +425,6 @@ function main(header, midder, footer) {
         var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
         var validContent = [];
 
-        log("categoryName: " + categoryName);
-
         for (var i = 0; i < mirrorContent.length; i++) {
             var item = {
                 Content: oCM.get(mirrorContent[i].ID, language),
@@ -435,6 +434,8 @@ function main(header, midder, footer) {
 
             //  I can get the id of the content item
             var itemID = item.CachedContent.getID();
+            log("itemID: " + itemID);
+
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);

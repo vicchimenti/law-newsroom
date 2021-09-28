@@ -1,15 +1,11 @@
 /***
  *      @author Victor Chimenti, MSCS
- *      @file organizerLawBaseNewsroomWorkingFile.js
- *      @see Media Library ID: 1889354
- *      organizer law base newsroom working file
+ *      @file organizerLawBaseWorkingFile.js
+ *      @see Media Library ID: 3011734
+ *      organizer law base working file
  *
- *      Foundation for Law News Center Organizers
- *          Major, Minor, Centerpiece, Hero,
- *          Category, Events, Announcements,
- *          and In the News
- *
- *      @version 6.1
+ *      @version 6.2
+ * 
  */
 
 

@@ -367,7 +367,7 @@ function main(header, midder, footer) {
         var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
-        var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
+        // var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
 
 
@@ -424,7 +424,7 @@ function main(header, midder, footer) {
         var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
         var validContent = [];
 
-        log("categoryName: " + categoryName);
+        // log("categoryName: " + categoryName);
 
         for (var i = 0; i < mirrorContent.length; i++) {
             var item = {
@@ -443,12 +443,12 @@ function main(header, midder, footer) {
 
 
 
-        for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            // let categoryValue = validContent[contentItem].content.get("Category").publish();
+        // for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
+        //     // let categoryValue = validContent[contentItem].content.get("Category").publish();
 
-            let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
-            log("categoryValue: " + categoryValue);
-        }
+        //     let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
+        //     log("categoryValue: " + categoryValue);
+        // }
 
 
 
@@ -550,10 +550,10 @@ function main(header, midder, footer) {
             let start = nStart <= validContent.length ? nStart - 1 : 0;
             let iterations = 0;
 
-            log("start: " + start);
-            log("iterations: " + iterations);
-            log("maxIterations: " + maxIterations);
-            log("validContent.length: " + validContent.length);
+            // log("start: " + start);
+            // log("iterations: " + iterations);
+            // log("maxIterations: " + maxIterations);
+            // log("validContent.length: " + validContent.length);
 
             /**
              * loop through valid content and write only items requested
@@ -566,10 +566,10 @@ function main(header, midder, footer) {
             } while (start < validContent.length && iterations < maxIterations);
 
 
-            log("start: " + start);
-            log("iterations: " + iterations);
-            log("maxIterations: " + maxIterations);
-            log("validContent.length: " + validContent.length);
+            // log("start: " + start);
+            // log("iterations: " + iterations);
+            // log("maxIterations: " + maxIterations);
+            // log("validContent.length: " + validContent.length);
 
 
             /**

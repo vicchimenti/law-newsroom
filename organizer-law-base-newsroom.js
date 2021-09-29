@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.9
+ *      @version 5.10
  */
 
 
@@ -33,7 +33,7 @@ importClass(com.terminalfour.cache.mock.MockContent);
 
 
 
-// importClass(com.terminalfour.content.element.ContentElement);
+importClass(com.terminalfour.content.element.ContentElement);
 // importClass(com.terminalfour.content.element.MultiSelectListContentElement);
 
 
@@ -446,8 +446,8 @@ function main(header, midder, footer) {
                 log("keyValues: " + j + ": " + keyValues[j]);
 
 
-            var itemValues = item.Content.get(itemID);
-            for (let k = 0; k < keyValues.length; k++)
+            var itemValues = item.Content.get(Category);
+            for (let k = 0; k < itemValues.length; k++)
                 log("itemValues: " + k + ": " + itemValues[k]);
 
 

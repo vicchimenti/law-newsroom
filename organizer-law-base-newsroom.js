@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.7
+ *      @version 5.8
  */
 
 
@@ -27,6 +27,8 @@ importClass(com.terminalfour.utils.T4StreamWriter);
 importClass(com.terminalfour.publish.ContentPublisher);
 importClass(com.terminalfour.publish.utils.BrokerUtils);
 importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+
+importClass(com.terminalfour.contenttype.IContentTypeController);
 
 
 
@@ -435,6 +437,12 @@ function main(header, midder, footer) {
             //  I can get the id of the content item
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
+
+            var contentTypeController = ApplicationContextProvider.getBean(IContentTypeController);
+            var keyValues = contentTypeController.get(itemID).getElements().toArray();
+
+            for (let j = 0; j < keyValues.length; j++)
+                log("keyValues: " + j + ": " + keyValues[j]);
 
 
             if (item.Content.getContentTypeID() == CID) {

@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.12
+ *      @version 5.13
  */
 
 
@@ -28,14 +28,14 @@ importClass(com.terminalfour.publish.ContentPublisher);
 importClass(com.terminalfour.publish.utils.BrokerUtils);
 importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
 
-importClass(com.terminalfour.contenttype.IContentTypeController);
-importClass(com.terminalfour.cache.mock.MockContent);
+// importClass(com.terminalfour.contenttype.IContentTypeController);
+// importClass(com.terminalfour.cache.mock.MockContent);
 
-importClass(com.terminalfour.content.IContentManager);
+// importClass(com.terminalfour.content.IContentManager);
 
 
 
-importClass(com.terminalfour.content.element.ContentElement);
+// importClass(com.terminalfour.content.element.ContentElement);
 // importClass(com.terminalfour.content.element.MultiSelectListContentElement);
 
 
@@ -441,23 +441,23 @@ function main(header, midder, footer) {
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
 
-            var contentTypeController = ApplicationContextProvider.getBean(IContentTypeController);
-            var keyValues = contentTypeController.get(CID).getElements().toArray();
+            // var contentTypeController = ApplicationContextProvider.getBean(IContentTypeController);
+            // var keyValues = contentTypeController.get(CID).getElements().toArray();
 
-            for (let j = 0; j < keyValues.length; j++)
-                log("keyValues: " + j + ": " + keyValues[j]);
+            // for (let j = 0; j < keyValues.length; j++)
+            //     log("keyValues: " + j + ": " + keyValues[j]);
 
-            var itemManager = ApplicationContextProvider.getBean(IContentManager);
-            var itemValues = itemManager.get(itemID, language).getElements().toArray();
-            for (let k = 0; k < itemValues.length; k++) {
-                log("itemValues: " + k + ": " + itemValues[k]);
-                try {
-                    log("itemValues[k].getValue(): " + itemValues[k].getValue());
-                } catch(e) {
-                    continue;
-                }
+            // var itemManager = ApplicationContextProvider.getBean(IContentManager);
+            // var itemValues = itemManager.get(itemID, language).getElements().toArray();
+            // for (let k = 0; k < itemValues.length; k++) {
+            //     log("itemValues: " + k + ": " + itemValues[k]);
+            //     try {
+            //         log("itemValues[k].getValue(): " + itemValues[k].getValue());
+            //     } catch(e) {
+            //         continue;
+            //     }
                 
-            }
+            // }
 
 
 

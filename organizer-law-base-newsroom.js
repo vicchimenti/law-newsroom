@@ -35,7 +35,7 @@ importClass(com.terminalfour.contenttype.ContentTypeManagerImpl);
 // importClass(com.terminalfour.contenttype.IContentTypeController);
 // importClass(com.terminalfour.cache.mock.MockContent);
 
-// importClass(com.terminalfour.content.IContentManager);
+importClass(com.terminalfour.content.IContentManager);
 
 
 
@@ -445,8 +445,8 @@ function main(header, midder, footer) {
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
 
-            var contentTypeController = ApplicationContextProvider.getBean(ContentTypeManagerImpl);
-            var keyValues = contentTypeController.get(CID);
+            // var contentTypeController = ApplicationContextProvider.getBean(ContentTypeManagerImpl);
+            var keyValues = item.get(CID);
 
             log("keyValues: " + keyValues);
 

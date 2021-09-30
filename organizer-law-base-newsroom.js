@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.14
+ *      @version 5.15
  */
 
 
@@ -446,10 +446,12 @@ function main(header, midder, footer) {
             log("itemID: " + itemID);
 
             var contentTypeController = ApplicationContextProvider.getBean(ContentTypeManagerImpl);
-            var keyValues = contentTypeController.get(CID).getElements().toArray();
+            var keyValues = contentTypeController.get(CID);
 
-            for (let j = 0; j < keyValues.length; j++)
-                log("keyValues: " + j + ": " + keyValues[j]);
+            log("keyValues: " + keyValues);
+
+            // for (let j = 0; j < keyValues.length; j++)
+            //     log("keyValues: " + j + ": " + keyValues[j]);
 
             // var itemManager = ApplicationContextProvider.getBean(IContentManager);
             // var itemValues = itemManager.get(itemID, language).getElements().toArray();

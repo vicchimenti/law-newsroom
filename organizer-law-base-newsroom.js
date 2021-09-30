@@ -446,12 +446,12 @@ function main(header, midder, footer) {
             log("itemID: " + itemID);
 
             // var contentTypeController = ApplicationContextProvider.getBean(ContentTypeManagerImpl);
-            var keyValues = item.get(CID);
+            var keyValues = item.Cache.getContent(itemID);
 
-            log("keyValues: " + keyValues);
+            // log("keyValues: " + keyValues);
 
-            // for (let j = 0; j < keyValues.length; j++)
-            //     log("keyValues: " + j + ": " + keyValues[j]);
+            for (let j = 0; j < keyValues.length; j++)
+                log("keyValues: " + j + ": " + keyValues[j]);
 
             // var itemManager = ApplicationContextProvider.getBean(IContentManager);
             // var itemValues = itemManager.get(itemID, language).getElements().toArray();

@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.13
+ *      @version 5.14
  */
 
 
@@ -27,6 +27,10 @@ importClass(com.terminalfour.utils.T4StreamWriter);
 importClass(com.terminalfour.publish.ContentPublisher);
 importClass(com.terminalfour.publish.utils.BrokerUtils);
 importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+
+importClass(com.terminalfour.contenttype.ContentTypeManagerImpl);
+
+
 
 // importClass(com.terminalfour.contenttype.IContentTypeController);
 // importClass(com.terminalfour.cache.mock.MockContent);
@@ -441,11 +445,11 @@ function main(header, midder, footer) {
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
 
-            // var contentTypeController = ApplicationContextProvider.getBean(IContentTypeController);
-            // var keyValues = contentTypeController.get(CID).getElements().toArray();
+            var contentTypeController = ApplicationContextProvider.getBean(ContentTypeManagerImpl);
+            var keyValues = contentTypeController.get(CID).getElements().toArray();
 
-            // for (let j = 0; j < keyValues.length; j++)
-            //     log("keyValues: " + j + ": " + keyValues[j]);
+            for (let j = 0; j < keyValues.length; j++)
+                log("keyValues: " + j + ": " + keyValues[j]);
 
             // var itemManager = ApplicationContextProvider.getBean(IContentManager);
             // var itemValues = itemManager.get(itemID, language).getElements().toArray();

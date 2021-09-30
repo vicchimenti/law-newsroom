@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.18
+ *      @version 5.19
  */
 
 
@@ -448,8 +448,8 @@ function main(header, midder, footer) {
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
 
-            var contentTypeController = ApplicationContextProvider.getBean(ContentManagerImpl);
-            var keyValues = contentTypeController.get(itemID, "language");
+            // var contentTypeController = ApplicationContextProvider.getBean(ContentManagerImpl);
+            var keyValues = Content.get(itemID, "language");
 
             // log("keyValues: " + keyValues);
 
@@ -468,7 +468,7 @@ function main(header, midder, footer) {
                 
             // }
 
-            var val = keyValues.getElementByAliasOnly("Category").getValue();​
+            var val = keyValues.getElementByAliasOnly("Category").getValue().toString();​
 
             log("val: " + val);
             

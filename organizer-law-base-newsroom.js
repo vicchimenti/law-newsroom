@@ -454,16 +454,17 @@ function main(header, midder, footer) {
             log("itemID: " + itemID);
 
             // For law school news center we need the Name value of the list item defined in the Category field
-            var itemObj = oCM.get(itemID, language);
+            // var itemObj = oCM.get(itemID, language);
 
             // var entries = item.Content.getElementByAliasOnly('Category');
 
-            var entries = itemObj.getElementByNameOnly('Category');
-            var entries = item.Content.getElementByNameOnly('Category');
+            // var entries = itemObj.getElementByNameOnly('Category');
+            // var itemEntries = item.Content.getElementByNameOnly('Category');
 
-            // var entries = contentManager.get(2525159, language).get('Category').getValue().toString().split(';')
+            var entries = oCM.get(itemID, language).get('Category').getValue().toString().split(';')
 
             // getElementByNameOnly
+            // log("itemEntries: " + itemEntries);
 
             log("entries: " + entries);
 

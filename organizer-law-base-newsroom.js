@@ -36,9 +36,9 @@ importClass(com.terminalfour.list.IPredefinedListManager);
 // importClass(com.terminalfour.spring.ApplicationContextProvider)
 // importClass(com.terminalfour.contenttype.ContentTypeManagerImpl);
 
-importClass(com.terminalfour.content.ContentManagerImpl);
+// importClass(com.terminalfour.content.ContentManagerImpl);
 
-importClass(com.terminalfour.content.element.ContentElement);
+// importClass(com.terminalfour.content.element.ContentElement);
 
 // importClass(com.terminalfour.content.element);
 
@@ -464,24 +464,22 @@ function main(header, midder, footer) {
 
 
         for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            // let categoryValue = validContent[contentItem].content.get("Category").publish();
 
             let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
-            // log("categoryValue: " + categoryValue);
 
             for (var category in categoryValue) {
-                var temp = categoryValue[category].split(':');
+                var categoryElement = categoryValue[category].split(':');
                 // var temp = categoryValue[category];
 
                 // temp[0] is the list id that the entry resides in while temp[1] is the entry id within that list.
                 // getEntry returns a PredefinedListEntry object, so we can cleanly get the name value. We can use getValue to get the value if needed.
                 // document.write(listManager.getEntry(temp[0], temp[1], language).getName() + ", ");
 
-                var vals = listManager.getEntry(temp[0], temp[1], language);
+                var topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
 
-                var nameVals = vals.getName();
+                var topicName = topic.getName();
 
-                log("nameVals: " + nameVals);
+                log("topicName: " + topicName);
 
             }
         }

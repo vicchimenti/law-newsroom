@@ -4,7 +4,7 @@
  *      @see Media Library ID: 3045187
  *      organizer law base newsroom grid
  *
- *      Foundation for Law News Center List
+ *      Foundation for Law News Center Grid
  *          Category Organizer
  *
  *      @version 6.2

@@ -450,7 +450,13 @@ function main(header, midder, footer) {
             // For law school news center we need the Name value of the list item
             var entries = oCM.get(itemID, language).get('categoryName').getValue().toString().split(';')
 
-            
+            // Iterate through the entry array
+            for (var entry in entries) {
+                var temp = entries[entry].split(':')
+                // temp[0] is the list id that the entry resides in while temp[1] is the entry id within that list.
+                // getEntry returns a PredefinedListEntry object, so we can cleanly get the name value. We can use getValue to get the value if needed.
+                document.write(listManager.getEntry(temp[0], temp[1], language).getName() + ", ");
+            }
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);
@@ -459,12 +465,12 @@ function main(header, midder, footer) {
 
 
 
-        for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-            // let categoryValue = validContent[contentItem].content.get("Category").publish();
+        // for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
+        //     // let categoryValue = validContent[contentItem].content.get("Category").publish();
 
-            let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
-            log("categoryValue: " + categoryValue);
-        }
+        //     let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
+        //     log("categoryValue: " + categoryValue);
+        // }
 
 
 

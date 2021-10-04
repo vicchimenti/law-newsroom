@@ -446,30 +446,21 @@ function main(header, midder, footer) {
          * Filter content that matches the category
          */
         var matchingTopics = [];
-
         for (let contentItem in validContent) {
 
-            let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
+            let categoryValues = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
 
-            for (let category in categoryValue) {
+            for (let category in categoryValues) {
 
-                let categoryElement = categoryValue[category].split(':');
+                let categoryElement = categoryValues[category].split(':');
                 let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
                 let topicName = topic.getName();
 
-                log("topicName: " + topicName);
-
                 if (topicName == categoryName) {
-                    log("Yes");
                     matchingTopics.push(validContent[contentItem]);
-                    log("pushed");
-                } else {
-                    log("No");
                 }
-
             }
         }
-
 
 
 
@@ -481,12 +472,10 @@ function main(header, midder, footer) {
             // when the user selects any custom sort element
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
-            // validContent.sort(byCustomElements(CID, arrayOfElements));
             matchingTopics.sort(byCustomElements(CID, arrayOfElements));
 
         } else {
             // when the user only sorts by the default options
-            // validContent.sort(eval(sortMethod + '(' + CID + ', sElement);'));
             matchingTopics.sort(eval(sortMethod + '(' + CID + ', sElement);'));
 
         }

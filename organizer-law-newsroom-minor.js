@@ -12,7 +12,7 @@ function readMedia(mediaID) {
 
 try {
     // Import Organizer base from media library
-    var base = readMedia(1889354);
+    var base = readMedia(3011734);
     // This is the original media library file for the edu newsroom 526090
     // This is the media library file for the new organizer 1607015
     // This is the media library file for the new law newsroom organizer 1889354

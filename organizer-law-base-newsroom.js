@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.23
+ *      @version 5.24
  */
 
 
@@ -436,7 +436,7 @@ function main(header, midder, footer) {
         var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
         // var contentManager = ApplicationContextProvider.getBean(IContentManager);
         var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
-        var contentManager = ApplicationContextProvider.getBean(ContentManagerImpl);
+        // var contentManager = ApplicationContextProvider.getBean(ContentManagerImpl);
 
         
         var validContent = [];
@@ -453,7 +453,10 @@ function main(header, midder, footer) {
             log("itemID: " + itemID);
 
             // For law school news center we need the Name value of the list item defined in the Category field
-            var entries = contentManager.get(itemID, language).get('Category').getValue().toString().split(';')
+            // var itemObj = item.CachedContent.get(itemID, language);
+
+            var entries = item.CachedContent.getElementByAliasOnly('Category').getValue().toString().split(';');
+            // var entries = item.get(itemID, language).get('Category').getValue().toString().split(';')
 
             // Iterate through the entry array
             for (var entry in entries) {

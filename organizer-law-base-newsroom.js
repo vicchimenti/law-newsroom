@@ -34,9 +34,9 @@ importClass(com.terminalfour.list.IPredefinedListManager)
 
 
 
-importClass(com.terminalfour.contenttype.ContentTypeManagerImpl);
+// importClass(com.terminalfour.contenttype.ContentTypeManagerImpl);
 
-importClass(com.terminalfour.content.ContentManagerImpl);
+// importClass(com.terminalfour.content.ContentManagerImpl);
 
 
 

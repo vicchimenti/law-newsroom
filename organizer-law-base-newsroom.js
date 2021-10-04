@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.27
+ *      @version 5.28
  */
 
 
@@ -434,12 +434,10 @@ function main(header, midder, footer) {
         /**
          * Filter content that matches content type
          */
-        // var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
         var oCM = ApplicationContextProvider.getBean(IContentManager);
         var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
-
-        
         var validContent = [];
+
         for (var i = 0; i < mirrorContent.length; i++) {
 
             var item = {
@@ -456,18 +454,20 @@ function main(header, midder, footer) {
 
 
 
+        /**
+         * Filter content that matches the category
+         */
         var matchingTopics = [];
 
-        for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
+        for (let contentItem in validContent) {
 
             let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
 
-            for (var category in categoryValue) {
-                var categoryElement = categoryValue[category].split(':');
+            for (let category in categoryValue) {
 
-                var topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
-
-                var topicName = topic.getName();
+                let categoryElement = categoryValue[category].split(':');
+                let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
+                let topicName = topic.getName();
 
                 log("topicName: " + topicName);
 

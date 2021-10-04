@@ -448,23 +448,36 @@ function main(header, midder, footer) {
                 index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
             };
 
+            log("mirrorContent[i].ID: " + mirrorContent[i].ID);
             //  I can get the id of the content item
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
 
             // For law school news center we need the Name value of the list item defined in the Category field
-            // var itemObj = item.CachedContent.get(itemID, language);
+            var itemObj = oCM.get(itemID, language);
 
-            var entries = item.CachedContent.getElementByAliasOnly('Category').getValue().toString().split(';');
+            // var entries = item.Content.getElementByAliasOnly('Category');
+
+            var entries = itemObj.getElementByNameOnly('Category');
+            var entries = itemObj.getElementByNameOnly('Category');
+
+
+
+            // getElementByNameOnly
+
+            log("entries: " + entries);
+
+
+            // var entries = item.ContentElement.getElementByAliasOnly('Category').getValue().toString().split(';');
             // var entries = item.get(itemID, language).get('Category').getValue().toString().split(';')
 
             // Iterate through the entry array
-            for (var entry in entries) {
-                var temp = entries[entry].split(':')
-                // temp[0] is the list id that the entry resides in while temp[1] is the entry id within that list.
-                // getEntry returns a PredefinedListEntry object, so we can cleanly get the name value. We can use getValue to get the value if needed.
-                document.write(listManager.getEntry(temp[0], temp[1], language).getName() + ", ");
-            }
+            // for (var entry in entries) {
+            //     var temp = entries[entry].split(':')
+            //     // temp[0] is the list id that the entry resides in while temp[1] is the entry id within that list.
+            //     // getEntry returns a PredefinedListEntry object, so we can cleanly get the name value. We can use getValue to get the value if needed.
+            //     document.write(listManager.getEntry(temp[0], temp[1], language).getName() + ", ");
+            // }
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);

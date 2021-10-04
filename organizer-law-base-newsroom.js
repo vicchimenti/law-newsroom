@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.26
+ *      @version 5.27
  */
 
 
@@ -541,8 +541,8 @@ function main(header, midder, footer) {
             // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
 
             var contentInfo = [];
-            for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
-                var tci = new TargetContentInfo(validContent[i].CachedContent, oSection, language);
+            for (var i = nStart - 1; i < matchingTopics.length && !isLimitPassed(i, LIMIT); i++) {
+                var tci = new TargetContentInfo(matchingTopics[i].CachedContent, oSection, language);
                 contentInfo.push(tci);
             }
             var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
@@ -590,30 +590,30 @@ function main(header, midder, footer) {
              * initialize iterators to account for starting and ending points
              * 
              */
-            let maxIterations = LIMIT <= validContent.length && LIMIT > 0 ? LIMIT : validContent.length;
-            let start = nStart <= validContent.length ? nStart - 1 : 0;
+            let maxIterations = LIMIT <= matchingTopics.length && LIMIT > 0 ? LIMIT : matchingTopics.length;
+            let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
             let iterations = 0;
 
             log("start: " + start);
             log("iterations: " + iterations);
             log("maxIterations: " + maxIterations);
-            log("validContent.length: " + validContent.length);
+            log("validContent.length: " + matchingTopics.length);
 
             /**
              * loop through valid content and write only items requested
              * 
              */
             do {
-                oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[start].Content, LAYOUT, isPreview);
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
                 start++;
                 iterations++;
-            } while (start < validContent.length && iterations < maxIterations);
+            } while (start < matchingTopics.length && iterations < maxIterations);
 
 
             log("start: " + start);
             log("iterations: " + iterations);
             log("maxIterations: " + maxIterations);
-            log("validContent.length: " + validContent.length);
+            log("validContent.length: " + matchingTopics.length);
 
 
             /**

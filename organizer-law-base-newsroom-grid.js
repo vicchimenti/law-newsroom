@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 6.0
+ *      @version 6.1
  */
 
 

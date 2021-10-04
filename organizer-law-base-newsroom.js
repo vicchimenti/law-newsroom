@@ -369,9 +369,9 @@ function main(header, midder, footer) {
         var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
-
         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
-        log("categoryName: " + categoryName);
+
+
 
 
         // the logic to determine layouts and links that were available to the user
@@ -470,12 +470,14 @@ function main(header, midder, footer) {
          * Sort content
          */
         if (sElement != "") {
+
             // when the user selects any custom sort element
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
             matchingTopics.sort(byCustomElements(CID, arrayOfElements));
 
         } else {
+
             // when the user only sorts by the default options
             matchingTopics.sort(eval(sortMethod + '(' + CID + ', sElement);'));
 
@@ -564,13 +566,11 @@ function main(header, midder, footer) {
             let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
             let iterations = 0;
 
-            log("start: " + start);
-            log("iterations: " + iterations);
-            log("maxIterations: " + maxIterations);
-            log("matchingTopics.length: " + matchingTopics.length);
+
+
 
             /**
-             * loop through valid content and write only items requested
+             * loop through matching topics and write only items requested
              * 
              */
             do {
@@ -580,10 +580,6 @@ function main(header, midder, footer) {
             } while (start < matchingTopics.length && iterations < maxIterations);
 
 
-            log("start: " + start);
-            log("iterations: " + iterations);
-            log("maxIterations: " + maxIterations);
-            log("matchingTopics.length: " + matchingTopics.length);
 
 
             /**

@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.25
+ *      @version 5.26
  */
 
 
@@ -450,45 +450,11 @@ function main(header, midder, footer) {
                 index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
             };
 
-            log("mirrorContent[i].ID: " + mirrorContent[i].ID);
-            //  I can get the id of the content item
-            var itemID = item.CachedContent.getID();
-            log("itemID: " + itemID);
+            // log("mirrorContent[i].ID: " + mirrorContent[i].ID);
+            // //  I can get the id of the content item
+            // var itemID = item.CachedContent.getID();
+            // log("itemID: " + itemID);
 
-            // elements[i] =  mirrorContent[i].getElements();
-
-            // For law school news center we need the Name value of the list item defined in the Category field
-            // var itemObj = oCM.get(itemID, language);
-
-            // var entries = item.ContentElement.getElementByAliasOnly('Category');
-
-
-            // var entries = item.Content.getElementByAliasOnly('Category');
-
-            // var entries = item.Content.getElementByNameOnly('Category');
-            // var itemEntries = item.Content.getElementByNameOnly('Category');
-
-            // var entries = item.ContentElement.getElementByAliasOnly('Category').getValue().toString().split(';');
-
-
-            // var entries = oCM.get(itemID, language).get('Category').getValue().toString().split(';')
-
-            // getElementByNameOnly
-            // log("itemEntries: " + itemEntries);
-
-            // log("entries: " + entries);
-
-
-            // var entries = item.ContentElement.getElementByAliasOnly('Category').getValue().toString().split(';');
-            // var entries = item.get(itemID, language).get('Category').getValue().toString().split(';')
-
-            // Iterate through the entry array
-            // for (var entry in entries) {
-            //     var temp = entries[entry].split(':');
-            //     // temp[0] is the list id that the entry resides in while temp[1] is the entry id within that list.
-            //     // getEntry returns a PredefinedListEntry object, so we can cleanly get the name value. We can use getValue to get the value if needed.
-            //     document.write(listManager.getEntry(temp[0], temp[1], language).getName() + ", ");
-            // }
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);
@@ -500,8 +466,24 @@ function main(header, midder, footer) {
         for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
             // let categoryValue = validContent[contentItem].content.get("Category").publish();
 
-            let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
-            log("categoryValue: " + categoryValue);
+            let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
+            // log("categoryValue: " + categoryValue);
+
+            for (var category in categoryValue) {
+                var temp = categoryValue[category].split(':');
+                // var temp = categoryValue[category];
+
+                // temp[0] is the list id that the entry resides in while temp[1] is the entry id within that list.
+                // getEntry returns a PredefinedListEntry object, so we can cleanly get the name value. We can use getValue to get the value if needed.
+                // document.write(listManager.getEntry(temp[0], temp[1], language).getName() + ", ");
+
+                var vals = listManager.getEntry(temp[0], temp[1], language);
+
+                var nameVals = vals.getName();
+
+                log("nameVals: " + nameVals);
+
+            }
         }
 
 

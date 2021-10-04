@@ -4,9 +4,10 @@
  *      @see Media Library ID: 1889354
  *      organizer law base newsroom
  *
- *      Foundation for Law News Center Category Organizers
+ *      Foundation for Law News Center List
+ *          Category Organizer
  *
- *      @version 5.28
+ *      @version 5.29
  */
 
 

@@ -1,7 +1,7 @@
 /***
  *      @author Victor Chimenti, MSCS
  *      @file organizerLawBaseNewsroomGrid.js
- *      @see Media Library ID: 1889354
+ *      @see Media Library ID: 3045187
  *      organizer law base newsroom grid
  *
  *      Foundation for Law News Center List

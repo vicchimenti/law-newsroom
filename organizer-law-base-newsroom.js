@@ -9,7 +9,7 @@
  *          Category, Events, Announcements,
  *          and In the News
  *
- *      @version 5.22
+ *      @version 5.23
  */
 
 
@@ -29,14 +29,16 @@ importClass(com.terminalfour.publish.utils.BrokerUtils);
 importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
 
 
-importClass(com.terminalfour.content.IContentManager)
-importClass(com.terminalfour.list.IPredefinedListManager)
+importClass(com.terminalfour.content.IContentManager);
+importClass(com.terminalfour.list.IPredefinedListManager);
 
 
-
+// importClass(com.terminalfour.spring.ApplicationContextProvider)
 // importClass(com.terminalfour.contenttype.ContentTypeManagerImpl);
 
-// importClass(com.terminalfour.content.ContentManagerImpl);
+importClass(com.terminalfour.content.ContentManagerImpl);
+
+importClass(com.terminalfour.content.element.ContentElement);
 
 
 
@@ -432,8 +434,11 @@ function main(header, midder, footer) {
          * Filter content that matches content type
          */
         var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
-        // var contentManager = ApplicationContextProvider.getBean(IContentManager)
+        // var contentManager = ApplicationContextProvider.getBean(IContentManager);
         var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
+        var contentManager = ApplicationContextProvider.getBean(ContentManagerImpl);
+
+        
         var validContent = [];
 
         for (var i = 0; i < mirrorContent.length; i++) {
@@ -447,8 +452,8 @@ function main(header, midder, footer) {
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
 
-            // For law school news center we need the Name value of the list item
-            var entries = oCM.get(itemID, language).get('categoryName').getValue().toString().split(';')
+            // For law school news center we need the Name value of the list item defined in the Category field
+            var entries = contentManager.get(itemID, language).get('Category').getValue().toString().split(';')
 
             // Iterate through the entry array
             for (var entry in entries) {

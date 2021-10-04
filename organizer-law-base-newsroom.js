@@ -434,27 +434,19 @@ function main(header, midder, footer) {
         /**
          * Filter content that matches content type
          */
-        var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
-        // var contentManager = ApplicationContextProvider.getBean(IContentManager);
+        // var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
+        var oCM = ApplicationContextProvider.getBean(IContentManager);
         var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
-        // var contentManager = ApplicationContextProvider.getBean(ContentManagerImpl);
 
         
         var validContent = [];
-        // var elements = [];
-
         for (var i = 0; i < mirrorContent.length; i++) {
+
             var item = {
                 Content: oCM.get(mirrorContent[i].ID, language),
                 CachedContent: mirrorContent[i],
                 index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
             };
-
-            // log("mirrorContent[i].ID: " + mirrorContent[i].ID);
-            // //  I can get the id of the content item
-            // var itemID = item.CachedContent.getID();
-            // log("itemID: " + itemID);
-
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);

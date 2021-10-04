@@ -459,9 +459,9 @@ function main(header, midder, footer) {
             // var entries = item.Content.getElementByAliasOnly('Category');
 
             var entries = itemObj.getElementByNameOnly('Category');
-            var entries = itemObj.getElementByNameOnly('Category');
+            var entries = item.Content.getElementByNameOnly('Category');
 
-
+            // var entries = contentManager.get(2525159, language).get('Category').getValue().toString().split(';')
 
             // getElementByNameOnly
 

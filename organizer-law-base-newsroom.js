@@ -432,6 +432,8 @@ function main(header, midder, footer) {
          * Filter content that matches content type
          */
         var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
+        // var contentManager = ApplicationContextProvider.getBean(IContentManager)
+        var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
         var validContent = [];
 
         for (var i = 0; i < mirrorContent.length; i++) {
@@ -444,6 +446,9 @@ function main(header, midder, footer) {
             //  I can get the id of the content item
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
+
+            // For law school news center we need the Name value of the list item
+            var entries = oCM.get(itemID, language).get('categoryName').getValue().toString().split(';')
 
             
 

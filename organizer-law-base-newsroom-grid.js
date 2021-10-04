@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Grid
  *          Category Organizer
  *
- *      @version 6.2
+ *      @version 6.3
  */
 
 
@@ -573,14 +573,32 @@ function main(header, midder, footer) {
 
 
             /**
-             * loop through matching topics and write only items requested
+             * check for content in matching topics field
              * 
              */
-            do {
-                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
-                start++;
-                iterations++;
-            } while (start < matchingTopics.length && iterations < maxIterations);
+            if (matchingTopics.length > 0) {
+
+                /**
+                 * loop through matching topics and write only items requested
+                 * 
+                 */
+                do {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
+                    start++;
+                    iterations++;
+                } while (start < matchingTopics.length && iterations < maxIterations);
+
+            } else {
+
+                /**
+                 * when no matching items write all categories
+                 * 
+                 */
+                for (let story in validContent) {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
+                }
+
+            }
 
 
 
@@ -589,11 +607,9 @@ function main(header, midder, footer) {
              * write the document
              * 
              */
-            if (matchingTopics.length > 0) {
-                document.write(oSW.toString());
-                document.write(midder);
-                document.write(footer);
-            }
+             document.write(oSW.toString());
+             document.write(midder);
+             document.write(footer);
         }
 
 

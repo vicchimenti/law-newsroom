@@ -597,7 +597,7 @@ function main(header, midder, footer) {
             log("start: " + start);
             log("iterations: " + iterations);
             log("maxIterations: " + maxIterations);
-            log("validContent.length: " + matchingTopics.length);
+            log("matchingTopics.length: " + matchingTopics.length);
 
             /**
              * loop through valid content and write only items requested
@@ -613,7 +613,7 @@ function main(header, midder, footer) {
             log("start: " + start);
             log("iterations: " + iterations);
             log("maxIterations: " + maxIterations);
-            log("validContent.length: " + matchingTopics.length);
+            log("matchingTopics.length: " + matchingTopics.length);
 
 
             /**

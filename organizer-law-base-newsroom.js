@@ -40,6 +40,7 @@ importClass(com.terminalfour.content.ContentManagerImpl);
 
 importClass(com.terminalfour.content.element.ContentElement);
 
+// importClass(com.terminalfour.content.element);
 
 
 
@@ -440,6 +441,7 @@ function main(header, midder, footer) {
 
         
         var validContent = [];
+        // var elements = [];
 
         for (var i = 0; i < mirrorContent.length; i++) {
             var item = {
@@ -453,23 +455,28 @@ function main(header, midder, footer) {
             var itemID = item.CachedContent.getID();
             log("itemID: " + itemID);
 
+            // elements[i] =  mirrorContent[i].getElements();
+
             // For law school news center we need the Name value of the list item defined in the Category field
             // var itemObj = oCM.get(itemID, language);
 
-            var entries = item.get('Category');
+            // var entries = item.ContentElement.getElementByAliasOnly('Category');
 
 
             // var entries = item.Content.getElementByAliasOnly('Category');
 
-            // var entries = itemObj.getElementByNameOnly('Category');
+            // var entries = item.Content.getElementByNameOnly('Category');
             // var itemEntries = item.Content.getElementByNameOnly('Category');
+
+            // var entries = item.ContentElement.getElementByAliasOnly('Category').getValue().toString().split(';');
+
 
             // var entries = oCM.get(itemID, language).get('Category').getValue().toString().split(';')
 
             // getElementByNameOnly
             // log("itemEntries: " + itemEntries);
 
-            log("entries: " + entries);
+            // log("entries: " + entries);
 
 
             // var entries = item.ContentElement.getElementByAliasOnly('Category').getValue().toString().split(';');
@@ -477,7 +484,7 @@ function main(header, midder, footer) {
 
             // Iterate through the entry array
             // for (var entry in entries) {
-            //     var temp = entries[entry].split(':')
+            //     var temp = entries[entry].split(':');
             //     // temp[0] is the list id that the entry resides in while temp[1] is the entry id within that list.
             //     // getEntry returns a PredefinedListEntry object, so we can cleanly get the name value. We can use getValue to get the value if needed.
             //     document.write(listManager.getEntry(temp[0], temp[1], language).getName() + ", ");
@@ -490,12 +497,12 @@ function main(header, midder, footer) {
 
 
 
-        // for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-        //     // let categoryValue = validContent[contentItem].content.get("Category").publish();
+        for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
+            // let categoryValue = validContent[contentItem].content.get("Category").publish();
 
-        //     let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
-        //     log("categoryValue: " + categoryValue);
-        // }
+            let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
+            log("categoryValue: " + categoryValue);
+        }
 
 
 

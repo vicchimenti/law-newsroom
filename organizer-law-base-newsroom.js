@@ -4,10 +4,7 @@
  *      @see Media Library ID: 1889354
  *      organizer law base newsroom
  *
- *      Foundation for Law News Center Organizers
- *          Major, Minor, Centerpiece, Hero,
- *          Category, Events, Announcements,
- *          and In the News
+ *      Foundation for Law News Center Category Organizers
  *
  *      @version 5.28
  */

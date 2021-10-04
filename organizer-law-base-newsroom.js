@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.30
+ *      @version 5.31
  */
 
 
@@ -570,14 +570,32 @@ function main(header, midder, footer) {
 
 
             /**
-             * loop through matching topics and write only items requested
+             * check for content in matching topics field
              * 
              */
-            do {
-                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
-                start++;
-                iterations++;
-            } while (start < matchingTopics.length && iterations < maxIterations);
+             if (matchingTopics.length > 0) {
+
+                /**
+                 * loop through matching topics and write only items requested
+                 * 
+                 */
+                do {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
+                    start++;
+                    iterations++;
+                } while (start < matchingTopics.length && iterations < maxIterations);
+
+            } else {
+
+                /**
+                 * when no matching items write all categories
+                 * 
+                 */
+                for (let story in validContent) {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
+                }
+
+            }
 
 
 

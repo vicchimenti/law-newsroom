@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Grid
  *          Category Organizer
  *
- *      @version 6.4
+ *      @version 6.5
  */
 
 
@@ -238,17 +238,15 @@ function isLimitPassed(i, limit) {
  * Called only when there is any custom field entered
  *
  * @param elem is a value assigned from an array like object of custom Elements to sort by
- * @param tag is the content item that is being sorted, in some cases this item will match a tag
+ * @param tag is the radio or tag valued from content item that is being sorted
  * 
- * Tag Sort will compare both items for an exact match to the choice
- * In most cases this will fit radio buttons that must match
  */
-function tagSort(tag, elem) {
+ function tagSort(tag, elem) {
 
     return function(a, b) {
-        // assign values from the element to a string for boolean comparison
-        let strA = a.Content.get(elem).publish();
-        let strB = b.Content.get(elem).publish();
+
+        let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
+        let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
         let isMatchA = (tag.includes(strA));
         let isMatchB = (tag.includes(strB));
 

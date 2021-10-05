@@ -308,7 +308,7 @@ function dynamicSort(elem) {
  * @param elements is a value assigned from an array like object of custom Elements to sort by
  * 
  */
-function byCustomElements(cid, elements) {
+function byCustomElements(cid, elements, cat) {
 
     return function(a, b) {
 
@@ -324,7 +324,7 @@ function byCustomElements(cid, elements) {
                     result = byDate(cid, currentElement)(a, b);
                     break;
                 case "Category Pin":
-                    result = byBoolean(cid, currentElement)(a, b);
+                    result = tagSort(currentElement, cat)(a, b);
                     break;
                 case 'Article Title':
                     result = byName(cid, currentElement)(a, b);
@@ -357,7 +357,7 @@ function main(header, midder, footer) {
          * Declarations
          * 
          */
-        var title = content.hasElement('Title') ? content.get('Title') : null;
+        // var title = content.hasElement('Title') ? content.get('Title') : null;
         var choice = content.get('Article type').publish();
         var CID = new java.lang.Integer(choice.split(";")[0]);
         var LAYOUT = choice.split(";")[1];
@@ -477,7 +477,7 @@ function main(header, midder, footer) {
             // when the user selects any custom sort element
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
-            matchingTopics.sort(byCustomElements(CID, arrayOfElements));
+            matchingTopics.sort(byCustomElements(CID, arrayOfElements, categoryName));
 
         } else {
 

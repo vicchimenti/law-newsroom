@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.35
+ *      @version 5.36
  */
 
 
@@ -247,14 +247,16 @@ function tagSort(tag, elem) {
 
     return function(a, b) {
         // assign values from the element to a string for boolean comparison
-        let strA = a.Content.get(elem).publish();
-        let strB = b.Content.get(elem).publish();
+        let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
+        let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
+
+        // strA == "" && (strA = "Undefined");
+        // strB == "" && (strB = "Undefined");
+
         let isMatchA = (tag.includes(strA));
         let isMatchB = (tag.includes(strB));
 
-        strA == "" && (strA = "Undefined");
-        strB == "" && (strB = "Undefined");
-
+        log("tagSort tag: " + tag);
         log("tagSort strA: " + strA);
         log("tagSort strB: " + strB);
         log("tagSort isMatchA: " + isMatchA);

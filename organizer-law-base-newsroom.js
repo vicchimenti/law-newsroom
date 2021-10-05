@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.36
+ *      @version 5.37
  */
 
 
@@ -246,22 +246,11 @@ function isLimitPassed(i, limit) {
 function tagSort(tag, elem) {
 
     return function(a, b) {
-        // assign values from the element to a string for boolean comparison
+
         let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
         let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
-
-        // strA == "" && (strA = "Undefined");
-        // strB == "" && (strB = "Undefined");
-
         let isMatchA = (tag.includes(strA));
         let isMatchB = (tag.includes(strB));
-
-        log("tagSort tag: " + tag);
-        log("tagSort strA: " + strA);
-        log("tagSort strB: " + strB);
-        log("tagSort isMatchA: " + isMatchA);
-        log("tagSort isMatchB: " + isMatchB);
-
 
         return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
     }

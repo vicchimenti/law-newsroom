@@ -308,7 +308,7 @@ function dynamicSort(elem) {
  * @param elements is a value assigned from an array like object of custom Elements to sort by
  * 
  */
-function byCustomElements(cid, elements) {
+function byCustomElements(cid, elements, cat) {
 
     return function(a, b) {
 
@@ -474,7 +474,7 @@ function main(header, midder, footer) {
             // when the user selects any custom sort element
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
-            matchingTopics.sort(byCustomElements(CID, arrayOfElements));
+            matchingTopics.sort(byCustomElements(CID, arrayOfElements, categoryName));
 
         } else {
 

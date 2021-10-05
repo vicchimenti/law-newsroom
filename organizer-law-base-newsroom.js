@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.32
+ *      @version 5.33
  */
 
 
@@ -324,7 +324,7 @@ function byCustomElements(cid, elements, cat) {
                     result = byDate(cid, currentElement)(a, b);
                     break;
                 case "Category Pin":
-                    result = byBoolean(cid, currentElement)(a, b);
+                    result = tagSort(cat, currentElement)(a, b);
                     break;
                 case 'Article Title':
                     result = byName(cid, currentElement)(a, b);

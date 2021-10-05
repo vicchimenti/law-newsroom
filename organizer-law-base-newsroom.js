@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.33
+ *      @version 5.34
  */
 
 
@@ -251,6 +251,12 @@ function tagSort(tag, elem) {
         let strB = b.Content.get(elem).publish();
         let isMatchA = (tag.includes(strA));
         let isMatchB = (tag.includes(strB));
+
+        log("tagSort strA: " + strA);
+        log("tagSort strB: " + strB);
+        log("tagSort isMatchA: " + isMatchA);
+        log("tagSort isMatchB: " + isMatchB);
+
 
         return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
     }

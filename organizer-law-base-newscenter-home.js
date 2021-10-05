@@ -1,10 +1,10 @@
 /***
  *      @author Victor Chimenti, MSCS
- *      @file organizerLawBaseWorkingFile.js
+ *      @file organizerLawBaseNewscenterHome.js
  *      @see Media Library ID: 3011734
  *      organizer law base working file
  *
- *      @version 6.3
+ *      @version 7.0
  * 
  */
 

@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Grid
  *          Category Organizer
  *
- *      @version 6.5
+ *      @version 6.6
  */
 
 

@@ -369,7 +369,6 @@ function main(header, midder, footer) {
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
-        log("categoryName: " + categoryName);
 
 
 

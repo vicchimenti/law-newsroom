@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.3
+ *      @version 7.4
  */
 
  
@@ -452,14 +452,13 @@ function main(header, midder, footer) {
             log('Selected Option: ' + selectedOption);
 
 
- 
-            //      if (homepageFeedName == homepageOption) {
-            //         matchingOptions.push(validContent[contentItem]);
-            //         var pushed = 0;
-            //         log('Push :' + pushed);
-            //         pushed++;
-            //      }
-            //  }
+            var pushed = 0;
+
+            if (selectedOption == homepageOption) {
+                matchingOptions.push(validContent[contentItem]);
+                log('Push :' + pushed);
+                pushed++;
+            }
          }
  
 

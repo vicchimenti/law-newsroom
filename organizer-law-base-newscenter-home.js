@@ -2,30 +2,32 @@
  *      @author Victor Chimenti, MSCS
  *      @file organizerLawBaseNewscenterHome.js
  *      @see Media Library ID: 3050627
- *      organizer law base working file
+ *      organizer law base newscenter home file
+ * 
+ *      Foundation for Law News Center Homepage
+ *          Major, Minor, Hero Organizers
  *
- *      @version 7.1
+ *      @version 7.2
  * 
  */
 
-
+ 
 
 
 /***
  *      Import T4 Utilities
  */
-importClass(com.terminalfour.sitemanager.cache.CachedContent);
-importClass(com.terminalfour.navigation.ServerSideLinkManager);
-importClass(com.terminalfour.spring.ApplicationContextProvider);
-importClass(com.terminalfour.publish.utils.TreeTraversalUtils);
-importClass(com.terminalfour.navigation.items.utils.TargetContentInfo);
-importClass(com.terminalfour.utils.T4StreamWriter);
-importClass(com.terminalfour.publish.ContentPublisher);
-importClass(com.terminalfour.publish.utils.BrokerUtils);
-importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
-
-// importClass(com.terminalfour.content.element.ContentElement);
-// importClass(com.terminalfour.content.element.MultiSelectListContentElement);
+ importClass(com.terminalfour.sitemanager.cache.CachedContent);
+ importClass(com.terminalfour.navigation.ServerSideLinkManager);
+ importClass(com.terminalfour.spring.ApplicationContextProvider);
+ importClass(com.terminalfour.publish.utils.TreeTraversalUtils);
+ importClass(com.terminalfour.navigation.items.utils.TargetContentInfo);
+ importClass(com.terminalfour.utils.T4StreamWriter);
+ importClass(com.terminalfour.publish.ContentPublisher);
+ importClass(com.terminalfour.publish.utils.BrokerUtils);
+ importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+ importClass(com.terminalfour.content.IContentManager);
+ importClass(com.terminalfour.list.IPredefinedListManager);
 
 
 

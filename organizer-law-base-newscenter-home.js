@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.6
+ *      @version 7.7
  */
 
  
@@ -244,6 +244,7 @@ function isLimitPassed(i, limit) {
 function tagSort(tag, elem) {
 
     return function(a, b) {
+
         // assign values from the element to a string for boolean comparison
         let strA = a.Content.get(elem).publish();
         let strB = b.Content.get(elem).publish();
@@ -450,21 +451,7 @@ function main(header, midder, footer) {
                 matchingOptions.push(validContent[contentItem]);
             }
          }
- 
 
-
-        /**
-         * Sort content
-         */
-        // if (sElement != "") {
-        //     var arrayOfElements = [];
-        //     arrayOfElements = sElement.split(',');
-        //     validContent.sort(byCustomElements(CID, arrayOfElements));
-        // } else {
-        //     validContent.sort(eval(sortMethod + '(' + CID + ', sElement);'));
-        // }
-        // if (bReverse)
-        //     validContent.reverse();
  
  
  
@@ -476,12 +463,11 @@ function main(header, midder, footer) {
              var arrayOfElements = [];
              arrayOfElements = sElement.split(',');
              matchingOptions.sort(byCustomElements(CID, arrayOfElements));
- 
          } else {
  
              matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
- 
          }
+
          if (bReverse) {
             matchingOptions.reverse();
          }
@@ -512,8 +498,8 @@ function main(header, midder, footer) {
          * Determine Pagination
          */
         if (bPaginate && !bSummFirst) {
-            // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
 
+            // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
             var contentInfo = [];
             for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
                 var tci = new TargetContentInfo(validContent[i].CachedContent, oSection, language);
@@ -534,18 +520,6 @@ function main(header, midder, footer) {
             paginator.setBeforeAndAfterHTML(header, footer);
             paginator.setPreview(isPreview);
             paginator.write(document, dbStatement, publishCache, section, language, isPreview, vector);
-
-            // eventually we may want an else if here EX: else if (bPaginate && bSummFirst) {...}
-            // that would allow when the Summary and Paginate option are both chosen
-            // however at this time I haven't been able to produce a solution that merges
-            // the paginator with the oCP but it should be possible with enough time to work it out
-            // for now we go straight to the else
-            // and we must communicate to our departments that we don't support that functionality
-            // when they try to select both summary and paginator
-            // Victor 7/2020
-
-
-
 
         } else {
 
@@ -568,20 +542,6 @@ function main(header, midder, footer) {
             let start = nStart <= validContent.length ? nStart - 1 : 0;
             let iterations = 0;
 
-            // log("start: " + start);
-            // log("iterations: " + iterations);
-            // log("maxIterations: " + maxIterations);
-            // log("validContent.length: " + validContent.length);
-
-            /**
-             * loop through valid content and write only items requested
-             * 
-             */
-            // do {
-            //     oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[start].Content, LAYOUT, isPreview);
-            //     start++;
-            //     iterations++;
-            // } while (start < validContent.length && iterations < maxIterations);
 
 
             /**
@@ -612,11 +572,6 @@ function main(header, midder, footer) {
 
             }
 
-
-            // log("start: " + start);
-            // log("iterations: " + iterations);
-            // log("maxIterations: " + maxIterations);
-            // log("validContent.length: " + validContent.length);
 
 
             /**

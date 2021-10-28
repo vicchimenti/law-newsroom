@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.23
+ *     @version 2.24
  */
 
 
@@ -127,6 +127,10 @@ try {
      * */
     var contentDict = {
 
+        frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
+        author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
+        pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
+        fieldTags:              getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
         headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
@@ -134,12 +138,8 @@ try {
         articleFullBody:        getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
         publishedDate:          getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
         frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
-        frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
         frontPageImageCaption:  getContentValues('<t4 type="content" name="Main Image Caption" output="normal" modifiers="striptags,htmlentities" />'),
-        author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
         fullTextLink:           getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
-        pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
-        fieldTags:              getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         inTheNewsLink:          getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
         inTheNewsLinkTitle:     getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
         internalLink:           getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
@@ -178,6 +178,13 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
+
+    let openCardBody = '<div class="newsroomArticleBlurb container card-body">';
+    let closeCardBody = '</div>';
+    let openRow = '<div class="row px-0">';
+    let closeRow = '</div>';
+    let summaryString = '<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>';
+
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
     var listItems = "";
@@ -341,7 +348,15 @@ try {
     writeDocument (
         [
             beginningHTML,
-
+            thumbNailString,
+            openCardBody,
+            openRow,
+            titleLink,
+            publishedLink,
+            summaryString,
+            dateline,
+            closeRow,
+            closeCardBody,
             endingHTML
         ]
     );

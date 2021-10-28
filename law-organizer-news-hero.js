@@ -7,7 +7,7 @@
 
 
 var fieldToBeEvaluated = content.get("Newscenter Homepage").publish(); //edit this to change the field
-var optionToTestFor = "centerpiece"; //edit this to change the option
+var optionToTestFor = "hero"; //edit this to change the option
 var contentTypeLayout = 'output/herofeed'; //edit this to change the Content Layout to use for output
 
 try {

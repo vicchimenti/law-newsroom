@@ -127,12 +127,15 @@ try {
      * */
     var contentDict = {
 
-        contentName:    getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        articleTitle:   getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-        headline:       getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
-        publishedDate:  getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-        articleSummary: getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
-        frontPageImage: getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
+        contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        publishedDate:          getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
+        articleSummary:         getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
+        frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
+        frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
+        frontPageImageCaption:  getContentValues('<t4 type="content" name="Main Image Caption" output="normal" modifiers="striptags,htmlentities" />'),
+        author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
 
 
 

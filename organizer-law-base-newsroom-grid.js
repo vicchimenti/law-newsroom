@@ -459,6 +459,10 @@ function main(header, midder, footer) {
                 let categoryElement = categoryValues[category].split(':');
 
                 log('category element: ' + categoryElement);
+
+                log('category element 0 : ' + categoryElement[0]);
+                log('category element 1: ' + categoryElement[1]);
+
                 let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
                 let topicName = topic.getName();
 

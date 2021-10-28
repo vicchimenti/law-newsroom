@@ -321,9 +321,6 @@ function byCustomElements(cid, elements) {
                 case 'Publish Date':
                     result = byDate(cid, currentElement)(a, b);
                     break;
-                case "Pinned":
-                    result = byBoolean(cid, currentElement)(a, b);
-                    break;
                 case 'Article Title':
                     result = byName(cid, currentElement)(a, b);
                     break;

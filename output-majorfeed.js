@@ -178,7 +178,6 @@ try {
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
     var dateline = '<p class="newsroomArticlePublishedDate">' + contentDict.publishedDate.content + '</p>';
-    var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
     var beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + contentDict.contentID.content + '" aria-label="' + contentDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
 

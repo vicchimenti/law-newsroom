@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.5
+ *      @version 7.6
  */
 
  
@@ -577,11 +577,40 @@ function main(header, midder, footer) {
              * loop through valid content and write only items requested
              * 
              */
-            do {
-                oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[start].Content, LAYOUT, isPreview);
-                start++;
-                iterations++;
-            } while (start < validContent.length && iterations < maxIterations);
+            // do {
+            //     oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[start].Content, LAYOUT, isPreview);
+            //     start++;
+            //     iterations++;
+            // } while (start < validContent.length && iterations < maxIterations);
+
+
+            /**
+             * check for content in matching topics field
+             * 
+             */
+            if (matchingOptions.length > 0) {
+
+                /**
+                 * loop through matching topics and write only items requested
+                 * 
+                 */
+                do {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingOptions[start].Content, LAYOUT, isPreview);
+                    start++;
+                    iterations++;
+                } while (start < matchingOptions.length && iterations < maxIterations);
+
+            } else {
+
+                /**
+                 * when no matching items write all categories
+                 * 
+                 */
+                for (let story in validContent) {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
+                }
+
+            }
 
 
             // log("start: " + start);

@@ -454,6 +454,7 @@ function main(header, midder, footer) {
 
             var pushed = 0;
 
+            // if homepageOption contains selectedOtion
             if (selectedOption == homepageOption) {
                 matchingOptions.push(validContent[contentItem]);
                 log('Push :' + pushed);

@@ -143,7 +143,9 @@ try {
         inTheNewsLink:          getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
         inTheNewsLinkTitle:     getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
         internalLink:           getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        internalLinkTitle:      getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />')
+        internalLinkTitle:      getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
+        contentID:              getContentValues('<t4 type="meta" meta="content_id" />')
+
 
     }
 
@@ -199,8 +201,8 @@ try {
     var suLawInTheNews = "SU Law in the News";
     var dateline = '<p class="newsroomArticlePublishedDate">' + contentDict.publishedDate.content + '</p>';
     var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
-    var beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0" title="' + contentDict.articleTitle.content + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-    var endingHTML = '<hr class="articleBorderBottom"></div>';
+    var beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + contentDict.contentID.content + '" aria-label="' + contentDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
+    var endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
 
@@ -213,7 +215,7 @@ try {
      *  when a special topic is present we parse for valid links
      * 
      * */
-    if (fieldTags != "") {
+    if (contentDict.fieldTags.content) {
         var arrayOfTags = fieldTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
             listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
@@ -278,10 +280,10 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
+    if (contentDict.articleFullBody.content) {
+        titleLink = '<h3 class="newsroomArticleTitle card-title">' + contentDict.headline.content + '</h3>';
     } else {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
+        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + contentDict.fullTextLink.content + '" title="Read the full article at ' + contentDict.headline.content + '">' + contentDict.headline.content + '</a></h3>';
     }
 
 

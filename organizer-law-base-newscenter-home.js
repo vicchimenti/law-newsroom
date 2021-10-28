@@ -447,17 +447,20 @@ function main(header, midder, footer) {
          var matchingOptions = [];
          for (let contentItem in validContent) {
  
-            //  let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
+             let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
 
-             let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString();
+            //  let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString();
 
 
              log('Selected Option: ' + selectedOption);
 
  
              for (let option in selectedOption) {
+
+                let optionElement = selectedOption[option].split(':');
+
  
-                 let optionElement = selectedOption[option].split(':');
+                //  let optionElement = selectedOption[option];
                  let homepageFeed = listManager.getEntry(optionElement[0], optionElement[1], language);
                  let homepageFeedName = homepageFeed.getName();
 

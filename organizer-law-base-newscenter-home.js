@@ -421,53 +421,67 @@ function main(header, midder, footer) {
         /**
          * Filter content that matches content type
          */
-        var oCM = ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
-        var validContent = [];
-
-        // log("categoryName: " + categoryName);
-
-        for (var i = 0; i < mirrorContent.length; i++) {
-            var item = {
-                Content: oCM.get(mirrorContent[i].ID, language),
-                CachedContent: mirrorContent[i],
-                index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
-            };
-
-            //  I can get the id of the content item
-            // var itemID = item.CachedContent.getID();
-
-            if (item.Content.getContentTypeID() == CID) {
-                validContent.push(item);
-            }
-        }
-
-
-
-        // for (let contentItem = 0; contentItem < validContent.length; contentItem++) {
-        //     // let categoryValue = validContent[contentItem].content.get("Category").publish();
-
-        //     let categoryValue = validContent[contentItem].Content.get("Category").getValue().toString();
-        //     log("categoryValue: " + categoryValue);
-        // }
-
-
-
-
-
-        /**
-         * Sort content
-         */
-        if (sElement != "") {
-            // when the user selects any custom sort element
-            var arrayOfElements = [];
-            arrayOfElements = sElement.split(',');
-            validContent.sort(byCustomElements(CID, arrayOfElements));
-        } else {
-            // when the user only sorts by the default options
-            validContent.sort(eval(sortMethod + '(' + CID + ', sElement);'));
-        }
-        if (bReverse)
-            validContent.reverse();
+         var oCM = ApplicationContextProvider.getBean(IContentManager);
+         var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
+         var validContent = [];
+ 
+         for (var i = 0; i < mirrorContent.length; i++) {
+ 
+             var item = {
+                 Content: oCM.get(mirrorContent[i].ID, language),
+                 CachedContent: mirrorContent[i],
+                 index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
+             };
+ 
+             if (item.Content.getContentTypeID() == CID) {
+                 validContent.push(item);
+             }
+         }
+ 
+ 
+ 
+ 
+         /**
+          * Filter content that matches the category
+          */
+         var matchingTopics = [];
+         for (let contentItem in validContent) {
+ 
+             let categoryValues = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
+ 
+             for (let category in categoryValues) {
+ 
+                 let categoryElement = categoryValues[category].split(':');
+                 let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
+                 let topicName = topic.getName();
+ 
+                 if (topicName == categoryName) {
+                     matchingTopics.push(validContent[contentItem]);
+                 }
+             }
+         }
+ 
+ 
+ 
+ 
+         /**
+          * Sort content
+          */
+         if (sElement != "") {
+ 
+             // when the user selects any custom sort element
+             var arrayOfElements = [];
+             arrayOfElements = sElement.split(',');
+             matchingTopics.sort(byCustomElements(CID, arrayOfElements, categoryName));
+ 
+         } else {
+ 
+             // when the user only sorts by the default options
+             matchingTopics.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+ 
+         }
+         if (bReverse)
+             matchingTopics.reverse();
 
 
 

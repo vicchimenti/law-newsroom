@@ -463,9 +463,11 @@ function main(header, midder, footer) {
              var arrayOfElements = [];
              arrayOfElements = sElement.split(',');
              matchingOptions.sort(byCustomElements(CID, arrayOfElements));
+
          } else {
  
              matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+             
          }
 
          if (bReverse) {

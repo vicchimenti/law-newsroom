@@ -22,17 +22,17 @@ div#MainZone div.container {
 
 /** news article customizations **/
 
-div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
+article.newsroomOrganizerWrapper h3.newsroomArticleTitle {
     font-size: 1.6rem;
     margin: 15px 0 15px 0;
 }
 
-div.newsroomOrganizerWrapper p {
+article.newsroomOrganizerWrapper p {
     font-size: 1.5rem;
     line-height: 1.35;
 }
 
-div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
+article.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
     font-size: 1.25rem;
 }
 
@@ -66,7 +66,7 @@ div.heroOrganizerWrapper h3.newsroomArticleTitle {
 
 /** border for organizer left on full page **/
 
-div.newsroomOrganizerWrapper.col-md-8 {
+article.newsroomOrganizerWrapper.col-md-8 {
     border: #e5e5e5;
     border-top: 0;
     border-right: 0;
@@ -78,7 +78,7 @@ div.newsroomOrganizerWrapper.col-md-8 {
 
 /** left right padding and margin to control image size **/
 
-div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
+article.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
     margin: 0 20px 20px 20px;
     padding: 0 20px 0 20px;
 }
@@ -202,7 +202,7 @@ div.titleWrapper address a {
 
 @media screen and (max-width: 767.999px) {
 
-    div.newsroomOrganizerWrapper.col-md-8 {
+    article.newsroomOrganizerWrapper.col-md-8 {
         border: none;
     }
     div.heroOrganizer.standardContent {
@@ -215,7 +215,7 @@ div.titleWrapper address a {
         padding: 0 20px 0 20px;
     }
 
-    div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
+    article.newsroomOrganizerWrapper h3.newsroomArticleTitle {
         font-size: 1.4rem;
     }
 
@@ -223,11 +223,11 @@ div.titleWrapper address a {
         font-size: 1.4rem;
     }
     
-    div.newsroomOrganizerWrapper p {
+    article.newsroomOrganizerWrapper p {
         font-size: 1.25rem;
     }
     
-    div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
+    article.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
         font-size: 1rem;
     }
 }

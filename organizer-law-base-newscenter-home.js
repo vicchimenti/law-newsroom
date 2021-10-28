@@ -457,10 +457,10 @@ function main(header, midder, footer) {
  
              for (let option in selectedOption) {
 
-                let optionElement = selectedOption[option].split(':');
+                // let optionElement = selectedOption[option].split(':');
 
  
-                //  let optionElement = selectedOption[option];
+                 let optionElement = selectedOption[option];
                  let homepageFeed = listManager.getEntry(optionElement[0], optionElement[1], language);
                  let homepageFeedName = homepageFeed.getName();
 

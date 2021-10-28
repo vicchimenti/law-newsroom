@@ -366,7 +366,7 @@ function main(header, midder, footer) {
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
-        log("Homepage Option: " + homepageOption);
+
 
 
         // the logic to determine layouts and links that were available to the user
@@ -456,37 +456,35 @@ function main(header, midder, footer) {
         /**
          * Sort content
          */
-        if (sElement != "") {
-            // when the user selects any custom sort element
-            var arrayOfElements = [];
-            arrayOfElements = sElement.split(',');
-            validContent.sort(byCustomElements(CID, arrayOfElements));
-        } else {
-            // when the user only sorts by the default options
-            validContent.sort(eval(sortMethod + '(' + CID + ', sElement);'));
-        }
-        if (bReverse)
-            validContent.reverse();
+        // if (sElement != "") {
+        //     var arrayOfElements = [];
+        //     arrayOfElements = sElement.split(',');
+        //     validContent.sort(byCustomElements(CID, arrayOfElements));
+        // } else {
+        //     validContent.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+        // }
+        // if (bReverse)
+        //     validContent.reverse();
  
  
  
          /**
           * Sort content
           */
-        //  if (sElement != "") {
+         if (sElement != "") {
  
-        //      var arrayOfElements = [];
-        //      arrayOfElements = sElement.split(',');
-        //      matchingOptions.sort(byCustomElements(CID, arrayOfElements, homepageOption));
+             var arrayOfElements = [];
+             arrayOfElements = sElement.split(',');
+             matchingOptions.sort(byCustomElements(CID, arrayOfElements));
  
-        //  } else {
+         } else {
  
-        //      matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+             matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
  
-        //  }
-        //  if (bReverse) {
-        //     matchingOptions.reverse();
-        //  }
+         }
+         if (bReverse) {
+            matchingOptions.reverse();
+         }
 
 
 

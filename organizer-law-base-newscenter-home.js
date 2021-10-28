@@ -447,16 +447,21 @@ function main(header, midder, footer) {
          var matchingOptions = [];
          for (let contentItem in validContent) {
  
-            let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
+            // let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
+
+            let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
+
+
+            // let strA = a.Content.get(elem).publish();
 
             //  let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString();
 
 
             log('Selected Option: ' + selectedOption);
 
-            let optionElement = selectedOption.split(':');
+            // let optionElement = selectedOption.split(':');
 
-            log("option element: " + optionElement);
+            // log("option element: " + optionElement);
 
 
 

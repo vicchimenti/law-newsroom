@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.25
+ *     @version 2.26
  */
 
 
@@ -145,7 +145,6 @@ try {
         internalLink:           getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
         internalLinkTitle:      getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
         contentID:              getContentValues('<t4 type="meta" meta="content_id" />')
-
 
     }
 

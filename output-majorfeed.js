@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.24
+ *     @version 2.25
  */
 
 
@@ -281,9 +281,13 @@ try {
      * 
      * */
     if (contentDict.articleFullBody.content) {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + contentDict.headline.content + '</h3>';
-    } else {
+
         titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + contentDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + contentDict.headline.content + '">' + contentDict.headline.content + '</a></h3>';
+
+    } else {
+
+        titleLink = '<h3 class="newsroomArticleTitle card-title">' + contentDict.headline.content + '</h3>';
+
     }
 
 
@@ -312,10 +316,16 @@ try {
      * 
      * */
     if (contentDict.frontPageImage.content) {
-        thumbNailString = '<span class="newsroomImageWrapper hidden">No Valid Image Content Provided</span>';
-    } else {
+
         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
+
+    } else {
+
+        thumbNailString = '<span class="newsroomImageWrapper hidden">No Valid Image Content Provided</span>';
+
     }
+
+
 
 
 

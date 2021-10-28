@@ -367,7 +367,7 @@ function main(header, midder, footer) {
         var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
-        let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Newscenter Homepage" output="normal" display_field="value" />');
+        let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Newscenter Homepage" output="normal" display_field="name" />');
 
 
 
@@ -433,7 +433,7 @@ function main(header, midder, footer) {
             };
 
             //  I can get the id of the content item
-            var itemID = item.CachedContent.getID();
+            // var itemID = item.CachedContent.getID();
 
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);

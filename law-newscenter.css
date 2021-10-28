@@ -78,7 +78,7 @@ div.newsroomOrganizerWrapper.col-md-8 {
 
 /** left right padding and margin to control image size **/
 
-div.newsroomOrganizerWrapper.col-md-8 div.newsroomMajorFeedItem {
+div.newsroomOrganizerWrapper.col-md-8 article.newsroomMajorFeedItem {
     margin: 0 20px 20px 20px;
     padding: 0 20px 0 20px;
 }
@@ -89,7 +89,7 @@ div.newsroomOrganizer div.titleWrapper {
 
 /** whitespace between items **/
 
-div.newsroomMajorFeedItem {
+article.newsroomMajorFeedItem {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
 }

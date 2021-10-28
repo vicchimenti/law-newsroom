@@ -369,7 +369,7 @@ function main(header, midder, footer) {
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
-
+        log("Homepage Option: " + homepageOption);
 
 
         // the logic to determine layouts and links that were available to the user
@@ -449,13 +449,13 @@ function main(header, midder, footer) {
  
              let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
  
-             for (let category in selectedOption) {
+             for (let option in selectedOption) {
  
-                 let categoryElement = selectedOption[category].split(':');
-                 let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
-                 let topicName = topic.getName();
+                 let optionElement = selectedOption[option].split(':');
+                 let homepageFeed = listManager.getEntry(optionElement[0], optionElement[1], language);
+                 let homepageFeedName = homepageFeed.getName();
  
-                 if (topicName == homepageOption) {
+                 if (homepageFeedName == homepageOption) {
                     matchingOptions.push(validContent[contentItem]);
                  }
              }

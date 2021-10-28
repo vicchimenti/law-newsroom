@@ -269,23 +269,6 @@ try {
 
 
 
-    /***
-     *  display byline only when provided 
-     * 
-     * */
-    // if (author == "") {
-    //     authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    // } else {
-    //     authorByLine = '<p class="byLine credits">By ' + author + '</p>';
-    // }
-    // if (photoCredit == "") {
-    //     photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-    // } else {
-    //     photoCredit = '<p class="byLine credits">Image credit: ' + frontPageImageCredit + '</p>';
-    // }
-
-
-
 
     /***
      *  verify Main image and photo credits

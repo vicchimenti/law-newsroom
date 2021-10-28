@@ -442,47 +442,16 @@ function main(header, midder, footer) {
  
  
          /**
-          * Filter content that matches the category
+          * Filter radio button value that matches the homepage option
           */
          var matchingOptions = [];
          for (let contentItem in validContent) {
- 
-            // let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
-
+             
             let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
-
-
-            // let strA = a.Content.get(elem).publish();
-
-            //  let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString();
-
 
             log('Selected Option: ' + selectedOption);
 
-            // let optionElement = selectedOption.split(':');
 
-            // log("option element: " + optionElement);
-
-
-
- 
-            //  for (let option in selectedOption) {
-
-            //     log("option: " + selectedOption[option]);
-
-            //     let optionElement = selectedOption[option].split(':');
-
-            //     log("option element: " + optionElement);
-
-            //     log("option element 0: " + optionElement[0]);
-            //     log("option element 1: " + optionElement[1]);
-
-
- 
-            //      let homepageFeed = listManager.getEntry(optionElement[0], optionElement[1], language);
-            //      let homepageFeedName = homepageFeed.getName();
-
-            //      log('Homepage Feed Name :' + homepageFeedName);
  
             //      if (homepageFeedName == homepageOption) {
             //         matchingOptions.push(validContent[contentItem]);

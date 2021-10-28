@@ -1,7 +1,7 @@
 /***
- *     @author Victor Chimenti, MSCS-SE '20
+ *     @author Victor Chimenti, MSCS
  *     @file output-majorfeed.js
- *     @see Seattle University School of Law Newsroom
+ *     @see Seattle University School of Law News Center
  *
  *     This new content type layout is a smart layout for all items in the
  *     major newsfeed used by the School of Law Newsroom. This content type
@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.22
+ *     @version 2.23
  */
 
 

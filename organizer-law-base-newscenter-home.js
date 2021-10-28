@@ -447,40 +447,45 @@ function main(header, midder, footer) {
          var matchingOptions = [];
          for (let contentItem in validContent) {
  
-             let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
+            let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString().split(';');
 
             //  let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").getValue().toString();
 
 
-             log('Selected Option: ' + selectedOption);
+            log('Selected Option: ' + selectedOption);
 
- 
-             for (let option in selectedOption) {
+            let optionElement = selectedOption.split(':');
 
-                log("option: " + selectedOption[option]);
+            log("option element: " + optionElement);
 
-                let optionElement = selectedOption[option].split(':');
-
-                log("option element: " + optionElement);
-
-                log("option element 0: " + optionElement[0]);
-                log("option element 1: " + optionElement[1]);
 
 
  
-                //  let optionElement = selectedOption[option];
-                 let homepageFeed = listManager.getEntry(optionElement[0], optionElement[1], language);
-                 let homepageFeedName = homepageFeed.getName();
+            //  for (let option in selectedOption) {
 
-                 log('Homepage Feed Name :' + homepageFeedName);
+            //     log("option: " + selectedOption[option]);
+
+            //     let optionElement = selectedOption[option].split(':');
+
+            //     log("option element: " + optionElement);
+
+            //     log("option element 0: " + optionElement[0]);
+            //     log("option element 1: " + optionElement[1]);
+
+
  
-                 if (homepageFeedName == homepageOption) {
-                    matchingOptions.push(validContent[contentItem]);
-                    var pushed = 0;
-                    log('Push :' + pushed);
-                    pushed++;
-                 }
-             }
+            //      let homepageFeed = listManager.getEntry(optionElement[0], optionElement[1], language);
+            //      let homepageFeedName = homepageFeed.getName();
+
+            //      log('Homepage Feed Name :' + homepageFeedName);
+ 
+            //      if (homepageFeedName == homepageOption) {
+            //         matchingOptions.push(validContent[contentItem]);
+            //         var pushed = 0;
+            //         log('Push :' + pushed);
+            //         pushed++;
+            //      }
+            //  }
          }
  
 

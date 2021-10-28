@@ -94,10 +94,10 @@ function byDate(cid, elem) {
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
 
-        return (dateA && !dateB) ? -1 :
-            (!dateA && dateB) ? 1 :
-            (!dateA && !dateB) ? 0 :
-            dateB.compareTo(dateA);
+        return  (dateA && !dateB) ? -1 :
+                (!dateA && dateB) ? 1 :
+                (!dateA && !dateB) ? 0 :
+                dateB.compareTo(dateA);
     }
 
     return result;

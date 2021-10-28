@@ -334,6 +334,20 @@ try {
 
 
 
+    /***
+     *  write document once
+     * 
+     * */
+    writeDocument (
+        [
+            beginningHTML,
+
+            endingHTML
+        ]
+    );
+
+
+
 
 } catch (err) {
     document.write(err.message);

@@ -36,7 +36,7 @@
 
 
 
- 
+
 /**
  * from the organizer we can't post console.log() directly to the browser.
  * this function allow you to create a log message that will post to the console in the browser
@@ -240,8 +240,6 @@ function isLimitPassed(i, limit) {
  * @param elem is a value assigned from an array like object of custom Elements to sort by
  * @param tag is the content item that is being sorted, in some cases this item will match a tag
  * 
- * Tag Sort will compare both items for an exact match to the choice
- * In most cases this will fit radio buttons that must match
  */
 function tagSort(tag, elem) {
 

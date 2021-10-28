@@ -121,6 +121,15 @@ function writeDocument(array) {
 
 try {
 
+
+    /***
+     *      Dictionary of content
+     * */
+    var contentDict = {
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" display_field="value" />')
+    }
+
     /***
      *  Assign local variables from the content type's fields
      * 

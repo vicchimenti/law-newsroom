@@ -321,7 +321,7 @@ function byCustomElements(cid, elements) {
                 case 'Publish Date':
                     result = byDate(cid, currentElement)(a, b);
                     break;
-                case "Category Pin":
+                case "Pinned":
                     result = byBoolean(cid, currentElement)(a, b);
                     break;
                 case 'Article Title':
@@ -445,17 +445,12 @@ function main(header, midder, footer) {
           * Filter radio button value that matches the homepage option
           */
          var matchingOptions = [];
-         let pushed = 0;
          for (let contentItem in validContent) {
              
             let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
-
-            log('Selected Option: ' + selectedOption);
-
             if(homepageOption.toLowerCase().includes(selectedOption)) {
+
                 matchingOptions.push(validContent[contentItem]);
-                log('Pushed: ' + pushed);
-                pushed++;
             }
          }
  

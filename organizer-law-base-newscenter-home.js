@@ -369,7 +369,6 @@ function main(header, midder, footer) {
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
-        let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Newscenter Homepage" output="normal" display_field="name" />');
 
 
 
@@ -483,7 +482,7 @@ function main(header, midder, footer) {
         if (!footer)
             footer = "";
         if (title != "")
-            header = header + '<h2 class="organizerTitle">' + title + '</h2>';
+            header = header + '<h2 class="organizerTitle sr-only">' + title + '</h2>';
         if (bViewAll) {
             var href = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Section" output="linkurl" modifiers="nav_sections" />');
             midder = midder + '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + '</a></div>';

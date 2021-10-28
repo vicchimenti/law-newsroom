@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.26
+ *     @version 2.27
  */
 
 
@@ -161,6 +161,9 @@ try {
     let openRow = '<div class="row px-0">';
     let closeRow = '</div>';
     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + contentDict.articleSummary.content + '</p></span>';
+    var imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    var openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    var closeImageWrapper = '</figure>';
 
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
@@ -273,14 +276,36 @@ try {
      *  verify Main image and photo credits
      * 
      * */
+    // if (contentDict.frontPageImage.content) {
+
+    //     thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
+
+    // } else {
+
+    //     thumbNailString = '<span class="newsroomImageWrapper hidden">No Valid Image Content Provided</span>';
+
+    // }
+
+
+    /***
+     *  Parse for image
+     * 
+     * */
     if (contentDict.frontPageImage.content) {
 
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
+        var imageID = content.get('Main Image').getID();
+        var mediaInfo = getMediaInfo(imageID);
+        var media = readMedia(imageID);
+        var info = new ImageInfo;
+        info.setInput(media);
 
-    } else {
+        let imageDefaultAlt = contentDict.frontPageImageCaption.content ? contentDict.frontPageImageCaption.content : contentDict.articleTitle.content;
 
-        thumbNailString = '<span class="newsroomImageWrapper hidden">No Valid Image Content Provided</span>';
-
+        imageString =   (info.check())
+                        ? '<img src="' + contentDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        : '<img src="' + contentDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+    
+        openImageWrapper = '<figure class="figure">';
     }
 
 
@@ -293,7 +318,9 @@ try {
     writeDocument (
         [
             beginningHTML,
-            thumbNailString,
+            openImageWrapper,
+            imageString,
+            closeImageWrapper,
             openCardBody,
             openRow,
             titleLink,

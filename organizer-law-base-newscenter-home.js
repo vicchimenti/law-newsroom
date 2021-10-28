@@ -207,9 +207,8 @@ function byOrder(cid, elem) {
 
     let result = (a, b) => {
 
-        return (a.index > b.index) ? 1 :
-            (a.index < b.index) ? -1 :
-            0;
+        return  (a.index > b.index) ? 1 :
+                (a.index < b.index) ? -1 : 0;
     }
 
     return result;
@@ -366,7 +365,7 @@ function main(header, midder, footer) {
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         // var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
-
+{/* <t4 type="content" name="Newscenter Homepage" output="normal" display_field="value" /> */}
 
 
 

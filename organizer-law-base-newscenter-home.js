@@ -459,32 +459,49 @@ function main(header, midder, footer) {
  
                  if (homepageFeedName == homepageOption) {
                     matchingOptions.push(validContent[contentItem]);
+                    var pushed = 0;
+                    log('Push :' + pushed);
+                    pushed++;
                  }
              }
          }
  
+
+
+        /**
+         * Sort content
+         */
+        if (sElement != "") {
+            // when the user selects any custom sort element
+            var arrayOfElements = [];
+            arrayOfElements = sElement.split(',');
+            validContent.sort(byCustomElements(CID, arrayOfElements));
+        } else {
+            // when the user only sorts by the default options
+            validContent.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+        }
+        if (bReverse)
+            validContent.reverse();
  
  
  
          /**
           * Sort content
           */
-         if (sElement != "") {
+        //  if (sElement != "") {
  
-             // when the user selects any custom sort element
-             var arrayOfElements = [];
-             arrayOfElements = sElement.split(',');
-             matchingOptions.sort(byCustomElements(CID, arrayOfElements, homepageOption));
+        //      var arrayOfElements = [];
+        //      arrayOfElements = sElement.split(',');
+        //      matchingOptions.sort(byCustomElements(CID, arrayOfElements, homepageOption));
  
-         } else {
+        //  } else {
  
-             // when the user only sorts by the default options
-             matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+        //      matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
  
-         }
-         if (bReverse) {
-            matchingOptions.reverse();
-         }
+        //  }
+        //  if (bReverse) {
+        //     matchingOptions.reverse();
+        //  }
 
 
 

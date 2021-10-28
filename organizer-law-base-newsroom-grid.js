@@ -448,25 +448,11 @@ function main(header, midder, footer) {
         for (let contentItem in validContent) {
 
             let categoryValues = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
-
-            log("categoryValues: " + categoryValues );
-
-
             for (let category in categoryValues) {
 
-                log("category: " + categoryValues[category] );
-
                 let categoryElement = categoryValues[category].split(':');
-
-                log('category element: ' + categoryElement);
-
-                log('category element 0: ' + categoryElement[0]);
-                log('category element 1: ' + categoryElement[1]);
-
                 let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
                 let topicName = topic.getName();
-
-                log("topicName: " + topicName);
 
                 if (topicName == categoryName) {
                     matchingTopics.push(validContent[contentItem]);

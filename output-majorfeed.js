@@ -131,6 +131,7 @@ try {
         articleTitle:   getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
         headline:       getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
         publishedDate:  getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
+        articleSummary: getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
 
 
 

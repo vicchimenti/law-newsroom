@@ -141,6 +141,7 @@ try {
         pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
         fieldTags:              getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         inTheNewsLink:          getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        inTheNewsLinkTitle:     getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
 
 
 

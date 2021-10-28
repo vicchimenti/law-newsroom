@@ -271,22 +271,6 @@ try {
 
 
 
-
-    /***
-     *  verify Main image and photo credits
-     * 
-     * */
-    // if (contentDict.frontPageImage.content) {
-
-    //     thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
-
-    // } else {
-
-    //     thumbNailString = '<span class="newsroomImageWrapper hidden">No Valid Image Content Provided</span>';
-
-    // }
-
-
     /***
      *  Parse for image
      * 

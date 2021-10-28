@@ -8,7 +8,6 @@
  *          Major, Minor, Hero Organizers
  *
  *      @version 7.2
- * 
  */
 
  
@@ -32,6 +31,12 @@
 
 
 
+
+
+
+
+
+ 
 /**
  * from the organizer we can't post console.log() directly to the browser.
  * this function allow you to create a log message that will post to the console in the browser

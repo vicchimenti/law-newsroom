@@ -215,63 +215,63 @@ try {
      *  when a special topic is present we parse for valid links
      * 
      * */
-    if (contentDict.fieldTags.content) {
-        var arrayOfTags = fieldTags.split(',');
-        for (let i = 0; i < arrayOfTags.length; i++) {
-            listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
-        }
+    // if (contentDict.fieldTags.content) {
+    //     var arrayOfTags = fieldTags.split(',');
+    //     for (let i = 0; i < arrayOfTags.length; i++) {
+    //         listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
+    //     }
 
-        // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
+    //     // Print any tags that were selected
+    //     listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
         
-        // when tags exist check for Special Categories - SU Law in the News
-        if (fieldTags.includes("SU Law in the News")) {
-            beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
+    //     // when tags exist check for Special Categories - SU Law in the News
+    //     if (fieldTags.includes("SU Law in the News")) {
+    //         beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
-            // parse law in news for external link to original story
-            if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
-                externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-            } else {
-                externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
-            }
+    //         // parse law in news for external link to original story
+    //         if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
+    //             externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
+    //         } else {
+    //             externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
+    //         }
 
-            // assign link value for publishing
-            publishedLink = externalLinkString;
-
-
-        // when tags exist check for Special Categories - Announcements
-        } else if (fieldTags.includes("Announcements")) {
-            beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
-
-            // parse announcements for internal link to origin
-            if (internalLink == "") {
-                internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
-            } else {
-                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
-            }
-
-            // assign link value for publishing
-            publishedLink = internalLinkString;
+    //         // assign link value for publishing
+    //         publishedLink = externalLinkString;
 
 
-        // when tags exist check for Special Categories - Announcements
-        } else if (fieldTags.includes("Events")) {
-            beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+    //     // when tags exist check for Special Categories - Announcements
+    //     } else if (fieldTags.includes("Announcements")) {
+    //         beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
-            // parse events for internal link to origin
-            if (internalLink == "") {
-                internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
-            } else {
-                internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
-            }
+    //         // parse announcements for internal link to origin
+    //         if (internalLink == "") {
+    //             internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+    //         } else {
+    //             internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
+    //         }
 
-            // assign link value for publishing
-            publishedLink = internalLinkString;            
-        }
-    }
+    //         // assign link value for publishing
+    //         publishedLink = internalLinkString;
+
+
+    //     // when tags exist check for Special Categories - Announcements
+    //     } else if (fieldTags.includes("Events")) {
+    //         beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+
+    //         // parse events for internal link to origin
+    //         if (internalLink == "") {
+    //             internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+    //         } else {
+    //             internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
+    //         }
+
+    //         // assign link value for publishing
+    //         publishedLink = internalLinkString;            
+    //     }
+    // }
 
 
 
@@ -283,7 +283,7 @@ try {
     if (contentDict.articleFullBody.content) {
         titleLink = '<h3 class="newsroomArticleTitle card-title">' + contentDict.headline.content + '</h3>';
     } else {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + contentDict.fullTextLink.content + '" title="Read the full article at ' + contentDict.headline.content + '">' + contentDict.headline.content + '</a></h3>';
+        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + contentDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + contentDict.headline.content + '">' + contentDict.headline.content + '</a></h3>';
     }
 
 
@@ -293,16 +293,16 @@ try {
      *  display byline only when provided 
      * 
      * */
-    if (author == "") {
-        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    } else {
-        authorByLine = '<p class="byLine credits">By ' + author + '</p>';
-    }
-    if (photoCredit == "") {
-        photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-    } else {
-        photoCredit = '<p class="byLine credits">Image credit: ' + frontPageImageCredit + '</p>';
-    }
+    // if (author == "") {
+    //     authorByLine = '<p class="byLine hidden">No Author Provided</p>';
+    // } else {
+    //     authorByLine = '<p class="byLine credits">By ' + author + '</p>';
+    // }
+    // if (photoCredit == "") {
+    //     photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    // } else {
+    //     photoCredit = '<p class="byLine credits">Image credit: ' + frontPageImageCredit + '</p>';
+    // }
 
 
 
@@ -311,10 +311,10 @@ try {
      *  verify Main image and photo credits
      * 
      * */
-    if (frontPageImage == "") {
+    if (contentDict.frontPageImage.content) {
         thumbNailString = '<span class="newsroomImageWrapper hidden">No Valid Image Content Provided</span>';
     } else {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
     }
 
 
@@ -324,22 +324,22 @@ try {
      *  Write the document once
      * 
      * */
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, publishedLink));
-    document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
-    document.write('<div class="creditsWrapper card-text hidden">');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
-    document.write('</div>'); // close credits div
-    document.write(dateline);
-    document.write('<div class="hidden">' + listOfTags + '</div>');
-    document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
-    document.write('</div></div>'); // close newsroomArticleBlurb and row divs
-    document.write(endingHTML);
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
+    // document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, publishedLink));
+    // document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
+    // document.write('<div class="creditsWrapper card-text hidden">');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
+    // document.write('</div>'); // close credits div
+    // document.write(dateline);
+    // document.write('<div class="hidden">' + listOfTags + '</div>');
+    // document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
+    // document.write('</div></div>'); // close newsroomArticleBlurb and row divs
+    // document.write(endingHTML);
 
 
 

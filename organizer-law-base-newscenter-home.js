@@ -454,6 +454,8 @@ function main(header, midder, footer) {
                  let optionElement = selectedOption[option].split(':');
                  let homepageFeed = listManager.getEntry(optionElement[0], optionElement[1], language);
                  let homepageFeedName = homepageFeed.getName();
+
+                 log('Homepage Feed Name :' + homepageFeedName);
  
                  if (homepageFeedName == homepageOption) {
                     matchingOptions.push(validContent[contentItem]);

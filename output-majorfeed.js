@@ -183,7 +183,7 @@ try {
     let closeCardBody = '</div>';
     let openRow = '<div class="row px-0">';
     let closeRow = '</div>';
-    let summaryString = '<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>';
+    let summaryString = '<span class="newsroomArticleLead card-text"><p>' + contentDict.articleSummary.content + '</p></span>';
 
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
@@ -197,9 +197,9 @@ try {
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
-    var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    var beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    var dateline = '<p class="newsroomArticlePublishedDate">' + contentDict.publishedDate.content + '</p>';
+    var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + contentDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + contentDict.frontPageImageCaption.content + '" /></span>';
+    var beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0" title="' + contentDict.articleTitle.content + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 

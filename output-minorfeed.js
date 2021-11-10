@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.8
+ *     @version 2.9
  */
 
 
@@ -114,7 +114,6 @@ try {
      *  Initialize defaults
      * 
      * */
-    let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
     let closeCardBody = '</div></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
@@ -123,8 +122,9 @@ try {
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "In the News";
-    let dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
-    let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
+    var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    var dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
+    var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
 
 

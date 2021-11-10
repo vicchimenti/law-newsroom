@@ -155,10 +155,12 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
-    let closeCardBody = '</div></div>'
-    var titleLink = "";
+    let closeCardBody = '</div></div>';
+    // let summaryString = '<p class="newsroomArticleLead card-text visually-hidden">No Summary Provided</p>';
+
+    // var titleLink = "";
     var listItems = "";
     var externalLinkString = "";
     var internalLinkString = "";
@@ -253,9 +255,20 @@ try {
     //     titleLink = '<h3 class="newsroomArticleTitle card-title"><a class="card-link" href="' + fullTextLink + '" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + headline + '</a></h3>';
     // }
 
-    titleLink = (minorDict.articleFullBody.content && minorDict.headline.content)
-                ? '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + headline + '</a></h3>'
-                : '<h3 class="newsroomArticleTitle card-title">' + minorDict.itemName.content + '</h3>';
+    let titleLink = (minorDict.articleFullBody.content && minorDict.headline.content)
+                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + headline + '</a></h3>'
+                    : '<h3 class="newsroomArticleTitle card-title">' + minorDict.itemName.content + '</h3>';
+
+
+
+
+    /***
+     *  parse for summary
+     * 
+     * */
+    let summaryString = (minorDict.articleSummary.content)
+                        ? '<p class="newsroomArticleLead card-text">' + minorDict.articleSummary.content + '</p>'
+                        : '<p class="newsroomArticleLead card-text visually-hidden">No Summary Provided</p>';
 
 
 
@@ -287,12 +300,12 @@ try {
         [
             beginningHTML,
             openCardBody,
-
             titleLink,
+
             publishedLink,
             summaryString,
             dateline,
-            closeRow,
+
 
             closeCardBody,
             endingHTML

@@ -156,7 +156,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
     var listItems = "";
     var externalLinkString = "";
@@ -188,7 +188,7 @@ try {
         }
 
         // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listItems + '</ul></div>';
+        listOfCats = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listItems + '</ul></div>';
         
         // when tags exist check for Special Categories - SU Law in the News
         if (fieldTags.includes("SU Law in the News")) {
@@ -267,7 +267,7 @@ try {
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, internalLinkString));
     document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
     document.write(dateline);
-    document.write(listOfTags);
+    document.write(listOfCats);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
     document.write('</div></div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);

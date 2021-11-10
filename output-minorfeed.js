@@ -151,7 +151,6 @@ try {
     function modifyWrapper(htmlClass) {
 
         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
-
     }
 
 
@@ -164,7 +163,6 @@ try {
     function modifyDateline(specialTopic) {
 
         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
-
     }
 
 
@@ -227,7 +225,7 @@ try {
      * 
      * */
     let titleLink = (minorDict.articleFullBody.content && minorDict.headline.content)
-                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + headline + '</a></h3>'
+                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + minorDict.headline.content + '</a></h3>'
                     : '<h3 class="newsroomArticleTitle card-title">' + minorDict.itemName.content + '</h3>';
 
 

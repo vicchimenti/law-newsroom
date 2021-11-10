@@ -107,20 +107,6 @@ try {
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
     }
 
-    // var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Title' output='normal' display_field='value' />");
-    // var headline = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='normal' display_field='value' />");
-    // var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Abstract' output='normal' display_field='value' />");
-    // var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Body' output='normal' display_field='value' />");
-    // var publishedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publish Date' output='normal' date_format='MMMM d, yyyy' />");
-    // var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
-    // var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
-    // var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
-    // var inTheNewsLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link' output='normal' modifiers='htmlentities,js-var' />");
-    // var inTheNewsLinkTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link Title' output='normal' display_field='value' />");    
-    // var internalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linkurl' modifiers='nav_sections' />");
-    // var internalLinkTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linktext' modifiers='nav_sections' />");
-    // var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
-
 
 
 
@@ -169,31 +155,6 @@ try {
 
 
     /***
-     *  process and prioritize special topics
-     * 
-     * */
-    switch (minorDict.catTags.content) {
-
-        case (minorDict.catTags.content.includes(suLawInTheNews)):
-            modifyWrapper(suLawInTheNews);
-            modifyDateline(suLawInTheNews);
-            break;
-
-        case (minorDict.catTags.content.includes(announcements)):
-            modifyWrapper(announcements);
-            modifyDateline(announcements);
-            break;
-
-        case (minorDict.catTags.content.includes(events)):
-            modifyWrapper(events);
-            modifyDateline(events);
-            break;
-    }
-
-
-
-
-    /***
      *  process categories
      * 
      * */
@@ -204,6 +165,32 @@ try {
 
         // Print any tags that were selected
         listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+    }
+    
+
+
+
+
+    /***
+     *  process and prioritize special topics
+     * 
+     * */
+    switch (listOfCats) {
+
+        case (listOfCats.includes(suLawInTheNews)):
+            modifyWrapper(suLawInTheNews);
+            modifyDateline(suLawInTheNews);
+            break;
+
+        case (listOfCats.includes(announcements)):
+            modifyWrapper(announcements);
+            modifyDateline(announcements);
+            break;
+
+        case (listOfCats.includes(events)):
+            modifyWrapper(events);
+            modifyDateline(events);
+            break;
     }
 
 

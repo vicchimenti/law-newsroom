@@ -188,35 +188,14 @@ try {
     var externalLinkString = "";
     var internalLinkString = "";
     var publishedLink = "";
-    var hyphen = " - ";
+    var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
-    var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    // var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
-    let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" id="minor' + minorDict.contentId.content + '" />">';
+    let dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
+    let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
 
-
-
-
-    /***
-     *  process headline default
-     * 
-     * */
-     switch (minorDict.itemName.content) {
-
-        case (minorDict.headline.content):
-            beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
-            break;
-        
-        case (minorDict.articleTitle.content):
-            beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.articleTitle.content + '" id="minor' + minorDict.contentId.content + '" />">';
-            break;
-        
-        default:
-            beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.itemName.content + '" id="minor' + minorDict.contentId.content + '" />">';
-    }
 
 
 
@@ -226,27 +205,9 @@ try {
      * */
     function modifyHeadline(htmlClass) {
 
-        switch (htmlClass && minorDict.itemName.content) {
+        beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
 
-            case (minorDict.headline.content):
-                beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
-                break;
-            
-            case (minorDict.articleTitle.content):
-                beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.articleTitle.content + '" id="minor' + minorDict.contentId.content + '" />">';
-                break;
-            
-            default:
-                beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.itemName.content + '" id="minor' + minorDict.contentId.content + '" />">';
-        }
     }
-
-
-
-
-
-
-
 
 
 
@@ -257,9 +218,36 @@ try {
      * */
     switch (minorDict.catTags.content) {
 
-        case (minorDict.catTags.content.includes("SU Law in the News")) :
-            beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
+        case (minorDict.catTags.content.includes(suLawInTheNews)):
+            modifyHeadline(suLawInTheNews);
+            dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
+            break;
 
+        case (minorDict.catTags.content.includes(announcements)):
+            modifyHeadline(announcements);
+            dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
+            break;
+
+        case (minorDict.catTags.content.includes(events)):
+            modifyHeadline(events);
+            dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+            break;
+    }
+
+
+
+
+    /***
+     *  process categories
+     * 
+     * */
+    if (minorDict.catTags.content) {
+
+        let arrayOfCats = minorDict.catTags.content.split(',');
+        let listItems = assignList(arrayOfCats);
+
+        // Print any tags that were selected
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
 
 
@@ -327,18 +315,7 @@ try {
 
 
 
-    /***
-     *  process categories
-     * 
-     * */
-    if (minorDict.catTags.content) {
 
-        let arrayOfCats = minorDict.catTags.content.split(',');
-        let listItems = assignList(arrayOfCats);
-
-        // Print any tags that were selected
-        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
-    }
 
 
 

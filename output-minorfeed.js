@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.9
+ *     @version 2.10
  */
 
 
@@ -122,6 +122,7 @@ try {
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "In the News";
+    var arrayOfCats = [];
     var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
     var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
@@ -160,7 +161,7 @@ try {
      * */
     if (minorDict.catTags.content) {
 
-        let arrayOfCats = minorDict.catTags.content.split(',');
+        arrayOfCats = minorDict.catTags.content.split(',');
         let listItems = assignList(arrayOfCats);
 
         // Print any tags that were selected
@@ -175,19 +176,19 @@ try {
      *  process and prioritize special topics
      * 
      * */
-    switch (listOfCats) {
+    switch (arrayOfCats) {
 
-        case (listOfCats.includes(suLawInTheNews)):
+        case (arrayOfCats.includes(suLawInTheNews)):
                 modifyWrapper(suLawInTheNews)
                 modifyDateline(suLawInTheNews)
                 break;
 
-        case (listOfCats.includes(announcements)):
+        case (arrayOfCats.includes(announcements)):
                 modifyWrapper(announcements)
                 modifyDateline(announcements)
                 break;
 
-        case (listOfCats.includes(events)):
+        case (arrayOfCats.includes(events)):
                 modifyWrapper(events)
                 modifyDateline(events)
                 break;

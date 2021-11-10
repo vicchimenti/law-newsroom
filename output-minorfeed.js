@@ -16,6 +16,71 @@
 
 
 
+
+
+
+
+/***
+ *      Import T4 Utilities
+ */
+ importClass(com.terminalfour.publish.utils.BrokerUtils);
+
+
+
+
+ /***
+ *      Extract values from T4 element tags
+ *      and confirm valid existing content item field
+ */
+function getContentValues(tag) {
+    try {
+        var _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+        return {
+            isError: false,
+            content: _tag == '' ? null : _tag
+        }
+    } catch (error) {
+        return {
+            isError: true,
+            message: error.message
+        }
+    }
+}
+
+
+
+
+/***
+ *      Returns an array of list items
+ */
+function assignList(arrayOfValues) {
+
+    let listValues = '';
+
+    for (let i = 0; i < arrayOfValues.length; i++) {
+
+        listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
+    }
+
+    return listValues;
+}
+
+
+
+
+/***
+ *      Write the document
+ */
+function writeDocument(array) {
+
+    for (let i = 0; i < array.length; i++) {
+
+        document.write(array[i]);
+    }
+}
+
+
+
 try {
 
     /***

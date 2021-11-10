@@ -249,12 +249,6 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    // if (minorDict.articleFullBody.content) {
-    //     titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
-    // } else {
-    //     titleLink = '<h3 class="newsroomArticleTitle card-title"><a class="card-link" href="' + fullTextLink + '" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + headline + '</a></h3>';
-    // }
-
     let titleLink = (minorDict.articleFullBody.content && minorDict.headline.content)
                     ? '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + headline + '</a></h3>'
                     : '<h3 class="newsroomArticleTitle card-title">' + minorDict.itemName.content + '</h3>';

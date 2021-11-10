@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.10
+ *     @version 2.11
  */
 
 
@@ -122,7 +122,7 @@ try {
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "In the News";
-    var arrayOfCats = [];
+    // var arrayOfCats = [];
     var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
     var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
@@ -161,7 +161,7 @@ try {
      * */
     if (minorDict.catTags.content) {
 
-        arrayOfCats = minorDict.catTags.content.split(',');
+        let arrayOfCats = minorDict.catTags.content.split(',');
         let listItems = assignList(arrayOfCats);
 
         // Print any tags that were selected
@@ -176,24 +176,53 @@ try {
      *  process and prioritize special topics
      * 
      * */
-    switch (minorDict.catTags.content) {
+    if (minorDict.catTags.content.includes(suLawInTheNews)) {
 
-        case (minorDict.catTags.content.includes(suLawInTheNews)):
-                alert("In the news")
-                modifyWrapper(suLawInTheNews)
-                modifyDateline(suLawInTheNews)
-                break;
+        modifyWrapper(suLawInTheNews);
+        modifyDateline(suLawInTheNews);
 
-        case (minorDict.catTags.content.includes(announcements)):
-                modifyWrapper(announcements)
-                modifyDateline(announcements)
-                break;
+    } else if (minorDict.catTags.content.includes(announcements)) {
 
-        case (minorDict.catTags.content.includes(events)):
-                modifyWrapper(events)
-                modifyDateline(events)
-                break;
+        modifyWrapper(announcements);
+        modifyDateline(announcements);
+
+    } else if (minorDict.catTags.content.includes(events)) {
+
+        modifyWrapper(events);
+        modifyDateline(events);
+
     }
+
+
+    // switch (minorDict.catTags.content) {
+
+    //     case minorDict.catTags.content.includes("In the News"):
+    //         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + suLawInTheNews + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
+
+    //             // console.log("In the news");
+    //             // modifyWrapper(suLawInTheNews)
+    //             // modifyDateline(suLawInTheNews)
+    //         break;
+
+    //     case (minorDict.catTags.content.includes(announcements)):
+    //         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + announcements + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
+
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
+
+    //             // modifyWrapper(announcements)
+    //             // modifyDateline(announcements)
+    //             break;
+
+    //     case (minorDict.catTags.content.includes(events)):
+    //         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + events + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
+
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+
+    //             // modifyWrapper(events)
+    //             // modifyDateline(events)
+    //             break;
+    // }
 
 
 

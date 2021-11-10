@@ -158,6 +158,11 @@ try {
     let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
     let closeCardBody = '</div></div>';
+    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let closeHidden = '</div>';
+
+
+
     // let summaryString = '<p class="newsroomArticleLead card-text visually-hidden">No Summary Provided</p>';
 
     // var titleLink = "";
@@ -177,6 +182,21 @@ try {
 
 
     /***
+     *  parse the list of topics tags, add <li> tags
+     * 
+     * */
+    if (minorDict.catTags.content) {
+
+        let arrayOfCats = minorDict.catTags.content.split(',');
+        let listItems = assignList(arrayOfCats);
+
+        // Print any tags that were selected
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+    }
+
+
+
+    /***
      *  parse the list of tags, add <li> tags
      *  whenever there is tag we check for special topics
      *      events, announcements and su law in the news
@@ -187,7 +207,7 @@ try {
     if (minorDict.catTags.content) {
 
 
-        
+
         let arrayOfTags = fieldTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
             listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
@@ -315,9 +335,11 @@ try {
             summaryString,
 
             dateline,
-            listOfCats,
 
+            openHidden,
+            listOfCats,
             pinnedItem,
+            closeHidden,
             closeCardBody,
             endingHTML
         ]

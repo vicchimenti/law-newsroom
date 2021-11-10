@@ -259,18 +259,17 @@ try {
      *  Write the document once
      * 
      * */
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-    document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, publishedLink));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, internalLinkString));
-    document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
-    document.write(dateline);
-    document.write(listOfCats);
-    document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
-    document.write('</div></div>'); // close newsroomArticleBlurb and row divs
-    document.write(endingHTML);
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+    // document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, publishedLink));
+    // document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
+    // document.write(dateline);
+    // document.write(listOfCats);
+    // document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
+    // document.write('</div></div>'); 
+    // document.write(endingHTML);
 
 
 
@@ -283,9 +282,7 @@ try {
             beginningHTML,
             openCardBody,
             titleLink,
-
             publishedLink,
-
             summaryString,
             dateline,
             openHidden,

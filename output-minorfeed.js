@@ -176,19 +176,20 @@ try {
      *  process and prioritize special topics
      * 
      * */
-    switch (arrayOfCats) {
+    switch (minorDict.catTags.content) {
 
-        case (arrayOfCats.includes(suLawInTheNews)):
+        case (minorDict.catTags.content.includes(suLawInTheNews)):
+                alert("In the news")
                 modifyWrapper(suLawInTheNews)
                 modifyDateline(suLawInTheNews)
                 break;
 
-        case (arrayOfCats.includes(announcements)):
+        case (minorDict.catTags.content.includes(announcements)):
                 modifyWrapper(announcements)
                 modifyDateline(announcements)
                 break;
 
-        case (arrayOfCats.includes(events)):
+        case (minorDict.catTags.content.includes(events)):
                 modifyWrapper(events)
                 modifyDateline(events)
                 break;

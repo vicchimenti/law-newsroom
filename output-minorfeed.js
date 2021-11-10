@@ -133,15 +133,6 @@ try {
     let closeCardBody = '</div></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
-
-
-
-    // let summaryString = '<p class="newsroomArticleLead card-text visually-hidden">No Summary Provided</p>';
-
-    // var titleLink = "";
-    var listItems = "";
-    var externalLinkString = "";
-    var internalLinkString = "";
     var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";
@@ -149,10 +140,6 @@ try {
     let dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
     let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
-
-
-
-
 
 
 
@@ -231,14 +218,6 @@ try {
     let  publishedLink =    (minorDict.linkPath.content && minorDict.linkText.content)
                             ? '<span class="externalLink credits"><a href="' + minorDict.linkPath.content + '" class="card-link" target="_blank" aria-label="Visit ' + minorDict.linkText.content + '"><em>' + minorDict.linkText.content + '</em></a></span>'
                             : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
-
-
-
-
-
-
-
-
 
 
 

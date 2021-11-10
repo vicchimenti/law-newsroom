@@ -184,8 +184,11 @@ try {
      *  when a special topic is present we parse for valid links
      * 
      * */
-    if (fieldTags != "") {
-        var arrayOfTags = fieldTags.split(',');
+    if (minorDict.catTags.content) {
+
+
+        
+        let arrayOfTags = fieldTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
             listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
         }

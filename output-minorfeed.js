@@ -217,24 +217,37 @@ try {
 
 
     /***
-     *  process special topics
+     *  modify dateline if special topic present
+     * 
+     * */
+    function modifyDateline(specialTopic) {
+
+        dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
+
+    }
+
+
+
+
+    /***
+     *  process and prioritize special topics
      * 
      * */
     switch (minorDict.catTags.content) {
 
         case (minorDict.catTags.content.includes(suLawInTheNews)):
             modifyWrapper(suLawInTheNews);
-            dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
+            modifyDateline(suLawInTheNews);
             break;
 
         case (minorDict.catTags.content.includes(announcements)):
             modifyWrapper(announcements);
-            dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
+            modifyDateline(announcements);
             break;
 
         case (minorDict.catTags.content.includes(events)):
             modifyWrapper(events);
-            dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+            modifyDateline(events);
             break;
     }
 

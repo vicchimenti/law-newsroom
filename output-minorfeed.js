@@ -122,7 +122,6 @@ try {
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "In the News";
-    // var arrayOfCats = [];
     var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
     var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
@@ -194,37 +193,6 @@ try {
     }
 
 
-    // switch (minorDict.catTags.content) {
-
-    //     case minorDict.catTags.content.includes("In the News"):
-    //         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + suLawInTheNews + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
-    //         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
-
-    //             // console.log("In the news");
-    //             // modifyWrapper(suLawInTheNews)
-    //             // modifyDateline(suLawInTheNews)
-    //         break;
-
-    //     case (minorDict.catTags.content.includes(announcements)):
-    //         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + announcements + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
-
-    //         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
-
-    //             // modifyWrapper(announcements)
-    //             // modifyDateline(announcements)
-    //             break;
-
-    //     case (minorDict.catTags.content.includes(events)):
-    //         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + events + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
-
-    //         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
-
-    //             // modifyWrapper(events)
-    //             // modifyDateline(events)
-    //             break;
-    // }
-
-
 
 
     /***
@@ -268,24 +236,6 @@ try {
                         ? '<div class="visually-hidden"><span class="articlePinned">' + minorDict.pinned.content + '</span></div>'
                         : '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
-
-
-
-    /***
-     *  Write the document once
-     * 
-     * */
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-    // document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, publishedLink));
-    // document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
-    // document.write(dateline);
-    // document.write(listOfCats);
-    // document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
-    // document.write('</div></div>'); 
-    // document.write(endingHTML);
 
 
 

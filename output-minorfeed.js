@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.3
+ *     @version 2.4
  */
 
 
@@ -138,7 +138,7 @@ try {
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
     let dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
-    let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
+    let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
@@ -150,7 +150,7 @@ try {
      * */
     function modifyWrapper(htmlClass) {
 
-        beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
+        beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
     }
 
 

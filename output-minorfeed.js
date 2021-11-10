@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.7
+ *     @version 2.8
  */
 
 
@@ -178,19 +178,19 @@ try {
     switch (listOfCats) {
 
         case (listOfCats.includes(suLawInTheNews)):
-            modifyWrapper(suLawInTheNews);
-            modifyDateline(suLawInTheNews);
-            break;
+                modifyWrapper(suLawInTheNews)
+                modifyDateline(suLawInTheNews)
+                break;
 
         case (listOfCats.includes(announcements)):
-            modifyWrapper(announcements);
-            modifyDateline(announcements);
-            break;
+                modifyWrapper(announcements)
+                modifyDateline(announcements)
+                break;
 
         case (listOfCats.includes(events)):
-            modifyWrapper(events);
-            modifyDateline(events);
-            break;
+                modifyWrapper(events)
+                modifyDateline(events)
+                break;
     }
 
 

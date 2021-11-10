@@ -274,6 +274,17 @@ try {
 
 
     /***
+     *  parse for pinned item
+     * 
+     * */
+    let pinnedItem =    (minorDict.pinned.content)
+                        ? '<div class="visually-hidden"><span class="articlePinned">' + minorDict.pinned.content + '</span></div>'
+                        : '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+
+
+
+
+    /***
      *  Write the document once
      * 
      * */
@@ -303,10 +314,13 @@ try {
             titleLink,
 
             publishedLink,
+
             summaryString,
+
             dateline,
+            listOfCats,
 
-
+            pinnedItem,
             closeCardBody,
             endingHTML
         ]

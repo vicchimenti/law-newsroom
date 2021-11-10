@@ -53,6 +53,24 @@ function getContentValues(tag) {
 /***
  *      Returns an array of list items
  */
+ function assignHeadline(arrayOfValues) {
+
+    let listValues = '';
+
+    for (let i = 0; i < arrayOfValues.length; i++) {
+
+        listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
+    }
+
+    return listValues;
+}
+
+
+
+
+/***
+ *      Returns an array of list items
+ */
 function assignList(arrayOfValues) {
 
     let listValues = '';
@@ -176,34 +194,75 @@ try {
     var suLawInTheNews = "SU Law in the News";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
     // var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
-    var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.itemName.content + '" id="minor' + minorDict.contentId.content + '" />">';
+    let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" id="minor' + minorDict.contentId.content + '" />">';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
 
+
     /***
-     *  parse the list of topics tags, add <li> tags
+     *  process headline default
      * 
      * */
-    if (minorDict.catTags.content) {
+     switch (minorDict.itemName.content) {
 
-        let arrayOfCats = minorDict.catTags.content.split(',');
-        let listItems = assignList(arrayOfCats);
-
-        // Print any tags that were selected
-        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+        case (minorDict.headline.content):
+            beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
+            break;
+        
+        case (minorDict.articleTitle.content):
+            beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.articleTitle.content + '" id="minor' + minorDict.contentId.content + '" />">';
+            break;
+        
+        default:
+            beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.itemName.content + '" id="minor' + minorDict.contentId.content + '" />">';
     }
 
 
 
     /***
-     *  parse the list of tags, add <li> tags
-     *  whenever there is tag we check for special topics
-     *      events, announcements and su law in the news
-     * 
-     *  when a special topic is present we parse for valid links
+     *  modify headline if special topic present
      * 
      * */
+    function modifyHeadline(htmlClass) {
+
+        switch (htmlClass && minorDict.itemName.content) {
+
+            case (minorDict.headline.content):
+                beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
+                break;
+            
+            case (minorDict.articleTitle.content):
+                beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.articleTitle.content + '" id="minor' + minorDict.contentId.content + '" />">';
+                break;
+            
+            default:
+                beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.itemName.content + '" id="minor' + minorDict.contentId.content + '" />">';
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /***
+     *  process special topics
+     * 
+     * */
+    switch (minorDict.catTags.content) {
+
+        case (minorDict.catTags.content.includes("SU Law in the News")) :
+            beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
+
+    }
+
+
     if (minorDict.catTags.content) {
 
 
@@ -263,6 +322,22 @@ try {
             // assign link value for publishing
             publishedLink = internalLinkString;
         }
+    }
+
+
+
+
+    /***
+     *  process categories
+     * 
+     * */
+    if (minorDict.catTags.content) {
+
+        let arrayOfCats = minorDict.catTags.content.split(',');
+        let listItems = assignList(arrayOfCats);
+
+        // Print any tags that were selected
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
 
 

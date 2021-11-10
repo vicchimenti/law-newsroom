@@ -199,11 +199,15 @@ try {
 
 
 
+
+
+
+
     /***
      *  modify headline if special topic present
      * 
      * */
-    function modifyHeadline(htmlClass) {
+    function modifyWrapper(htmlClass) {
 
         beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />">';
 
@@ -219,17 +223,17 @@ try {
     switch (minorDict.catTags.content) {
 
         case (minorDict.catTags.content.includes(suLawInTheNews)):
-            modifyHeadline(suLawInTheNews);
+            modifyWrapper(suLawInTheNews);
             dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
             break;
 
         case (minorDict.catTags.content.includes(announcements)):
-            modifyHeadline(announcements);
+            modifyWrapper(announcements);
             dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
             break;
 
         case (minorDict.catTags.content.includes(events)):
-            modifyHeadline(events);
+            modifyWrapper(events);
             dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
             break;
     }
@@ -385,9 +389,7 @@ try {
             publishedLink,
 
             summaryString,
-
             dateline,
-
             openHidden,
             listOfCats,
             pinnedItem,

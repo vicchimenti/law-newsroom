@@ -53,24 +53,6 @@ function getContentValues(tag) {
 /***
  *      Returns an array of list items
  */
- function assignHeadline(arrayOfValues) {
-
-    let listValues = '';
-
-    for (let i = 0; i < arrayOfValues.length; i++) {
-
-        listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
-    }
-
-    return listValues;
-}
-
-
-
-
-/***
- *      Returns an array of list items
- */
 function assignList(arrayOfValues) {
 
     let listValues = '';

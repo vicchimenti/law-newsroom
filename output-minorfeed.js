@@ -122,7 +122,7 @@ try {
     var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";
-    var suLawInTheNews = "SU Law in the News";
+    var suLawInTheNews = "In the News";
     let dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
     let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
     var endingHTML = '<hr class="articleBorderBottom"></article>';

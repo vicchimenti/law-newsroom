@@ -170,7 +170,7 @@ try {
 
 
     /***
-     *  Declare/Assign local variables with base formatting
+     *  Initialize defaults
      * 
      * */
     let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
@@ -187,7 +187,6 @@ try {
     var listItems = "";
     var externalLinkString = "";
     var internalLinkString = "";
-    var publishedLink = "";
     var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";
@@ -266,6 +265,18 @@ try {
         // Print any tags that were selected
         listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
+
+
+
+
+    /***
+     *  process link
+     * 
+     * */
+    let  publishedLink =    (minorDict.linkPath.content && minorDict.linkText.content)
+                            ? '<span class="externalLink credits"><a href="' + minorDict.linkPath.content + '" class="card-link" target="_blank" aria-label="Visit ' + minorDict.linkText.content + '"><em>' + minorDict.linkText.content + '</em></a></span>'
+                            : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
+
 
 
     if (minorDict.catTags.content) {

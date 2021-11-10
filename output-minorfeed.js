@@ -131,7 +131,6 @@ try {
         catTags:            getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         linkPath:           getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
         linkText:           getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
-        anchorTag:          getContentValues('<t4 type="meta" meta="html_anchor" />'),
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
     }
 
@@ -157,6 +156,8 @@ try {
      * 
      * */
     var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
+    let closeCardBody = '</div></div>'
     var titleLink = "";
     var listItems = "";
     var externalLinkString = "";
@@ -168,8 +169,8 @@ try {
     var suLawInTheNews = "SU Law in the News";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
     // var specialCatString = '<span class="newsroomArticleSpecialCategory hidden">Standard News Category Article</span>';
-    var beginningHTML = '<div class="newsroomMinorFeedItem newsroomBlurb card border-0" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
-    var endingHTML = '<hr class="articleBorderBottom"></div>';
+    var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.itemName.content + '" id="minor' + minorDict.contentId.content + '" />">';
+    var endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
 
@@ -246,11 +247,13 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (articleFullBody == "") {
+    if (minorDict.articleFullBody.content) {
         titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
     } else {
         titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
     }
+
+    titleLink = 
 
 
 
@@ -271,6 +274,28 @@ try {
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span></div>');
     document.write('</div></div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);
+
+
+
+    /***
+     *  write document once
+     * 
+     * */
+    writeDocument (
+        [
+            beginningHTML,
+            openCardBody,
+
+            titleLink,
+            publishedLink,
+            summaryString,
+            dateline,
+            closeRow,
+
+            closeCardBody,
+            endingHTML
+        ]
+    );
 
 
 

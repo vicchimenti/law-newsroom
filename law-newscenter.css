@@ -105,24 +105,25 @@ div.heroOrganizerWrapper.col-xs-12 {
 /** Minor Feed  **/
 
 .newsroomMinorFeedItem h3.newsroomArticleTitle {
-  padding-left: 0;
+  padding: 0;
 }
 
 .newsroomMinorFeedItem .newsroomArticleLead  {
-  padding-left: 0;
+  padding: 0;
 }
 
 .newsroomMinorFeedItem .newsroomArticlePublishedDate  {
-  padding-left: 0;
+  padding: 0;
 }
 
 .newsroomMinorFeedItem .externalLink  {
-  padding-left: 0;
+  padding: 0;
 }
 
 .newsroomMinorFeedItem hr.articleBorderBottom  {
   margin-left: 0;
-  padding-left: 0;
+  margin-right: 0;
+  padding: 0;
 }
 
 span.credits a.card-link {

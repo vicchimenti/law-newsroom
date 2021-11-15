@@ -176,7 +176,7 @@ try {
     let hyphen = " | ";
     let events = "Events";
     let announcements = "Announcements";
-    let suLawInTheNews = "SU Law in the News";
+    let suLawInTheNews = "In the News";
     let dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + '</p>';
     let beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentId.content + '" aria-label="' + majorDict.headline.content + '">';
     let endingHTML = '<hr class="articleBorderBottom"></article>';

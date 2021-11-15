@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.13
+ *     @version 2.14
  */
 
 
@@ -133,17 +133,6 @@ try {
 
 
     /***
-     *  default section link
-     * 
-     * */
-    let publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
-                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
-                        : (minorDict.externalLink.content && minorDict.externalLinkText.content)
-                        ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
-                        : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
-
-
-    /***
      *  modify headline if special topic present
      * 
      * */
@@ -163,27 +152,7 @@ try {
 
         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
     }
-
-
-
-
-    /***
-     *  process published link
-     * 
-     * */
-    function processLink() {
-
-        value = (condition1) ? a : (condition2) ? c : d;
-
-
-        publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
-                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
-                        : (minorDict.externalLink.content && minorDict.externalLinkText.content)
-                        ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
-                        : publishedLink;
-    }
-    
-
+   
 
 
 
@@ -195,20 +164,16 @@ try {
 
         modifyWrapper(suLawInTheNews);
         modifyDateline(suLawInTheNews);
-        processLink();
 
     } else if (minorDict.catTags.content.includes(announcements)) {
 
         modifyWrapper(announcements);
         modifyDateline(announcements);
-        processLink();
-
 
     } else if (minorDict.catTags.content.includes(events)) {
 
         modifyWrapper(events);
         modifyDateline(events);
-        processLink();
 
     }
 
@@ -227,6 +192,19 @@ try {
         // Print any tags that were selected
         listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
+
+
+
+
+    /***
+     *  default section link
+     * 
+     * */
+    let publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
+                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
+                        : (minorDict.externalLink.content && minorDict.externalLinkText.content)
+                        ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
+                        : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
 
 
 

@@ -14,10 +14,6 @@
   position: unset;
 }
 
-#pageContentWrapper.container {
-  padding: 0;
-}
-
 
 /** Wraps Major Feed Overflow within container **/
 

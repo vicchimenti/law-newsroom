@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.29
+ *     @version 2.30
  */
 
 
@@ -144,7 +144,7 @@ try {
         externalLinkText:       getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
         sectionLink:            getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
         sectionLinkText:        getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
-        contentID:              getContentValues('<t4 type="meta" meta="content_id" />')
+        contentId:              getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
 
@@ -178,7 +178,7 @@ try {
     let announcements = "Announcements";
     let suLawInTheNews = "SU Law in the News";
     let dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + '</p>';
-    let beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentID.content + '" aria-label="' + majorDict.headline.content + '">';
+    let beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentId.content + '" aria-label="' + majorDict.headline.content + '">';
     let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 

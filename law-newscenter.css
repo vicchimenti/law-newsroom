@@ -58,17 +58,13 @@ div.heroOrganizer.standardContent {
 }
 
 .newsroomHeroFeedItem h3.newsroomArticleTitle {
+  font-size: 1.6rem;
   margin: 1.5rem 0 1rem 0;
   padding: 0;
 }
 
 div.heroOrganizerWrapper.col-xs-12 {
     padding-left: 0;
-}
-
-div.heroOrganizerWrapper h3.newsroomArticleTitle {
-    font-size: 1.6rem;
-    padding-left: 16px;
 }
 
 

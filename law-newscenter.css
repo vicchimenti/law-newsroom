@@ -267,33 +267,37 @@ div.titleWrapper address a {
 
 
 /* Large devices (desktops, 992px and up) */
-  @media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
 
-    .major-feed .card-deck {
-      margin-left: 2rem;
-    }
+  .major-feed .card-deck {
+    margin-left: 2rem;
+  }
 
-    .minor-feed .card-deck {
-      margin-right: 2rem;
-    }
+  .minor-feed .card-deck {
+    margin-right: 2rem;
+  }
 }
 
 
 
 @media screen and (max-width: 767.999px) {
 
+  .heroOrganizerWrapper {
+    padding-top: 1rem;
+  }
+
     div.newsroomOrganizerWrapper.col-md-8 {
-        border: none;
+      border: none;
     }
-    div.heroOrganizer.standardContent {
+    /* div.heroOrganizer.standardContent {
         margin-left: 20px;
         padding-left: 20px;
-    }
+    } */
 
-    .newsroomMinorFeedItem.card {
+    /* .newsroomMinorFeedItem.card {
         margin: 0 20px 20px 20px;
         padding: 0 20px 0 20px;
-    }
+    } */
 
     div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
         font-size: 1.4rem;

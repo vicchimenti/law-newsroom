@@ -178,7 +178,7 @@ try {
     let announcements = "Announcements";
     let suLawInTheNews = "SU Law in the News";
     let dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + '</p>';
-    let beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentID.content + '" aria-label="' + majorDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
+    let beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentID.content + '" aria-label="' + majorDict.headline.content + '">';
     let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
@@ -190,7 +190,7 @@ try {
      * */
     function modifyWrapper(htmlClass) {
 
-        beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + majorDict.headline.content + '" id="minor' + majorDict.contentId.content + '" />';
+        beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" id="major' + majorDict.contentId.content + '" aria-label="' + majorDict.headline.content + '">';
     }
     
     

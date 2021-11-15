@@ -107,7 +107,7 @@ try {
         sectionLink:        getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
         sectionLinkText:    getContentValues('<t4 type="content" name="Internal SU Link" output="externalLinkText" modifiers="nav_sections" />'),
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
-        
+
     }
 
 
@@ -121,14 +121,14 @@ try {
     let closeCardBody = '</div></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
-    var hyphen = " | ";
-    var events = "Events";
-    var announcements = "Announcements";
-    var suLawInTheNews = "In the News";
-    var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
-    var dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
-    var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
-    var endingHTML = '<hr class="articleBorderBottom"></article>';
+    let hyphen = " | ";
+    let events = "Events";
+    let announcements = "Announcements";
+    let suLawInTheNews = "In the News";
+    let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    let dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
+    let beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
+    let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
 

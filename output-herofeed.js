@@ -151,6 +151,17 @@ try {
 
 
     /***
+     *  parse for pinned item
+     * 
+     * */
+    let pinnedItem =    (heroDict.pinned.content)
+                        ? '<div class="visually-hidden"><span class="articlePinned">' + heroDict.pinned.content + '</span></div>'
+                        : '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+
+
+
+
+    /***
      *  parse the list of tags, add <li> tags
      * 
      * */

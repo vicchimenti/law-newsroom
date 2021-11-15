@@ -102,10 +102,10 @@ try {
         articleFullBody:    getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
         pinned:             getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
         catTags:            getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
-        linkPath:           getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
-        linkText:           getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLink:       getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLinkText:   getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
         sectionLink:        getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        sectionLinkText:    getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
+        sectionLinkText:    getContentValues('<t4 type="content" name="Internal SU Link" output="externalLinkText" modifiers="nav_sections" />'),
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
     }
 
@@ -202,8 +202,8 @@ try {
      *  process link
      * 
      * */
-    let  publishedLink =    (minorDict.linkPath.content && minorDict.linkText.content)
-                            ? '<span class="externalLink credits"><a href="' + minorDict.linkPath.content + '" class="card-link" target="_blank" aria-label="Visit ' + minorDict.linkText.content + '"><em>' + minorDict.linkText.content + '</em></a></span>'
+    let  publishedLink =    (minorDict.externalLink.content && minorDict.externalLinkText.content)
+                            ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" aria-label="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
                             : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
 
 

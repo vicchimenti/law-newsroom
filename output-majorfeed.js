@@ -269,6 +269,7 @@ try {
             summaryString,
             dateline,
             openHidden,
+            listOfCats,
             closeHidden,
             closeCardBody,
             endingHTML

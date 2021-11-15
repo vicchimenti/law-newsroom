@@ -285,14 +285,18 @@ div.titleWrapper address a {
     padding-top: 1rem;
   }
 
-  /* div.newsroomOrganizerWrapper.col-md-8 {
+  div.newsroomOrganizerWrapper.col-md-8 {
     border: none;
     margin: 0;
-  } */
+  }
 
   div.newsroomOrganizerWrapper {
     border: none;
     margin: 0;
+  }
+
+  article.newsroomMajorFeedItem {
+    padding-bottom: 0;
   }
 }
 

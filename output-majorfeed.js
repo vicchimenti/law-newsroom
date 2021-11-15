@@ -130,7 +130,7 @@ try {
         frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
         author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
         pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
-        catTags:              getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
+        catTags:                getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
         headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
@@ -156,10 +156,10 @@ try {
      * 
      * */
 
-     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
-     let closeCardBody = '</div></div>';
-     let openHidden = '<div class="searchSortFields visually-hidden">';
-     let closeHidden = '</div>';
+    let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
+    let closeCardBody = '</div></div>';
+    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let closeHidden = '</div>';
     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + contentDict.articleSummary.content + '</p></span>';
     var imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
     var openImageWrapper = '<figure class="figure hidden visually-hidden">';
@@ -268,6 +268,8 @@ try {
             publishedLink,
             summaryString,
             dateline,
+            openHidden,
+            closeHidden,
             closeCardBody,
             endingHTML
         ]

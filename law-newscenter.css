@@ -92,6 +92,7 @@ div.heroOrganizerWrapper.col-xs-12 {
 }
 
 .newsroomMinorFeedItem hr.articleBorderBottom  {
+  margin-left: 0;
   padding-left: 0;
 }
 

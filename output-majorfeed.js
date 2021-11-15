@@ -130,7 +130,7 @@ try {
         frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
         author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
         pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
-        fieldTags:              getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
+        catTags:              getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
         headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
@@ -216,8 +216,8 @@ try {
      *  when a special topic is present we parse for valid links
      * 
      * */
-    // if (contentDict.fieldTags.content) {
-    //     var arrayOfTags = fieldTags.split(',');
+    // if (contentDict.catTags.content) {
+    //     var arrayOfTags = catTags.split(',');
     //     for (let i = 0; i < arrayOfTags.length; i++) {
     //         listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
     //     }
@@ -226,7 +226,7 @@ try {
     //     listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
         
     //     // when tags exist check for Special Categories - SU Law in the News
-    //     if (fieldTags.includes("SU Law in the News")) {
+    //     if (catTags.includes("SU Law in the News")) {
     //         beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
@@ -242,7 +242,7 @@ try {
 
 
     //     // when tags exist check for Special Categories - Announcements
-    //     } else if (fieldTags.includes("Announcements")) {
+    //     } else if (catTags.includes("Announcements")) {
     //         beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
@@ -258,7 +258,7 @@ try {
 
 
     //     // when tags exist check for Special Categories - Announcements
-    //     } else if (fieldTags.includes("Events")) {
+    //     } else if (catTags.includes("Events")) {
     //         beginningHTML = '<div class="newsroomMajorFeedItem newsroomBlurb card border-0 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 

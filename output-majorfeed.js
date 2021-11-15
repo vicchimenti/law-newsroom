@@ -172,7 +172,7 @@ try {
     var authorByLine = "";
     var externalLinkString = "";
     var internalLinkString = "";
-    var publishedLink = "";
+    // var publishedLink = "";
     var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";
@@ -236,7 +236,7 @@ try {
      *  process categories
      * 
      * */
-    if (minorDict.catTags.content) {
+    if (majorDict.catTags.content) {
 
         let arrayOfCats = majorDict.catTags.content.split(',');
         let listItems = assignList(arrayOfCats);
@@ -248,6 +248,26 @@ try {
 
 
 
+    /***
+     *  default section link
+     * 
+     * */
+    let publishedLink = (majorDict.sectionLink.content && majorDict.sectionLinkText.content)
+                        ? '<span class="newsLink"><a href="' + majorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.sectionLinkText.content + '"><em>' + majorDict.sectionLinkText.content + '</em></a></span>'
+                        : (majorDict.externalLink.content && majorDict.externalLinkText.content)
+                        ? '<span class="newsLink"><a href="' + majorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.externalLinkText.content + '"><em>' + majorDict.externalLinkText.content + '</em></a></span>'
+                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+
+
+
+
+    /***
+     *  parse for pinned item
+     * 
+     * */
+    let pinnedItem =    (majorDict.pinned.content)
+                        ? '<div class="visually-hidden"><span class="articlePinned">' + majorDict.pinned.content + '</span></div>'
+                        : '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 
@@ -256,15 +276,9 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (majorDict.articleFullBody.content) {
-
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '">' + majorDict.headline.content + '</a></h3>';
-
-    } else {
-
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
-
-    }
+     let titleLink =    (majorDict.articleFullBody.content)
+                        ? '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '" >' + majorDict.headline.content + '</a></h3>'
+                        : '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
 
 
 
@@ -310,6 +324,7 @@ try {
             dateline,
             openHidden,
             listOfCats,
+            pinnedItem,
             closeHidden,
             closeCardBody,
             endingHTML

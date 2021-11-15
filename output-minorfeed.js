@@ -120,7 +120,6 @@ try {
     let closeCardBody = '</div></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
-    let publishedLink = '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
     var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";
@@ -129,6 +128,17 @@ try {
     var dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + '</p>';
     var beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
+
+
+
+
+    /***
+     *  default section link
+     * 
+     * */
+    let publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
+                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" aria-label="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
+                        : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
 
 
 
@@ -152,6 +162,20 @@ try {
     function modifyDateline(specialTopic) {
 
         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
+    }
+
+
+
+
+    /***
+     *  process published link
+     * 
+     * */
+    function processLink(linkPath, linkText) {
+
+        publishedLink = (linkPath && linkText)
+                        ? '<span class="externalLink credits"><a href="' + linkPath + '" class="card-link" target="_blank" title="Visit ' + linkText + '"><em>' + linkText + '</em></a></span>'
+                        : publishedLink;
     }
 
 
@@ -182,29 +206,22 @@ try {
 
         modifyWrapper(suLawInTheNews);
         modifyDateline(suLawInTheNews);
+        processLink(minorDict.externalLink.content, minorDict.externalLinkText.content);
 
     } else if (minorDict.catTags.content.includes(announcements)) {
 
         modifyWrapper(announcements);
         modifyDateline(announcements);
+        processLink(minorDict.sectionLink.content, minorDict.sectionLinkText.content);
+
 
     } else if (minorDict.catTags.content.includes(events)) {
 
         modifyWrapper(events);
         modifyDateline(events);
+        processLink(minorDict.sectionLink.content, minorDict.sectionLinkText.content);
 
     }
-
-
-
-
-    /***
-     *  process link
-     * 
-     * */
-    let  publishedLink =    (minorDict.externalLink.content && minorDict.externalLinkText.content)
-                            ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" aria-label="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
-                            : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
 
 
 

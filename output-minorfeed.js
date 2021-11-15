@@ -107,6 +107,7 @@ try {
         sectionLink:        getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
         sectionLinkText:    getContentValues('<t4 type="content" name="Internal SU Link" output="externalLinkText" modifiers="nav_sections" />'),
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
+        
     }
 
 

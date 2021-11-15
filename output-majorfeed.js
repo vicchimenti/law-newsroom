@@ -140,10 +140,10 @@ try {
         frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
         frontPageImageCaption:  getContentValues('<t4 type="content" name="Main Image Caption" output="normal" modifiers="striptags,htmlentities" />'),
         fullTextLink:           getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
-        externalLink:          getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
-        externalLinkText:     getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
-        sectionLink:           getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        sectionLinkText:      getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
+        externalLink:           getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLinkText:       getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionLink:            getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
+        sectionLinkText:        getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
         contentID:              getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
@@ -180,6 +180,30 @@ try {
     var dateline = '<p class="newsroomArticlePublishedDate">' + contentDict.publishedDate.content + '</p>';
     var beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + contentDict.contentID.content + '" aria-label="' + contentDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
+
+
+
+
+    /***
+     *  modify headline if special topic present
+     * 
+     * */
+    function modifyWrapper(htmlClass) {
+
+        beginningHTML = '<article class="newsroomMinorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" aria-label="' + minorDict.headline.content + '" id="minor' + minorDict.contentId.content + '" />';
+    }
+    
+    
+    
+    
+    /***
+     *  modify dateline if special topic present
+     * 
+     * */
+    function modifyDateline(specialTopic) {
+
+        dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
+    }
 
 
 

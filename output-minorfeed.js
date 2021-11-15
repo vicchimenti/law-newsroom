@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.12
+ *     @version 2.13
  */
 
 
@@ -177,22 +177,6 @@ try {
                         ? '<span class="externalLink credits"><a href="' + linkPath + '" class="card-link" target="_blank" title="Visit ' + linkText + '"><em>' + linkText + '</em></a></span>'
                         : publishedLink;
     }
-
-
-
-
-    /***
-     *  process categories
-     * 
-     * */
-    if (minorDict.catTags.content) {
-
-        let arrayOfCats = minorDict.catTags.content.split(',');
-        let listItems = assignList(arrayOfCats);
-
-        // Print any tags that were selected
-        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
-    }
     
 
 
@@ -221,6 +205,22 @@ try {
         modifyDateline(events);
         processLink(minorDict.sectionLink.content, minorDict.sectionLinkText.content);
 
+    }
+
+
+
+
+    /***
+     *  process categories
+     * 
+     * */
+    if (minorDict.catTags.content) {
+
+        let arrayOfCats = minorDict.catTags.content.split(',');
+        let listItems = assignList(arrayOfCats);
+
+        // Print any tags that were selected
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
 
 

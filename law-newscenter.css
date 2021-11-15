@@ -302,6 +302,10 @@ div.titleWrapper address a {
   article.newsroomMajorFeedItem {
     padding-bottom: 0;
   }
+
+  .minor-feed {
+    margin-bottom: 1rem;
+  }
 }
 
 

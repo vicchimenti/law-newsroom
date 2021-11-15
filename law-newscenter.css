@@ -96,6 +96,7 @@ div.heroOrganizerWrapper.col-xs-12 {
 }
 
 .newsroomMajorFeedItem hr.articleBorderBottom  {
+  margin-left: 0;
   margin-right: 0;
   padding: 0;
 }
@@ -262,6 +263,17 @@ div.titleWrapper address a {
 
 
 /** Responsive Media Querys **/
+
+
+/* Large devices (desktops, 992px and up) */
+  @media screen and (min-width: 992px) {
+
+    .major-feed .card-deck {
+      margin-left: 2rem;
+    }
+}
+
+
 
 @media screen and (max-width: 767.999px) {
 

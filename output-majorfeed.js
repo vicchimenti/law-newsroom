@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.31
+ *     @version 2.32
  */
 
 
@@ -160,23 +160,15 @@ try {
     let closeCardBody = '</div></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
-    let summaryString = '<span class="newsroomArticleLead card-text"><p>' + majorDict.articleSummary.content + '</p></span>';
     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
     let openImageWrapper = '<figure class="figure hidden visually-hidden">';
     let closeImageWrapper = '</figure>';
-
     let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
-    // var titleLink = "";
-    // var listItems = "";
-    // var photoCredit = "";
-    // var authorByLine = "";
-    // var externalLinkString = "";
-    // var internalLinkString = "";
-    // var publishedLink = "";
     let hyphen = " | ";
     let events = "Events";
     let announcements = "Announcements";
     let suLawInTheNews = "In the News";
+    let summaryString = '<span class="newsroomArticleLead card-text"><p>' + majorDict.articleSummary.content + '</p></span>';
     let dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + '</p>';
     let beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentId.content + '" aria-label="' + majorDict.headline.content + '">';
     let endingHTML = '<hr class="articleBorderBottom"></article>';

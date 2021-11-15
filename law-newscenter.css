@@ -272,6 +272,10 @@ div.titleWrapper address a {
     .major-feed .card-deck {
       margin-left: 2rem;
     }
+
+    .minor-feed .card-deck {
+      margin-right: 2rem;
+    }
 }
 
 

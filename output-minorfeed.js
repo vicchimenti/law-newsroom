@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.14
+ *     @version 2.15
  */
 
 
@@ -201,10 +201,10 @@ try {
      * 
      * */
     let publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
-                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
+                        ? '<span class="newsLink"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
                         : (minorDict.externalLink.content && minorDict.externalLinkText.content)
-                        ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
-                        : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
+                        ? '<span class="newsLink"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
+                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
 
 
 

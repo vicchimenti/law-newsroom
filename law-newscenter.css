@@ -47,11 +47,14 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
 div.heroOrganizer.standardContent {
     margin: 0;
     min-width: -webkit-fill-available;
-    padding-right: 25px;
 }
 
 .newsroomHeroFeedItem.col-xs-12 {
     padding-left: 0;
+}
+
+.newsroomHeroFeedItem img {
+  padding: 0;
 }
 
 div.heroOrganizerWrapper.col-xs-12 {

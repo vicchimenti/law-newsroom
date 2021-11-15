@@ -5,7 +5,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.32
+ *     @version 2.33
  */
 
 
@@ -34,7 +34,7 @@ importClass(com.terminalfour.media.utils.ImageInfo);
  */
 function getContentValues(tag) {
     try {
-        var _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
         return {
             isError: false,
             content: _tag == '' ? null : _tag
@@ -117,7 +117,7 @@ try {
     /***
      *      Dictionary of content
      * */
-    var majorDict = {
+    let majorDict = {
 
         frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
         author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),

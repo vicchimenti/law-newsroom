@@ -137,10 +137,10 @@ try {
      * 
      * */
     let publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
-                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" aria-label="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
+                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
+                        : (minorDict.externalLink.content && minorDict.externalLinkText.content)
+                        ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
                         : '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
-
-
 
 
     /***
@@ -171,10 +171,15 @@ try {
      *  process published link
      * 
      * */
-    function processLink(linkPath, linkText) {
+    function processLink() {
 
-        publishedLink = (linkPath && linkText)
-                        ? '<span class="externalLink credits"><a href="' + linkPath + '" class="card-link" target="_blank" title="Visit ' + linkText + '"><em>' + linkText + '</em></a></span>'
+        value = (condition1) ? a : (condition2) ? c : d;
+
+
+        publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
+                        ? '<span class="externalLink credits"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
+                        : (minorDict.externalLink.content && minorDict.externalLinkText.content)
+                        ? '<span class="externalLink credits"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
                         : publishedLink;
     }
     
@@ -190,20 +195,20 @@ try {
 
         modifyWrapper(suLawInTheNews);
         modifyDateline(suLawInTheNews);
-        processLink(minorDict.externalLink.content, minorDict.externalLinkText.content);
+        processLink();
 
     } else if (minorDict.catTags.content.includes(announcements)) {
 
         modifyWrapper(announcements);
         modifyDateline(announcements);
-        processLink(minorDict.sectionLink.content, minorDict.sectionLinkText.content);
+        processLink();
 
 
     } else if (minorDict.catTags.content.includes(events)) {
 
         modifyWrapper(events);
         modifyDateline(events);
-        processLink(minorDict.sectionLink.content, minorDict.sectionLinkText.content);
+        processLink();
 
     }
 

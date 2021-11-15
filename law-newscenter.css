@@ -41,6 +41,22 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
     color: #aa0000;
 }
 
+span.newsLink a.card-link {
+  color: #088099;
+  font-family: 'Montserrat';
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+span.newsLink a.card-link:hover {
+  text-decoration: underline;
+}
+
+span.newsLink a.card-link:focus {
+  text-decoration: underline;
+}
+
 
 
 /** Hero Feed  **/
@@ -132,13 +148,6 @@ div.newsroomOrganizerWrapper.major-feed {
   margin-left: 0;
   margin-right: 0;
   padding: 0;
-}
-
-span.credits a.card-link {
-  color: #088099;
-  font-family: 'Montserrat';
-  font-size: 1.25rem;
-  font-weight: 500;
 }
 
 div.newsroomOrganizerWrapper.minor-feed {

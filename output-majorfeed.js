@@ -1,11 +1,13 @@
 /***
  *     @author Victor Chimenti, MSCS
- *     @file output-majorfeed.js
  *     @see Seattle University School of Law News Center Majorfeed
+ *     @file output-majorfeed.js
+ *          Law - Newscenter Story
+ *          ID: 5296
  *
  *     Document will write once when the page loads
  *
- *     @version 2.33
+ *     @version 2.34
  */
 
 

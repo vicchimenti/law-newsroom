@@ -14,6 +14,10 @@
   position: unset;
 }
 
+#pageContentWrapper.container {
+  padding: 0;
+}
+
 
 /** Wraps Major Feed Overflow within container **/
 
@@ -50,7 +54,7 @@ div.heroOrganizer.standardContent {
     padding-right: 25px;
 }
 
-div.newsroomHeroFeedItem.col-xs-12 {
+.newsroomHeroFeedItem.col-xs-12 {
     padding-left: 0;
 }
 

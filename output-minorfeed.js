@@ -104,6 +104,8 @@ try {
         catTags:            getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         linkPath:           getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
         linkText:           getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionLink:        getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
+        sectionLinkText:    getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
     }
 

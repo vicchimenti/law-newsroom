@@ -143,7 +143,7 @@ try {
     // var listOfTags = "";
     // var photoCredit = "";
     // var authorByLine = "";
-    var thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    var imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     var beginningHTML = '<div class="newsroomHeroFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
     var endingHTML = '<hr class="articleBorderBottom"></div>';
 
@@ -202,11 +202,11 @@ try {
      * 
      * */
     if (frontPageImage == "") {
-        thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
+        imageString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
         // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
 
     } else {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+        imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
         // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
     }
 
@@ -220,11 +220,36 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
 
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, imageString));
     document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('</div></div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);
+
+
+    /***
+     *  write document once
+     * 
+     * */
+    writeDocument (
+        [
+            beginningHTML,
+            openImageWrapper,
+            imageString,
+            closeImageWrapper,
+            openCardBody,
+            titleLink,
+            publishedLink,
+            summaryString,
+            dateline,
+            openHidden,
+            listOfCats,
+            pinnedItem,
+            closeHidden,
+            closeCardBody,
+            endingHTML
+        ]
+    );
 
 
 

@@ -125,7 +125,7 @@ try {
     /***
      *      Dictionary of content
      * */
-    var contentDict = {
+    var majorDict = {
 
         frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
         author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
@@ -160,7 +160,7 @@ try {
     let closeCardBody = '</div></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
-    let summaryString = '<span class="newsroomArticleLead card-text"><p>' + contentDict.articleSummary.content + '</p></span>';
+    let summaryString = '<span class="newsroomArticleLead card-text"><p>' + majorDict.articleSummary.content + '</p></span>';
     var imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
     var openImageWrapper = '<figure class="figure hidden visually-hidden">';
     var closeImageWrapper = '</figure>';
@@ -177,8 +177,8 @@ try {
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
-    var dateline = '<p class="newsroomArticlePublishedDate">' + contentDict.publishedDate.content + '</p>';
-    var beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + contentDict.contentID.content + '" aria-label="' + contentDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
+    var dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + '</p>';
+    var beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentID.content + '" aria-label="' + majorDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
@@ -216,13 +216,13 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (contentDict.articleFullBody.content) {
+    if (majorDict.articleFullBody.content) {
 
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + contentDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + contentDict.headline.content + '">' + contentDict.headline.content + '</a></h3>';
+        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '">' + majorDict.headline.content + '</a></h3>';
 
     } else {
 
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + contentDict.headline.content + '</h3>';
+        titleLink = '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
 
     }
 
@@ -233,7 +233,7 @@ try {
      *  Parse for image
      * 
      * */
-    if (contentDict.frontPageImage.content) {
+    if (majorDict.frontPageImage.content) {
 
         var imageID = content.get('Main Image').getID();
         var mediaInfo = getMediaInfo(imageID);
@@ -241,11 +241,11 @@ try {
         var info = new ImageInfo;
         info.setInput(media);
 
-        let imageDefaultAlt = contentDict.frontPageImageCaption.content ? contentDict.frontPageImageCaption.content : contentDict.articleTitle.content;
+        let imageDefaultAlt = majorDict.frontPageImageCaption.content ? majorDict.frontPageImageCaption.content : majorDict.articleTitle.content;
 
         imageString =   (info.check())
-                        ? '<img src="' + contentDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                        : '<img src="' + contentDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+                        ? '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        : '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
     
         openImageWrapper = '<figure class="figure">';
     }

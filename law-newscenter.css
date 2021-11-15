@@ -96,7 +96,7 @@ div.heroOrganizerWrapper.col-xs-12 {
 }
 
 .newsroomMajorFeedItem hr.articleBorderBottom  {
-  /* margin-left: 1.5rem; */
+  margin-right: 0;
   padding: 0;
 }
 

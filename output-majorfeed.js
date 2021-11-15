@@ -161,25 +161,25 @@ try {
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + majorDict.articleSummary.content + '</p></span>';
-    var imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    var openImageWrapper = '<figure class="figure hidden visually-hidden">';
-    var closeImageWrapper = '</figure>';
+    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    let closeImageWrapper = '</figure>';
 
-    var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
-    var titleLink = "";
-    var listItems = "";
-    var photoCredit = "";
-    var authorByLine = "";
-    var externalLinkString = "";
-    var internalLinkString = "";
+    let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    // var titleLink = "";
+    // var listItems = "";
+    // var photoCredit = "";
+    // var authorByLine = "";
+    // var externalLinkString = "";
+    // var internalLinkString = "";
     // var publishedLink = "";
-    var hyphen = " | ";
-    var events = "Events";
-    var announcements = "Announcements";
-    var suLawInTheNews = "SU Law in the News";
-    var dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + '</p>';
-    var beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentID.content + '" aria-label="' + majorDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
-    var endingHTML = '<hr class="articleBorderBottom"></article>';
+    let hyphen = " | ";
+    let events = "Events";
+    let announcements = "Announcements";
+    let suLawInTheNews = "SU Law in the News";
+    let dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + '</p>';
+    let beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0" id="major' + majorDict.contentID.content + '" aria-label="' + majorDict.headline.content + '" data-position-default="Main" data-position-selected="Main">';
+    let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
 

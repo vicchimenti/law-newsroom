@@ -19,6 +19,85 @@
 
 
 
+
+
+
+
+/***
+ *      Import T4 Utilities
+ */
+ importClass(com.terminalfour.media.IMediaManager);
+ importClass(com.terminalfour.spring.ApplicationContextProvider);
+ importClass(com.terminalfour.publish.utils.BrokerUtils);
+ importClass(com.terminalfour.media.utils.ImageInfo);
+ 
+ 
+ 
+ 
+ /***
+  *      Extract values from T4 element tags
+  *      and confirm valid existing content item field
+  */
+ function getContentValues(tag) {
+     try {
+         var _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+         return {
+             isError: false,
+             content: _tag == '' ? null : _tag
+         }
+     } catch (error) {
+         return {
+             isError: true,
+             message: error.message
+         }
+     }
+ }
+ 
+ 
+ 
+ 
+ /***
+  *      Returns a media object
+  */
+ function getMediaInfo(mediaID) {
+ 
+     var mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+     var media = mediaManager.get(mediaID, language);
+ 
+     return media;
+ }
+ 
+ 
+ 
+ 
+ /***
+  *      Returns a media stream object
+  */
+ function readMedia(mediaID) {
+ 
+     var mediaObj = getMediaInfo(mediaID);
+     var oMediaStream = mediaObj.getMedia();
+ 
+     return oMediaStream;
+ }
+ 
+ 
+ 
+ 
+ /***
+  *      Write the document
+  */
+ function writeDocument(array) {
+ 
+     for (let i = 0; i < array.length; i++) {
+ 
+         document.write(array[i]);
+     }
+ }
+
+
+
+
 try {
 
     /***

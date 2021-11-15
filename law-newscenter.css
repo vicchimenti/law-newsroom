@@ -42,6 +42,7 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
 }
 
 
+
 /** Hero Feed  **/
 
 div.heroOrganizer.standardContent {
@@ -69,6 +70,21 @@ div.heroOrganizerWrapper.col-xs-12 {
 
 .newsroomHeroFeedItem hr.articleBorderBottom {
   margin: 0;
+}
+
+
+/** Minor Feed  **/
+
+.newsroomMinorFeedItem h3.newsroomArticleTitle {
+  padding-left: 0;
+}
+
+.newsroomMinorFeedItem .newsroomArticleLead  {
+  padding-left: 0;
+}
+
+.newsroomMinorFeedItem .newsroomArticlePublishedDate  {
+  padding-left: 0;
 }
 
 

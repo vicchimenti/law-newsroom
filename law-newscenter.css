@@ -101,6 +101,10 @@ div.heroOrganizerWrapper.col-xs-12 {
   padding: 0;
 }
 
+div.newsroomOrganizerWrapper.major-feed {
+  margin-bottom: 1rem;
+}
+
 
 /** Minor Feed  **/
 
@@ -131,6 +135,10 @@ span.credits a.card-link {
   font-family: 'Montserrat';
   font-size: 1.25rem;
   font-weight: 500;
+}
+
+div.newsroomOrganizerWrapper.minor-feed {
+  margin-bottom: 1rem;
 }
 
 
@@ -303,7 +311,7 @@ div.titleWrapper address a {
     padding-bottom: 0;
   }
 
-  .minor-feed {
+  div.newsroomOrganizerWrapper.minor-feed {
     margin-bottom: 1rem;
   }
 }

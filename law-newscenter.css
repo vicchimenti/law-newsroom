@@ -79,6 +79,27 @@ div.heroOrganizerWrapper.col-xs-12 {
   padding: 0;
 }
 
+.newsroomMajorFeedItem h3.newsroomArticleTitle {
+  padding: 0;
+}
+
+.newsroomMajorFeedItem .newsroomArticleLead  {
+  padding: 0;
+}
+
+.newsroomMajorFeedItem .newsroomArticlePublishedDate  {
+  padding: 0;
+}
+
+.newsroomMajorFeedItem .externalLink  {
+  padding: 0;
+}
+
+.newsroomMajorFeedItem hr.articleBorderBottom  {
+  /* margin-left: 1.5rem; */
+  padding: 0;
+}
+
 
 /** Minor Feed  **/
 

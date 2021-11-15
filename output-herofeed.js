@@ -100,6 +100,12 @@
 
 try {
 
+
+    /***
+     *      Dictionary of content
+     * */
+    var heroDict = {}
+
     /***
      *  Assign local variables from the content type's fields
      * 

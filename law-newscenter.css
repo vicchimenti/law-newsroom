@@ -67,6 +67,10 @@ div.heroOrganizerWrapper.col-xs-12 {
     padding-left: 0;
 }
 
+.newsroomHeroFeedItem hr.articleBorderBottom {
+  margin: 0;
+}
+
 
 
 /** border for organizer left on full page **/

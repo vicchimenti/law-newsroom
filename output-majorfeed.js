@@ -165,7 +165,7 @@ try {
     var openImageWrapper = '<figure class="figure hidden visually-hidden">';
     var closeImageWrapper = '</figure>';
 
-    var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    var listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
     var listItems = "";
     var photoCredit = "";
@@ -173,7 +173,7 @@ try {
     var externalLinkString = "";
     var internalLinkString = "";
     var publishedLink = "";
-    var hyphen = " - ";
+    var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
@@ -223,7 +223,7 @@ try {
     //     }
 
     //     // Print any tags that were selected
-    //     listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
+    //     listOfCats = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
         
     //     // when tags exist check for Special Categories - SU Law in the News
     //     if (catTags.includes("SU Law in the News")) {

@@ -110,12 +110,12 @@ span.credits a.card-link {
 /** border for organizer left on full page **/
 
 div.newsroomOrganizerWrapper.col-md-8 {
-    border: #e5e5e5;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-style: solid;
-    margin: 20px 0 20px 0;
+  border: #e5e5e5;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-style: solid;
+  margin: 20px 0 20px 0;
 }
 
 
@@ -127,14 +127,14 @@ div.newsroomOrganizerWrapper.col-md-8 {
 } */
 
 div.newsroomOrganizer div.titleWrapper {
-    background-color: white;
+  background-color: white;
 }
 
 /** whitespace between items **/
 
 article.newsroomMajorFeedItem {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 
@@ -151,12 +151,12 @@ hr.articleBorderBottom {
 
 /** Aligns news summary with the image **/
 
-div.newsroomArticleBlurb.container div.row {
+/* div.newsroomArticleBlurb.container div.row {
     margin-left: 0;
     margin-right: 1px;
     padding-left: 20px;
     padding-right: 20px;
-}
+} */
 
 
 
@@ -193,9 +193,9 @@ div.newsroomArticle ul li.tag {
 */
 
 
-.newsroomMajorFeedItem img.articleImage {
+/* .newsroomMajorFeedItem img.articleImage {
     padding: 8px 16px 0 16px;
-}
+} */
 
 
 /** layout for byline and credits **/

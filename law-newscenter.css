@@ -87,7 +87,17 @@ div.heroOrganizerWrapper.col-xs-12 {
   padding-left: 0;
 }
 
+.newsroomMinorFeedItem .externalLink  {
+  padding-left: 0;
+}
 
+.newsroomMinorFeedItem hr.articleBorderBottom  {
+  padding-left: 0;
+}
+
+
+
+ 
 
 /** border for organizer left on full page **/
 

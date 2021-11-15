@@ -111,7 +111,7 @@ div.heroOrganizerWrapper.col-xs-12 {
   padding: 0;
 }
 
-.newsroomMajorFeedItem .externalLink  {
+.newsroomMajorFeedItem .newsLink  {
   padding: 0;
 }
 
@@ -140,7 +140,7 @@ div.newsroomOrganizerWrapper.major-feed {
   padding: 0;
 }
 
-.newsroomMinorFeedItem .externalLink  {
+.newsroomMinorFeedItem .newsLink  {
   padding: 0;
 }
 

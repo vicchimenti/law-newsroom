@@ -120,6 +120,7 @@ try {
     let closeCardBody = '</div></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
+    let publishedLink = '<span class="externalLink visually-hidden">No Proper Link Provided</span>';
     var hyphen = " | ";
     var events = "Events";
     var announcements = "Announcements";

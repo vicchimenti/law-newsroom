@@ -75,6 +75,10 @@ div.heroOrganizerWrapper.col-xs-12 {
 
 /** Major Feed  **/
 
+.newsroomMajorFeedItem figure {
+  margin: 0;
+}
+
 .newsroomMajorFeedItem img {
   padding: 0;
 }

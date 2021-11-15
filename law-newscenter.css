@@ -46,12 +46,12 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
 /** Hero Feed  **/
 
 div.heroOrganizer.standardContent {
-    margin: 0;
-    min-width: -webkit-fill-available;
+  margin: 0;
+  min-width: -webkit-fill-available;
 }
 
 .newsroomHeroFeedItem.col-xs-12 {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .newsroomHeroFeedItem img {
@@ -65,7 +65,7 @@ div.heroOrganizer.standardContent {
 }
 
 div.heroOrganizerWrapper.col-xs-12 {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .newsroomHeroFeedItem hr.articleBorderBottom {
@@ -96,6 +96,13 @@ div.heroOrganizerWrapper.col-xs-12 {
   padding-left: 0;
 }
 
+span.credits a.card-link {
+  color: #088099;
+  font-family: 'Montserrat';
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 
 
  
@@ -114,10 +121,10 @@ div.newsroomOrganizerWrapper.col-md-8 {
 
 /** left right padding and margin to control image size **/
 
-div.newsroomOrganizerWrapper.col-md-8 article.newsroomMajorFeedItem {
+/* div.newsroomOrganizerWrapper.col-md-8 article.newsroomMajorFeedItem {
     margin: 0 20px 20px 20px;
     padding: 0 20px 0 20px;
-}
+} */
 
 div.newsroomOrganizer div.titleWrapper {
     background-color: white;
@@ -200,14 +207,6 @@ p.credits {
 
 
 
-/* ***** customizations for minor feed ***** */
-
-span.credits a.card-link {
-    color: #088099;
-    font-family: 'Montserrat';
-    font-size: 1.25rem;
-    font-weight: 500;
-}
 
 
 

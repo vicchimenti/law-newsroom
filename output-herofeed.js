@@ -34,7 +34,7 @@
   */
  function getContentValues(tag) {
      try {
-         var _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+         let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
          return {
              isError: false,
              content: _tag == '' ? null : _tag
@@ -98,7 +98,7 @@ try {
     /***
      *      Dictionary of content
      * */
-    var heroDict = {}
+    let heroDict = {}
 
     /***
      *  Assign local variables from the content type's fields

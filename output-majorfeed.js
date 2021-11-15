@@ -140,10 +140,10 @@ try {
         frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
         frontPageImageCaption:  getContentValues('<t4 type="content" name="Main Image Caption" output="normal" modifiers="striptags,htmlentities" />'),
         fullTextLink:           getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
-        inTheNewsLink:          getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
-        inTheNewsLinkTitle:     getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
-        internalLink:           getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        internalLinkTitle:      getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
+        externalLink:          getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLinkText:     getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionLink:           getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
+        sectionLinkText:      getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
         contentID:              getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
@@ -207,10 +207,10 @@ try {
     //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
     //         // parse law in news for external link to original story
-    //         if (inTheNewsLink == "" || inTheNewsLinkTitle == "") {
+    //         if (externalLink == "" || externalLinkText == "") {
     //             externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     //         } else {
-    //             externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkTitle + '" target="_blank" class="card-link"><em>' + inTheNewsLinkTitle + '</em></a></span>';
+    //             externalLinkString = '<span class="externalLink credits"><a href="' + externalLink + '" title="' + externalLinkText + '" target="_blank" class="card-link"><em>' + externalLinkText + '</em></a></span>';
     //         }
 
     //         // assign link value for publishing
@@ -223,10 +223,10 @@ try {
     //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
     //         // parse announcements for internal link to origin
-    //         if (internalLink == "") {
-    //             internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+    //         if (sectionLink == "") {
+    //             internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
     //         } else {
-    //             internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
+    //             internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
     //         }
 
     //         // assign link value for publishing
@@ -239,10 +239,10 @@ try {
     //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 
     //         // parse events for internal link to origin
-    //         if (internalLink == "") {
-    //             internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+    //         if (sectionLink == "") {
+    //             internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
     //         } else {
-    //             internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkTitle + '" target="_blank" class="card-link"><em>' + internalLinkTitle + '</em></a></span>';
+    //             internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
     //         }
 
     //         // assign link value for publishing

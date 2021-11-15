@@ -156,10 +156,10 @@ try {
      * 
      * */
 
-    let openCardBody = '<div class="newsroomArticleBlurb container card-body">';
-    let closeCardBody = '</div>';
-    let openRow = '<div class="row px-0">';
-    let closeRow = '</div>';
+     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
+     let closeCardBody = '</div></div>';
+     let openHidden = '<div class="searchSortFields visually-hidden">';
+     let closeHidden = '</div>';
     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + contentDict.articleSummary.content + '</p></span>';
     var imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
     var openImageWrapper = '<figure class="figure hidden visually-hidden">';
@@ -329,12 +329,10 @@ try {
             imageString,
             closeImageWrapper,
             openCardBody,
-            openRow,
             titleLink,
             publishedLink,
             summaryString,
             dateline,
-            closeRow,
             closeCardBody,
             endingHTML
         ]

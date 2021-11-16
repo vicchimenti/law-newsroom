@@ -137,18 +137,9 @@
             contactDict.anchorTag.content,
             headerString,
             openCardBody,
+            openPrimary,
 
-
-
-            openImageWrapper,
-            imageString,
-            closeImageWrapper,
-            titleLink,
-            openHidden,
-            pinnedItem,
-            closeHidden,
-
-
+            closePrimary,
             closeCardBody,
             endingHTML
         ]

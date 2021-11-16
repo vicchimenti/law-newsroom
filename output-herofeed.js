@@ -230,14 +230,14 @@ try {
      *  verify Main image and photo credits
      * 
      * */
-    if (frontPageImage == "") {
-        imageString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
-        // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    // if (frontPageImage == "") {
+    //     imageString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
+    //     // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
 
-    } else {
-        imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-        // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
-    }
+    // } else {
+    //     imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    //     // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    // }
 
 
 
@@ -254,7 +254,7 @@ try {
         var info = new ImageInfo;
         info.setInput(media);
 
-        let imageDefaultAlt = heroDict.frontPageImageCaption.content ? heroDict.frontPageImageCaption.content : heroDict.articleTitle.content;
+        let imageDefaultAlt = heroDict.articleTitle.content ? heroDict.articleTitle.content : heroDict.contentName.content;
 
         imageString =   (info.check())
                         ? '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'

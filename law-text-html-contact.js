@@ -74,7 +74,7 @@
     /***
      *      Dictionary of content
      * */
-    let heroDict = {
+    let contactDict = {
 
         contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         contactHeader:           getContentValues('<t4 type="content" name="Header" output="normal" modifiers="striptags,htmlentities" />'),
@@ -84,6 +84,7 @@
         department1:          getContentValues('<t4 type="content" name="Department 1" output="normal" modifiers="striptags,htmlentities" />'),
         email1:                 getContentValues('<t4 type="content" name="Email 1" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
         phone1:           getContentValues('<t4 type="content" name="Phone 1" output="normal" modifiers="striptags,htmlentities" />'),
+        anchorTag:  getContentValues('<t4 type="meta" meta="html_anchor" />'),
         contentId:              getContentValues('<t4 type="meta" meta="content_id" />')
 
     }

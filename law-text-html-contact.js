@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.2
+ *      @version 1.3
  */
 
 
@@ -96,7 +96,7 @@
      * */
     let beginningHTML = '<div class="newsCenterContact col-12 col-xs-12 card border-0" id="contact' + contactDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
     let endingHTML = '<hr class="articleBorderBottom"></div>';
-    let headerString = '<h3 class="newsCenterContactHeader card-header">' + contactDict.contactHeader.content + '</h3>';
+    let headerString = '<h3 class="newsCenterContactHeader card-header border-0">' + contactDict.contactHeader.content + '</h3>';
     let openCardBody = '<div class="newsCenterContactBody card-body">';
     let closeCardBody = '</div>';
     let openPrimary = '<address class="newsCenterContactPrimary" id=primary"' + contactDict.contentId.content + '">';

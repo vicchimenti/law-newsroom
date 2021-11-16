@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.4
+ *      @version 1.5
  */
 
 
@@ -96,12 +96,12 @@
      * */
     let beginningHTML = '<div class="newsCenterContact col-12 col-xs-12 card border-0" id="contact' + contactDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
     let endingHTML = '<hr class="articleBorderBottom"></div>';
-    let headerString = '<h3 class="newsCenterContactHeader card-header border-0 px-0">' + contactDict.contactHeader.content + '</h3>';
+    let headerString = '<h2 class="newsCenterContactHeader card-header border-0 px-0">' + contactDict.contactHeader.content + '</h2>';
     let openCardBody = '<div class="newsCenterContactBody card-body px-0">';
     let closeCardBody = '</div>';
     let openPrimary = '<address class="newsCenterContactPrimary" id=primary"' + contactDict.contentId.content + '">';
     let closePrimary = '</address>'
-    let primaryName = '<h4 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h4>';
+    let primaryName = '<h3 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h3>';
     let primaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
     let primaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department1.content + '</p>';
     let primaryEmail = '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email1.content + '" title="Contact ' + contactDict.firstName1.content + '">Email ' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</a></p>';

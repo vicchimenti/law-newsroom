@@ -1,7 +1,14 @@
 /* ***** Contact Box ***** */
-.newsCenterContact address {
-    color: #333333;
+.newsCenterContact {
+    color: #000000;
     font-family: 'Montserrat';
+}
+
+.newsCenterContact .newsCenterContactHeader {
+    background: #f7f7f7;
+}
+
+.newsCenterContact address {
     font-size: 1.5rem;
     font-weight: 500;
 }

@@ -1,17 +1,26 @@
 /* ***** Contact Box ***** */
-div.newsCenterContact address {
+.newsCenterContact address {
     color: #333333;
     font-family: 'Montserrat';
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-div.newsCenterContact address strong {
-    font-weight: 700;
+.newsCenterContact h4 {
+    font-weight: 600;
 }
 
-div.newsCenterContact address a {
+.newsCenterContact address a {
     color: #088099;
+    text-decoration: none;
+}
+
+.newsCenterContact address a:hover {
+    text-decoration: underline;
+}
+
+.newsCenterContact address a:focus {
+    text-decoration: underline;
 }
 
 /** horizontal rule between articles **/
@@ -19,6 +28,6 @@ div.newsCenterContact address a {
 hr.articleBorderBottom {
     color: #e5e5e5;
     height: 3px;
-    margin: 0 20px;
+    margin: 0;
     opacity: unset;
 }

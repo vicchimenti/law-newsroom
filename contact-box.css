@@ -1,0 +1,24 @@
+/* ***** Contact Box ***** */
+div.newsCenterContact address {
+    color: #333333;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+div.newsCenterContact address strong {
+    font-weight: 700;
+}
+
+div.newsCenterContact address a {
+    color: #088099;
+}
+
+/** horizontal rule between articles **/
+
+hr.articleBorderBottom {
+    color: #e5e5e5;
+    height: 3px;
+    margin: 0 20px;
+    opacity: unset;
+}

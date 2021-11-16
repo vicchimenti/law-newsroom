@@ -101,6 +101,8 @@
     let closeCardBody = '</div>';
     let openPrimary = '<address class="newsCenterContactPrimary" id=primary"' + contactDict.contentId.content + '">';
     let closePrimary = '</address>'
+    let primaryName = '<h4 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h4>';
+    let primaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
 
 
 
@@ -138,6 +140,8 @@
             headerString,
             openCardBody,
             openPrimary,
+            primaryName,
+            primaryTitle,
 
             closePrimary,
             closeCardBody,

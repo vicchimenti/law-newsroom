@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.1
+ *      @version 1.2
  */
 
 
@@ -105,29 +105,27 @@
     let primaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
     let primaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department1.content + '</p>';
     let primaryEmail = '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email1.content + '" title="Contact ' + contactDict.firstName1.content + '">Email ' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</a></p>';
-    let primaryPhone = '<p class="card-text contactPhone"></p> ';
-
-
+    let primaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone1.content + '" title="Call ' + contactDict.firstName1.content + '">' + contactDict.phone1.content + '</a></p> ';
 
 
 
 {/* <div class="newsCenterContact card">
   <h3 class="newsCenterContactHeader card-header"></h3>
   <div class="newsCenterContactBody card-body">
-      <div class="newsCenterContactPrimary">
+      <address class="newsCenterContactPrimary">
         <h4 class="card-title contactName"></h4>
         <p class="card-text contactTitle"></p>
         <p class="card-text contactDepartment"></p>
         <p class="card-text emailWrapper"><a href="#" class="contactEmail"></a></p>
         <p class="card-text contactPhone"></p> 
-      </div>
-      <div class="newsCenterContactSecondary">
+      </address>
+      <address class="newsCenterContactSecondary">
         <h4 class="card-title contactName"></h4>
         <p class="card-text contactTitle"></p>
         <p class="card-text contactDepartment"></p>
         <p class="card-text emailWrapper"><a href="#" class="contactEmail"></a></p>
         <p class="card-text contactPhone"></p> 
-      </div>
+      </address>
   </div>
 </div> */}
 
@@ -146,7 +144,7 @@
             primaryTitle,
             primaryDepartment,
             primaryEmail,
-
+            primaryPhone,
             closePrimary,
             closeCardBody,
             endingHTML

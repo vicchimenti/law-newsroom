@@ -7,7 +7,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.5
+ *      @version 3.6
  */
 
 
@@ -177,7 +177,7 @@ try {
 
 
 
-    
+
     /***
      *  write document once
      * 

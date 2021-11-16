@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.34
+ *     @version 2.35
  */
 
 
@@ -275,10 +275,10 @@ try {
      * */
     if (majorDict.frontPageImage.content) {
 
-        var imageID = content.get('Main Image').getID();
-        var mediaInfo = getMediaInfo(imageID);
-        var media = readMedia(imageID);
-        var info = new ImageInfo;
+        let imageID = content.get('Main Image').getID();
+        let mediaInfo = getMediaInfo(imageID);
+        let media = readMedia(imageID);
+        let info = new ImageInfo;
         info.setInput(media);
 
         let imageDefaultAlt = majorDict.frontPageImageCaption.content ? majorDict.frontPageImageCaption.content : majorDict.articleTitle.content;

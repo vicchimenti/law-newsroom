@@ -104,8 +104,8 @@
     let primaryName = '<h4 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h4>';
     let primaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
     let primaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department1.content + '</p>';
-    let primaryEmail = '<p class="card-text emailWrapper"><a href="#" class="contactEmail"></a></p>';
-
+    let primaryEmail = '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email1.content + '" title="Contact ' + contactDict.firstName1.content + '">Email ' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</a></p>';
+    let primaryPhone = '<p class="card-text contactPhone"></p> ';
 
 
 
@@ -145,6 +145,7 @@
             primaryName,
             primaryTitle,
             primaryDepartment,
+            primaryEmail,
 
             closePrimary,
             closeCardBody,

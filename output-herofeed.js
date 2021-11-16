@@ -151,8 +151,8 @@ try {
     let openImageWrapper = '<figure class="figure hidden visually-hidden">';
     let closeImageWrapper = '</figure>';
     // var imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    let beginningHTML = '<div class="newsroomHeroFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-    let endingHTML = '<hr class="articleBorderBottom"></div>';
+    let beginningHTML = '<article class="newsroomHeroFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
+    let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
 

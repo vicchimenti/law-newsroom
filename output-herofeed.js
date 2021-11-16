@@ -7,7 +7,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.4
+ *      @version 3.5
  */
 
 
@@ -270,14 +270,14 @@ try {
      *  Write the document once
      * 
      * */
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
 
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, imageString));
-    document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('</div></div>'); // close newsroomArticleBlurb and row divs
-    document.write(endingHTML);
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, imageString));
+    // document.write('<div class="newsroomArticleBlurb container card-body"><div class="row px-0">');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    // document.write('</div></div>'); // close newsroomArticleBlurb and row divs
+    // document.write(endingHTML);
 
 
     /***
@@ -292,11 +292,7 @@ try {
             closeImageWrapper,
             openCardBody,
             titleLink,
-            publishedLink,
-            summaryString,
-            dateline,
             openHidden,
-            listOfCats,
             pinnedItem,
             closeHidden,
             closeCardBody,

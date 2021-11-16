@@ -90,6 +90,19 @@
     }
 
 
+    /***
+     *  Declare/Assign local variables with base formatting
+     * 
+     * */
+    let beginningHTML = '<div class="newsCenterContact col-12 col-xs-12 card border-0" id="contact' + contactDict.contentId.content + '">';
+    let endingHTML = '<hr class="articleBorderBottom"></div>';
+    let headerString = '<h3 class="newsCenterContactHeader card-header">' + contactDict.contactHeader.content + '</h3>';
+    let openCardBody = '<div class="newsCenterContactBody card-body">';
+    let closeCardBody = '</div>';
+    let openPrimary = '<address class="newsCenterContactPrimary" id=primary"' + contactDict.contentId.content + '">';
+    let closePrimary = '</address>'
+
+
 
 
 
@@ -121,14 +134,21 @@
      writeDocument (
         [
             beginningHTML,
+            contactDict.anchorTag.content,
+            headerString,
+            openCardBody,
+
+
+
             openImageWrapper,
             imageString,
             closeImageWrapper,
-            openCardBody,
             titleLink,
             openHidden,
             pinnedItem,
             closeHidden,
+
+
             closeCardBody,
             endingHTML
         ]

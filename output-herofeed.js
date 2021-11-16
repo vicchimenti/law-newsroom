@@ -143,9 +143,12 @@ try {
     // var listOfTags = "";
     // var photoCredit = "";
     // var authorByLine = "";
-    var imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    var beginningHTML = '<div class="newsroomHeroFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-    var endingHTML = '<hr class="articleBorderBottom"></div>';
+    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    let closeImageWrapper = '</figure>';
+    // var imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    let beginningHTML = '<div class="newsroomHeroFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    let endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
 

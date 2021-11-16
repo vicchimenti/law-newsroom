@@ -143,6 +143,10 @@ try {
     // var listOfTags = "";
     // var photoCredit = "";
     // var authorByLine = "";
+    let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
+    let closeCardBody = '</div></div>';
+    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let closeHidden = '</div>';
     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
     let openImageWrapper = '<figure class="figure hidden visually-hidden">';
     let closeImageWrapper = '</figure>';

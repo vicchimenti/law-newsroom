@@ -66,6 +66,10 @@ div.heroOrganizer.standardContent {
   min-width: -webkit-fill-available;
 }
 
+.newsroomHeroFeedItem figure {
+  margin: 0;
+}
+
 .newsroomHeroFeedItem.col-xs-12 {
   padding-left: 0;
 }

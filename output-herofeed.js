@@ -151,6 +151,17 @@ try {
 
 
     /***
+     *  determine if the article contains full text content
+     * 
+     * */
+    let titleLink = (heroDict.articleFullBody.content)
+                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + heroDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + heroDict.headline.content + '" >' + heroDict.headline.content + '</a></h3>'
+                    : '<h3 class="newsroomArticleTitle card-title">' + heroDict.headline.content + '</h3>';
+
+
+
+
+    /***
      *  parse for pinned item
      * 
      * */

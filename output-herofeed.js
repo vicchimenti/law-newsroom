@@ -138,7 +138,7 @@ try {
      * 
      * */
     // var listOfTags = "";
-    var titleLink = "";
+    // var titleLink = "";
     // var listItems = "";
     // var listOfTags = "";
     // var photoCredit = "";
@@ -230,6 +230,30 @@ try {
     } else {
         imageString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
         // photoCredit = '<p class="byLine hidden">No Photographer Provided</p>';
+    }
+
+
+
+
+    /***
+     *  Parse for image
+     * 
+     * */
+    if (heroDict.frontPageImage.content) {
+
+        var imageID = content.get('Main Image').getID();
+        var mediaInfo = getMediaInfo(imageID);
+        var media = readMedia(imageID);
+        var info = new ImageInfo;
+        info.setInput(media);
+
+        let imageDefaultAlt = heroDict.frontPageImageCaption.content ? heroDict.frontPageImageCaption.content : heroDict.articleTitle.content;
+
+        imageString =   (info.check())
+                        ? '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        : '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+    
+        openImageWrapper = '<figure class="figure">';
     }
 
 

@@ -77,13 +77,13 @@
     let heroDict = {
 
         contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-        headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
-        frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
-        articleFullBody:        getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
-        publishedDate:          getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-        pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
-        fullTextLink:           getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
+        contactHeader:           getContentValues('<t4 type="content" name="Header" output="normal" modifiers="striptags,htmlentities" />'),
+        lastName1:               getContentValues('<t4 type="content" name="Last Name 1" output="normal" modifiers="striptags,htmlentities" />'),
+        firstName1:             getContentValues('<t4 type="content" name="First Name 1" output="normal" modifiers="striptags,htmlentities" />'),
+        title1:         getContentValues('<t4 type="content" name="Title 1" output="normal" modifiers="striptags,htmlentities" />'),
+        department1:          getContentValues('<t4 type="content" name="Department 1" output="normal" modifiers="striptags,htmlentities" />'),
+        email1:                 getContentValues('<t4 type="content" name="Email 1" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
+        phone1:           getContentValues('<t4 type="content" name="Phone 1" output="normal" modifiers="striptags,htmlentities" />'),
         contentId:              getContentValues('<t4 type="meta" meta="content_id" />')
 
     }

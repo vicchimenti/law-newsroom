@@ -19,7 +19,7 @@ try {
     var header, midder, footer;
 
     // declare content wrappers
-    header = '<div class="heroOrganizerWrapper col-12 col-xs-12 order-xs-1 col-md-12 order-md-first border-0" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main"><div class="heroOrganizer standardContent card-deck"><div class="heroOrganizerExtra"></div>';
+    header = '<div class="heroOrganizerWrapper contentItem col-12 col-xs-12 order-xs-1 col-md-12 order-md-first" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main"><div class="heroOrganizer standardContent card-deck"><div class="heroOrganizerExtra"></div>';
     midder = '<span></span>';
     footer = '</div><div class="heroOrganizer ToggleExtra boxlinks" style="display:none">Show More</div></div>';
 

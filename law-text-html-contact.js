@@ -65,9 +65,35 @@
 
 
 
+/***
+ *      Main
+ * */
+ try {
 
 
-<div class="newsCenterContact card">
+    /***
+     *      Dictionary of content
+     * */
+    let heroDict = {
+
+        contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
+        articleFullBody:        getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
+        publishedDate:          getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
+        pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
+        fullTextLink:           getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
+        contentId:              getContentValues('<t4 type="meta" meta="content_id" />')
+
+    }
+
+
+
+
+
+
+{/* <div class="newsCenterContact card">
   <h3 class="newsCenterContactHeader card-header"></h3>
   <div class="newsCenterContactBody card-body">
       <div class="newsCenterContactPrimary">
@@ -85,4 +111,31 @@
         <p class="card-text contactPhone"></p> 
       </div>
   </div>
-</div>
+</div> */}
+
+    /***
+     *  write document once
+     * 
+     * */
+     writeDocument (
+        [
+            beginningHTML,
+            openImageWrapper,
+            imageString,
+            closeImageWrapper,
+            openCardBody,
+            titleLink,
+            openHidden,
+            pinnedItem,
+            closeHidden,
+            closeCardBody,
+            endingHTML
+        ]
+    );
+
+
+
+
+} catch (err) {
+    document.write(err.message);
+}

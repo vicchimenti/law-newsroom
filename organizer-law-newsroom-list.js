@@ -16,10 +16,16 @@ try {
 	var base = readMedia(1889354);
 	eval(String(base));
 
+	let titleField = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="$value" />');
+
+
 	// Set content wrappers
 	var header, midder, footer;
   
-	header = '<div class="newsroomOrganizerWrapper contentItem col-xs-12 col-md-6 offset-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main"><div class="newsroomOrganizer standardContent card-deck"><div class="organizerExtra"></div>';
+	header = '<div class="newsroomOrganizerWrapper contentItem col-xs-12 col-md-6 offset-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+				<div class="titleWrapper standardContent col-xs-12">\
+                <h2 class="organizerTitle text-center sr-only">' + titleField + '</h2></div>\
+				<div class="newsroomOrganizer standardContent card-deck">';
 	midder = '<span></span>';
 	footer = '</div><div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div></div>';
         

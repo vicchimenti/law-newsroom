@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.7
+ *      @version 1.8
  */
 
 
@@ -89,6 +89,7 @@
         title2:         getContentValues('<t4 type="content" name="Title 2" output="normal" modifiers="striptags,htmlentities" />'),
         department2:    getContentValues('<t4 type="content" name="Department 2" output="normal" modifiers="striptags,htmlentities" />'),
         email2:         getContentValues('<t4 type="content" name="Email 2" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
+        phone2:         getContentValues('<t4 type="content" name="Phone 2" output="normal" modifiers="striptags,htmlentities" />'),
         anchorTag:      getContentValues('<t4 type="meta" meta="html_anchor" />'),
         contentId:      getContentValues('<t4 type="meta" meta="content_id" />')
 

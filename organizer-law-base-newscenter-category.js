@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.38
+ *      @version 5.39
  */
 
 
@@ -355,7 +355,7 @@ function main(header, midder, footer) {
          * Declarations
          * 
          */
-        var title = content.hasElement('Title') ? content.get('Title') : null;
+        // var title = content.hasElement('Title') ? content.get('Title') : null;
         var choice = content.get('Article type').publish();
         var CID = new java.lang.Integer(choice.split(";")[0]);
         var LAYOUT = choice.split(";")[1];
@@ -363,8 +363,8 @@ function main(header, midder, footer) {
         var sortMethod = content.get('Sorting method').publish();
         var sElement = String(content.get('Custom element'));
         var bReverse = !content.get('Reverse order').isNull();
-        var bPaginate = content.hasElement('Paginate?') ? !content.get('Paginate?').isNull() : null;
-        var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
+        // var bPaginate = content.hasElement('Paginate?') ? !content.get('Paginate?').isNull() : null;
+        // var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
@@ -373,19 +373,19 @@ function main(header, midder, footer) {
 
 
         // the logic to determine layouts and links that were available to the user
-        var bViewAll = content.hasElement('Show link to original section') ? !content.get('Show link to original section').isNull() : false;
-        var sViewAllText = content.hasElement('Link to original section text') ? content.get('Link to original section text') : "";
-        if (sViewAllText == "")
-            sViewAllText = "View All";
+        // var bViewAll = content.hasElement('Show link to original section') ? !content.get('Show link to original section').isNull() : false;
+        // var sViewAllText = content.hasElement('Link to original section text') ? content.get('Link to original section text') : "";
+        // if (sViewAllText == "")
+        //     sViewAllText = "View All";
 
 
 
 
         // overrides a news layout that doesn't work
-        var bSummFirst = (LAYOUT == "v9/organizer/newsArticleSummary/Link");
-        if (bSummFirst) {
-            LAYOUT = "v9/organizer/newsArticleSummary";
-        }
+        // var bSummFirst = (LAYOUT == "v9/organizer/newsArticleSummary/Link");
+        // if (bSummFirst) {
+        //     LAYOUT = "v9/organizer/newsArticleSummary";
+        // }
 
 
 
@@ -495,41 +495,41 @@ function main(header, midder, footer) {
             midder = "";
         if (!footer)
             footer = "";
-        if (title != "")
-            header = header + '<h2 class="organizerTitle">' + title + '</h2>';
-        if (bViewAll) {
-            var href = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Section" output="linkurl" modifiers="nav_sections" />');
-            midder = midder + '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + '</a></div>';
-        }
+        // if (title != "")
+        //     header = header + '<h2 class="organizerTitle">' + title + '</h2>';
+        // if (bViewAll) {
+        //     var href = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Section" output="linkurl" modifiers="nav_sections" />');
+        //     midder = midder + '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + '</a></div>';
+        // }
 
 
 
         /**
          * Determine Pagination
          */
-        if (bPaginate && !bSummFirst) {
+        // if (bPaginate && !bSummFirst) {
             // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
 
-            var contentInfo = [];
-            for (var i = nStart - 1; i < matchingTopics.length && !isLimitPassed(i, LIMIT); i++) {
-                var tci = new TargetContentInfo(matchingTopics[i].CachedContent, oSection, language);
-                contentInfo.push(tci);
-            }
-            var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
-            var sectionPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.SectionPublisher),
-                contentPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.ContentPublisher),
-                publishHelper = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.PublishHelper),
-                paginator = new NavigationPaginator(sectionPublisher, contentPublisher, publishHelper);
-            paginator.setContentPerPage((nPerPage > 0 ? nPerPage : 10));
-            paginator.setFormatter(LAYOUT);
-            paginator.setLinksToShow(10);
-            var before = '<div class="paginationWrapper"><div class="pagination"><span class="paginationNumber">';
-            var middle = '</span><span class="paginationNumber">';
-            var after = '</span></div></div>';
-            paginator.setPageSeparators(before, middle, after);
-            paginator.setBeforeAndAfterHTML(header, footer);
-            paginator.setPreview(isPreview);
-            paginator.write(document, dbStatement, publishCache, section, language, isPreview, vector);
+            // var contentInfo = [];
+            // for (var i = nStart - 1; i < matchingTopics.length && !isLimitPassed(i, LIMIT); i++) {
+            //     var tci = new TargetContentInfo(matchingTopics[i].CachedContent, oSection, language);
+            //     contentInfo.push(tci);
+            // }
+            // var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
+            // var sectionPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.SectionPublisher),
+            //     contentPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.ContentPublisher),
+            //     publishHelper = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.PublishHelper),
+            //     paginator = new NavigationPaginator(sectionPublisher, contentPublisher, publishHelper);
+            // paginator.setContentPerPage((nPerPage > 0 ? nPerPage : 10));
+            // paginator.setFormatter(LAYOUT);
+            // paginator.setLinksToShow(10);
+            // var before = '<div class="paginationWrapper"><div class="pagination"><span class="paginationNumber">';
+            // var middle = '</span><span class="paginationNumber">';
+            // var after = '</span></div></div>';
+            // paginator.setPageSeparators(before, middle, after);
+            // paginator.setBeforeAndAfterHTML(header, footer);
+            // paginator.setPreview(isPreview);
+            // paginator.write(document, dbStatement, publishCache, section, language, isPreview, vector);
 
             // eventually we may want an else if here EX: else if (bPaginate && bSummFirst) {...}
             // that would allow when the Summary and Paginate option are both chosen
@@ -543,7 +543,7 @@ function main(header, midder, footer) {
 
 
 
-        } else {
+        // } else {
 
             /**
              * Gather content and write header
@@ -605,7 +605,7 @@ function main(header, midder, footer) {
             document.write(oSW.toString());
             document.write(midder);
             document.write(footer);
-        }
+        // }
 
 
 

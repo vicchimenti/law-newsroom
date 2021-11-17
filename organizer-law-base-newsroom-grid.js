@@ -454,6 +454,11 @@ function main(header, midder, footer) {
                 let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
                 let topicName = topic.getName();
 
+                log('categoryName: ' + categoryName);
+
+                log('topicName: ' + topicName);
+
+
                 if (topicName == categoryName) {
                     matchingTopics.push(validContent[contentItem]);
                 }

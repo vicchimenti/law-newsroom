@@ -462,12 +462,6 @@ function main(header, midder, footer) {
         header = header || '';
         midder = midder || '';
         footer = footer || '';
-        // if (!header)
-        //     header = "";
-        // if (!midder)
-        //     midder = "";
-        // if (!footer)
-        //     footer = "";
 
 
 

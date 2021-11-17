@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.9
+ *      @version 7.10
  */
 
  
@@ -371,10 +371,10 @@ function main(header, midder, footer) {
 
 
         // the logic to determine layouts and links that were available to the user
-        var bViewAll = content.hasElement('Show link to original section') ? !content.get('Show link to original section').isNull() : false;
-        var sViewAllText = content.hasElement('Link to original section text') ? content.get('Link to original section text') : "";
-        if (sViewAllText == "")
-            sViewAllText = "View All";
+        // var bViewAll = content.hasElement('Show link to original section') ? !content.get('Show link to original section').isNull() : false;
+        // var sViewAllText = content.hasElement('Link to original section text') ? content.get('Link to original section text') : "";
+        // if (sViewAllText == "")
+        //     sViewAllText = "View All";
 
 
 
@@ -489,10 +489,10 @@ function main(header, midder, footer) {
             footer = "";
         if (title != "")
             header = header + '<h2 class="organizerTitle sr-only">' + title + '</h2>';
-        if (bViewAll) {
-            var href = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Section" output="linkurl" modifiers="nav_sections" />');
-            midder = midder + '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + '</a></div>';
-        }
+        // if (bViewAll) {
+        //     var href = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Section" output="linkurl" modifiers="nav_sections" />');
+        //     midder = midder + '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + '</a></div>';
+        // }
 
 
 

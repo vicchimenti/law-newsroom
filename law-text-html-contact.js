@@ -105,7 +105,7 @@
     let headerString = '<h2 class="newsCenterContactHeader card-header text-center border-0 px-0">' + contactDict.contactHeader.content + '</h2>';
     let openCardBody = '<div class="newsCenterContactBody card-body px-0">';
     let closeCardBody = '</div>';
-    let openPrimary = '<address class="newsCenterContactPrimary" id=primary"' + contactDict.contentId.content + '">';
+    let openPrimary = '<address class="newsCenterContactPrimary" id="' + contactDict.contentId.content + '">';
     let closePrimary = '</address>'
     let primaryName = '<h3 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h3>';
     let primaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
@@ -114,26 +114,14 @@
     let primaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone1.content + '" title="Call ' + contactDict.firstName1.content + '">' + contactDict.phone1.content + '</a></p> ';
 
 
+    let secondaryName = '<h3 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h3>';
+    let secondaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
+    let secondaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department1.content + '</p>';
+    let secondaryEmail = '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email1.content + '" title="Contact ' + contactDict.firstName1.content + '">Email ' + contactDict.firstName1.content + '</a></p>';
+    let secondaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone1.content + '" title="Call ' + contactDict.firstName1.content + '">' + contactDict.phone1.content + '</a></p> ';
 
-{/* <div class="newsCenterContact card">
-  <h3 class="newsCenterContactHeader card-header"></h3>
-  <div class="newsCenterContactBody card-body">
-      <address class="newsCenterContactPrimary">
-        <h4 class="card-title contactName"></h4>
-        <p class="card-text contactTitle"></p>
-        <p class="card-text contactDepartment"></p>
-        <p class="card-text emailWrapper"><a href="#" class="contactEmail"></a></p>
-        <p class="card-text contactPhone"></p> 
-      </address>
-      <address class="newsCenterContactSecondary">
-        <h4 class="card-title contactName"></h4>
-        <p class="card-text contactTitle"></p>
-        <p class="card-text contactDepartment"></p>
-        <p class="card-text emailWrapper"><a href="#" class="contactEmail"></a></p>
-        <p class="card-text contactPhone"></p> 
-      </address>
-  </div>
-</div> */}
+
+
 
     /***
      *  write document once

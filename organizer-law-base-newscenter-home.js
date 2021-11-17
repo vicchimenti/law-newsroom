@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.8
+ *      @version 7.9
  */
 
  
@@ -362,7 +362,7 @@ function main(header, midder, footer) {
         var sElement = String(content.get('Custom element'));
         var bReverse = !content.get('Reverse order').isNull();
         // var bPaginate = content.hasElement('Paginate?') ? !content.get('Paginate?').isNull() : null;
-        var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
+        // var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');

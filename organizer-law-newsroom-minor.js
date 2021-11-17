@@ -27,7 +27,6 @@ try {
                 <div class="titleWrapper standardContent col-xs-12">\
                 <h2 class="organizerTitle text-center sr-only">' + titleField + '</h2></div>\
 				<div class="newsroomOrganizer standardContent card-deck border-0">\
-                <div class="newsroomOrganizerExtra"></div>\
 		';
         midder = '';
         footer = '</div></div>';    

@@ -568,6 +568,9 @@ function main(header, midder, footer) {
             let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
             let iterations = 0;
 
+            log("maxIterations: " + maxIterations);
+            log("iterations: " + iterations);
+            log("start: " + start);
 
 
 
@@ -587,6 +590,11 @@ function main(header, midder, footer) {
                     iterations++;
                 } while (start < matchingTopics.length && iterations < maxIterations);
 
+                log("maxIterations: " + maxIterations);
+                log("iterations: " + iterations);
+                log("start: " + start);
+
+
             } else {
 
                 /**
@@ -598,6 +606,11 @@ function main(header, midder, footer) {
                     start++;
                     iterations++;
                 } while (start < validContent.length && iterations < LIMIT);
+
+                log("maxIterations else: " + maxIterations);
+                log("iterations else: " + iterations);
+                log("start else: " + start);
+
 
                 // for (let story in validContent) {
                 //     oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);

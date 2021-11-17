@@ -588,9 +588,15 @@ function main(header, midder, footer) {
                  * when no matching items write all categories
                  * 
                  */
-                for (let story in validContent) {
-                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
-                }
+                 do {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[start].Content, LAYOUT, isPreview);
+                    start++;
+                    iterations++;
+                } while (start < validContent.length && iterations < maxIterations);
+
+                // for (let story in validContent) {
+                //     oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
+                // }
 
             }
 

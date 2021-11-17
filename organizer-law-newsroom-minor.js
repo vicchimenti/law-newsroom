@@ -23,7 +23,6 @@ try {
                   <div class="newsroomOrganizerExtra"></div>\
 		';
         midder = '\
-                  <span></span>\
  		';
         footer = '\
 			</div>\

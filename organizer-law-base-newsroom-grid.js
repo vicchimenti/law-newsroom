@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Grid
  *          Category Organizer
  *
- *      @version 6.8
+ *      @version 6.9
  */
 
 
@@ -592,7 +592,7 @@ function main(header, midder, footer) {
                     oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[start].Content, LAYOUT, isPreview);
                     start++;
                     iterations++;
-                } while (start < validContent.length && iterations < maxIterations);
+                } while (start < validContent.length && iterations < LIMIT);
 
                 // for (let story in validContent) {
                 //     oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);

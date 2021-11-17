@@ -420,7 +420,7 @@ function main(header, midder, footer) {
          * Filter content that matches content type
          */
          var oCM = ApplicationContextProvider.getBean(IContentManager);
-         var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
+        //  var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
          var validContent = [];
  
          for (var i = 0; i < mirrorContent.length; i++) {

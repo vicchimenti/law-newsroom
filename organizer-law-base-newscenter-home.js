@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.13
+ *      @version 7.14
  */
 
  
@@ -353,7 +353,6 @@ function main(header, midder, footer) {
          * Declarations
          * 
          */
-        // var title = content.hasElement('Title') ? content.get('Title') : null;
         var choice = content.get('Article type').publish();
         var CID = new java.lang.Integer(choice.split(";")[0]);
         var LAYOUT = choice.split(";")[1];
@@ -400,7 +399,6 @@ function main(header, midder, footer) {
          * Filter content that matches content type
          */
          var oCM = ApplicationContextProvider.getBean(IContentManager);
-        //  var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
          var validContent = [];
  
          for (var i = 0; i < mirrorContent.length; i++) {
@@ -461,15 +459,15 @@ function main(header, midder, footer) {
         /**
          * Display content
          */
-        // header = header || '';
-        // midder = midder || '';
-        // footer = footer || '';
-        if (!header)
-            header = "";
-        if (!midder)
-            midder = "";
-        if (!footer)
-            footer = "";
+        header = header || '';
+        midder = midder || '';
+        footer = footer || '';
+        // if (!header)
+        //     header = "";
+        // if (!midder)
+        //     midder = "";
+        // if (!footer)
+        //     footer = "";
 
 
 

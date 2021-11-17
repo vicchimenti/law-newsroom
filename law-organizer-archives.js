@@ -1,5 +1,5 @@
 /***
- *  law/organizer/korematsuCenter
+ *  law/organizer/archives
  * 
  */
 

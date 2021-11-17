@@ -26,8 +26,8 @@ try {
 				<div class="titleWrapper standardContent col-xs-12">\
                 <h2 class="organizerTitle text-center sr-only">' + titleField + '</h2></div>\
 				<div class="newsroomOrganizer standardContent card-deck">';
-	midder = '<span></span>';
-	footer = '</div><div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div></div>';
+	midder = '';
+	footer = '</div></div>';
         
 	// Write content
   	main(header, midder, footer);

@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.7
+ *      @version 7.8
  */
 
  
@@ -361,7 +361,7 @@ function main(header, midder, footer) {
         var sortMethod = content.get('Sorting method').publish();
         var sElement = String(content.get('Custom element'));
         var bReverse = !content.get('Reverse order').isNull();
-        var bPaginate = content.hasElement('Paginate?') ? !content.get('Paginate?').isNull() : null;
+        // var bPaginate = content.hasElement('Paginate?') ? !content.get('Paginate?').isNull() : null;
         var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
@@ -380,10 +380,10 @@ function main(header, midder, footer) {
 
 
         // overrides a news layout that doesn't work
-        var bSummFirst = (LAYOUT == "v9/organizer/newsArticleSummary/Link");
-        if (bSummFirst) {
-            LAYOUT = "v9/organizer/newsArticleSummary";
-        }
+        // var bSummFirst = (LAYOUT == "v9/organizer/newsArticleSummary/Link");
+        // if (bSummFirst) {
+        //     LAYOUT = "v9/organizer/newsArticleSummary";
+        // }
 
 
 
@@ -499,31 +499,31 @@ function main(header, midder, footer) {
         /**
          * Determine Pagination
          */
-        if (bPaginate && !bSummFirst) {
+        // if (bPaginate && !bSummFirst) {
 
             // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
-            var contentInfo = [];
-            for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
-                var tci = new TargetContentInfo(validContent[i].CachedContent, oSection, language);
-                contentInfo.push(tci);
-            }
-            var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
-            var sectionPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.SectionPublisher),
-                contentPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.ContentPublisher),
-                publishHelper = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.PublishHelper),
-                paginator = new NavigationPaginator(sectionPublisher, contentPublisher, publishHelper);
-            paginator.setContentPerPage((nPerPage > 0 ? nPerPage : 10));
-            paginator.setFormatter(LAYOUT);
-            paginator.setLinksToShow(10);
-            var before = '<div class="paginationWrapper"><div class="pagination"><span class="paginationNumber">';
-            var middle = '</span><span class="paginationNumber">';
-            var after = '</span></div></div>';
-            paginator.setPageSeparators(before, middle, after);
-            paginator.setBeforeAndAfterHTML(header, footer);
-            paginator.setPreview(isPreview);
-            paginator.write(document, dbStatement, publishCache, section, language, isPreview, vector);
+            // var contentInfo = [];
+            // for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
+            //     var tci = new TargetContentInfo(validContent[i].CachedContent, oSection, language);
+            //     contentInfo.push(tci);
+            // }
+            // var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
+            // var sectionPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.SectionPublisher),
+            //     contentPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.ContentPublisher),
+            //     publishHelper = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.PublishHelper),
+            //     paginator = new NavigationPaginator(sectionPublisher, contentPublisher, publishHelper);
+            // paginator.setContentPerPage((nPerPage > 0 ? nPerPage : 10));
+            // paginator.setFormatter(LAYOUT);
+            // paginator.setLinksToShow(10);
+            // var before = '<div class="paginationWrapper"><div class="pagination"><span class="paginationNumber">';
+            // var middle = '</span><span class="paginationNumber">';
+            // var after = '</span></div></div>';
+            // paginator.setPageSeparators(before, middle, after);
+            // paginator.setBeforeAndAfterHTML(header, footer);
+            // paginator.setPreview(isPreview);
+            // paginator.write(document, dbStatement, publishCache, section, language, isPreview, vector);
 
-        } else {
+        // } else {
 
             /**
              * Gather content and write header
@@ -583,7 +583,7 @@ function main(header, midder, footer) {
             document.write(oSW.toString());
             document.write(midder);
             document.write(footer);
-        }
+        // }
 
 
 

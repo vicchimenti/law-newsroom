@@ -106,9 +106,9 @@
     let openCardBody = '<div class="newsCenterContactBody card-body px-0">';
     let closeCardBody = '</div>';
     let openPrimary = '<address class="newsCenterContactPrimary" id="primary' + contactDict.contentId.content + '">';
-    let closePrimary = '</address>'
+    let closePrimary = '</address>';
     let openSecondary = '<address class="newsCenterContactSecondary visually-hidden" id="secondary' + contactDict.contentId.content + '">';
-    let closeSecondary = '</address>'
+    let closeSecondary = '</address>';
     let primaryName = '<h3 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h3>';
     let primaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
     let primaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department1.content + '</p>';
@@ -195,7 +195,7 @@
             secondaryTitle,
             secondaryDepartment,
             secondaryEmail,
-            secondaryPhone.
+            secondaryPhone,
             closeSecondary,
             closeCardBody,
             endingHTML

@@ -1,13 +1,13 @@
 /***
  *      @author Victor Chimenti, MSCS
- *      @file organizerLawBaseNewsroom.js
+ *      @file organizer-law-base-newscenter-category.js
  *      @see Media Library ID: 1889354
- *      organizer law base newsroom
+ *      organizer law base newscenter category
  *
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.37
+ *      @version 5.38
  */
 
 

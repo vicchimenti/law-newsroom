@@ -11,11 +11,10 @@ function readMedia(mediaID) {
 }
 
 try {
+    
     // Import Organizer base from media library
     var base = readMedia(3050627);
     eval(String(base));
-    // Set content wrapper, if any
-    // rm contentItem class
     var header, midder, footer;
     var choice = String(content.get('Article type').publish());
     switch (choice) {
@@ -25,20 +24,18 @@ try {
                   		<div class="newsroomOrganizerExtra"></div>\
 		';
         midder = '\
-                  <span></span>\
  		';
         footer = '\
             </div>\
-            <div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div>\
 		</div>\
  		';
     }
+
+
     // Write content
-    // Delegate header/footer writing to main method
-    // (paginator doesn't display them in publish on pages >1, only preview)
-    //if (header) document.write(header);
     main(header, midder, footer);
-    //if (footer) document.write(footer);
+
+
 } catch (err) {
     document.write(err.message + err.stack);
 }

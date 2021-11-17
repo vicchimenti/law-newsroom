@@ -32,7 +32,6 @@ try {
  		';
         footer = '\
 			</div>\
-			<div class="newsroomOrganizerToggleExtra boxlinks" style="display:none">Show More</div>\
 		</div>\
  		';
     }

@@ -114,11 +114,59 @@
     let primaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone1.content + '" title="Call ' + contactDict.firstName1.content + '">' + contactDict.phone1.content + '</a></p> ';
 
 
-    let secondaryName = '<h3 class="card-title contactName">' + contactDict.firstName2.content + ' ' + contactDict.lastName2.content + '</h3>';
-    let secondaryTitle = '<p class="card-text contactTitle">' + contactDict.title2.content + '</p>';
-    let secondaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department2.content + '</p>';
-    let secondaryEmail = '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email2.content + '" title="Contact ' + contactDict.firstName2.content + '">Email ' + contactDict.firstName2.content + '</a></p>';
-    let secondaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone2.content + '" title="Call ' + contactDict.firstName2.content + '">' + contactDict.phone2.content + '</a></p> ';
+
+
+    /***
+     *  parse for secondary name
+     * 
+     * */
+    let secondaryName = (contactDict.firstName2.content && contactDict.lastName2.content)
+                        ? '<h3 class="card-title contactName">' + contactDict.firstName2.content + ' ' + contactDict.lastName2.content + '</h3>'
+                        : '<span class="contactName visually-hidden">No Valid Name Entered</span>';
+
+    
+                        
+
+    /***
+     *  parse for secondary title
+     * 
+     * */
+    let secondaryTitle =    (contactDict.title2.content)
+                            ? '<p class="card-text contactTitle">' + contactDict.title2.content + '</p>'
+                            : '<span class="contactTitle visually-hidden">No Valid Title Entered</span>';
+
+
+
+
+    /***
+     *  parse for secondary department
+     * 
+     * */
+    let secondaryDepartment =   (contactDict.department2.content)
+                                ? '<p class="card-text contactDepartment">' + contactDict.department2.content + '</p>'
+                                : '<span class="contactDepartment visually-hidden">No Valid Department Entered</span>';
+
+
+
+
+    /***
+     *  parse for secondary email
+     * 
+     * */
+    let secondaryEmail =    (contactDict.email2.content && contactDict.firstName2.content)
+                            ? '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email2.content + '" title="Contact ' + contactDict.firstName2.content + '">Email ' + contactDict.firstName2.content + '</a></p>'
+                            : '<span class="contactEmail visually-hidden">No Valid Email Entered</span>';
+
+
+
+
+    /***
+     *  parse for secondary phone
+     * 
+     * */
+    let secondaryPhone =    (contactDict.phone2.content && contactDict.firstName2.content)
+                            ? '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone2.content + '" title="Call ' + contactDict.firstName2.content + '">' + contactDict.phone2.content + '</a></p> '
+                            : '<span class="contactPhone visually-hidden">No Valid Phone Entered</span>';
 
 
 

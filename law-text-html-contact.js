@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.8
+ *      @version 1.9
  */
 
 
@@ -107,8 +107,9 @@
     let closeCardBody = '</div>';
     let openPrimary = '<address class="newsCenterContactPrimary" id="primary' + contactDict.contentId.content + '">';
     let closePrimary = '</address>';
-    let openSecondary = '<address class="newsCenterContactSecondary visually-hidden" id="secondary' + contactDict.contentId.content + '">';
+    let openSecondary = '<address class="newsCenterContactSecondary visually-hidden">';
     let closeSecondary = '</address>';
+    let secondaryName = '<span class="contactName visually-hidden">No Valid Name Entered</span>';
     let primaryName = '<h3 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h3>';
     let primaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
     let primaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department1.content + '</p>';
@@ -117,14 +118,16 @@
 
 
 
-
     /***
      *  parse for secondary name
      * 
+     *  When a proper value exists, unhide all secondary fields with valid properties
+     * 
      * */
-    let secondaryName = (contactDict.firstName2.content && contactDict.lastName2.content)
-                        ? '<h3 class="card-title contactName">' + contactDict.firstName2.content + ' ' + contactDict.lastName2.content + '</h3>'
-                        : '<span class="contactName visually-hidden">No Valid Name Entered</span>';
+    if (contactDict.firstName2.content && contactDict.lastName2.content) {
+        secondaryName = '<h3 class="card-title contactName">' + contactDict.firstName2.content + ' ' + contactDict.lastName2.content + '</h3>';
+        openSecondary = '<address class="newsCenterContactSecondary" id="secondary' + contactDict.contentId.content + '">';
+    }
 
     
                         

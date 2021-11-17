@@ -1,6 +1,8 @@
-# School of Law Newsroom
+# School of Law News Center
 
-## ToDo
+News Center Story and Organizer content types
+
+## Todo
 
 - [x] Add Major Minor Feed to Content Type
 - [x] Test Selector in law/organizer/news layout

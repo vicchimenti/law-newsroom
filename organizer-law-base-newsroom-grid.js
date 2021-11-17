@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Grid
  *          Category Organizer
  *
- *      @version 6.11
+ *      @version 6.12
  */
 
 
@@ -454,11 +454,6 @@ function main(header, midder, footer) {
                 let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
                 let topicName = topic.getName();
 
-                log('categoryName: ' + categoryName);
-
-                log('topicName: ' + topicName);
-
-
                 if (topicName == categoryName) {
                     matchingTopics.push(validContent[contentItem]);
                 }
@@ -512,8 +507,8 @@ function main(header, midder, footer) {
          * Determine Pagination
          */
         if (bPaginate && !bSummFirst) {
-            // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
 
+            // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
             var contentInfo = [];
             for (var i = nStart - 1; i < matchingTopics.length && !isLimitPassed(i, LIMIT); i++) {
                 var tci = new TargetContentInfo(matchingTopics[i].CachedContent, oSection, language);
@@ -534,17 +529,6 @@ function main(header, midder, footer) {
             paginator.setBeforeAndAfterHTML(header, footer);
             paginator.setPreview(isPreview);
             paginator.write(document, dbStatement, publishCache, section, language, isPreview, vector);
-
-            // eventually we may want an else if here EX: else if (bPaginate && bSummFirst) {...}
-            // that would allow when the Summary and Paginate option are both chosen
-            // however at this time I haven't been able to produce a solution that merges
-            // the paginator with the oCP but it should be possible with enough time to work it out
-            // for now we go straight to the else
-            // and we must communicate to our departments that we don't support that functionality
-            // when they try to select both summary and paginator
-            // Victor 7/2020
-
-
 
 
         } else {
@@ -568,9 +552,6 @@ function main(header, midder, footer) {
             let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
             let iterations = 0;
 
-            log("maxIterations: " + maxIterations);
-            log("iterations: " + iterations);
-            log("start: " + start);
 
 
 
@@ -590,32 +571,15 @@ function main(header, midder, footer) {
                     iterations++;
                 } while (start < matchingTopics.length && iterations < maxIterations);
 
-                log("maxIterations: " + maxIterations);
-                log("iterations: " + iterations);
-                log("start: " + start);
-
-
             } else {
 
                 /**
                  * when no matching items write all categories
                  * 
                  */
-                 do {
-                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[start].Content, LAYOUT, isPreview);
-                    start++;
-                    iterations++;
-                } while (start < validContent.length && iterations < LIMIT);
-
-                log("maxIterations else: " + maxIterations);
-                log("iterations else: " + iterations);
-                log("start else: " + start);
-
-
-                // for (let story in validContent) {
-                //     oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
-                // }
-
+                for (let story in validContent) {
+                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
+                }
             }
 
 

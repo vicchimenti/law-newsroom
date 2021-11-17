@@ -114,11 +114,11 @@
     let primaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone1.content + '" title="Call ' + contactDict.firstName1.content + '">' + contactDict.phone1.content + '</a></p> ';
 
 
-    let secondaryName = '<h3 class="card-title contactName">' + contactDict.firstName1.content + ' ' + contactDict.lastName1.content + '</h3>';
-    let secondaryTitle = '<p class="card-text contactTitle">' + contactDict.title1.content + '</p>';
-    let secondaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department1.content + '</p>';
-    let secondaryEmail = '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email1.content + '" title="Contact ' + contactDict.firstName1.content + '">Email ' + contactDict.firstName1.content + '</a></p>';
-    let secondaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone1.content + '" title="Call ' + contactDict.firstName1.content + '">' + contactDict.phone1.content + '</a></p> ';
+    let secondaryName = '<h3 class="card-title contactName">' + contactDict.firstName2.content + ' ' + contactDict.lastName2.content + '</h3>';
+    let secondaryTitle = '<p class="card-text contactTitle">' + contactDict.title2.content + '</p>';
+    let secondaryDepartment = '<p class="card-text contactDepartment">' + contactDict.department2.content + '</p>';
+    let secondaryEmail = '<p class="card-text emailWrapper"><a class="contactEmail" href="mailto:' + contactDict.email2.content + '" title="Contact ' + contactDict.firstName2.content + '">Email ' + contactDict.firstName2.content + '</a></p>';
+    let secondaryPhone = '<p class="card-text phoneWrapper"><a class="contactPhone" href="tel:' + contactDict.phone2.content + '" title="Call ' + contactDict.firstName2.content + '">' + contactDict.phone2.content + '</a></p> ';
 
 
 

@@ -100,8 +100,8 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    let beginningHTML = '<div class="newsCenterContact col-12 col-xs-12 order-xs-last col-md-4 col-md-pull-8 order-md-2 card border-0" id="contact' + contactDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
-    let endingHTML = '<hr class="articleBorderBottom"></div>';
+    let beginningHTML = '<div class="newsCenterContact col-12 col-xs-12 order-xs-4 col-md-4 col-md-pull-8 order-md-2" id="contact' + contactDict.contentId.content + '" data-position-default="Main" data-position-selected="Main"><div class="card border-0">';
+    let endingHTML = '<hr class="articleBorderBottom"></div></div>';
     let headerString = '<h2 class="newsCenterContactHeader card-header text-center border-0 px-0">' + contactDict.contactHeader.content + '</h2>';
     let openCardBody = '<div class="newsCenterContactBody card-body px-0">';
     let closeCardBody = '</div>';

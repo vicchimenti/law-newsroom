@@ -58,8 +58,8 @@
   */
  function getMediaInfo(mediaID) {
  
-     var mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-     var media = mediaManager.get(mediaID, language);
+     let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+     let media = mediaManager.get(mediaID, language);
  
      return media;
  }
@@ -72,8 +72,8 @@
   */
  function readMedia(mediaID) {
  
-     var mediaObj = getMediaInfo(mediaID);
-     var oMediaStream = mediaObj.getMedia();
+     let mediaObj = getMediaInfo(mediaID);
+     let oMediaStream = mediaObj.getMedia();
  
      return oMediaStream;
  }
@@ -121,6 +121,13 @@
  *      Write the document
  */
 try {
+
+
+    /***
+     *      Dictionary of content
+     * */
+    let majorDict = {
+
 
     /***
      *  Assign local variables from the content type's fields

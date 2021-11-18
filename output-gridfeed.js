@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 7.3
+ *     @version 7.4
  */
 
 
@@ -183,8 +183,8 @@ try {
      let openHidden = '<div class="searchSortFields visually-hidden">';
      let closeHidden = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-     let openImageWrapper = '<figure class="figure newsroomImageWrapper visually-hidden">';
-     let closeImageWrapper = '</figure>';
+     let openImageWrapper = '<span class="newsroomImageWrapper visually-hidden">';
+     let closeImageWrapper = '</span>';
      let listOfCats = '<div class="newsroomArticle tags hidden">No Tags Entered</div>';
     //  let hyphen = " | ";
     //  let events = 'Events';
@@ -383,10 +383,10 @@ try {
         let imageDefaultAlt = gridDict.articleTitle.content;
 
         imageString =   (info.check())
-                        ? '<img src="' + gridDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                        : '<img src="' + gridDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+                        ? '<img src="' + gridDict.frontPageImage.content + '" class="articleImage card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        : '<img src="' + gridDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
     
-        openImageWrapper = '<figure class="figure newsroomImageWrapper">';
+        openImageWrapper = '<span class="newsroomImageWrapper">';
     }
 
 

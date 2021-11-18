@@ -186,10 +186,10 @@ try {
      let openImageWrapper = '<figure class="figure hidden visually-hidden">';
      let closeImageWrapper = '</figure>';
      let listOfCats = '<div class="newsroomArticle tags hidden">No Tags Entered</div>';
-     let hyphen = " | ";
-     let events = 'Events';
-     let announcements = 'Announcements';
-     let suLawInTheNews = 'In the News';
+    //  let hyphen = " | ";
+    //  let events = 'Events';
+    //  let announcements = 'Announcements';
+    //  let suLawInTheNews = 'In the News';
      let openFooter = '<div class="card-footer">'
      let closeFooter = '</div>';
 
@@ -199,9 +199,9 @@ try {
 
     // var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>" + articleSubtitle + "</p></span>";
     // var titleLink = "";
-    var listItems = "";
-    var listOfTags = "";
-    var publishedLink = "";
+    // var listItems = "";
+    // var listOfTags = "";
+    // var publishedLink = "";
     // var thumbNailString = "";
 
     var beginningHTML = '<article class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" id="newsGrid' + gridDict.contentId.content + '" aria-label="' + gridDict.headline.content + '" >';

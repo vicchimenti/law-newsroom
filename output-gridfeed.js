@@ -197,7 +197,7 @@ try {
      let dateline = '<medium class="newsroomArticlePublishedDate">' + gridDict.publishedDate.content + '</medium>';
 
 
-    var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>" + articleSubtitle + "</p></span>";
+    // var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>" + articleSubtitle + "</p></span>";
     var titleLink = "";
     var listItems = "";
     var listOfTags = "";
@@ -321,8 +321,8 @@ try {
      *  verify category pin
      * 
      * */
-    let pinnedCat = catPin
-                    ? '<span class="catPinned">' + catPin + '</span>'
+    let pinnedCat = gridDict.catPin.content
+                    ? '<span class="catPinned">' + gridDict.catPin.content + '</span>'
                     : '<span class="catPinned">No Pin Selected</span>';
 
 

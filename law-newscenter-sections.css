@@ -50,14 +50,14 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     padding: 0%;
 }
 
-div.gridFeedItem div.newsroomArticleBlurb.container div.row {
+.gridFeedItem div.newsroomArticleBlurb.container div.row {
     margin-left: 0;
     margin-right: 1px;
     padding-left: 0;
     padding-right: 0;
 }
 
-div.gridFeedItem h3.card-title {
+.gridFeedItem h3.card-title {
     font-size: 1.25rem;
     font-weight: 450;
     margin-top: 0;
@@ -65,14 +65,14 @@ div.gridFeedItem h3.card-title {
     padding-bottom: 10px;
 }
 
-div.gridFeedItem p {
+.gridFeedItem p {
     font-size: 1rem;
     font-weight: 450;
     line-height: inherit;
     margin-bottom: 0;
 }
 
-div.gridFeedItem .newsroomArticlePublishedDate {
+.gridFeedItem .newsroomArticlePublishedDate {
     font-size: 1rem;
     font-weight: 500;
 }
@@ -182,7 +182,7 @@ div.card span.newsroomArticleSpecialCategory {
 /* ***** Mobile Up ***** */
 @media screen and (min-width: 576px) {
     /* If Bootstrap 4 only */
-    div.gridFeedItem {
+    .gridFeedItem {
         flex: auto;
     }
 }
@@ -199,7 +199,7 @@ div.card span.newsroomArticleSpecialCategory {
 
 @media screen and (max-width: 1200px) {
     /* If Bootstrap 4 only */
-    .card-deck div.gridFeedItem.card {
+    .card-deck .gridFeedItem.card {
         flex: auto;
     }
 }
@@ -219,22 +219,22 @@ div.card span.newsroomArticleSpecialCategory {
         padding-left: 15px;
     }
 
-    div.gridOrganizerWrapper h2.organizerTitle{
+    div.gridOrganizerWrapper h2.organizerTitle {
         padding-left: 5px;
     }
 
-    div.gridFeedItem {
+    .gridFeedItem {
         font-size: 1rem;
         font-weight: 400;
         max-width: 100%;
     }
 
-    div.gridFeedItem h3 {
+    .gridFeedItem h3 {
         font-size: 1rem;
         font-weight: 400;
     }
     
-    div.gridFeedItem p {
+    .gridFeedItem p {
         font-size: 1rem;
         font-weight: 400;
     }

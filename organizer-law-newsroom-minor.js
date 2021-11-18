@@ -16,6 +16,9 @@ try {
     var base = readMedia(3050627);
     eval(String(base));
 
+    
+
+    let contactField = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Contact Info" output="selective-output" format="$value" />');
     let titleField = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="$value" />');
 
     var header, midder, footer;

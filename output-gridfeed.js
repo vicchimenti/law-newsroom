@@ -294,11 +294,11 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
-    } else {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
-    }
+    // if (articleFullBody == "") {
+    //     titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
+    // } else {
+    //     titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
+    // }
 
 
 

@@ -46,8 +46,12 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     padding: 0;
 }
 
+.gridFeedItem figure.newsroomImageWrapper {
+    margin: 0;
+}
+
 .gridFeedItem .articleImage {
-    padding: 0%;
+    padding: 0;
 }
 
 .gridFeedItem div.newsroomArticleBlurb.container div.row {

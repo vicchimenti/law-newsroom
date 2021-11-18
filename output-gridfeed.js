@@ -158,8 +158,8 @@ try {
      let openHidden = '<div class="searchSortFields visually-hidden">';
      let closeHidden = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-     let openImageWrapper = '<span class="newsroomImageWrapper visually-hidden">';
-     let closeImageWrapper = '</span>';
+     let openImageWrapper = '<figure class="figure newsroomImageWrapper visually-hidden">';
+     let closeImageWrapper = '</figure>';
      let listOfCats = '<div class="newsroomArticle tags hidden">No Tags Entered</div>';
      let openFooter = '<div class="card-footer">'
      let closeFooter = '</div>';

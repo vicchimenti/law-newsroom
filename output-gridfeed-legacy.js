@@ -1,5 +1,5 @@
 /***
- *     @author Victor Chimenti, MSCS
+ *     @author Victor Chimenti, MSCS-SE '20
  *     @file output-gridfeed.js
  *     @see Seattle University School of Law Newsroom - output/gridfeed
  *
@@ -12,116 +12,12 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 7.0
+ *     @version 6.5
  */
 
 
 
 
-
-
-
-
-/***
- *      Import T4 Utilities
- */
- importClass(com.terminalfour.media.IMediaManager);
- importClass(com.terminalfour.spring.ApplicationContextProvider);
- importClass(com.terminalfour.publish.utils.BrokerUtils);
- importClass(com.terminalfour.media.utils.ImageInfo);
- 
- 
- 
- 
- /***
-  *      Extract values from T4 element tags
-  *      and confirm valid existing content item field
-  */
- function getContentValues(tag) {
-     try {
-         let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
-         return {
-             isError: false,
-             content: _tag == '' ? null : _tag
-         }
-     } catch (error) {
-         return {
-             isError: true,
-             message: error.message
-         }
-     }
- }
- 
- 
- 
- 
- /***
-  *      Returns a media object
-  */
- function getMediaInfo(mediaID) {
- 
-     var mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-     var media = mediaManager.get(mediaID, language);
- 
-     return media;
- }
- 
- 
- 
- 
- /***
-  *      Returns a media stream object
-  */
- function readMedia(mediaID) {
- 
-     var mediaObj = getMediaInfo(mediaID);
-     var oMediaStream = mediaObj.getMedia();
- 
-     return oMediaStream;
- }
- 
- 
- 
- 
- /***
-  *      Returns an array of list items
-  */
- function assignList(arrayOfValues) {
- 
-     let listValues = '';
- 
-     for (let i = 0; i < arrayOfValues.length; i++) {
- 
-         listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
-     }
- 
-     return listValues;
- }
- 
- 
- 
- 
- /***
-  *      Write the document
-  */
- function writeDocument(array) {
- 
-     for (let i = 0; i < array.length; i++) {
- 
-         document.write(array[i]);
-     }
- }
-  
-
-
-
-
-
-
-
-/***
- *      Write the document
- */
 try {
 
     /***

@@ -140,7 +140,7 @@ try {
         internalLink:       getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
         internalLinkText:   getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
         fullTextLink:       getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
-        
+
 
 
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
@@ -167,7 +167,7 @@ try {
     var internalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linkurl' modifiers='nav_sections' />");
     var internalLinkText = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linktext' modifiers='nav_sections' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='fulltext' use-element='true' filename-element='Headline' modifiers='striptags,htmlentities' />");
-    var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
+    var catTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
     var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
     var catPin = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category Pin' output='normal' display_field='value' />");
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />"); 
@@ -199,8 +199,8 @@ try {
      *  parse the list of tags, add <li> tags
      * 
      * */
-    // if (fieldTags != "") {
-    //     var arrayOfTags = fieldTags.split(',');
+    // if (catTags != "") {
+    //     var arrayOfTags = catTags.split(',');
     //     for (let i = 0; i < arrayOfTags.length; i++) {
     //         listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
     //     }
@@ -215,8 +215,8 @@ try {
      *  when a special topic is present we parse for valid links
      * 
      * */
-    if (fieldTags != "") {
-    var arrayOfTags = fieldTags.split(',');
+    if (catTags != "") {
+    var arrayOfTags = catTags.split(',');
     for (let i = 0; i < arrayOfTags.length; i++) {
         let currentItem = arrayOfTags[i].trim();
         listItems += '<li class="tag">' + currentItem + '</li>';
@@ -226,7 +226,7 @@ try {
     listOfTags = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listItems + '</ul></div>';
     
     // when tags exist check for Special Categories - SU Law in the News
-    if (fieldTags.includes("SU Law in the News")) {
+    if (catTags.includes("SU Law in the News")) {
         beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
@@ -241,7 +241,7 @@ try {
         publishedLink = externalLinkString;
         
     // when tags exist check for Special Categories - Announcements
-    } else if (fieldTags.includes("Announcements")) {
+    } else if (catTags.includes("Announcements")) {
         beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
@@ -256,7 +256,7 @@ try {
         publishedLink = internalLinkString;
         
     // when tags exist check for Special Categories - Announcements
-    } else if (fieldTags.includes("Events")) {
+    } else if (catTags.includes("Events")) {
         beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 

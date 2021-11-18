@@ -47,6 +47,11 @@ hr.articleBorderBottom {
     opacity: unset;
 }
 
-.contactWrapper {
-    display: none;
+
+/* Medium devices */
+@media screen and (max-width: 991.98px) {
+
+    .contactWrapper {
+        display: none;
+    }
 }

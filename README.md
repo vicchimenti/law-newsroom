@@ -34,3 +34,4 @@ News Center Story and Organizer content types
 - [x] Grdifeed title link
 - [] fulltext to article title
 - [] image wraper to fig on grid
+- [] cat feed

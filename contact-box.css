@@ -46,3 +46,7 @@ hr.articleBorderBottom {
     margin: 0;
     opacity: unset;
 }
+
+.contactWrapper {
+    display: none;
+}

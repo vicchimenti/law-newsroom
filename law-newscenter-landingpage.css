@@ -28,6 +28,17 @@ div.gridOrganizerWrapper .gridFeedItem {
     font-weight: 500;
 }
 
+.gridFeedItem .newsroomArticlePublishedDate {
+    color: #ffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.gridFeedItem .card-footer {
+    background-color: #807060;
+    border-top: 1px solid #807060;
+}
+
 
 /* ***  Large min Defaults min 1200   *** */
 

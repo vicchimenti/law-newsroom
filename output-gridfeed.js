@@ -133,6 +133,8 @@ try {
         headline:       getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
         frontPageImage: getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
         articleSummary: getContentValues('<t4 type="content" name="Article Subtitle" output="normal" modifiers="striptags,htmlentities" />'),
+        articleFullBody:    getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
+        publishedDate:      getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
 
 
         contentId:      getContentValues('<t4 type="meta" meta="content_id" />')

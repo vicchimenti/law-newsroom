@@ -31,3 +31,4 @@ News Center Story and Organizer content types
 - [] Add aria-label or title field to fulltext link
 - [] Trim whitespace from announcement feed
 - [] Create Generic Grid Organizer for Archives
+- [] Grdifeed title link

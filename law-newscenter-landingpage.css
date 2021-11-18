@@ -23,6 +23,15 @@ div.gridOrganizerWrapper .gridFeedItem {
     max-width: 100%;
 }
 
+.gridFeedItem figure.newsroomImageWrapper {
+    margin: 0;
+}
+
+.gridFeedItem .figure-img.articleImage {
+    margin: 0;
+    padding: 0;
+}
+
 .gridFeedItem .newsroomArticlePublishedDate {
     font-size: 1rem;
     font-weight: 500;

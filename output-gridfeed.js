@@ -349,7 +349,7 @@ try {
      * 
      * */
     let publishedLink = (gridDict.sectionLink.content && gridDict.sectionLinkText.content)
-                        ? '<span class="sectionLink credits"><a href="' + gridDict.sectionLink.content + '" class="card-link" target="_blank" title="' + gridDict.sectionLinkText.content + '"><em>' + gridDict.sectionLinkText.content + '</em></a></span>'
+                        ? '<span class="newsLink credits"><a class="card-link" target="_blank" href="' + gridDict.sectionLink.content + '" title="Visit ' + gridDict.sectionLinkText.content + '"><em>' + gridDict.sectionLinkText.content + '</em></a></span>'
                         : (gridDict.externalLink.content && gridDict.externalLinkText.content)
                         ? '<span class="newsLink"><a href="' + gridDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + gridDict.externalLinkText.content + '"><em>' + gridDict.externalLinkText.content + '</em></a></span>'
                         : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';

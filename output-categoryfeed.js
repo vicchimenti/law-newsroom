@@ -1,19 +1,16 @@
 /***
- *     @author Victor Chimenti, MSCS-SE '20
+ *     @author Victor Chimenti, MSCS
+ *     @see Seattle University School of Law News Center Category
  *     @file output-categoryfeed.js
- *     @see Seattle University School of Law Newsroom
+ *          Law - Newscenter Story
+ *          ID: 5296
  *
  *     This new content type layout is a smart layout for all items in the
- *     category newsfeed used by the School of Law Newsroom. This content type
- *     ensures that images, headlines, by-lines, tags and the abstract
- *     summary layout as expected.
- *
- *     This content layout will be the organizer layout and will link to the
- *     full text layout to reveal the full article.
+ *     category newsfeed used by the School of Law Newsroom.
  *
  *     Document will write once when the page loads
  *
- *     @version 5.7
+ *     @version 6.0
  */
 
 

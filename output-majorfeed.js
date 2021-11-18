@@ -113,6 +113,9 @@ function writeDocument(array) {
 
 
 
+/***
+ *      Main
+ */
 try {
 
 

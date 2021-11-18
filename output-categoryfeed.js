@@ -113,7 +113,16 @@ function writeDocument(array) {
 
 
 
+/***
+ *      Main
+ */
 try {
+
+
+    /***
+     *      Dictionary of content
+     * */
+    let catDict = {}
 
     /***
      *  Assign local variables from the content type's fields

@@ -198,7 +198,7 @@ try {
 
 
     // var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>" + articleSubtitle + "</p></span>";
-    var titleLink = "";
+    // var titleLink = "";
     var listItems = "";
     var listOfTags = "";
     var publishedLink = "";
@@ -313,6 +313,17 @@ try {
     } else {
         thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     }
+
+
+
+
+    /***
+     *  determine if the article contains full text content
+     * 
+     * */
+    let titleLink = (majorDict.articleFullBody.content)
+                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '" >' + majorDict.headline.content + '</a></h3>'
+                    : '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
 
 
 

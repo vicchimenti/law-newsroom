@@ -57,6 +57,10 @@ div.gridOrganizerWrapper .gridFeedItem {
         padding-bottom: 25px;
     }
 
+    div.gridOrganizer.standardContent {
+        padding: 0 30px;
+    }
+
     .gridFeedItem {
         margin-bottom: 1rem;;
     }

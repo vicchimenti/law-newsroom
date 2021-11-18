@@ -403,11 +403,8 @@ try {
 
             openCardBody,
             titleLink,
-
-
             publishedLink,
             summaryString,
-            
             openHidden,
             pinnedCat,
             listOfCats,

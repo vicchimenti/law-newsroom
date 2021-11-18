@@ -383,10 +383,7 @@ try {
             
             openHidden,
             pinnedCat,
-
-
             listOfCats,
-
             closeHidden,
             closeCardBody,
             openFooter,

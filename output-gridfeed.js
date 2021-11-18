@@ -237,10 +237,10 @@ try {
         let imageDefaultAlt = gridDict.articleTitle.content;
 
         imageString =   (info.check())
-                        ? '<img src="' + gridDict.frontPageImage.content + '" class="articleImage card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                        : '<img src="' + gridDict.frontPageImage.content + '" class="articleImage card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+                        ? '<img src="' + gridDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        : '<img src="' + gridDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
     
-        openImageWrapper = '<span class="newsroomImageWrapper">';
+        openImageWrapper = '<figure class="figure newsroomImageWrapper">';
     }
 
 

@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 7.2
+ *     @version 7.3
  */
 
 
@@ -307,12 +307,12 @@ try {
      *  verify Main image and photo credits
      * 
      * */
-    if (frontPageImage == "") {
-        thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
+    // if (frontPageImage == "") {
+    //     thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
 
-    } else {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    }
+    // } else {
+    //     thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+    // }
 
 
 

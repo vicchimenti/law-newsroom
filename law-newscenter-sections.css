@@ -50,7 +50,8 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     margin: 0;
 }
 
-.gridFeedItem .articleImage {
+.gridFeedItem .figure-img.articleImage {
+    margin: 0;
     padding: 0;
 }
 
@@ -77,9 +78,17 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
 }
 
 .gridFeedItem .newsroomArticlePublishedDate {
+    color: #ffff;
     font-size: 1rem;
     font-weight: 500;
 }
+
+.gridFeedItem .card-footer {
+    background-color: #CC9F26;
+    border-top: 1px solid #CC9F26;
+}
+
+
 
 
 

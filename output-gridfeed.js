@@ -356,6 +356,7 @@ try {
     writeDocument (
         [
             beginningHTML,
+
             openImageWrapper,
             imageString,
             closeImageWrapper,
@@ -375,7 +376,6 @@ try {
             openFooter,
             dateline,
             closeFooter,
-
             endingHTML
         ]
     );

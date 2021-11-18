@@ -1,18 +1,16 @@
 /***
  *     @author Victor Chimenti, MSCS
+ *     @see Seattle University School of Law News Center Gridfeed
  *     @file output-gridfeed.js
- *     @see Seattle University School of Law Newsroom - output/gridfeed
+ *          Law - Newscenter Story
+ *          ID: 5296
  *
  *     This new content type layout is a smart layout for news items that must obey
- *     a masonry grid layout. In its first iteration this layout will be dedicated
- *     to the category news pages.
- *
- *     This content layout will be the organizer layout and will link to the
- *     full text layout to reveal the full article.
+ *     a masonry grid layout.
  *
  *     Document will write once when the page loads
  *
- *     @version 7.0
+ *     @version 7.1
  */
 
 

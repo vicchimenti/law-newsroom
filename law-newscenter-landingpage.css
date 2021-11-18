@@ -23,6 +23,11 @@ div.gridOrganizerWrapper .gridFeedItem {
     max-width: 100%;
 }
 
+.gridFeedItem .newsroomArticlePublishedDate {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 
 /* ***  Large min Defaults min 1200   *** */
 

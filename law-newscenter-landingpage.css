@@ -19,7 +19,7 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     color: #aa0000;
 }
 
-div.gridOrganizerWrapper div.gridFeedItem {
+div.gridOrganizerWrapper .gridFeedItem {
     max-width: 100%;
 }
 
@@ -35,7 +35,7 @@ div.gridOrganizerWrapper div.gridFeedItem {
         gap: 1rem;
       }
     
-      div.gridOrganizerWrapper div.gridFeedItem {
+      div.gridOrganizerWrapper .gridFeedItem {
         margin: 0;
         padding: 0;
     }

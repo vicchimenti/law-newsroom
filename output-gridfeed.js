@@ -328,6 +328,22 @@ try {
 
 
 
+    /***
+     *  process categories
+     * 
+     * */
+    if (majorDict.catTags.content) {
+
+        let arrayOfCats = majorDict.catTags.content.split(',');
+        let listItems = assignList(arrayOfCats);
+
+        // Print any tags that were selected
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+    }
+
+
+
+
 
     /***
      *  Write the document once

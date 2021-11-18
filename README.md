@@ -10,14 +10,14 @@ News Center Story and Organizer content types
 - [x] Use New Organizer for dual column flex logic
 - [x] Build organizer for major feed
 - [x] Build organizer for minor feed
-- [] Add Lazy if necessary
+- [x] Add Lazy if necessary
 - [x] Clean up category feed
 - [x] Add Grid Organizer
 - [x] Adjust sort algo for new date fields
 - [x] Adjust sort algo for radio button fields
 - [] Add mobile layout category
 - [x] Add mobile layout major minor
-- [] Address numeric sorting layout
+- [x] Address numeric sorting layout
 - [] Track Category List Bug
 - [x] Add Centerpiece layout
 - [x] Add Centerpiece logic
@@ -27,8 +27,10 @@ News Center Story and Organizer content types
 - [x] Remove contentItem class from organizers
 - [x] Build Banner
 - [x] Fix internal link bug on major and minor feeds
-- [] Adjust mobile nav to and account foir archives
+- [] Adjust mobile nav to and account for archives
 - [] Add aria-label or title field to fulltext link
 - [] Trim whitespace from announcement feed
 - [] Create Generic Grid Organizer for Archives
-- [] Grdifeed title link
+- [x] Grdifeed title link
+- [] fulltext to article title
+- [] image wraper to fig on grid

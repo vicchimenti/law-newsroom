@@ -40,13 +40,13 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     color: #aa0000;
 }
 
-div.gridFeedItem {
+.gridFeedItem {
     margin: 15px;
     max-width: 260px;
     padding: 0;
 }
 
-div.gridFeedItem .articleImage {
+.gridFeedItem .articleImage {
     padding: 0%;
 }
 

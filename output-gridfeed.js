@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 7.4
+ *     @version 7.5
  */
 
 
@@ -178,7 +178,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
+     let openCardBody = '<div class="newsroomArticleBlurb card-body"><div class="row px-0">';
      let closeCardBody = '</div></div>';
      let openHidden = '<div class="searchSortFields visually-hidden">';
      let closeHidden = '</div>';

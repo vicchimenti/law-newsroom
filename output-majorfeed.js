@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.35
+ *     @version 2.36
  */
 
 
@@ -57,8 +57,8 @@ function getContentValues(tag) {
  */
 function getMediaInfo(mediaID) {
 
-    var mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-    var media = mediaManager.get(mediaID, language);
+    let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+    let media = mediaManager.get(mediaID, language);
 
     return media;
 }
@@ -71,8 +71,8 @@ function getMediaInfo(mediaID) {
  */
 function readMedia(mediaID) {
 
-    var mediaObj = getMediaInfo(mediaID);
-    var oMediaStream = mediaObj.getMedia();
+    let mediaObj = getMediaInfo(mediaID);
+    let oMediaStream = mediaObj.getMedia();
 
     return oMediaStream;
 }

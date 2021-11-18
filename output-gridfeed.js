@@ -178,16 +178,31 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
+     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
+     let closeCardBody = '</div></div>';
+     let openHidden = '<div class="searchSortFields visually-hidden">';
+     let closeHidden = '</div>';
+     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+     let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+     let closeImageWrapper = '</figure>';
+     let listOfCats = '<div class="newsroomArticle tags hidden">No Tags Entered</div>';
+     let hyphen = " | ";
+     let events = 'Events';
+     let announcements = 'Announcements';
+     let suLawInTheNews = 'In the News';
+     let openFooter = '<div class="card-footer">'
+
+     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + gridDict.articleSummary.content + '</p></span>';
+     let dateline = '<p class="newsroomArticlePublishedDate">' + gridDict.publishedDate.content + '</p>';
+
+
     var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>" + articleSubtitle + "</p></span>";
     var titleLink = "";
     var listItems = "";
     var listOfTags = "";
     var publishedLink = "";
-    var thumbNailString = "";
-    var hyphen = " - ";
-    var events = "Events";
-    var announcements = "Announcements";
-    var suLawInTheNews = "SU Law in the News";
+    // var thumbNailString = "";
+
     var beginningHTML = '<div class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
     var endingHTML = '</div>';
 
@@ -306,7 +321,7 @@ try {
      * 
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="newsroomArticleBlurb card-body">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));

@@ -321,9 +321,9 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    let titleLink = (majorDict.articleFullBody.content)
-                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '" >' + majorDict.headline.content + '</a></h3>'
-                    : '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
+    let titleLink = (gridDict.articleFullBody.content)
+                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + gridDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + gridDict.headline.content + '" >' + gridDict.headline.content + '</a></h3>'
+                    : '<h3 class="newsroomArticleTitle card-title">' + gridDict.headline.content + '</h3>';
 
 
 

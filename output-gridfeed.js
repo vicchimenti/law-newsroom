@@ -135,10 +135,10 @@ try {
         articleSummary:     getContentValues('<t4 type="content" name="Article Subtitle" output="normal" modifiers="striptags,htmlentities" />'),
         articleFullBody:    getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
         publishedDate:      getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-        inTheNewsLink:      getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
-        inTheNewsLinkText:  getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
-        internalLink:       getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        internalLinkText:   getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
+        externalLink:      getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLinkText:  getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionLink:       getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
+        sectionLinkText:   getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
         fullTextLink:       getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
         catTags:            getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
         catPin:             getContentValues('<t4 type="content" name="Category Pin" output="normal" display_field="value" />'),
@@ -161,10 +161,10 @@ try {
     // var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Body' output='normal' display_field='value' />");
     // var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' display_field='value' />");
     // var publishedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publish Date' output='normal' date_format='MMMM d, yyyy' />");
-    // var inTheNewsLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link' output='normal' modifiers='htmlentities,js-var' />");
-    // var inTheNewsLinkText = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link Title' output='normal' display_field='value' />");    
-    // var internalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linkurl' modifiers='nav_sections' />");
-    // var internalLinkText = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linktext' modifiers='nav_sections' />");
+    // var externalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link' output='normal' modifiers='htmlentities,js-var' />");
+    // var externalLinkText = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link Title' output='normal' display_field='value' />");    
+    // var sectionLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linkurl' modifiers='nav_sections' />");
+    // var sectionLinkText = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Internal SU Link' output='linktext' modifiers='nav_sections' />");
     // var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='fulltext' use-element='true' filename-element='Headline' modifiers='striptags,htmlentities' />");
     // var catTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
     // var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
@@ -193,7 +193,7 @@ try {
      let openFooter = '<div class="card-footer">'
      let closeFooter = '</div>';
 
-     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + gridDict.articleSummary.content + '</p></span>';
+     let summaryString = '<span class="newsroomArticleLead subtitle card-text"><p>' + gridDict.articleSummary.content + '</p></span>';
      let dateline = '<medium class="newsroomArticlePublishedDate">' + gridDict.publishedDate.content + '</medium>';
 
 
@@ -246,10 +246,10 @@ try {
 //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
 //         // parse law in news for external link to original story
-//         if (inTheNewsLink == "" || inTheNewsLinkText == "") {
+//         if (externalLink == "" || externalLinkText == "") {
 //             externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
 //         } else {
-//             externalLinkString = '<span class="externalLink credits"><a href="' + inTheNewsLink + '" title="' + inTheNewsLinkText + '" target="_blank" class="card-link"><em>' + inTheNewsLinkText + '</em></a></span>';
+//             externalLinkString = '<span class="externalLink credits"><a href="' + externalLink + '" title="' + externalLinkText + '" target="_blank" class="card-link"><em>' + externalLinkText + '</em></a></span>';
 //         }
 
 //         // assign link value for publishing
@@ -261,10 +261,10 @@ try {
 //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
 //         // parse announcements for internal link to origin
-//         if (internalLink == "") {
-//             internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+//         if (sectionLink == "") {
+//             internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
 //         } else {
-//             internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkText + '" target="_blank" class="card-link"><em>' + internalLinkText + '</em></a></span>';
+//             internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
 //         }
 
 //         // assign link value for publishing
@@ -276,10 +276,10 @@ try {
 //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 
 //         // parse events for internal link to origin
-//         if (internalLink == "") {
-//             internalLinkString = '<span class="internalLink hidden">No Proper Link Provided</span>';
+//         if (sectionLink == "") {
+//             internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
 //         } else {
-//             internalLinkString = '<span class="internalLink credits"><a href="' + internalLink + '" title="' + internalLinkText + '" target="_blank" class="card-link"><em>' + internalLinkText + '</em></a></span>';
+//             internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
 //         }
 
 //         // assign link value for publishing
@@ -344,6 +344,19 @@ try {
 
 
 
+    /***
+     *  default section link
+     * 
+     * */
+    let publishedLink = (gridDict.sectionLink.content && gridDict.sectionLinkText.content)
+                        ? '<span class="newsLink"><a href="' + gridDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + gridDict.sectionLinkText.content + '"><em>' + gridDict.sectionLinkText.content + '</em></a></span>'
+                        : (gridDict.externalLink.content && gridDict.externalLinkText.content)
+                        ? '<span class="newsLink"><a href="' + gridDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + gridDict.externalLinkText.content + '"><em>' + gridDict.externalLinkText.content + '</em></a></span>'
+                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+
+
+
+
 
     /***
      *  Write the document once
@@ -374,10 +387,14 @@ try {
             beginningHTML,
 
             openImageWrapper,
+
             imageString,
             closeImageWrapper,
+
             openCardBody,
             titleLink,
+
+
             publishedLink,
             summaryString,
             

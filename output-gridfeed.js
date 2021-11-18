@@ -340,6 +340,19 @@ try {
 
 
     /***
+     *  default section link
+     * 
+     * */
+    let publishedLink = (gridDict.sectionLink.content && gridDict.sectionLinkText.content)
+                        ? '<span class="newsLink credits"><a class="card-link" target="_blank" href="' + gridDict.sectionLink.content + '" title="Visit ' + gridDict.sectionLinkText.content + '"><em>' + gridDict.sectionLinkText.content + '</em></a></span>'
+                        : (gridDict.externalLink.content && gridDict.externalLinkText.content)
+                        ? '<span class="newsLink credits"><a class="card-link" target="_blank" href="' + gridDict.externalLink.content + '" title="Visit ' + gridDict.externalLinkText.content + '"><em>' + gridDict.externalLinkText.content + '</em></a></span>'
+                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+
+
+
+
+    /***
      *  process categories
      * 
      * */
@@ -351,20 +364,6 @@ try {
         // Print any tags that were selected
         listOfCats = '<div class="newsroomArticle tags topics"><ul class="categories">' + listItems + '</ul></div><br>';
     }
-
-
-
-
-    /***
-     *  default section link
-     * 
-     * */
-    let publishedLink = (gridDict.sectionLink.content && gridDict.sectionLinkText.content)
-                        ? '<span class="newsLink credits"><a class="card-link" target="_blank" href="' + gridDict.sectionLink.content + '" title="Visit ' + gridDict.sectionLinkText.content + '"><em>' + gridDict.sectionLinkText.content + '</em></a></span>'
-                        : (gridDict.externalLink.content && gridDict.externalLinkText.content)
-                        ? '<span class="newsLink credits"><a class="card-link" target="_blank" href="' + gridDict.externalLink.content + '" title="Visit ' + gridDict.externalLinkText.content + '"><em>' + gridDict.externalLinkText.content + '</em></a></span>'
-                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
-
 
 
 

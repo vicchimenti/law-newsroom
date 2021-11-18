@@ -1,4 +1,9 @@
 /* ***** Contact Box ***** */
+
+.contactWrapper {
+    margin-right: 2rem;
+}
+
 .newsCenterContact {
     color: #000000;
     font-family: 'Montserrat';

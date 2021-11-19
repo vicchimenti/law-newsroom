@@ -52,33 +52,6 @@ function getContentValues(tag) {
  
  
  
- 
-/***
- *      Returns a media object
- */
-// function getMediaInfo(mediaID) {
-
-//     let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-//     let media = mediaManager.get(mediaID, language);
-
-//     return media;
-// }
-
-
-
-
-/***
- *      Returns a media stream object
- */
-// function readMedia(mediaID) {
-
-//     let mediaObj = getMediaInfo(mediaID);
-//     let oMediaStream = mediaObj.getMedia();
-
-//     return oMediaStream;
-// }
-
-
 
 
 /***

@@ -151,24 +151,25 @@ div.newsroomOrganizer.card-deck .card {
     border: none;
 }
 
-div.newsroomCategoryFeedItem div.newsroomArticleBlurb.card-body {
-    padding: 0%;
+.newsroomCategoryFeedItem .newsroomArticleBlurb.card-body {
+    margin: 0;
+    padding: 0;
 }
 
-div.newsroomCategoryFeedItem h3 {
+.newsroomCategoryFeedItem h3 {
     font-size: 1.75rem;
     font-weight: 450;
     margin-bottom: 10px;
     padding-bottom: 10px;
 }
 
-div.newsroomCategoryFeedItem p {
+.newsroomCategoryFeedItem p {
     font-size: 1.25rem;
     font-weight: 450;
     line-height: 1.75rem;
 }
 
-div.newsroomCategoryFeedItem ul {
+.newsroomCategoryFeedItem ul {
     font-size: 1.25rem;
     font-weight: 450;
     margin-bottom: 0;
@@ -178,7 +179,7 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
     font-size: 1.25rem;
 }
 
-div.card span.newsroomArticleSpecialCategory {
+.card span.newsroomArticleSpecialCategory {
     color: #aa0000;
 }
 

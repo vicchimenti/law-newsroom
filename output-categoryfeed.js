@@ -56,13 +56,13 @@ function getContentValues(tag) {
 /***
  *      Returns a media object
  */
-function getMediaInfo(mediaID) {
+// function getMediaInfo(mediaID) {
 
-    let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-    let media = mediaManager.get(mediaID, language);
+//     let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+//     let media = mediaManager.get(mediaID, language);
 
-    return media;
-}
+//     return media;
+// }
 
 
 
@@ -70,13 +70,13 @@ function getMediaInfo(mediaID) {
 /***
  *      Returns a media stream object
  */
-function readMedia(mediaID) {
+// function readMedia(mediaID) {
 
-    let mediaObj = getMediaInfo(mediaID);
-    let oMediaStream = mediaObj.getMedia();
+//     let mediaObj = getMediaInfo(mediaID);
+//     let oMediaStream = mediaObj.getMedia();
 
-    return oMediaStream;
-}
+//     return oMediaStream;
+// }
 
 
 
@@ -386,7 +386,7 @@ try {
 
             pinnedItem,
             listOfCats,
-            
+
             closeHidden,
 
             closeCardBody,

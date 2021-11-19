@@ -20,11 +20,6 @@ div#MainZone div.container {
 
 /* *****  Grid Organizer customizations  **** */
 
-div.gridOrganizerWrapper {
-    background-color: #f7f7f7;
-    padding-bottom: 50px;
-} 
-
 div.gridOrganizer.standardContent {
     display: flex;
     flex: 0 0 100%;
@@ -197,49 +192,62 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
 **/
 
 
-/* ***** Mobile Up ***** */
-@media screen and (min-width: 576px) {
-    /* If Bootstrap 4 only */
-    .gridFeedItem {
-        flex: auto;
+/* ***** Desktop ***** */
+@media screen and (min-width: 992px) {
+
+    .gridOrganizerWrapper {
+        background-color: #f7f7f7;
+        padding-bottom: 50px;
+    }
+
+    .newsroomOrganizerWrapper .card-deck {
+        width: 50%;
     }
 }
 
-@media screen and (min-width: 767.999px) {
+
+
+/* ***** Mobile Up ***** */
+/* @media screen and (min-width: 576px) {
+    .gridFeedItem {
+        flex: auto;
+    }
+} */
+
     /* If Bootstrap 4 only */
+/* @media screen and (min-width: 767.999px) {
     div.gridOrganizerWrapper {
         padding: 0 50px 50px 50px;
     }
-}
+} */
 
 
 /* ***** Desktop down ***** */
 
-@media screen and (max-width: 1200px) {
-    /* If Bootstrap 4 only */
+/* @media screen and (max-width: 1200px) {
     .card-deck .gridFeedItem.card {
         flex: auto;
     }
-}
+} */
 
-@media screen and (max-width: 767.999px) {
+@media screen and (max-width: 991.99px) {
 
     h2.organizerTitle {
         font-size: 1.75rem;;
-        margin-left: 10px;
+        /* margin-left: 10px;
         margin-right: 10px;
         padding-left: 15px;
-        padding-right: 10px;
+        padding-right: 10px; */
     }
 
-    div.gridOrganizerWrapper {
+    /* div.gridOrganizerWrapper {
         padding-bottom: 15px;
         padding-left: 15px;
-    }
+    } */
 
-    div.gridOrganizerWrapper h2.organizerTitle {
+    /* div.gridOrganizerWrapper h2.organizerTitle {
         padding-left: 5px;
-    }
+    } */
 
     .gridFeedItem {
         font-size: 1rem;
@@ -257,27 +265,27 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
         font-weight: 400;
     }
 
-    div.newsroomCategoryFeedItem {
+    /* div.newsroomCategoryFeedItem {
         margin-left: 10px;
         margin-right: 10px;
         padding-left: 15px;
         padding-right: 15px;
-    }
+    } */
 
-    div.newsroomCategoryFeedItem h3 {
+    .newsroomCategoryFeedItem h3 {
         font-size: 1rem;
         font-weight: 400;
     }
 
-    div.newsroomCategoryFeedItem p {
+    .newsroomCategoryFeedItem p {
         font-size: 1rem;
         font-weight: 400;
     }
 
-    div.newsroomCategoryFeedItem ul {
+    /* .newsroomCategoryFeedItem ul {
         font-size: 1rem;
         font-weight: 400;
-    }
+    } */
 
     div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
         font-size: 1rem;

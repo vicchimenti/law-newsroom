@@ -471,7 +471,6 @@ try {
 
             pinnedItem,
             listOfCats,
-
             closeHidden,
             closeCardBody,
             endingHTML

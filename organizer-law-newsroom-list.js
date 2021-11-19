@@ -25,7 +25,7 @@ try {
 	header = '<div class="newsroomOrganizerWrapper contentItem col" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
 				<div class="titleWrapper standardContent col-xs-12">\
                 <h2 class="organizerTitle text-center">' + titleField + '</h2></div>\
-				<div class="newsroomOrganizer standardContent col-xs-12 card-deck">';
+				<div class="newsroomOrganizer standardContent col-xs-12 card-deck d-flex justify-content-center">';
 	midder = '';
 	footer = '</div></div>';
         

@@ -207,6 +207,18 @@ try {
 
 
 
+
+    /***
+     *  determine if the article contains full text content
+     * 
+     * */
+    let titleLink = (catDict.articleFullBody.content)
+                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + catDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + catDict.headline.content + '" >' + catDict.headline.content + '</a></h3>'
+                    : '<h3 class="newsroomArticleTitle card-title">' + catDict.headline.content + '</h3>';
+
+
+
+
         /***
      *  parse the list of tags, add <li> tags
      *  whenever there is tag we check for special topics
@@ -378,8 +390,11 @@ try {
             openCardBody,
 
             titleLink,
+
             publishedLink,
+
             summaryString,
+
             dateline,
 
             openHidden,
@@ -388,7 +403,6 @@ try {
             listOfCats,
 
             closeHidden,
-
             closeCardBody,
             endingHTML
         ]

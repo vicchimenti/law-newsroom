@@ -255,7 +255,6 @@ try {
 
 
 
-
     /***
      *  determine if the article contains full text content
      * 
@@ -451,9 +450,7 @@ try {
             titleLink,
             publishedLink,
             summaryString,
-
             dateline,
-
             openHidden,
 
             pinnedItem,

@@ -447,21 +447,21 @@ try {
      *  Write the document once
      * 
      * */
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write('<div class="newsroomArticleBlurb card-body">');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
-    document.write('<div class="creditsWrapper card-text hidden">');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
-    document.write('</div>'); // close credits div
-    document.write(dateline);
-    document.write('<div class="hidden">' + listOfTags + '</div>');
-    document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
-    document.write('</div>'); // close newsroomArticleBlurb and row divs
-    document.write(endingHTML);
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
+    // document.write('<div class="newsroomArticleBlurb card-body">');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    // document.write('<span class="newsroomArticleLead card-text"><p>' + articleSummary + '</p></span>');
+    // document.write('<div class="creditsWrapper card-text hidden">');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
+    // document.write('</div>'); // close credits div
+    // document.write(dateline);
+    // document.write('<div class="hidden">' + listOfTags + '</div>');
+    // document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
+    // document.write('</div>'); // close newsroomArticleBlurb and row divs
+    // document.write(endingHTML);
 
 
 

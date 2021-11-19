@@ -196,13 +196,13 @@ try {
     var externalLinkString = "";
     var internalLinkString = "";
     var publishedLink = "";
-    var hyphen = " - ";
-    var events = "Events";
-    var announcements = "Announcements";
-    var suLawInTheNews = "SU Law in the News";
-    var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
-    var endingHTML = '<hr class="articleBorderBottom"></div>';
+    // var hyphen = " - ";
+    // var events = "Events";
+    // var announcements = "Announcements";
+    // var suLawInTheNews = "SU Law in the News";
+    // var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
+    // var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
+    // var endingHTML = '<hr class="articleBorderBottom"></div>';
 
 
 
@@ -215,64 +215,64 @@ try {
      *  when a special topic is present we parse for valid links
      * 
      * */
-    if (catTags != "") {
-        var arrayOfTags = catTags.split(',');
-        for (let i = 0; i < arrayOfTags.length; i++) {
-            let currentItem = arrayOfTags[i].trim();
-            listItems += '<li class="tag">' + currentItem + '</li>';
-        }
+    // if (catTags != "") {
+    //     var arrayOfTags = catTags.split(',');
+    //     for (let i = 0; i < arrayOfTags.length; i++) {
+    //         let currentItem = arrayOfTags[i].trim();
+    //         listItems += '<li class="tag">' + currentItem + '</li>';
+    //     }
 
-        // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
+    //     // Print any tags that were selected
+    //     listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
         
-        // when tags exist check for Special Categories - SU Law in the News
-        if (catTags.includes("SU Law in the News")) {
-            beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
+    //     // when tags exist check for Special Categories - SU Law in the News
+    //     if (catTags.includes("SU Law in the News")) {
+    //         beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
-            // parse law in news for external link to original story
-            if (externalLink == "" || externalLinkText == "") {
-                externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-            } else {
-                externalLinkString = '<span class="externalLink credits"><a href="' + externalLink + '" title="' + externalLinkText + '" target="_blank" class="card-link"><em>' + externalLinkText + '</em></a></span>';
-            }
+    //         // parse law in news for external link to original story
+    //         if (externalLink == "" || externalLinkText == "") {
+    //             externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
+    //         } else {
+    //             externalLinkString = '<span class="externalLink credits"><a href="' + externalLink + '" title="' + externalLinkText + '" target="_blank" class="card-link"><em>' + externalLinkText + '</em></a></span>';
+    //         }
 
-            // assign link value for publishing
-            publishedLink = externalLinkString;
-
-
-        // when tags exist check for Special Categories - Announcements
-        } else if (catTags.includes("Announcements")) {
-            beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
-
-            // parse announcements for internal link to origin
-            if (sectionLink == "") {
-                internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
-            } else {
-                internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
-            }
-
-            // assign link value for publishing
-            publishedLink = internalLinkString;
+    //         // assign link value for publishing
+    //         publishedLink = externalLinkString;
 
 
-        // when tags exist check for Special Categories - Announcements
-        } else if (catTags.includes("Events")) {
-            beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
-            dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+    //     // when tags exist check for Special Categories - Announcements
+    //     } else if (catTags.includes("Announcements")) {
+    //         beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
-            // parse events for internal link to origin
-            if (sectionLink == "") {
-                internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
-            } else {
-                internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
-            }
+    //         // parse announcements for internal link to origin
+    //         if (sectionLink == "") {
+    //             internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
+    //         } else {
+    //             internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
+    //         }
 
-            // assign link value for publishing
-            publishedLink = internalLinkString;            
-        }
-    }
+    //         // assign link value for publishing
+    //         publishedLink = internalLinkString;
+
+
+    //     // when tags exist check for Special Categories - Announcements
+    //     } else if (catTags.includes("Events")) {
+    //         beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
+    //         dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
+
+    //         // parse events for internal link to origin
+    //         if (sectionLink == "") {
+    //             internalLinkString = '<span class="sectionLink hidden">No Proper Link Provided</span>';
+    //         } else {
+    //             internalLinkString = '<span class="sectionLink credits"><a href="' + sectionLink + '" title="' + sectionLinkText + '" target="_blank" class="card-link"><em>' + sectionLinkText + '</em></a></span>';
+    //         }
+
+    //         // assign link value for publishing
+    //         publishedLink = internalLinkString;            
+    //     }
+    // }
 
 
 
@@ -363,6 +363,34 @@ try {
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
     document.write('</div>'); // close newsroomArticleBlurb and row divs
     document.write(endingHTML);
+
+
+
+
+    /***
+     *  write document once
+     * 
+     * */
+    writeDocument (
+        [
+            beginningHTML,
+
+            openCardBody,
+
+            titleLink,
+            publishedLink,
+            summaryString,
+            dateline,
+            openHidden,
+            listOfCats,
+            pinnedItem,
+
+            closeHidden,
+
+            closeCardBody,
+            endingHTML
+        ]
+    );
 
 
 

@@ -151,7 +151,7 @@ try {
     var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' display_field='value' />");
     var publishedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publish Date' output='normal' date_format='MMMM d, yyyy' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='fulltext' use-element='true' filename-element='Headline' modifiers='striptags,htmlentities' />");
-    var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
+    var catTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category' output='normal' display_field='name' />");
     var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
     var isMajor = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Major or Minor' output='normal' display_field='value' />");
     var catPin = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category Pin' output='normal' display_field='value' />");
@@ -196,8 +196,8 @@ try {
      *  when a special topic is present we parse for valid links
      * 
      * */
-    if (fieldTags != "") {
-        var arrayOfTags = fieldTags.split(',');
+    if (catTags != "") {
+        var arrayOfTags = catTags.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
             let currentItem = arrayOfTags[i].trim();
             listItems += '<li class="tag">' + currentItem + '</li>';
@@ -207,7 +207,7 @@ try {
         listOfTags = '<div class="newsroomArticle tags"><ul class="categories">' + listItems + '</ul></div>';
         
         // when tags exist check for Special Categories - SU Law in the News
-        if (fieldTags.includes("SU Law in the News")) {
+        if (catTags.includes("SU Law in the News")) {
             beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawInTheNews" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + suLawInTheNews + '</span></p>';
 
@@ -223,7 +223,7 @@ try {
 
 
         // when tags exist check for Special Categories - Announcements
-        } else if (fieldTags.includes("Announcements")) {
+        } else if (catTags.includes("Announcements")) {
             beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawAnnouncements" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + announcements + '</span></p>';
 
@@ -239,7 +239,7 @@ try {
 
 
         // when tags exist check for Special Categories - Announcements
-        } else if (fieldTags.includes("Events")) {
+        } else if (catTags.includes("Events")) {
             beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 lawEvents" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main"/>">';
             dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + hyphen + '<span class="newsroomArticleSpecialCategory">' + events + '</span></p>';
 
@@ -262,8 +262,8 @@ try {
      *  parse the list of tags, add <li> tags
      * 
      * */
-    // if (fieldTags != "") {
-    //     var arrayOfTags = fieldTags.split(',');
+    // if (catTags != "") {
+    //     var arrayOfTags = catTags.split(',');
     //     for (let i = 0; i < arrayOfTags.length; i++) {
     //         listItems += '<li class="tag rounded-pill">' + arrayOfTags[i] + '</li>';
     //     }

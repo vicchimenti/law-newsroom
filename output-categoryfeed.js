@@ -388,7 +388,6 @@ try {
             beginningHTML,
 
             openCardBody,
-
             titleLink,
 
             publishedLink,

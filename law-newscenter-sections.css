@@ -104,7 +104,7 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
 
 /** Overrides law style for list items **/
 
-div.newsroomArticle ul li.tag {
+/* div.newsroomArticle ul li.tag {
     background: #f7f7f7;
     background-color: rgb(247, 247, 247);
     border-bottom-right-radius: 15px;
@@ -120,7 +120,7 @@ div.newsroomArticle ul li.tag {
     padding-left: 10px;
     margin-bottom: 5px;;
     margin-right: 5px;
-}
+} */
 
 p.credits {
     margin-bottom: 0.5rem;

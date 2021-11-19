@@ -213,7 +213,7 @@ try {
      * */
     function modifyWrapper(htmlClass) {
 
-        beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" id="major' + majorDict.contentId.content + '" aria-label="' + majorDict.headline.content + '">';
+        beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" id="major' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
     }
     
     
@@ -225,7 +225,7 @@ try {
      * */
     function modifyDateline(specialTopic) {
 
-        dateline = '<p class="newsroomArticlePublishedDate">' + majorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
+        dateline = '<p class="newsroomArticlePublishedDate">' + catDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
     }
 
 

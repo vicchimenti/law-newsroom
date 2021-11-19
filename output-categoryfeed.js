@@ -259,9 +259,9 @@ try {
      *  process categories
      * 
      * */
-    if (majorDict.catTags.content) {
+    if (catDict.catTags.content) {
 
-        let arrayOfCats = majorDict.catTags.content.split(',');
+        let arrayOfCats = catDict.catTags.content.split(',');
         let listItems = assignList(arrayOfCats);
 
         // Print any tags that were selected
@@ -275,8 +275,8 @@ try {
      *  verify category pin
      * 
      * */
-    let pinnedCat = (gridDict.catPin.content)
-                    ? '<span class="catPinned">' + gridDict.catPin.content + '</span>'
+    let pinnedCat = (catDict.catPin.content)
+                    ? '<span class="catPinned">' + catDict.catPin.content + '</span>'
                     : '<span class="catPinned">No Pin Selected</span>';
 
 

@@ -399,11 +399,9 @@ try {
     writeDocument (
         [
             beginningHTML,
-
             openCardBody,
             titleLink,
             publishedLink,
-
             summaryString,
 
             dateline,

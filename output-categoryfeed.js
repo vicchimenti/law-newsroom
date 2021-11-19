@@ -272,6 +272,17 @@ try {
 
 
     /***
+     *  verify category pin
+     * 
+     * */
+    let pinnedCat = (gridDict.catPin.content)
+                    ? '<span class="catPinned">' + gridDict.catPin.content + '</span>'
+                    : '<span class="catPinned">No Pin Selected</span>';
+
+
+
+
+    /***
      *  determine if the article contains full text content
      * 
      * */

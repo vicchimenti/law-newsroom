@@ -130,7 +130,9 @@ try {
         articleSummary:     getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
         articleFullBody:    getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections,htmlentities" />'),
         publishedDate:      getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-
+        fullTextLink:       getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
+        catTags:            getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
+        
 
 
         contentId:          getContentValues('<t4 type="meta" meta="content_id" />')

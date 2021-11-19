@@ -96,10 +96,11 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
 /** horizontal rule between articles **/
 
  hr.articleBorderBottom {
-    border-top: 3px solid #f7f7f7;
+    border-top: 3px solid #e5e5e5;
     display: block;
     height: 3px;
     margin: 2rem 0;
+    opacity: unset;
 }
 
 

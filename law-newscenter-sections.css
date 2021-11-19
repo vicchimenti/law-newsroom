@@ -95,10 +95,13 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
 
 /** horizontal rule between articles **/
 
-.law-newscenterSections-2077081 hr.articleBorderBottom {
-    color: #f7f7f7;
-    margin: 10px 0 20px 0;
+ hr.articleBorderBottom {
+    border-top: 3px solid #f7f7f7;
+    display: block;
+    height: 3px;
+    margin: 2rem 0;
 }
+
 
 
 

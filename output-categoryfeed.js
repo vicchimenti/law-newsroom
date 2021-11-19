@@ -231,6 +231,30 @@ try {
 
 
 
+    /***
+     *  process and prioritize special topics
+     * 
+     * */
+    if (majorDict.catTags.content.includes(suLawInTheNews)) {
+
+        modifyWrapper(suLawInTheNews);
+        modifyDateline(suLawInTheNews);
+
+    } else if (majorDict.catTags.content.includes(announcements)) {
+
+        modifyWrapper(announcements);
+        modifyDateline(announcements);
+
+    } else if (majorDict.catTags.content.includes(events)) {
+
+        modifyWrapper(events);
+        modifyDateline(events);
+
+    }
+
+
+
+
 
     /***
      *  determine if the article contains full text content

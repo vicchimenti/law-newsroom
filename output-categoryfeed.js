@@ -479,8 +479,7 @@ try {
             summaryString,
             dateline,
             openHidden,
-
-            pinnedItem,
+            pinnedCat,
             listOfCats,
             closeHidden,
             closeCardBody,

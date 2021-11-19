@@ -219,6 +219,19 @@ try {
 
 
 
+    /***
+     *  default section link
+     * 
+     * */
+    let publishedLink = (catDict.sectionLink.content && catDict.sectionLinkText.content)
+                        ? '<span class="newsLink"><a href="' + catDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + catDict.sectionLinkText.content + '"><em>' + catDict.sectionLinkText.content + '</em></a></span>'
+                        : (catDict.externalLink.content && catDict.externalLinkText.content)
+                        ? '<span class="newsLink"><a href="' + catDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + catDict.externalLinkText.content + '"><em>' + catDict.externalLinkText.content + '</em></a></span>'
+                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+
+
+
+
         /***
      *  parse the list of tags, add <li> tags
      *  whenever there is tag we check for special topics

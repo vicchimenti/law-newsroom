@@ -213,7 +213,7 @@ try {
      * */
     function modifyWrapper(htmlClass) {
 
-        beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
+        beginningHTML = '<article class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 ' + htmlClass + '" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
     }
     
     

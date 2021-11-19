@@ -235,17 +235,17 @@ try {
      *  process and prioritize special topics
      * 
      * */
-    if (majorDict.catTags.content.includes(suLawInTheNews)) {
+    if (catDict.catTags.content.includes(suLawInTheNews)) {
 
         modifyWrapper(suLawInTheNews);
         modifyDateline(suLawInTheNews);
 
-    } else if (majorDict.catTags.content.includes(announcements)) {
+    } else if (catDict.catTags.content.includes(announcements)) {
 
         modifyWrapper(announcements);
         modifyDateline(announcements);
 
-    } else if (majorDict.catTags.content.includes(events)) {
+    } else if (catDict.catTags.content.includes(events)) {
 
         modifyWrapper(events);
         modifyDateline(events);

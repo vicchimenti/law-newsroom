@@ -172,6 +172,21 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
+     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
+     let closeCardBody = '</div></div>';
+     let openHidden = '<div class="searchSortFields visually-hidden">';
+     let closeHidden = '</div>';
+     let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+     let hyphen = " | ";
+     let events = "Events";
+     let announcements = "Announcements";
+     let suLawInTheNews = "In the News";
+     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + catDict.articleSummary.content + '</p></span>';
+     let dateline = '<p class="newsroomArticlePublishedDate">' + catDict.publishedDate.content + '</p>';
+     let beginningHTML = '<article class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
+     let endingHTML = '<hr class="articleBorderBottom"></article>';
+
+
     var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
     var listItems = "";

@@ -22,10 +22,10 @@ try {
 	// Set content wrappers
 	var header, midder, footer;
   
-	header = '<div class="newsroomOrganizerWrapper contentItem col-xs-12 col-md-6 offset-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+	header = '<div class="newsroomOrganizerWrapper contentItem col" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
 				<div class="titleWrapper standardContent col-xs-12">\
                 <h2 class="organizerTitle text-center">' + titleField + '</h2></div>\
-				<div class="newsroomOrganizer standardContent card-deck">';
+				<div class="newsroomOrganizer standardContent col-xs-12 card-deck">';
 	midder = '';
 	footer = '</div></div>';
         

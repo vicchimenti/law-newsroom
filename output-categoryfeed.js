@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 6.5
+ *     @version 6.6
  */
 
 
@@ -131,7 +131,7 @@ try {
      let announcements = "Announcements";
      let suLawInTheNews = "In the News";
      let summaryString = '<span class="newsroomArticleLead card-text px-0 mx-0"><p>' + catDict.articleSummary.content + '</p></span>';
-     let dateline = '<p class="newsroomArticlePublishedDate">' + catDict.publishedDate.content + '</p>';
+     let dateline = '<p class="newsroomArticlePublishedDate mx-0 px-0">' + catDict.publishedDate.content + '</p>';
      let beginningHTML = '<article class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
      let endingHTML = '<hr class="articleBorderBottom"></article>';
 

@@ -381,10 +381,12 @@ try {
             publishedLink,
             summaryString,
             dateline,
-            openHidden,
-            listOfCats,
-            pinnedItem,
 
+            openHidden,
+
+            pinnedItem,
+            listOfCats,
+            
             closeHidden,
 
             closeCardBody,

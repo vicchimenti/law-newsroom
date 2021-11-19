@@ -187,15 +187,15 @@ try {
      let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
-    var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
-    var titleLink = "";
+    // var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    // var titleLink = "";
     var listItems = "";
-    var photoCredit = "";
-    var authorByLine = "";
-    var thumbNailString = "";
-    var externalLinkString = "";
-    var internalLinkString = "";
-    var publishedLink = "";
+    // var photoCredit = "";
+    // var authorByLine = "";
+    // var thumbNailString = "";
+    // var externalLinkString = "";
+    // var internalLinkString = "";
+    // var publishedLink = "";
     // var hyphen = " - ";
     // var events = "Events";
     // var announcements = "Announcements";

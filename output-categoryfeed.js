@@ -402,7 +402,6 @@ try {
 
             openCardBody,
             titleLink,
-
             publishedLink,
 
             summaryString,

@@ -86,55 +86,6 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
 
 
 
-
-
-/** horizontal rule between articles **/
-
- hr.articleBorderBottom {
-    border-top: 3px solid #e5e5e5;
-    display: block;
-    height: 3px;
-    margin: 1rem 0;
-    opacity: unset;
-}
-
-
-
-
-
-/** Overrides law style for list items **/
-
-/* div.newsroomArticle ul li.tag {
-    background: #f7f7f7;
-    background-color: rgb(247, 247, 247);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    display: inline-block;
-    padding: 1px 10px;
-    padding-top: 1px;
-    padding-right: 10px;
-    padding-bottom: 1px;
-    padding-left: 10px;
-    margin-bottom: 5px;;
-    margin-right: 5px;
-} */
-
-p.credits {
-    margin-bottom: 0.5rem;
-}
-
-.standardContent ul li:before {
-    content: none;
-}
-
-
-
-
-
-
 /* *****  category feed customizations ***** */
 
 
@@ -178,6 +129,18 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
     color: #aa0000;
 }
 
+p.credits {
+    margin-bottom: 0.5rem;
+}
+
+hr.articleBorderBottom {
+    border-top: 3px solid #e5e5e5;
+    display: block;
+    height: 3px;
+    margin: 1rem 0;
+    opacity: unset;
+}
+
 
 
 
@@ -206,86 +169,34 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
 }
 
 
-
-/* ***** Mobile Up ***** */
-/* @media screen and (min-width: 576px) {
-    .gridFeedItem {
-        flex: auto;
-    }
-} */
-
-    /* If Bootstrap 4 only */
-/* @media screen and (min-width: 767.999px) {
-    div.gridOrganizerWrapper {
-        padding: 0 50px 50px 50px;
-    }
-} */
-
-
-/* ***** Desktop down ***** */
-
-/* @media screen and (max-width: 1200px) {
-    .card-deck .gridFeedItem.card {
-        flex: auto;
-    }
-} */
-
+/* ***** Mobile ***** */
 @media screen and (max-width: 991.99px) {
 
     h2.organizerTitle {
         font-size: 1.75rem;;
-        /* margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 15px;
-        padding-right: 10px; */
     }
-
-    /* div.gridOrganizerWrapper {
-        padding-bottom: 15px;
-        padding-left: 15px;
-    } */
-
-    /* div.gridOrganizerWrapper h2.organizerTitle {
-        padding-left: 5px;
-    } */
 
     .gridFeedItem {
         font-size: 1rem;
-        font-weight: 400;
+        margin: 1rem 0;
         max-width: 100%;
     }
 
     .gridFeedItem h3 {
         font-size: 1rem;
-        font-weight: 400;
     }
     
     .gridFeedItem p {
         font-size: 1rem;
-        font-weight: 400;
     }
-
-    /* div.newsroomCategoryFeedItem {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-    } */
 
     .newsroomCategoryFeedItem h3 {
         font-size: 1rem;
-        font-weight: 400;
     }
 
     .newsroomCategoryFeedItem p {
         font-size: 1rem;
-        font-weight: 400;
     }
-
-    /* .newsroomCategoryFeedItem ul {
-        font-size: 1rem;
-        font-weight: 400;
-    } */
 
     div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
         font-size: 1rem;

@@ -122,7 +122,15 @@ try {
     /***
      *      Dictionary of content
      * */
-    let catDict = {}
+    let catDict = {
+
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+
+
+
+        contentId:  getContentValues('<t4 type="meta" meta="content_id" />')
+
+    }
 
     /***
      *  Assign local variables from the content type's fields

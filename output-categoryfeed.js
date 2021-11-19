@@ -124,13 +124,15 @@ try {
      * */
     let catDict = {
 
-        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        articleTitle:   getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-        headline:       getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        contentName:        getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle:       getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        headline:           getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        articleSummary:     getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
+        articleFullBody:    getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections,htmlentities" />'),
 
 
 
-        contentId:  getContentValues('<t4 type="meta" meta="content_id" />')
+        contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
 

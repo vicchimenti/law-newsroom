@@ -187,24 +187,6 @@ try {
      let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
-    // var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
-    // var titleLink = "";
-    // var listItems = "";
-    // var photoCredit = "";
-    // var authorByLine = "";
-    // var thumbNailString = "";
-    // var externalLinkString = "";
-    // var internalLinkString = "";
-    // var publishedLink = "";
-    // var hyphen = " - ";
-    // var events = "Events";
-    // var announcements = "Announcements";
-    // var suLawInTheNews = "SU Law in the News";
-    // var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    // var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
-    // var endingHTML = '<hr class="articleBorderBottom"></div>';
-
-
 
 
     /***

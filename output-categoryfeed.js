@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 6.4
+ *     @version 6.5
  */
 
 
@@ -130,7 +130,7 @@ try {
      let events = "Events";
      let announcements = "Announcements";
      let suLawInTheNews = "In the News";
-     let summaryString = '<span class="newsroomArticleLead card-text"><p>' + catDict.articleSummary.content + '</p></span>';
+     let summaryString = '<span class="newsroomArticleLead card-text px-0 mx-0"><p>' + catDict.articleSummary.content + '</p></span>';
      let dateline = '<p class="newsroomArticlePublishedDate">' + catDict.publishedDate.content + '</p>';
      let beginningHTML = '<article class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
      let endingHTML = '<hr class="articleBorderBottom"></article>';
@@ -156,7 +156,7 @@ try {
      * */
     function modifyDateline(specialTopic) {
 
-        dateline = '<p class="newsroomArticlePublishedDate">' + catDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
+        dateline = '<p class="newsroomArticlePublishedDate px-0 mx-0">' + catDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
     }
 
 
@@ -218,8 +218,8 @@ try {
      * 
      * */
     let titleLink = (catDict.articleFullBody.content)
-                    ? '<h3 class="newsroomArticleTitle card-title"><a class="card-link" target="_blank" href="' + catDict.fullTextLink.content + '"  title="Read the full article at: ' + catDict.headline.content + '">' + catDict.headline.content + '</a></h3>'
-                    : '<h3 class="newsroomArticleTitle card-title">' + catDict.headline.content + '</h3>';
+                    ? '<h3 class="newsroomArticleTitle card-title px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.fullTextLink.content + '"  title="Read the full article at: ' + catDict.headline.content + '">' + catDict.headline.content + '</a></h3>'
+                    : '<h3 class="newsroomArticleTitle card-title px-0 mx-0">' + catDict.headline.content + '</h3>';
 
 
 
@@ -229,9 +229,9 @@ try {
      * 
      * */
     let publishedLink = (catDict.sectionLink.content && catDict.sectionLinkText.content)
-                        ? '<span class="newsLink"><a class="card-link" target="_blank" href="' + catDict.sectionLink.content + '" title="Visit ' + catDict.sectionLinkText.content + '"><em>' + catDict.sectionLinkText.content + '</em></a></span>'
+                        ? '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.sectionLink.content + '" title="Visit ' + catDict.sectionLinkText.content + '"><em>' + catDict.sectionLinkText.content + '</em></a></span>'
                         : (catDict.externalLink.content && catDict.externalLinkText.content)
-                        ? '<span class="newsLink"><a class="card-link" target="_blank" href="' + catDict.externalLink.content + '" title="Visit ' + catDict.externalLinkText.content + '"><em>' + catDict.externalLinkText.content + '</em></a></span>'
+                        ? '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.externalLink.content + '" title="Visit ' + catDict.externalLinkText.content + '"><em>' + catDict.externalLinkText.content + '</em></a></span>'
                         : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
 
 

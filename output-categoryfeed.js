@@ -311,11 +311,11 @@ try {
      *  display byline only when provided 
      * 
      * */
-    if (author == "") {
-        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    } else {
-        authorByLine = '<p class="byLine">By ' + author + '</p>';
-    }
+    // if (author == "") {
+    //     authorByLine = '<p class="byLine hidden">No Author Provided</p>';
+    // } else {
+    //     authorByLine = '<p class="byLine">By ' + author + '</p>';
+    // }
 
 
     /***

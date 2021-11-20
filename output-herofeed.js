@@ -20,74 +20,74 @@
 /***
  *      Import T4 Utilities
  */
- importClass(com.terminalfour.media.IMediaManager);
- importClass(com.terminalfour.spring.ApplicationContextProvider);
- importClass(com.terminalfour.publish.utils.BrokerUtils);
- importClass(com.terminalfour.media.utils.ImageInfo);
- 
- 
- 
- 
- /***
-  *      Extract values from T4 element tags
-  *      and confirm valid existing content item field
-  */
- function getContentValues(tag) {
-     try {
-         let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
-         return {
-             isError: false,
-             content: _tag == '' ? null : _tag
-         }
-     } catch (error) {
-         return {
-             isError: true,
-             message: error.message
-         }
-     }
- }
- 
- 
- 
- 
- /***
-  *      Returns a media object
-  */
- function getMediaInfo(mediaID) {
- 
-     var mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-     var media = mediaManager.get(mediaID, language);
- 
-     return media;
- }
- 
- 
- 
- 
- /***
-  *      Returns a media stream object
-  */
- function readMedia(mediaID) {
- 
-     var mediaObj = getMediaInfo(mediaID);
-     var oMediaStream = mediaObj.getMedia();
- 
-     return oMediaStream;
- }
- 
- 
- 
- 
- /***
-  *      Write the document
-  */
- function writeDocument(array) {
- 
-     for (let i = 0; i < array.length; i++) {
- 
-         document.write(array[i]);
-     }
- }
+importClass(com.terminalfour.media.IMediaManager);
+importClass(com.terminalfour.spring.ApplicationContextProvider);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
+importClass(com.terminalfour.media.utils.ImageInfo);
+
+
+
+
+/***
+ *      Extract values from T4 element tags
+ *      and confirm valid existing content item field
+ */
+function getContentValues(tag) {
+    try {
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+        return {
+            isError: false,
+            content: _tag == '' ? null : _tag
+        }
+    } catch (error) {
+        return {
+            isError: true,
+            message: error.message
+        }
+    }
+}
+
+
+
+
+/***
+ *      Returns a media object
+ */
+function getMediaInfo(mediaID) {
+
+    var mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+    var media = mediaManager.get(mediaID, language);
+
+    return media;
+}
+
+
+
+
+/***
+ *      Returns a media stream object
+ */
+function readMedia(mediaID) {
+
+    var mediaObj = getMediaInfo(mediaID);
+    var oMediaStream = mediaObj.getMedia();
+
+    return oMediaStream;
+}
+
+
+
+
+/***
+ *      Write the document
+ */
+function writeDocument(array) {
+
+    for (let i = 0; i < array.length; i++) {
+
+        document.write(array[i]);
+    }
+}
 
 
 
@@ -100,15 +100,15 @@ try {
      * */
     let heroDict = {
 
-        contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-        headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
-        frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
-        articleFullBody:        getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
-        publishedDate:          getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-        pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
-        fullTextLink:           getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
-        contentId:              getContentValues('<t4 type="meta" meta="content_id" />')
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        headline: getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        frontPageImage: getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
+        articleFullBody: getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
+        publishedDate: getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
+        pinned: getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
 
@@ -136,9 +136,9 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    let titleLink = (heroDict.articleFullBody.content)
-                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + heroDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + heroDict.headline.content + '" >' + heroDict.headline.content + '</a></h3>'
-                    : '<h3 class="newsroomArticleTitle card-title">' + heroDict.headline.content + '</h3>';
+    let titleLink = (heroDict.articleFullBody.content) ?
+        '<h3 class="newsroomArticleTitle card-title"><a href="' + heroDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + heroDict.headline.content + '" >' + heroDict.headline.content + '</a></h3>' :
+        '<h3 class="newsroomArticleTitle card-title">' + heroDict.headline.content + '</h3>';
 
 
 
@@ -147,9 +147,9 @@ try {
      *  parse for pinned item
      * 
      * */
-    let pinnedItem =    (heroDict.pinned.content)
-                        ? '<div class="visually-hidden"><span class="articlePinned">' + heroDict.pinned.content + '</span></div>'
-                        : '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+    let pinnedItem = (heroDict.pinned.content) ?
+        '<div class="visually-hidden"><span class="articlePinned">' + heroDict.pinned.content + '</span></div>' :
+        '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 
@@ -168,10 +168,10 @@ try {
 
         let imageDefaultAlt = heroDict.articleTitle.content ? heroDict.articleTitle.content : heroDict.contentName.content;
 
-        imageString =   (info.check())
-                        ? '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                        : '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
-    
+        imageString = (info.check()) ?
+            '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+
         openImageWrapper = '<figure class="figure">';
     }
 
@@ -182,7 +182,7 @@ try {
      *  write document once
      * 
      * */
-    writeDocument (
+    writeDocument(
         [
             beginningHTML,
             openImageWrapper,

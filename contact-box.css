@@ -20,6 +20,11 @@
     font-weight: 500;
 }
 
+.newsCenterContact address p {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 .newsCenterContact h3 {
     font-size: 1.4rem;
     font-weight: 600;
@@ -38,6 +43,7 @@
     text-decoration: underline;
 }
 
+
 /** horizontal rule between articles **/
 
 hr.articleBorderBottom {
@@ -49,8 +55,8 @@ hr.articleBorderBottom {
 
 
 /* Medium devices */
-@media screen and (max-width: 991.98px) {
 
+@media screen and (max-width: 991.98px) {
     .contactWrapper {
         display: none;
     }

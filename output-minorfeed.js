@@ -23,12 +23,12 @@
 /***
  *      Import T4 Utilities
  */
- importClass(com.terminalfour.publish.utils.BrokerUtils);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
 
 
 
 
- /***
+/***
  *      Extract values from T4 element tags
  *      and confirm valid existing content item field
  */
@@ -92,21 +92,21 @@ try {
      *      Dictionary of content
      * */
     let minorDict = {
-        
-        itemName:           getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        articleTitle:       getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-        headline:           getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
-        fullTextLink:       getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
-        publishedDate:      getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-        articleSummary:     getContentValues('<t4 type="content" name="Article Subtitle" output="normal" modifiers="striptags,htmlentities" />'),
-        articleFullBody:    getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
-        pinned:             getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
-        catTags:            getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
-        externalLink:       getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
-        externalLinkText:   getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
-        sectionLink:        getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        sectionLinkText:    getContentValues('<t4 type="content" name="Internal SU Link" output="externalLinkText" modifiers="nav_sections" />'),
-        contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
+
+        itemName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        headline: getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
+        publishedDate: getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
+        articleSummary: getContentValues('<t4 type="content" name="Article Subtitle" output="normal" modifiers="striptags,htmlentities" />'),
+        articleFullBody: getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
+        pinned: getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
+        catTags: getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
+        externalLink: getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLinkText: getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionLink: getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
+        sectionLinkText: getContentValues('<t4 type="content" name="Internal SU Link" output="externalLinkText" modifiers="nav_sections" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
 
@@ -153,7 +153,7 @@ try {
 
         dateline = '<p class="newsroomArticlePublishedDate">' + minorDict.publishedDate.content + hyphen + '<span class="newsroomArticleSpecialCategory">' + specialTopic + '</span></p>';
     }
-   
+
 
 
 
@@ -201,11 +201,11 @@ try {
      *  default section link
      * 
      * */
-    let publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content)
-                        ? '<span class="newsLink"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>'
-                        : (minorDict.externalLink.content && minorDict.externalLinkText.content)
-                        ? '<span class="newsLink"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>'
-                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+    let publishedLink = (minorDict.sectionLink.content && minorDict.sectionLinkText.content) ?
+        '<span class="newsLink"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>' :
+        (minorDict.externalLink.content && minorDict.externalLinkText.content) ?
+        '<span class="newsLink"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>' :
+        '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
 
 
 
@@ -214,9 +214,9 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    let titleLink = (minorDict.articleFullBody.content)
-                    ? '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + minorDict.headline.content + '</a></h3>'
-                    : '<h3 class="newsroomArticleTitle card-title">' + minorDict.headline.content + '</h3>';
+    let titleLink = (minorDict.articleFullBody.content) ?
+        '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + minorDict.headline.content + '</a></h3>' :
+        '<h3 class="newsroomArticleTitle card-title">' + minorDict.headline.content + '</h3>';
 
 
 
@@ -225,9 +225,9 @@ try {
      *  parse for summary
      * 
      * */
-    let summaryString = (minorDict.articleSummary.content)
-                        ? '<p class="newsroomArticleLead card-text">' + minorDict.articleSummary.content + '</p>'
-                        : '<p class="newsroomArticleLead card-text visually-hidden">No Summary Provided</p>';
+    let summaryString = (minorDict.articleSummary.content) ?
+        '<p class="newsroomArticleLead card-text">' + minorDict.articleSummary.content + '</p>' :
+        '<p class="newsroomArticleLead card-text visually-hidden">No Summary Provided</p>';
 
 
 
@@ -236,9 +236,9 @@ try {
      *  parse for pinned item
      * 
      * */
-    let pinnedItem =    (minorDict.pinned.content)
-                        ? '<div class="visually-hidden"><span class="articlePinned">' + minorDict.pinned.content + '</span></div>'
-                        : '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+    let pinnedItem = (minorDict.pinned.content) ?
+        '<div class="visually-hidden"><span class="articlePinned">' + minorDict.pinned.content + '</span></div>' :
+        '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 
@@ -247,7 +247,7 @@ try {
      *  write document once
      * 
      * */
-    writeDocument (
+    writeDocument(
         [
             beginningHTML,
             openCardBody,

@@ -108,7 +108,7 @@ function writeDocument(array) {
         document.write(array[i]);
     }
 }
- 
+
 
 
 
@@ -124,24 +124,24 @@ try {
      * */
     let majorDict = {
 
-        frontPageImageCredit:   getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
-        author:                 getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
-        pinned:                 getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
-        catTags:                getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
-        contentName:            getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        articleTitle:           getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-        headline:               getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
-        articleSummary:         getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
-        articleFullBody:        getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
-        publishedDate:          getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-        frontPageImage:         getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
-        frontPageImageCaption:  getContentValues('<t4 type="content" name="Main Image Caption" output="normal" modifiers="striptags,htmlentities" />'),
-        fullTextLink:           getContentValues('<t4 type="content" name="Headline" output="fulltext" use-element="true" filename-element="Headline" modifiers="striptags,htmlentities" />'),
-        externalLink:           getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
-        externalLinkText:       getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
-        sectionLink:            getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        sectionLinkText:        getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
-        contentId:              getContentValues('<t4 type="meta" meta="content_id" />')
+        frontPageImageCredit: getContentValues('<t4 type="content" name="Main Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
+        author: getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
+        pinned: getContentValues('<t4 type="content" name="Pinned" output="normal" display_field="value" />'),
+        catTags: getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        headline: getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        articleSummary: getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
+        articleFullBody: getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections" />'),
+        publishedDate: getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
+        frontPageImage: getContentValues('<t4 type="content" name="Main Image" output="normal" formatter="path/*" />'),
+        frontPageImageCaption: getContentValues('<t4 type="content" name="Main Image Caption" output="normal" modifiers="striptags,htmlentities" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
+        externalLink: getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLinkText: getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionLink: getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
+        sectionLinkText: getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
 
@@ -181,10 +181,10 @@ try {
 
         beginningHTML = '<article class="newsroomMajorFeedItem newsroomBlurb card border-0 ' + htmlClass + '" id="major' + majorDict.contentId.content + '" aria-label="' + majorDict.headline.content + '">';
     }
-    
-    
-    
-    
+
+
+
+
     /***
      *  modify dateline if special topic present
      * 
@@ -241,11 +241,11 @@ try {
      *  default section link
      * 
      * */
-    let publishedLink = (majorDict.sectionLink.content && majorDict.sectionLinkText.content)
-                        ? '<span class="newsLink"><a href="' + majorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.sectionLinkText.content + '"><em>' + majorDict.sectionLinkText.content + '</em></a></span>'
-                        : (majorDict.externalLink.content && majorDict.externalLinkText.content)
-                        ? '<span class="newsLink"><a href="' + majorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.externalLinkText.content + '"><em>' + majorDict.externalLinkText.content + '</em></a></span>'
-                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+    let publishedLink = (majorDict.sectionLink.content && majorDict.sectionLinkText.content) ?
+        '<span class="newsLink"><a href="' + majorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.sectionLinkText.content + '"><em>' + majorDict.sectionLinkText.content + '</em></a></span>' :
+        (majorDict.externalLink.content && majorDict.externalLinkText.content) ?
+        '<span class="newsLink"><a href="' + majorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.externalLinkText.content + '"><em>' + majorDict.externalLinkText.content + '</em></a></span>' :
+        '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
 
 
 
@@ -254,9 +254,9 @@ try {
      *  parse for pinned item
      * 
      * */
-    let pinnedItem =    (majorDict.pinned.content)
-                        ? '<div class="visually-hidden"><span class="articlePinned">' + majorDict.pinned.content + '</span></div>'
-                        : '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+    let pinnedItem = (majorDict.pinned.content) ?
+        '<div class="visually-hidden"><span class="articlePinned">' + majorDict.pinned.content + '</span></div>' :
+        '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 
@@ -265,9 +265,9 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-     let titleLink =    (majorDict.articleFullBody.content)
-                        ? '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '" >' + majorDict.headline.content + '</a></h3>'
-                        : '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
+    let titleLink = (majorDict.articleFullBody.content) ?
+        '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '" >' + majorDict.headline.content + '</a></h3>' :
+        '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
 
 
 
@@ -286,10 +286,10 @@ try {
 
         let imageDefaultAlt = majorDict.frontPageImageCaption.content ? majorDict.frontPageImageCaption.content : majorDict.articleTitle.content;
 
-        imageString =   (info.check())
-                        ? '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                        : '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
-    
+        imageString = (info.check()) ?
+            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+
         openImageWrapper = '<figure class="figure">';
     }
 
@@ -300,7 +300,7 @@ try {
      *  write document once
      * 
      * */
-    writeDocument (
+    writeDocument(
         [
             beginningHTML,
             openImageWrapper,

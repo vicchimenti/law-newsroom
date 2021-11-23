@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.20
+ *     @version 2.21
  */
 
 
@@ -215,7 +215,7 @@ try {
      * 
      * */
     let titleLink = (minorDict.articleFullBody.content) ?
-        '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + minorDict.headline.content + '</a></h3>' :
+        '<h3 class="newsroomArticleTitle card-title"><a href="' + minorDict.fullTextLink.content + '" class="card-link" target="_blank" aria-label="Read the full article at: ' + minorDict.headline.content + '" >' + minorDict.headline.content + '</a></h3>' :
         '<h3 class="newsroomArticleTitle card-title">' + minorDict.headline.content + '</h3>';
 
 

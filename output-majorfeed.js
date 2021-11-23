@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.37
+ *     @version 2.38
  */
 
 
@@ -266,7 +266,7 @@ try {
      * 
      * */
     let titleLink = (majorDict.articleFullBody.content) ?
-        '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + majorDict.headline.content + '" >' + majorDict.headline.content + '</a></h3>' :
+        '<h3 class="newsroomArticleTitle card-title"><a href="' + majorDict.fullTextLink.content + '" class="card-link" target="_blank" title="Read the full article at: ' + majorDict.headline.content + '" >' + majorDict.headline.content + '</a></h3>' :
         '<h3 class="newsroomArticleTitle card-title">' + majorDict.headline.content + '</h3>';
 
 

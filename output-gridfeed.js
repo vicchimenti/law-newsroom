@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 7.8
+ *     @version 7.9
  */
 
 
@@ -176,7 +176,7 @@ try {
      * 
      * */
     let titleLink = (gridDict.articleFullBody.content) ?
-        '<h3 class="newsroomArticleTitle card-title"><a href="' + gridDict.fullTextLink.content + '" class="card-link" title="Read the full article at: ' + gridDict.headline.content + '" >' + gridDict.headline.content + '</a></h3>' :
+        '<h3 class="newsroomArticleTitle card-title"><a href="' + gridDict.fullTextLink.content + '" class="card-link" target="_blank" title="Read the full article at: ' + gridDict.headline.content + '" >' + gridDict.headline.content + '</a></h3>' :
         '<h3 class="newsroomArticleTitle card-title">' + gridDict.headline.content + '</h3>';
 
 

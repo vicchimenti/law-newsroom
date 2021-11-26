@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 6.6
+ *     @version 6.7
  */
 
 
@@ -23,35 +23,40 @@
 /***
  *      Import T4 Utilities
  */
- importClass(com.terminalfour.media.IMediaManager);
- importClass(com.terminalfour.spring.ApplicationContextProvider);
- importClass(com.terminalfour.publish.utils.BrokerUtils);
- importClass(com.terminalfour.media.utils.ImageInfo);
- 
- 
- 
- 
+importClass(com.terminalfour.media.IMediaManager);
+importClass(com.terminalfour.spring.ApplicationContextProvider);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
+importClass(com.terminalfour.media.utils.ImageInfo);
+
+
+
+
 /***
  *      Extract values from T4 element tags
- *      and confirm valid existing content item field
+ *      and confirm valid existing content item field and trim strings
  */
 function getContentValues(tag) {
+
     try {
-        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim()
+
         return {
             isError: false,
             content: _tag == '' ? null : _tag
         }
+
     } catch (error) {
+
         return {
             isError: true,
             message: error.message
         }
     }
 }
- 
- 
- 
+
+
+
 
 
 /***
@@ -97,20 +102,20 @@ try {
      * */
     let catDict = {
 
-        contentName:        getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        articleTitle:       getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-        headline:           getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
-        articleSummary:     getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
-        articleFullBody:    getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections,htmlentities" />'),
-        publishedDate:      getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-        fullTextLink:       getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
-        catTags:            getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
-        catPin:             getContentValues('<t4 type="content" name="Category Pin" output="normal" display_field="value" />'),
-        externalLink:       getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
-        externalLinkText:   getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
-        sectionLink:        getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
-        sectionLinkText:    getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
-        contentId:          getContentValues('<t4 type="meta" meta="content_id" />')
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        headline: getContentValues('<t4 type="content" name="Headline" output="normal" modifiers="striptags,htmlentities" />'),
+        articleSummary: getContentValues('<t4 type="content" name="Abstract" output="normal" modifiers="striptags,htmlentities" />'),
+        articleFullBody: getContentValues('<t4 type="content" name="Article Body" output="normal" modifiers="medialibrary,nav_sections,htmlentities" />'),
+        publishedDate: getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
+        catTags: getContentValues('<t4 type="content" name="Category" output="normal" display_field="name" />'),
+        catPin: getContentValues('<t4 type="content" name="Category Pin" output="normal" display_field="value" />'),
+        externalLink: getContentValues('<t4 type="content" name="External Link" output="normal" modifiers="striptags,htmlentities" />'),
+        externalLinkText: getContentValues('<t4 type="content" name="External Link Title" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionLink: getContentValues('<t4 type="content" name="Internal SU Link" output="linkurl" modifiers="nav_sections" />'),
+        sectionLinkText: getContentValues('<t4 type="content" name="Internal SU Link" output="linktext" modifiers="nav_sections" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
 
@@ -121,19 +126,19 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row mx-0 px-0">';
-     let closeCardBody = '</div></div>';
-     let openHidden = '<div class="searchSortFields visually-hidden">';
-     let closeHidden = '</div>';
-     let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
-     let hyphen = " | ";
-     let events = "Events";
-     let announcements = "Announcements";
-     let suLawInTheNews = "In the News";
-     let summaryString = '<span class="newsroomArticleLead card-text px-0 mx-0"><p>' + catDict.articleSummary.content + '</p></span>';
-     let dateline = '<p class="newsroomArticlePublishedDate mx-0 px-0">' + catDict.publishedDate.content + '</p>';
-     let beginningHTML = '<article class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
-     let endingHTML = '<hr class="articleBorderBottom"></article>';
+    let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row mx-0 px-0">';
+    let closeCardBody = '</div></div>';
+    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let closeHidden = '</div>';
+    let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
+    let hyphen = " | ";
+    let events = "Events";
+    let announcements = "Announcements";
+    let suLawInTheNews = "In the News";
+    let summaryString = '<span class="newsroomArticleLead card-text px-0 mx-0"><p>' + catDict.articleSummary.content + '</p></span>';
+    let dateline = '<p class="newsroomArticlePublishedDate mx-0 px-0">' + catDict.publishedDate.content + '</p>';
+    let beginningHTML = '<article class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
+    let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 
 
@@ -146,10 +151,10 @@ try {
 
         beginningHTML = '<article class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0 ' + htmlClass + '" id="category' + catDict.contentId.content + '" aria-label="' + catDict.headline.content + '">';
     }
-    
-    
-    
-    
+
+
+
+
     /***
      *  modify dateline if special topic present
      * 
@@ -206,9 +211,9 @@ try {
      *  verify category pin
      * 
      * */
-    let pinnedCat = (catDict.catPin.content)
-                    ? '<span class="catPinned">' + catDict.catPin.content + '</span>'
-                    : '<span class="catPinned">No Pin Selected</span>';
+    let pinnedCat = (catDict.catPin.content) ?
+        '<span class="catPinned">' + catDict.catPin.content + '</span>' :
+        '<span class="catPinned">No Pin Selected</span>';
 
 
 
@@ -217,9 +222,9 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    let titleLink = (catDict.articleFullBody.content)
-                    ? '<h3 class="newsroomArticleTitle card-title px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.fullTextLink.content + '"  title="Read the full article at: ' + catDict.headline.content + '">' + catDict.headline.content + '</a></h3>'
-                    : '<h3 class="newsroomArticleTitle card-title px-0 mx-0">' + catDict.headline.content + '</h3>';
+    let titleLink = (catDict.articleFullBody.content) ?
+        '<h3 class="newsroomArticleTitle card-title px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.fullTextLink.content + '"  title="Read the full article at: ' + catDict.headline.content + '">' + catDict.headline.content + '</a></h3>' :
+        '<h3 class="newsroomArticleTitle card-title px-0 mx-0">' + catDict.headline.content + '</h3>';
 
 
 
@@ -228,11 +233,11 @@ try {
      *  default section link
      * 
      * */
-    let publishedLink = (catDict.sectionLink.content && catDict.sectionLinkText.content)
-                        ? '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.sectionLink.content + '" title="Visit ' + catDict.sectionLinkText.content + '"><em>' + catDict.sectionLinkText.content + '</em></a></span>'
-                        : (catDict.externalLink.content && catDict.externalLinkText.content)
-                        ? '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.externalLink.content + '" title="Visit ' + catDict.externalLinkText.content + '"><em>' + catDict.externalLinkText.content + '</em></a></span>'
-                        : '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+    let publishedLink = (catDict.sectionLink.content && catDict.sectionLinkText.content) ?
+        '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.sectionLink.content + '" title="Visit ' + catDict.sectionLinkText.content + '"><em>' + catDict.sectionLinkText.content + '</em></a></span>' :
+        (catDict.externalLink.content && catDict.externalLinkText.content) ?
+        '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.externalLink.content + '" title="Visit ' + catDict.externalLinkText.content + '"><em>' + catDict.externalLinkText.content + '</em></a></span>' :
+        '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
 
 
 
@@ -241,7 +246,7 @@ try {
      *  write document once
      * 
      * */
-    writeDocument (
+    writeDocument(
         [
             beginningHTML,
             openCardBody,

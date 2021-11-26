@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.38
+ *     @version 2.39
  */
 
 
@@ -32,16 +32,21 @@ importClass(com.terminalfour.media.utils.ImageInfo);
 
 /***
  *      Extract values from T4 element tags
- *      and confirm valid existing content item field
+ *      and confirm valid existing content item field and trim strings
  */
 function getContentValues(tag) {
+
     try {
-        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim()
+
         return {
             isError: false,
             content: _tag == '' ? null : _tag
         }
+
     } catch (error) {
+
         return {
             isError: true,
             message: error.message

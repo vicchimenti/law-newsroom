@@ -65,12 +65,21 @@
 
     .masonryOrganizer .mainHeroItem {
         margin-bottom: 1rem;
+        padding: 0;
+
+    }
+
+    .masonryOrganizer .mainHeroItem .card-body {
+        padding: 0;
+    }
+
+    .masonryOrganizer .mainHeroItem .card-footer {
+        padding: 0;
     }
 
     .mainHeroItem hr.articleBorderBottom {
-        border-top: 3px solid #e5e5e5;
+        border-top: solid #807060;
         display: block;
-        height: 3px;
-        margin: 0 20px 20px 20px;
+        margin: 0;
     }
 }

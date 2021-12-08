@@ -21,10 +21,10 @@ try {
     var header, midder, footer;
 
     // declare content wrappers
-    header = '<div class="heroOrganizerWrapper contentItem col-12 order-xs-1 order-md-1" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+    header = '<div class="heroOrganizerWrapper contentItem col" id="heromain' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
                 <div class="titleWrapper standardContent col-xs-12">\
                 <h2 class="organizerTitle text-center sr-only">' + titleField + '</h2></div>\
-                <div class="heroOrganizer standardContent card-deck border-0">';
+                <div class="heroOrganizer card-group border-0">';
     midder = '';
     footer = '</div></div>';
 

@@ -5,6 +5,18 @@
     justify-content: space-evenly;
 }
 
+.masonryOrganizer .mainHeroItem {
+    margin: auto;
+}
+
+.mainHeroItem img.card-img-top {
+    padding: 2rem 2rem 0 2rem;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
+
 
 @media (min-width: 992px) {
     .masonryOrganizer.card-group > .mainHeroItem.card {
@@ -15,8 +27,13 @@
 
 @media (max-width: 991.98px) {
 
+    .masonryOrganizerWrapper  {
+        padding-bottom: 25px;
+    }
+
     .masonryOrganizer.card-group {
         flex-direction: column;
+        flex: auto;
         padding: 0 30px;
     }
 
@@ -24,4 +41,10 @@
         margin-bottom: 1rem;
     }
 
+    .mainHeroItem hr.articleBorderBottom {
+        border-top: 3px solid #e5e5e5;
+        display: block;
+        height: 3px;
+        margin: 0 20px 20px 20px;
+    }
 }

@@ -1,13 +1,14 @@
 /***
  *      @author Victor Chimenti, MSCS
  *      @see Seattle University School of Law Newsroom
- *      @file output-herofeed.js
+ *      @file output-main-herofeed.js
  *          Law - Newscenter Story
  *          ID: 5296
+ *          output/main/herofeed
  *
  *      Document will write once when the page loads
  *
- *      @version 3.9
+ *      @version 4.0
  */
 
 

@@ -7,7 +7,7 @@
 
 
 @media (min-width: 992px) {
-    .masonryOrganizer.card-group > .newsroomHeroFeedItem.card {
+    .masonryOrganizer.card-group > .mainHeroItem.card {
         margin-bottom: 0;
         flex: auto;
     }
@@ -20,7 +20,7 @@
         padding: 0 30px;
     }
 
-    .masonryOrganizer .newsroomHeroFeedItem {
+    .masonryOrganizer .mainHeroItem {
         margin-bottom: 1rem;
     }
 

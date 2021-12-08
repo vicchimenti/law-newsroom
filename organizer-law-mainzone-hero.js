@@ -16,14 +16,13 @@ try {
     eval(String(base));
 
     let titleField = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="$value" />');
-
+    let titleString = titleField ? '<h2 class="organizerTitle text-center">' + titleField + '</h2>' : '<h2 class="organizerTitle sr-only">News Stories</h2>';
     // declare content wrappers
     var header, midder, footer;
 
     // declare content wrappers
     header = '<div class="heroOrganizerWrapper contentItem col" id="heromain' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
-                <div class="titleWrapper standardContent col-xs-12">\
-                <h2 class="organizerTitle text-center sr-only">' + titleField + '</h2></div>\
+                <div class="titleWrapper standardContent col-xs-12">' + titleString + '</div>\
                 <div class="heroOrganizer card-group border-0">';
     midder = '';
     footer = '</div></div>';

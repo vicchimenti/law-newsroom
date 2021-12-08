@@ -5,12 +5,8 @@
     justify-content: space-evenly;
 }
 
-.masonryOrganizer .mainHeroItem {
-    margin: auto;
-}
-
 .mainHeroItem img.card-img-top {
-    padding: 2rem 2rem 0 2rem;
+    padding: 0;
     width: 100%;
     width: -moz-available;
     width: -webkit-fill-available;
@@ -18,10 +14,25 @@
 }
 
 
+
 @media (min-width: 992px) {
+    
     .masonryOrganizer.card-group > .mainHeroItem.card {
         margin-bottom: 0;
         flex: auto;
+    }
+
+    .masonryOrganizer .mainHeroItem {
+        padding: 0.5rem;
+    }
+
+    .masonryOrganizer .mainHeroItem .card-body {
+        padding: 0;
+    }
+
+    .masonryOrganizer .mainHeroItem .card-body h3 {
+        font-size: 1.25rem;
+        margin: 1rem 0 0.25rem 0;
     }
 }
 
@@ -35,6 +46,11 @@
         flex-direction: column;
         flex: auto;
         padding: 0 30px;
+    }
+
+    .masonryOrganizer .mainHeroItem {
+        margin: auto;
+        width: -webkit-fill-available;
     }
 
     .masonryOrganizer .mainHeroItem {

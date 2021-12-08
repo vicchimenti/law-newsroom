@@ -432,13 +432,13 @@ function main(header, midder, footer) {
                     matchingOptions.push(validContent[contentItem]);
                 }
              }
+
         } else {
 
             for (let contentItem in validContent) {
 
-                    matchingOptions.push(validContent[contentItem]);
-                }
-             }
+                matchingOptions.push(validContent[contentItem]);
+            }
         }
 
 

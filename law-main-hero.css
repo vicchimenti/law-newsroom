@@ -1,0 +1,27 @@
+.masonryOrganizer.card-group {
+    display: flex;
+    flex: 0 0 100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+
+@media (min-width: 992px) {
+    .masonryOrganizer.card-group>.newsroomHeroFeedItem.card {
+        margin-bottom: 0;
+        flex: auto;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .masonryOrganizer {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .masonryOrganizer .newsroomHeroFeedItem {
+        margin-bottom: 1rem;
+    }
+
+}

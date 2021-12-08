@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.1
+ *      @version 4.2
  */
 
 
@@ -132,7 +132,7 @@ try {
     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
     let openImageWrapper = '<figure class="figure hidden visually-hidden">';
     let closeImageWrapper = '</figure>';
-    let beginningHTML = '<article class="newsroomHeroFeedItem newsroomBlurb col card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
+    let beginningHTML = '<article class="newsroomHeroFeedItem newsroomBlurb col-xs-12 col-lg-3 card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
     let endingHTML = '<hr class="articleBorderBottom"></article>';
 
 

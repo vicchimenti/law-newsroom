@@ -170,7 +170,7 @@ hr.articleBorderBottom {
 
 
 /* ***** Mobile ***** */
-@media screen and (max-width: 991.99px) {
+@media screen and (max-width: 991.98px) {
 
     h2.organizerTitle {
         font-size: 1.75rem;;
@@ -198,7 +198,21 @@ hr.articleBorderBottom {
         font-size: 1rem;
     }
 
-    div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
+    .newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
         font-size: 1rem;
+    }
+
+
+    /* .gridOrganizerWrapper {
+        padding-bottom: 25px;
+    } */
+
+    .gridOrganizer.standardContent {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .gridOrganizer .gridFeedItem {
+        margin-bottom: 1rem;
     }
 }

@@ -20,18 +20,18 @@ div#MainZone div.container {
 
 /* *****  Grid Organizer customizations  **** */
 
-div.gridOrganizer.standardContent {
+.gridOrganizer.standardContent {
     display: flex;
     flex: 0 0 100%;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
-div.gridOrganizerWrapper div.titleWrapper {
+.gridOrganizerWrapper .titleWrapper {
     width: 100%;
 }
 
-div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
+.gridOrganizerWrapper .titleWrapper h2.organizerTitle {
     color: #aa0000;
 }
 
@@ -50,7 +50,7 @@ div.gridOrganizerWrapper div.titleWrapper h2.organizerTitle {
     padding: 0;
 }
 
-.gridFeedItem div.newsroomArticleBlurb.container div.row {
+.gridFeedItem .newsroomArticleBlurb.container .row {
     margin-left: 0;
     margin-right: 1px;
     padding-left: 0;

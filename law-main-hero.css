@@ -16,7 +16,7 @@
 
 
 @media (min-width: 992px) {
-    
+
     .masonryOrganizer.card-group > .mainHeroItem.card {
         margin-bottom: 0;
         flex: auto;
@@ -33,6 +33,17 @@
     .masonryOrganizer .mainHeroItem .card-body h3 {
         font-size: 1.25rem;
         margin: 1rem 0 0.25rem 0;
+    }
+
+    .masonryOrganizer .mainHeroItem .card-footer {
+        padding: 0;
+    }
+
+    .mainHeroItem hr.articleBorderBottom {
+        border-top: 3px solid #e5e5e5;
+        display: block;
+        height: 3px;
+        margin: 0;
     }
 }
 

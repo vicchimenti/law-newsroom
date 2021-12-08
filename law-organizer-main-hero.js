@@ -1,5 +1,5 @@
 /***
- * 	law/organizer/news/hero
+ * 	law/organizer/main/hero
  *	this is a switcher that defines which content layout to use given the
  *	variable that's being evaluated.
  *

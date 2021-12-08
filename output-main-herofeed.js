@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.4
+ *      @version 4.5
  */
 
 
@@ -125,15 +125,15 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
-    let closeCardBody = '</div></div>';
+    let openCardBody = '<div class="card-body">';
+    let closeCardBody = '<hr class="articleBorderBottom"></div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<figure class="figure hidden visually-hidden">';
-    let closeImageWrapper = '</figure>';
-    let beginningHTML = '<article class="mainHeroItem col-xs-12 col-lg-3 card h-100 border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
-    let endingHTML = '<hr class="articleBorderBottom"></article>';
+    // let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    // let closeImageWrapper = '</figure>';
+    let beginningHTML = '<article class="mainHeroItem col-xs-12 col-lg-3 card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
+    let endingHTML = '</article>';
 
 
 
@@ -143,8 +143,8 @@ try {
      * 
      * */
     let titleLink = (heroDict.articleFullBody.content) ?
-        '<h3 class="newsroomArticleTitle card-title"><a href="' + heroDict.fullTextLink.content + '" class="card-link" target="_blank" title="Read the full article at: ' + heroDict.headline.content + '" >' + heroDict.headline.content + '</a></h3>' :
-        '<h3 class="newsroomArticleTitle card-title">' + heroDict.headline.content + '</h3>';
+        '<h3 class="mainHeroTitle card-title"><a href="' + heroDict.fullTextLink.content + '" class="card-link" target="_blank" title="Read the full article at: ' + heroDict.headline.content + '" >' + heroDict.headline.content + '</a></h3>' :
+        '<h3 class="mainHeroTitle card-title">' + heroDict.headline.content + '</h3>';
 
 
 
@@ -175,10 +175,10 @@ try {
         let imageDefaultAlt = heroDict.articleTitle.content ? heroDict.articleTitle.content : heroDict.contentName.content;
 
         imageString = (info.check()) ?
-            '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + heroDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+            '<img src="' + heroDict.frontPageImage.content + '" class="mainHeroImage card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + heroDict.frontPageImage.content + '" class="mainHeroImage card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
 
-        openImageWrapper = '<figure class="figure">';
+        // openImageWrapper = '<figure class="figure">';
     }
 
 
@@ -191,9 +191,7 @@ try {
     writeDocument(
         [
             beginningHTML,
-            openImageWrapper,
             imageString,
-            closeImageWrapper,
             openCardBody,
             titleLink,
             openHidden,

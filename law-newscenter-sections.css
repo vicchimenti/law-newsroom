@@ -24,7 +24,7 @@ div.gridOrganizer.standardContent {
     display: flex;
     flex: 0 0 100%;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 div.gridOrganizerWrapper div.titleWrapper {

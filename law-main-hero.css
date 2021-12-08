@@ -40,9 +40,8 @@
     }
 
     .mainHeroItem hr.articleBorderBottom {
-        border-top: 3px solid #e5e5e5;
+        border-top: solid #807060;
         display: block;
-        height: 3px;
         margin: 0;
     }
 }

@@ -82,7 +82,7 @@ div.gridOrganizerWrapper .gridFeedItem {
         padding: 0 30px;
     }
 
-    .gridFeedItem {
+    .gridOrganizer .gridFeedItem {
         margin-bottom: 1rem;
     }
 }

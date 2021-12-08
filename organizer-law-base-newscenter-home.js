@@ -419,16 +419,28 @@ function main(header, midder, footer) {
  
          /**
           * Filter radio button value that matches the homepage option
+          * Parse CID to match Newscenter Story
           */
          var matchingOptions = [];
-         for (let contentItem in validContent) {
-             
-            let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
-            if(homepageOption.toLowerCase().includes(selectedOption)) {
+         if (CID == '5296') {
 
-                matchingOptions.push(validContent[contentItem]);
-            }
-         }
+            for (let contentItem in validContent) {
+             
+                let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
+                if(homepageOption.toLowerCase().includes(selectedOption)) {
+    
+                    matchingOptions.push(validContent[contentItem]);
+                }
+             }
+        } else {
+
+            for (let contentItem in validContent) {
+
+                    matchingOptions.push(validContent[contentItem]);
+                }
+             }
+        }
+
 
  
  

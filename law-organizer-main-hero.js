@@ -8,7 +8,7 @@
 
 var fieldToBeEvaluated = content.get("Newscenter Homepage").publish(); //edit this to change the field
 var optionToTestFor = "major"; //edit this to change the option
-var contentTypeLayout = 'output/herofeed'; //edit this to change the Content Layout to use for output
+var contentTypeLayout = 'output/main/herofeed'; //edit this to change the Content Layout to use for output
 
 try {
     if (fieldToBeEvaluated == optionToTestFor) {

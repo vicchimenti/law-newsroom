@@ -54,7 +54,7 @@ div.gridOrganizerWrapper .gridFeedItem {
 @media screen and (min-width: 1200px) {
 
     div.gridOrganizerWrapper div.gridOrganizer.standardContent {
-        justify-content: start;
+        justify-content: space-between;
         flex-flow: unset;
         flex-direction: row;
         gap: 1rem;

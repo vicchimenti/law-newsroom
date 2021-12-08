@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.5
+ *      @version 4.6
  */
 
 
@@ -126,10 +126,13 @@ try {
      * 
      * */
     let openCardBody = '<div class="card-body">';
-    let closeCardBody = '<hr class="articleBorderBottom"></div>';
+    let closeCardBody = '</div>';
     let openHidden = '<div class="searchSortFields visually-hidden">';
     let closeHidden = '</div>';
     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    let openFooter = '<div class="card-footer bg-transparent border-0">';
+    let closeFooter = '</div>';
+    let borderBottom = '<hr class="articleBorderBottom">';
     // let openImageWrapper = '<figure class="figure hidden visually-hidden">';
     // let closeImageWrapper = '</figure>';
     let beginningHTML = '<article class="mainHeroItem col-xs-12 col-lg-3 card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
@@ -198,6 +201,9 @@ try {
             pinnedItem,
             closeHidden,
             closeCardBody,
+            openFooter,
+            borderBottom,
+            closeFooter,
             endingHTML
         ]
     );

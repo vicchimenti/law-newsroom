@@ -422,7 +422,7 @@ function main(header, midder, footer) {
           * Parse CID to match Newscenter Story
           */
          var matchingOptions = [];
-         if (CID == '5296') {
+         if (CID == 5296) {
 
             for (let contentItem in validContent) {
              

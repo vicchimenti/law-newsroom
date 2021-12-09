@@ -507,7 +507,7 @@ function main(header, midder, footer) {
          * check for content in matching topics field
          * 
          */
-            if (matchingTopics.length > 0) {
+        if (matchingTopics.length > 0) {
 
             /**
              * loop through matching topics and write only items requested

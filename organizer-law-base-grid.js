@@ -519,22 +519,27 @@ function main(header, midder, footer) {
 
 
 
-                /**
+        /**
          * Display content
          */
-                 header = header || '';
-                 midder = midder || '';
-                 footer = footer || '';
+        header = header || '';
+        midder = midder || '';
+        footer = footer || '';
 
 
 
 
-
-
+        /**
+         * Gather content and write header
+         * 
+         */
         document.write(header);
         var oSW = new java.io.StringWriter();
         var oT4SW = new T4StreamWriter(oSW);
         var oCP = new ContentPublisher();
+
+
+
         // prepare for first content item
         first = true;
         // log("writing content - validContent.length: " + validContent.length);
@@ -563,10 +568,20 @@ function main(header, midder, footer) {
             );
         }
 
+
+
+
+        /**
+         * write the document
+         * 
+         */
         document.write(oSW.toString());
         document.write(midder);
         document.write(footer);
 
+
+
+        
     } catch (e) {
         log("Error Thrown: " + e);
     }

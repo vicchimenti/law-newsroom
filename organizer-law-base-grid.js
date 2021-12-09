@@ -7,7 +7,7 @@
  *      Foundation for Law Mainzone
  *          Masonry Organizer
  *
- *      @version 3.28
+ *      @version 3.30
  */
 
 
@@ -501,12 +501,22 @@ function main(header, midder, footer) {
              
         } else if (CID == 5143) {
 
-            for (let contentItem in validContent) {
-            
-                let selectedOption = validContent[contentItem].Content.get("Faculty Status").publish();
-                if (categoryName.includes(selectedOption)) {
-    
+            if (categoryName == "Faculty Profile") {
+
+                for (let contentItem in validContent) {
+
                     matchingOptions.push(validContent[contentItem]);
+                }
+
+            } else {
+
+                for (let contentItem in validContent) {
+            
+                    let selectedOption = validContent[contentItem].Content.get("Faculty Status").publish();
+                    if (categoryName.includes(selectedOption)) {
+        
+                        matchingOptions.push(validContent[contentItem]);
+                    }
                 }
             }
 

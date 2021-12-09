@@ -504,16 +504,16 @@ function main(header, midder, footer) {
 
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
-            matchingTopics.sort(byCustomElements(CID, arrayOfElements, categoryName));
+            matchingOptions.sort(byCustomElements(CID, arrayOfElements, categoryName));
 
         } else {
 
-            matchingTopics.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+            matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
 
         }
 
         if (bReverse) {
-            matchingTopics.reverse();
+            matchingOptions.reverse();
         }
 
 
@@ -540,32 +540,44 @@ function main(header, midder, footer) {
 
 
 
-        // prepare for first content item
-        first = true;
-        // log("writing content - validContent.length: " + validContent.length);
 
-        for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
-            // log("i: " + i);
-            // log("Limit: " + LIMIT);
-            // if first print content item completely
-            if (first) {
-                oLayout = LAYOUT;
-                first = false;
-                // if not first print link version if requested but normally otherwise
-            } else {
-                oLayout = bSummFirst ? LAYOUT + "/Link" : LAYOUT;
+        /**
+         * initialize iterators to account for starting and ending points
+         * 
+         */
+        let maxIterations = LIMIT <= matchingOptions.length && LIMIT > 0 ? LIMIT : matchingOptions.length;
+        let start = nStart <= matchingOptions.length ? nStart - 1 : 0;
+        let iterations = 0;
+
+
+
+
+        /**
+         * check for content in matching topics field
+         * 
+         */
+        if (matchingOptions.length > 0) {
+
+            /**
+             * loop through matching topics and write only items requested
+             * 
+             */
+            do {
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingOptions[start].Content, LAYOUT, isPreview);
+                start++;
+                iterations++;
+            } while (start < matchingOptions.length && iterations < maxIterations);
+
+        } else {
+
+            /**
+             * when no matching items write all categories
+             * 
+             */
+            for (let story in validContent) {
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
             }
-            // log("oLayout: " + oLayout);
 
-            oCP.write(
-                oT4SW,
-                dbStatement,
-                publishCache,
-                oSection,
-                validContent[i].Content,
-                oLayout,
-                isPreview
-            );
         }
 
 
@@ -581,7 +593,7 @@ function main(header, midder, footer) {
 
 
 
-        
+
     } catch (e) {
         log("Error Thrown: " + e);
     }

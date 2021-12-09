@@ -355,7 +355,6 @@ function main(header, midder, footer) {
          * Declarations
          * 
          */
-        // var title = content.hasElement('Title') ? content.get('Title') : null;
         var choice = content.get('Article type').publish();
         var CID = new java.lang.Integer(choice.split(";")[0]);
         var LAYOUT = choice.split(";")[1];
@@ -363,8 +362,6 @@ function main(header, midder, footer) {
         var sortMethod = content.get('Sorting method').publish();
         var sElement = String(content.get('Custom element'));
         var bReverse = !content.get('Reverse order').isNull();
-        // var bPaginate = content.hasElement('Paginate?') ? !content.get('Paginate?').isNull() : null;
-        // var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');

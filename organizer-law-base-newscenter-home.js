@@ -422,13 +422,20 @@ function main(header, midder, footer) {
           * Parse CID to match Newscenter Story
           */
          let idString = CID.toString();
+         log('idString: ' + idString);
          let newscenterId = "5296";
+         log('newscenterId: ' + newscenterId);
          var matchingOptions = [];
          if (idString == newscenterId) {
+            log('if');
 
             for (let contentItem in validContent) {
              
                 let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
+                log('selectedOption: ' + selectedOption);
+                log('homepageOption: ' + homepageOption);
+
+
                 if(homepageOption.toLowerCase().includes(selectedOption)) {
     
                     matchingOptions.push(validContent[contentItem]);
@@ -436,6 +443,8 @@ function main(header, midder, footer) {
              }
 
         } else {
+
+            log('else');
 
             for (let contentItem in validContent) {
 

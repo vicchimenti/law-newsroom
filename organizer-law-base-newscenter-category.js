@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.41
+ *      @version 5.42
  */
 
 
@@ -475,7 +475,7 @@ function main(header, midder, footer) {
 
 
 
-         
+
         /**
          * Gather content and write header
          * 

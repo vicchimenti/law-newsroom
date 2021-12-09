@@ -474,67 +474,69 @@ function main(header, midder, footer) {
          footer = footer || '';
 
 
+
+         
+        /**
+         * Gather content and write header
+         * 
+         */
+        document.write(header);
+        var oSW = new java.io.StringWriter();
+        var oT4SW = new T4StreamWriter(oSW);
+        var oCP = new ContentPublisher();
+
+
+
+        /**
+         * initialize iterators to account for starting and ending points
+         * 
+         */
+        let maxIterations = LIMIT <= matchingTopics.length && LIMIT > 0 ? LIMIT : matchingTopics.length;
+        let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
+        let iterations = 0;
+
+
+
+
+        /**
+         * check for content in matching topics field
+         * 
+         */
+            if (matchingTopics.length > 0) {
+
             /**
-             * Gather content and write header
+             * loop through matching topics and write only items requested
              * 
              */
-            document.write(header);
-            var oSW = new java.io.StringWriter();
-            var oT4SW = new T4StreamWriter(oSW);
-            var oCP = new ContentPublisher();
+            do {
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
+                start++;
+                iterations++;
+            } while (start < matchingTopics.length && iterations < maxIterations);
 
-
-
-            /**
-             * initialize iterators to account for starting and ending points
-             * 
-             */
-            let maxIterations = LIMIT <= matchingTopics.length && LIMIT > 0 ? LIMIT : matchingTopics.length;
-            let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
-            let iterations = 0;
-
-
-
+        } else {
 
             /**
-             * check for content in matching topics field
+             * when no matching items write all categories
              * 
              */
-             if (matchingTopics.length > 0) {
-
-                /**
-                 * loop through matching topics and write only items requested
-                 * 
-                 */
-                do {
-                    oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
-                    start++;
-                    iterations++;
-                } while (start < matchingTopics.length && iterations < maxIterations);
-
-            } else {
-
-                /**
-                 * when no matching items write all categories
-                 * 
-                 */
-                for (let story in validContent) {
-                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
-                }
-
+            for (let story in validContent) {
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
             }
 
+        }
 
 
 
-            /**
-             * write the document
-             * 
-             */
-            document.write(oSW.toString());
-            document.write(midder);
-            document.write(footer);
-        // }
+
+        /**
+         * write the document
+         * 
+         */
+        document.write(oSW.toString());
+        document.write(midder);
+        document.write(footer);
+  
 
 
 

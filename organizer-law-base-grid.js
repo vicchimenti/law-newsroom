@@ -58,7 +58,7 @@
  
 
 
- 
+
 /**
  * Sorts content by date, from most recent to least recent.
  * If these is no date, content is treated as least recent.
@@ -117,9 +117,15 @@
  * Sorts content alphabetically, from A to Z. Ignores special characters
  * (anything that isn't a word or space).
  * Defaults to using the Name element.
+ * 
+ * @param cid The content type ID
+ * @param elem The element to use for sorting
+ * 
  */
 function byName(cid, elem) {
+
     if (!elem) {
+
         switch (cid) {
             case 208:
                 elem = "Post Title";
@@ -148,19 +154,16 @@ function byName(cid, elem) {
         }
     }
 
-    return function(a, b) {
 
-        var strA = String(a.Content.get(elem))
-            .replace(/[^\w\s]/gi, "")
-            .toLowerCase();
+    let result = (a, b) => {
 
-        var strB = String(b.Content.get(elem))
-            .replace(/[^\w\s]/gi, "")
-            .toLowerCase();
+        var strA = String(a.Content.get(elem)).replace(/[^\w\s]/gi, '').toLowerCase();
+        var strB = String(b.Content.get(elem)).replace(/[^\w\s]/gi, '').toLowerCase();
 
-        // compare string a to string b    
         return strA.localeCompare(strB);
-    };
+    }
+
+    return result;
 }
 
 /**

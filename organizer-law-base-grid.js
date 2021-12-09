@@ -7,7 +7,7 @@
  *      Foundation for Law Mainzone
  *          Masonry Organizer
  *
- *      @version 3.25
+ *      @version 3.26
  */
 
 
@@ -402,6 +402,8 @@ function main(header, midder, footer) {
         var bReverse = !content.get("Reverse order").isNull();
         var LIMIT = content.get("Total number of items to display");
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
+        var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
+
 
 
 
@@ -490,10 +492,27 @@ function main(header, midder, footer) {
              
         } else if (CID == 5143) {
 
+            // var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
+
+
             for (let contentItem in validContent) {
             
+
                 let selectedOption = validContent[contentItem].Content.get("Faculty Status").publish();
-                if (selectedOption != "") {
+
+                // for (let category in categoryValues) {
+
+                //     let categoryElement = categoryValues[category].split(':');
+                //     let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
+                //     let topicName = topic.getName();
+    
+                //     if (topicName == categoryName) {
+                //         matchingTopics.push(validContent[contentItem]);
+                //     }
+                // }
+
+                if (categoryName.includes(selectedOption)) {
+                // if (selectedOption != "") {
     
                     matchingOptions.push(validContent[contentItem]);
                 }

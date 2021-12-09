@@ -34,29 +34,15 @@ importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
  *
  * To trigger this function when you need a console.log() use the example:
  * Example: log("variable a: " + varA);
- *
+ * 
  * @param message The string that will print to the browser console
- *
+ * 
  */
-function log(message) {
-    document.write("<script>eval(\"console.log('" + message + "')\");</script>");
-}
-
-/* Sorting methods */
-
-/**
- * All methods select what element to use for sorting if one is not provided,
- * depending on the content type ID. They then return a method to be used by
- * Array.prototype.sort().
- *
- * @param cid The content type ID
- * @param elem The element to use for sorting
- */
+ log = message => document.write('<script>eval("console.log(\'' + message + '\')");</script>');
 
 
- case 5296:
-    elem = "Publish Date";
-    break;
+
+
 
     
 /**
@@ -78,6 +64,9 @@ function log(message) {
                 break;
             case 82:
                 elem = 'Publish Date';
+                break;
+            case 5296:
+                elem = "Publish Date";
                 break;
             default:
 

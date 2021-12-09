@@ -278,18 +278,18 @@ function isLimitPassed(i, limit) {
  * @param tag is the radio or tag valued from content item that is being sorted
  * 
  */
-//  function tagSort(tag, elem) {
+ function tagSort(tag, elem) {
 
-//     return function(a, b) {
+    return function(a, b) {
 
-//         let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
-//         let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
-//         let isMatchA = (tag.includes(strA));
-//         let isMatchB = (tag.includes(strB));
+        let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
+        let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
+        let isMatchA = (tag.includes(strA));
+        let isMatchB = (tag.includes(strB));
 
-//         return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
-//     }
-// }
+        return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
+    }
+}
 
 
 
@@ -344,7 +344,7 @@ function isLimitPassed(i, limit) {
  * @param cat is the category being parsed for
  * 
  */
- function byCustomElements(cid, elements) {
+ function byCustomElements(cid, elements, cat) {
 
     return function(a, b) {
 
@@ -364,6 +364,9 @@ function isLimitPassed(i, limit) {
                     break;
                 case 'Pinned':
                     result = byBoolean(cid, currentElement)(a, b);
+                    break;
+                case 'Faculty Status':
+                    result = tagSort(cat, currentElement)(a, b);
                     break;
                 default:
                     result = dynamicSort(currentElement)(a, b);
@@ -492,27 +495,10 @@ function main(header, midder, footer) {
              
         } else if (CID == 5143) {
 
-            // var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
-
-
             for (let contentItem in validContent) {
             
-
                 let selectedOption = validContent[contentItem].Content.get("Faculty Status").publish();
-
-                // for (let category in categoryValues) {
-
-                //     let categoryElement = categoryValues[category].split(':');
-                //     let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
-                //     let topicName = topic.getName();
-    
-                //     if (topicName == categoryName) {
-                //         matchingTopics.push(validContent[contentItem]);
-                //     }
-                // }
-
                 if (categoryName.includes(selectedOption)) {
-                // if (selectedOption != "") {
     
                     matchingOptions.push(validContent[contentItem]);
                 }
@@ -536,7 +522,7 @@ function main(header, midder, footer) {
 
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
-            matchingOptions.sort(byCustomElements(CID, arrayOfElements));
+            matchingOptions.sort(byCustomElements(CID, arrayOfElements, categoryName));
 
         } else {
 

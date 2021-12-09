@@ -407,39 +407,6 @@ function main(header, midder, footer) {
 
 
         /**
-         * Pagination
-         * 
-         */
-        var bPaginate = content.hasElement("Paginate?")
-                        ? !content.get("Paginate?").isNull()
-                        : null;
-
-        var nPerPage =  content.hasElement("Total number of items to display per page")
-                        ? content.get("Total number of items to display per page")
-                        : 0;
-
-
-
-        // the logic to determine layouts and links that were available to the user
-        var bViewAll = content.hasElement("Show link to original section") ?
-            !content.get("Show link to original section").isNull() :
-            false;
-        var sViewAllText = content.hasElement("Link to original section text") ?
-            content.get("Link to original section text") :
-            "";
-        if (sViewAllText == "") sViewAllText = "View All";
-
-
-        // occurs only in cases where the organizer is sorting a News Article with a Summary Link in edu
-        var bSummFirst = LAYOUT == "v9/organizer/newsArticleSummary/Link";
-        if (bSummFirst) {
-            LAYOUT = "v9/organizer/newsArticleSummary";
-        }
-
-
-
-
-        /**
          * Get section
          */
         var oSSLM = ServerSideLinkManager.getManager();

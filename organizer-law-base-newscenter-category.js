@@ -145,7 +145,6 @@ function byName(cid, elem) {
                 break;
             default:
                 elem = 'Name';
-                break;
         }
     }
 

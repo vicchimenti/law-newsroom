@@ -239,25 +239,25 @@ function byOrder(cid, elem) {
  * - Preview: Content must be approved or pending
  * - Publish: Content must be approved
  */
-var isValidStatus = (function() {
-    if (isPreview)
-        return function(status) {
-            return status != 2;
-        };
-    else
-        return function(status) {
-            return status == 0;
-        };
-})();
+// var isValidStatus = (function() {
+//     if (isPreview)
+//         return function(status) {
+//             return status != 2;
+//         };
+//     else
+//         return function(status) {
+//             return status == 0;
+//         };
+// })();
 
 /**
  * Determines whether a number has passed a certain limit.
  * Used for checking if the total number of content items to display has been reached.
  */
-function isLimitPassed(i, limit) {
-    if (limit > 0) return i >= limit;
-    else return false;
-}
+// function isLimitPassed(i, limit) {
+//     if (limit > 0) return i >= limit;
+//     else return false;
+// }
 
 
 
@@ -479,6 +479,7 @@ function main(header, midder, footer) {
          *      Newscenter Story ID:5296
          *      Faculty Profile ID:5143
          * let all other content types pass thru
+         * 
          */
         var matchingOptions = [];
         

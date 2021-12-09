@@ -470,11 +470,13 @@ function main(header, midder, footer) {
         /**
          * Filter featured items for image
          * to maintain valid limits and start positions
-         * current content types are Newscenter Story ID:5296
+         * current content types are
+         *      Newscenter Story ID:5296
+         *      Faculty Profile ID:5143
          * let all other content types pass thru
          */
         var matchingOptions = [];
-
+        
         if (CID == 5296) {
 
             for (let contentItem in validContent) {
@@ -486,6 +488,17 @@ function main(header, midder, footer) {
                 }
             }
              
+        } else if (CID == 5143) {
+
+            for (let contentItem in validContent) {
+            
+                let selectedOption = validContent[contentItem].Content.get("Faculty Status").publish();
+                if (selectedOption != "") {
+    
+                    matchingOptions.push(validContent[contentItem]);
+                }
+            }
+
         } else {
 
             for (let contentItem in validContent) {

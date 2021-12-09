@@ -471,6 +471,7 @@ function main(header, midder, footer) {
          * Filter featured items for image
          * to maintain valid limits and start positions
          * current content types are Newscenter Story ID:5296
+         * let all other content types pass thru
          */
         var matchingOptions = [];
 

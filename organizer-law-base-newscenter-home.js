@@ -501,10 +501,12 @@ function main(header, midder, footer) {
         let start = nStart <= matchingOptions.length ? nStart - 1 : 0;
         let iterations = 0;
 
+        log('iterations: ' + iterations);
         log('maxIterations: ' + maxIterations);
         log('LIMIT: ' + LIMIT);
         log('start: ' + start);
         log('nStart: ' + nStart);
+        log('matchingOptions: ' + matchingOptions.length);
 
 
 
@@ -541,10 +543,12 @@ function main(header, midder, footer) {
             }
         }
 
+        log('iterations: ' + iterations);
         log('maxIterations: ' + maxIterations);
         log('LIMIT: ' + LIMIT);
         log('start: ' + start);
         log('nStart: ' + nStart);
+        log('matchingOptions: ' + matchingOptions.length);
 
         /**
          * initialize iterators to account for starting and ending points

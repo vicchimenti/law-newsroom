@@ -369,24 +369,6 @@ function main(header, midder, footer) {
 
 
 
-        // the logic to determine layouts and links that were available to the user
-        // var bViewAll = content.hasElement('Show link to original section') ? !content.get('Show link to original section').isNull() : false;
-        // var sViewAllText = content.hasElement('Link to original section text') ? content.get('Link to original section text') : "";
-        // if (sViewAllText == "")
-        //     sViewAllText = "View All";
-
-
-
-
-        // overrides a news layout that doesn't work
-        // var bSummFirst = (LAYOUT == "v9/organizer/newsArticleSummary/Link");
-        // if (bSummFirst) {
-        //     LAYOUT = "v9/organizer/newsArticleSummary";
-        // }
-
-
-
-
         /**
          * Get section
          */
@@ -418,9 +400,8 @@ function main(header, midder, footer) {
         /**
          * Filter content that matches content type
          */
-        var oCM = ApplicationContextProvider.getBean(IContentManager);
-        var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
         var validContent = [];
+        var oCM = ApplicationContextProvider.getBean(IContentManager);
 
         for (var i = 0; i < mirrorContent.length; i++) {
 
@@ -442,6 +423,8 @@ function main(header, midder, footer) {
          * Filter content that matches the category
          */
         var matchingTopics = [];
+        var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
+
         for (let contentItem in validContent) {
 
             let categoryValues = validContent[contentItem].Content.get("Category").getValue().toString().split(';');

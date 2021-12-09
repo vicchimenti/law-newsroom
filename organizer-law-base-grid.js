@@ -7,7 +7,7 @@
  *      Foundation for Law Mainzone
  *          Masonry Organizer
  *
- *      @version 3.23
+ *      @version 3.24
  */
 
 
@@ -278,18 +278,18 @@ function isLimitPassed(i, limit) {
  * @param tag is the radio or tag valued from content item that is being sorted
  * 
  */
- function tagSort(tag, elem) {
+//  function tagSort(tag, elem) {
 
-    return function(a, b) {
+//     return function(a, b) {
 
-        let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
-        let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
-        let isMatchA = (tag.includes(strA));
-        let isMatchB = (tag.includes(strB));
+//         let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
+//         let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
+//         let isMatchA = (tag.includes(strA));
+//         let isMatchB = (tag.includes(strB));
 
-        return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
-    }
-}
+//         return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
+//     }
+// }
 
 
 
@@ -344,7 +344,7 @@ function isLimitPassed(i, limit) {
  * @param cat is the category being parsed for
  * 
  */
- function byCustomElements(cid, elements, cat) {
+ function byCustomElements(cid, elements) {
 
     return function(a, b) {
 

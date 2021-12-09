@@ -1,13 +1,13 @@
 /***
  *      @author Victor Chimenti, MSCS
- *      @file organizerLawBaseNewscenterHome.js
+ *      @file organizerLawBaseMainMasonryDev.js
  *      @see Media Library ID: 3050627
- *      organizer law base newscenter home file
+ *      organizer law base main masonry file
  * 
- *      Foundation for Law News Center Homepage
- *          Major, Minor, Hero Organizers
+ *      Foundation for Mainzone Masory Organizers
+ *          with access to Newscenter Story
  *
- *      @version 7.22
+ *      @version 8.0
  */
 
  

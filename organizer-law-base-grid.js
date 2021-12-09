@@ -374,18 +374,25 @@ function isLimitPassed(i, limit) {
     }
 }
 
-/***
- * check custom element === Category Pin
- * and then if the pin === choice
- * if so assign logic value to the result or create new byPin function
- */
 
-/* Main method */
+
+
+
+
+
 
 /**
+ * Main
  * Method called by Organizer content types to sort and display content.
  */
 function main(header, midder, footer) {
+
+
+    try {} catch (e) {
+        log("Error Thrown: " + e);
+    }
+
+
     /**
      * Set variables
      */

@@ -102,7 +102,7 @@ function byDate(cid, elem) {
         return  (dateA && !dateB) ? 1 :
                 (!dateA && dateB) ? -1 :
                 (!dateA && !dateB) ? 0 :
-                dateA.compareTo(dateB);
+                dateB.compareTo(dateA);
     }
     
     return result;

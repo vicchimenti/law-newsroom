@@ -450,12 +450,15 @@ function main(header, midder, footer) {
          */
         var validContent = [];
         var oCM = ApplicationContextProvider.getBean(IContentManager);
+
         for (var i = 0; i < mirrorContent.length; i++) {
+
             var item = {
                 Content: oCM.get(mirrorContent[i].ID, language),
                 CachedContent: mirrorContent[i],
                 index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
             };
+            
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);
             }

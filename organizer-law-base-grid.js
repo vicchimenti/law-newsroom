@@ -401,6 +401,8 @@ function main(header, midder, footer) {
         var sElement = String(content.get("Custom element"));
         var bReverse = !content.get("Reverse order").isNull();
         var LIMIT = content.get("Total number of items to display");
+        var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
+
 
 
 

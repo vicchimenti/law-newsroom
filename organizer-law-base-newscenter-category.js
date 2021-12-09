@@ -303,6 +303,7 @@ function dynamicSort(elem) {
  * 
  * @param cid is the content type id
  * @param elements is a value assigned from an array like object of custom Elements to sort by
+ * @param cat is the category being parsed for
  * 
  */
 function byCustomElements(cid, elements, cat) {

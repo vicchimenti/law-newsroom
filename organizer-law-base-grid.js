@@ -361,6 +361,12 @@ function byOrder(cid, elem) {
                 case 'Article Title':
                     result = byName(cid, currentElement)(a, b);
                     break;
+                case 'Last Name':
+                    result = byName(cid, currentElement)(a, b);
+                    break;
+                case 'First Name':
+                    result = byName(cid, currentElement)(a, b);
+                    break;
                 case 'Pinned':
                     result = byBoolean(cid, currentElement)(a, b);
                     break;

@@ -470,21 +470,23 @@ function main(header, midder, footer) {
         /**
          * Filter featured items for image
          * to maintain valid limits and start positions
+         * current content types are Newscenter Story ID:5296
          */
         var matchingOptions = [];
 
-        if (CID == 526) {
-            Main Image
-        }
-        for (let contentItem in validContent) {
-            
-            let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
-            if(homepageOption.toLowerCase().includes(selectedOption)) {
+        if (CID == 5296) {
 
-                matchingOptions.push(validContent[contentItem]);
+            for (let contentItem in validContent) {
+            
+                let selectedOption = validContent[contentItem].Content.get("Main Image").publish();
+                if (selectedOption != "") {
+    
+                    matchingOptions.push(validContent[contentItem]);
+                }
             }
+             
         }
-         
+
 
 
 

@@ -421,8 +421,10 @@ function main(header, midder, footer) {
           * Filter radio button value that matches the homepage option
           * Parse CID to match Newscenter Story
           */
+         let idString = CID.toString();
+         let newscenterId = "5296";
          var matchingOptions = [];
-         if (CID == 5296) {
+         if (idString == newscenterId) {
 
             for (let contentItem in validContent) {
              

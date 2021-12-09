@@ -449,19 +449,19 @@ function main(header, midder, footer) {
          */
         if (sElement != "") {
 
-            // when the user selects any custom sort element
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
             matchingTopics.sort(byCustomElements(CID, arrayOfElements, categoryName));
 
         } else {
 
-            // when the user only sorts by the default options
             matchingTopics.sort(eval(sortMethod + '(' + CID + ', sElement);'));
 
         }
-        if (bReverse)
+
+        if (bReverse) {
             matchingTopics.reverse();
+        }
 
 
 

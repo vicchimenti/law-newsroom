@@ -205,19 +205,32 @@ function byBoolean(cid, elem) {
     return result;
 }
 
+
+
+
 /**
  * Sorts content by section order.
  * Content type ID and element name have no effect on the returned sorting method.
  */
 function byOrder(cid, elem) {
-    return function(a, b) {
-        if (a.index > b.index) return 1;
-        if (a.index < b.index) return -1;
-        return 0;
-    };
+
+    let result = (a, b) => {
+
+        return  (a.index > b.index) ? 1 :
+                (a.index < b.index) ? -1 : 0;
+    }
+
+    return result;
 }
 
-/* Helper methods */
+
+
+
+
+
+
+
+/***** Legacy Helper methods *****/
 
 /**
  * Checks a content item's status to see if it should be displayed.
@@ -246,10 +259,56 @@ function isLimitPassed(i, limit) {
     else return false;
 }
 
-function getMode(isPreview) {
-    if (isPreview) return CachedContent.CURRENT;
-    else return CachedContent.APPROVED;
+
+
+/***** End Legacy Helper methods *****/
+
+
+
+
+
+
+
+
+/**
+ * Parse Custom Sort Field for multiple fields
+ * Called only when there is any custom field entered
+ *
+ * @param elem is a value assigned from an array like object of custom Elements to sort by
+ * @param tag is the radio or tag valued from content item that is being sorted
+ * 
+ */
+ function tagSort(tag, elem) {
+
+    return function(a, b) {
+
+        let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
+        let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
+        let isMatchA = (tag.includes(strA));
+        let isMatchB = (tag.includes(strB));
+
+        return isMatchA && !isMatchB ? -1 : !isMatchA && isMatchB ? 1 : 0;
+    }
 }
+
+
+
+
+/**
+ * Checks a content item's status to see if it should be displayed.
+ * The result depends on whether the CMS is in preview or publish, as each mode
+ * displays content under different conditions:
+ * - Preview: Content must be approved or pending
+ * - Publish: Content must be approved
+ * 
+ * @param isPreview boolean
+ * 
+ */
+ function getMode(isPreview) {
+
+    return isPreview ? CachedContent.CURRENT : CachedContent.APPROVED;
+}
+
 
 
 

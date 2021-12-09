@@ -150,7 +150,6 @@ function byName(cid, elem) {
                 break;
             default:
                 elem = "Name";
-                break;
         }
     }
 
@@ -166,6 +165,9 @@ function byName(cid, elem) {
     return result;
 }
 
+
+
+
 /**
  * Sorts content by a boolean value (i.e. whether or not an element has a value).
  * Particularly useful for single checkboxes (e.g. System Status content type).
@@ -173,16 +175,19 @@ function byName(cid, elem) {
  * If two content items have the same value, also sorts by section order.
  */
 function byBoolean(cid, elem) {
+
     if (!elem) {
+
         switch (cid) {
             case 359:
                 elem = "Service is Available";
                 break;
             default:
                 return byOrder(cid, elem);
-                break;
         }
     }
+
+
     return function(a, b) {
         var boolA = !a.Content.get(elem).isNull();
         var boolB = !b.Content.get(elem).isNull();

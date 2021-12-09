@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.19
+ *      @version 7.20
  */
 
  
@@ -493,14 +493,14 @@ function main(header, midder, footer) {
         var oCP = new ContentPublisher();
 
 
-
         /**
          * initialize iterators to account for starting and ending points
          * 
          */
-        let maxIterations = LIMIT <= validContent.length && LIMIT > 0 ? LIMIT : validContent.length;
-        let start = nStart <= validContent.length ? nStart - 1 : 0;
+        let maxIterations = LIMIT <= matchingTopics.length && LIMIT > 0 ? LIMIT : matchingTopics.length;
+        let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
         let iterations = 0;
+
 
 
 
@@ -508,17 +508,17 @@ function main(header, midder, footer) {
          * check for content in matching topics field
          * 
          */
-        if (matchingOptions.length > 0) {
+        if (matchingTopics.length > 0) {
 
             /**
              * loop through matching topics and write only items requested
              * 
              */
             do {
-                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingOptions[start].Content, LAYOUT, isPreview);
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
                 start++;
                 iterations++;
-            } while (start < matchingOptions.length && iterations < maxIterations);
+            } while (start < matchingTopics.length && iterations < maxIterations);
 
         } else {
 
@@ -529,8 +529,47 @@ function main(header, midder, footer) {
             for (let story in validContent) {
                 oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
             }
-
         }
+
+
+
+        /**
+         * initialize iterators to account for starting and ending points
+         * 
+         */
+        // let maxIterations = LIMIT <= validContent.length && LIMIT > 0 ? LIMIT : validContent.length;
+        // let start = nStart <= validContent.length ? nStart - 1 : 0;
+        // let iterations = 0;
+
+
+
+        /**
+         * check for content in matching topics field
+         * 
+         */
+        // if (matchingOptions.length > 0) {
+
+            /**
+             * loop through matching topics and write only items requested
+             * 
+             */
+        //     do {
+        //         oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingOptions[start].Content, LAYOUT, isPreview);
+        //         start++;
+        //         iterations++;
+        //     } while (start < matchingOptions.length && iterations < maxIterations);
+
+        // } else {
+
+            /**
+             * when no matching items write all categories
+             * 
+             */
+        //     for (let story in validContent) {
+        //         oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
+        //     }
+
+        // }
 
 
 

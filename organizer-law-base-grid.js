@@ -498,144 +498,43 @@ function main(header, midder, footer) {
 
 
 
-        /**
-         * Sort content
-         */
-        if (sElement != "") {
 
-            // when the user selects any custom sort element
-            var arrayOfElements = [];
-            arrayOfElements = sElement.split(",");
-            // In cases where we must match to the original layout or content item
-            var boolMatch = LAYOUT;
-            // sort the valid content by the custom elements
-            validContent.sort(byCustomElements(CID, arrayOfElements, boolMatch));
-        } else {
-            // when the user only sorts by the default options
-            validContent.sort(eval(sortMethod + "(" + CID + ", sElement);"));
-        }
-        if (bReverse) validContent.reverse();
+        document.write(header);
+        var oSW = new java.io.StringWriter();
+        var oT4SW = new T4StreamWriter(oSW);
+        var oCP = new ContentPublisher();
+        // prepare for first content item
+        first = true;
+        // log("writing content - validContent.length: " + validContent.length);
 
-        /**
-         * Display content
-         */
-        if (!header) header = "";
-        if (!midder) midder = "";
-        if (!footer) footer = "";
-        // if (title != "")
-            // header = header + '<div class="titleWrapper col-xs-12"><h2 class="organizerTitle">' + title + "</h2></div>";
-        if (bViewAll) {
-            var href = BrokerUtils.processT4Tags(
+        for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
+            // log("i: " + i);
+            // log("Limit: " + LIMIT);
+            // if first print content item completely
+            if (first) {
+                oLayout = LAYOUT;
+                first = false;
+                // if not first print link version if requested but normally otherwise
+            } else {
+                oLayout = bSummFirst ? LAYOUT + "/Link" : LAYOUT;
+            }
+            // log("oLayout: " + oLayout);
+
+            oCP.write(
+                oT4SW,
                 dbStatement,
                 publishCache,
-                section,
-                content,
-                language,
-                isPreview,
-                '<t4 type="content" name="Section" output="linkurl" modifiers="nav_sections" />'
+                oSection,
+                validContent[i].Content,
+                oLayout,
+                isPreview
             );
-            midder =
-                midder +
-                '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + "</a></div>";
         }
 
-        /**
-         * Determine Pagination
-         */
-        if (bPaginate && !bSummFirst) {
-            // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
+        document.write(oSW.toString());
+        document.write(midder);
+        document.write(footer);
 
-            var contentInfo = [];
-            for (
-                var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++
-            ) {
-                var tci = new TargetContentInfo(
-                    validContent[i].CachedContent,
-                    oSection,
-                    language
-                );
-                contentInfo.push(tci);
-            }
-            var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
-            var sectionPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(
-                    com.terminalfour.publish.SectionPublisher
-                ),
-                contentPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(
-                    com.terminalfour.publish.ContentPublisher
-                ),
-                publishHelper = com.terminalfour.spring.ApplicationContextProvider.getBean(
-                    com.terminalfour.publish.PublishHelper
-                ),
-                paginator = new NavigationPaginator(
-                    sectionPublisher,
-                    contentPublisher,
-                    publishHelper
-                );
-            paginator.setContentPerPage(nPerPage > 0 ? nPerPage : 10);
-            paginator.setFormatter(LAYOUT);
-            paginator.setLinksToShow(10);
-            var before =
-                '<div class="paginationWrapper"><div class="pagination"><span class="paginationNumber">';
-            var middle = '</span><span class="paginationNumber">';
-            var after = "</span></div></div>";
-            paginator.setPageSeparators(before, middle, after);
-            paginator.setBeforeAndAfterHTML(header, footer);
-            paginator.setPreview(isPreview);
-            paginator.write(
-                document,
-                dbStatement,
-                publishCache,
-                section,
-                language,
-                isPreview,
-                vector
-            );
-
-            // eventually we may want an else if here EX: else if (bPaginate && bSummFirst) {...}
-            // that would allow when the Summary and Paginate option are both chosen
-            // however at this time I haven't been able to produce a solution that merges
-            // the paginator with the oCP but it should be possible with enough time to work it out
-            // for now we go straight to the else
-            // and we must communicate to our departments that we don't support that functionality
-            // when they try to select both summary and paginator
-            // Victor 7/2020
-        } else {
-            document.write(header);
-            var oSW = new java.io.StringWriter();
-            var oT4SW = new T4StreamWriter(oSW);
-            var oCP = new ContentPublisher();
-            // prepare for first content item
-            first = true;
-            // log("writing content - validContent.length: " + validContent.length);
-
-            for (var i = nStart - 1; i < validContent.length && !isLimitPassed(i, LIMIT); i++) {
-                // log("i: " + i);
-                // log("Limit: " + LIMIT);
-                // if first print content item completely
-                if (first) {
-                    oLayout = LAYOUT;
-                    first = false;
-                    // if not first print link version if requested but normally otherwise
-                } else {
-                    oLayout = bSummFirst ? LAYOUT + "/Link" : LAYOUT;
-                }
-                // log("oLayout: " + oLayout);
-
-                oCP.write(
-                    oT4SW,
-                    dbStatement,
-                    publishCache,
-                    oSection,
-                    validContent[i].Content,
-                    oLayout,
-                    isPreview
-                );
-            }
-
-            document.write(oSW.toString());
-            document.write(midder);
-            document.write(footer);
-        }
     } catch (e) {
         log("Error Thrown: " + e);
     }

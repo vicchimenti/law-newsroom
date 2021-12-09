@@ -1,5 +1,5 @@
 /***
- *      @author Victor Chimenti, MSCS-SE 2020
+ *      @author Victor Chimenti, MSCS
  *      @file organizerLawBaseGrid.js
  *      @see Media Library ID: 2686600
  *      organizer law base grid

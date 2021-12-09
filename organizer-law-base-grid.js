@@ -406,14 +406,17 @@ function main(header, midder, footer) {
 
 
 
+        /**
+         * Pagination
+         * 
+         */
+        var bPaginate = content.hasElement("Paginate?")
+                        ? !content.get("Paginate?").isNull()
+                        : null;
 
-        // the paginate option to display items on multiple pages
-        var bPaginate = content.hasElement("Paginate?") ?
-                !content.get("Paginate?").isNull() : null;
-
-        // the number of items to display on each page when pagination is true
-        var nPerPage = content.hasElement("Total number of items to display per page") ?
-                content.get("Total number of items to display per page") : 0;
+        var nPerPage =  content.hasElement("Total number of items to display per page")
+                        ? content.get("Total number of items to display per page")
+                        : 0;
 
 
 

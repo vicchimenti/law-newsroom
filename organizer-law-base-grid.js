@@ -14,18 +14,29 @@
  *
  *      Adapted from the existing organizer organizer.js media library id 163514
  *
- *      @version 3.20
+ *      @version 3.21
  */
 
-importClass(com.terminalfour.sitemanager.cache.CachedContent);
-importClass(com.terminalfour.navigation.ServerSideLinkManager);
-importClass(com.terminalfour.spring.ApplicationContextProvider);
-importClass(com.terminalfour.publish.utils.TreeTraversalUtils);
-importClass(com.terminalfour.navigation.items.utils.TargetContentInfo);
-importClass(com.terminalfour.utils.T4StreamWriter);
-importClass(com.terminalfour.publish.ContentPublisher);
-importClass(com.terminalfour.publish.utils.BrokerUtils);
-importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+
+
+
+/***
+ *      Import T4 Utilities
+ */
+ importClass(com.terminalfour.sitemanager.cache.CachedContent);
+ importClass(com.terminalfour.navigation.ServerSideLinkManager);
+ importClass(com.terminalfour.spring.ApplicationContextProvider);
+ importClass(com.terminalfour.publish.utils.TreeTraversalUtils);
+ importClass(com.terminalfour.navigation.items.utils.TargetContentInfo);
+ importClass(com.terminalfour.utils.T4StreamWriter);
+ importClass(com.terminalfour.publish.ContentPublisher);
+ importClass(com.terminalfour.publish.utils.BrokerUtils);
+ importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
+ importClass(com.terminalfour.content.IContentManager);
+ importClass(com.terminalfour.list.IPredefinedListManager);
+
+
+
 
 /**
  * from the organizer we can't post console.log() directly to the browser.

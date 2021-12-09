@@ -335,56 +335,43 @@ function isLimitPassed(i, limit) {
 
 
 
-
-
-
 /**
  * Parse Custom Sort Field for multiple fields
  * Called only when there is any custom field entered
- *
- * @param cid The content type ID
- * @param elemArray is an array like object of custom Elements to sort by
- * @param tag is the content item that is being sorted, in some cases this item will match a tag
  * 
- * By Custom Elements calls differnt sort functions depending on the specific custom elements entered
- * With each function call Custom Elements will take the array and pass one item to the helper function
+ * @param cid is the content type id
+ * @param elements is a value assigned from an array like object of custom Elements to sort by
+ * @param cat is the category being parsed for
  * 
- * Helper Functions:
- *      Dynamic Sort for alphabetic sorting
- *      Tag Sort for matching tags to layouts
- *      By Date for handling any date field entered
  */
-function byCustomElements(cid, elemArray, tag) {
-    // assign the array of custom elements to a local scope
-    let customElements = elemArray;
+ function byCustomElements(cid, elements, cat) {
+
     return function(a, b) {
-        // number of elements is the number of custom sort elements entered by the user
-        var i = 0,
-            result = 0,
-            numberOfElements = customElements.length;
 
-        // if the result is zero then the value of a and b are equal
-        while (result === 0 && i < numberOfElements) {
+        let element = result = 0;
+        while (result === 0 && element < elements.length) {
+            let currentElement = elements[element].trim();
 
-            // switch through each element
-            let currentElement = customElements[i].trim();
             switch (currentElement) {
-                case "Publish Date":
+                case 'Published':
+                    result = byDate(cid, currentElement)(a, b);
+                    break;
+                case 'Publish Date':
                     result = byDate(cid, currentElement)(a, b);
                     break;
                 case "Category Pin":
-                    result = tagSort(tag, currentElement)(a, b);
+                    result = tagSort(cat, currentElement)(a, b);
+                    break;
+                case 'Article Title':
+                    result = byName(cid, currentElement)(a, b);
                     break;
                 default:
                     result = dynamicSort(currentElement)(a, b);
-                    break;
             }
-
-            // increment index
-            i++;
+            element++;
         }
         return result;
-    };
+    }
 }
 
 /***

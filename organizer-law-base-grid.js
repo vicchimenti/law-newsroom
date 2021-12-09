@@ -315,21 +315,21 @@ function isLimitPassed(i, limit) {
 /**
  * Parse Custom Sort Field for multiple fields
  * Called only when there is any custom field entered
- *
+ * 
  * @param elem is a value assigned from an array like object of custom Elements to sort by
  * 
- * Dynamic Sort will sort two strings alphabetically
  */
-function dynamicSort(elem) {
-    return function(a, b) {
-        // we have to use publish() rather than getValue()
-        // to accommodate multiple input types such as radio buttons, checkboxes in addition to plain text and numbers
-        // publish() returns a string
+ function dynamicSort(elem) {
+
+    let result = (a, b) => {
+
         let strA = a.Content.get(elem).publish();
         let strB = b.Content.get(elem).publish();
 
         return strA > strB ? 1 : strA < strB ? -1 : 0;
-    };
+    }
+
+    return result;
 }
 
 

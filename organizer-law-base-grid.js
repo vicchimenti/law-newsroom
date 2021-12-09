@@ -26,7 +26,6 @@
  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
  importClass(com.terminalfour.content.IContentManager);
- importClass(com.terminalfour.list.IPredefinedListManager);
 
 
 

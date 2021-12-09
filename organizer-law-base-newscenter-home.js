@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.21
+ *      @version 7.22
  */
 
  
@@ -99,12 +99,12 @@ function byDate(cid, elem) {
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
 
-        return  (dateA && !dateB) ? -1 :
-                (!dateA && dateB) ? 1 :
+        return  (dateA && !dateB) ? 1 :
+                (!dateA && dateB) ? -1 :
                 (!dateA && !dateB) ? 0 :
-                dateB.compareTo(dateA);
+                dateA.compareTo(dateB);
     }
-
+    
     return result;
 }
 
@@ -527,7 +527,7 @@ function main(header, midder, footer) {
                 oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingOptions[start].Content, LAYOUT, isPreview);
                 start++;
                 iterations++;
-            } while (start < matchingOptions.length && iterations < maxIterations);
+            } while (start < matchingOptions.length && iterations <= maxIterations);
 
         } else {
 

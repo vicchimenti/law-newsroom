@@ -504,17 +504,27 @@ function main(header, midder, footer) {
 
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
-            matchingOptions.sort(byCustomElements(CID, arrayOfElements, categoryName));
+            matchingTopics.sort(byCustomElements(CID, arrayOfElements, categoryName));
 
         } else {
 
-            matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+            matchingTopics.sort(eval(sortMethod + '(' + CID + ', sElement);'));
 
         }
 
         if (bReverse) {
-            matchingOptions.reverse();
+            matchingTopics.reverse();
         }
+
+
+
+
+                /**
+         * Display content
+         */
+                 header = header || '';
+                 midder = midder || '';
+                 footer = footer || '';
 
 
 

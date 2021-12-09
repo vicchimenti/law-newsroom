@@ -54,62 +54,58 @@ function log(message) {
  */
 
 
+ case 5296:
+    elem = "Publish Date";
+    break;
 
+    
 /**
  * Sorts content by date, from most recent to least recent.
  * If these is no date, content is treated as least recent.
  * Defaults to using the last modified date.
+ * 
+ * @param cid The content type ID
+ * @param elem The element to use for sorting
+ * 
  */
-function byDate(cid, elem) {
+ function byDate(cid, elem) {
 
     if (!elem) {
+
         switch (cid) {
             case 208:
-                elem = "Published";
+                elem = 'Published';
                 break;
             case 82:
-                elem = "Publish Date";
-                break;
-            case 5296:
-                elem = "Publish Date";
+                elem = 'Publish Date';
                 break;
             default:
-                return function(a, b) {
-                    var dateA = a.CachedContent.getLastModified(
-                        language,
-                        CachedContent.APPROVED
-                    );
-                    var dateB = b.CachedContent.getLastModified(
-                        language,
-                        CachedContent.APPROVED
-                    );
+
+                let result = (a, b) => {
+
+                    var dateA = a.CachedContent.getLastModified(language, CachedContent.APPROVED);
+                    var dateB = b.CachedContent.getLastModified(language, CachedContent.APPROVED);
+
                     return dateB.compareTo(dateA);
-                };
-                break;
+                }
+
+                return result;
         }
     }
 
-    return function(a, b) {
 
-        // log("elem: " + elem);
+    let result = (a, b) => {
 
-        // asssign a b values
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
 
-        // log("dateA: " + dateA);
-        // log("dateB: " + dateB);
+        return  (dateA && !dateB) ? -1 :
+                (!dateA && dateB) ? 1 :
+                (!dateA && !dateB) ? 0 :
+                dateB.compareTo(dateA);
+    }
 
-
-
-        // No date gets least recent treatment
-        if (dateA && !dateB) return -1;
-        if (!dateA && dateB) return 1;
-        if (!dateA && !dateB) return 0;
-
-        // compare valid dates
-        return dateB.compareTo(dateA);
-    };
+    return result;
 }
 
 

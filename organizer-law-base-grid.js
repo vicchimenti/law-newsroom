@@ -173,6 +173,10 @@ function byName(cid, elem) {
  * Particularly useful for single checkboxes (e.g. System Status content type).
  * Defaults to sorting by section order.
  * If two content items have the same value, also sorts by section order.
+ * 
+ * @param cid The content type ID
+ * @param elem The element to use for sorting
+ * 
  */
 function byBoolean(cid, elem) {
 
@@ -188,13 +192,17 @@ function byBoolean(cid, elem) {
     }
 
 
-    return function(a, b) {
+    let result = (a, b) => {
+
         var boolA = !a.Content.get(elem).isNull();
         var boolB = !b.Content.get(elem).isNull();
-        if (boolA && !boolB) return 1;
-        if (!boolA && boolB) return -1;
-        return byOrder(cid, elem)(a, b);
-    };
+
+        return  (boolA && !boolB) ? 1 :
+                (!boolA && boolB) ? -1 :
+                byOrder(cid, elem)(a, b);
+    }
+
+    return result;
 }
 
 /**

@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.18
+ *      @version 7.19
  */
 
  
@@ -421,30 +421,23 @@ function main(header, midder, footer) {
           * Filter radio button value that matches the homepage option
           * Parse CID to match Newscenter Story
           */
-         let idString = CID.toString();
-         log('idString: ' + idString);
-         let newscenterId = "5296";
-         log('newscenterId: ' + newscenterId);
+
+          log('validContent length: ' + validContent.length);
+
          var matchingOptions = [];
-         if (idString == newscenterId) {
-            log('if');
+         if (CID == 5296) {
 
             for (let contentItem in validContent) {
              
                 let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
-                log('selectedOption: ' + selectedOption);
-                log('homepageOption: ' + homepageOption);
 
-
-                if(homepageOption.toLowerCase().includes(selectedOption)) {
+                if (homepageOption.toLowerCase().includes(selectedOption)) {
     
                     matchingOptions.push(validContent[contentItem]);
                 }
              }
 
         } else {
-
-            log('else');
 
             for (let contentItem in validContent) {
 
@@ -453,7 +446,8 @@ function main(header, midder, footer) {
         }
 
 
- 
+        log('matchingOptions: ' + matchingOptions.length);
+
  
  
          /**

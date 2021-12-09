@@ -7,7 +7,7 @@
  *      Foundation for Law Mainzone
  *          Masonry Organizer
  *
- *      @version 3.24
+ *      @version 3.25
  */
 
 
@@ -361,6 +361,9 @@ function isLimitPassed(i, limit) {
                     break;
                 case 'Article Title':
                     result = byName(cid, currentElement)(a, b);
+                    break;
+                case 'Pinned':
+                    result = byBoolean(cid, currentElement)(a, b);
                     break;
                 default:
                     result = dynamicSort(currentElement)(a, b);

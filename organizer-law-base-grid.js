@@ -359,9 +359,6 @@ function isLimitPassed(i, limit) {
                 case 'Publish Date':
                     result = byDate(cid, currentElement)(a, b);
                     break;
-                case "Category Pin":
-                    result = tagSort(cat, currentElement)(a, b);
-                    break;
                 case 'Article Title':
                     result = byName(cid, currentElement)(a, b);
                     break;
@@ -504,7 +501,7 @@ function main(header, midder, footer) {
 
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
-            matchingOptions.sort(byCustomElements(CID, arrayOfElements, categoryName));
+            matchingOptions.sort(byCustomElements(CID, arrayOfElements));
 
         } else {
 

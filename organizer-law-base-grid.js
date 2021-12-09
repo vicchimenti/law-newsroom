@@ -485,6 +485,12 @@ function main(header, midder, footer) {
                 }
             }
              
+        } else {
+
+            for (let contentItem in validContent) {
+
+                matchingOptions.push(validContent[contentItem]);
+            }
         }
 
 

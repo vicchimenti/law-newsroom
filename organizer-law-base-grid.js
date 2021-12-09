@@ -458,11 +458,33 @@ function main(header, midder, footer) {
                 CachedContent: mirrorContent[i],
                 index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
             };
-            
+
             if (item.Content.getContentTypeID() == CID) {
                 validContent.push(item);
             }
         }
+
+
+
+
+        /**
+         * Filter featured items for image
+         * to maintain valid limits and start positions
+         */
+        var matchingOptions = [];
+
+        if (CID == 526) {
+            Main Image
+        }
+        for (let contentItem in validContent) {
+            
+            let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
+            if(homepageOption.toLowerCase().includes(selectedOption)) {
+
+                matchingOptions.push(validContent[contentItem]);
+            }
+        }
+         
 
 
 

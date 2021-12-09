@@ -394,18 +394,14 @@ function main(header, midder, footer) {
          * 
          */
         var choice = content.get("Article type").publish();
-        // parses out the content id that references the content type in the media library
         var CID = new java.lang.Integer(choice.split(";")[0]);
-        // parses layout options from the content type choice
         var LAYOUT = choice.split(";")[1];
-        // section id
         var SSID = String(content.get("Section")).match(/sslink_id="(\d+)"/)[1];
-        // the required sort method from the list of options
         var sortMethod = content.get("Sorting method").publish();
-        // the optional custom elements that a user can sort by - this can be any length of items
         var sElement = String(content.get("Custom element"));
-        // the reverse order option
         var bReverse = !content.get("Reverse order").isNull();
+        var LIMIT = content.get("Total number of items to display");
+
 
 
 
@@ -420,7 +416,6 @@ function main(header, midder, footer) {
 
 
         // the number of items to display
-        var LIMIT = content.get("Total number of items to display");
         // log("LIMIT: " + LIMIT);
 
         // user has the option of beginning their display at any item rather than the first
@@ -462,6 +457,9 @@ function main(header, midder, footer) {
         );
         var sectionID = myLink.getToSectionID();
 
+
+
+
         /**
          * Get content from section
          */
@@ -476,24 +474,19 @@ function main(header, midder, footer) {
         var mode = getMode(isPreview);
         var aSCI = oSection.getContent(oChannel, language, mode);
         var mirrorContent = [];
-
-
-        // var item????
         for (var i = 0; i < aSCI.length; i++) {
             var item = aSCI[i].getContent();
             mirrorContent.push(item);
         }
 
+
+
+        
         /**
          * Filter content that matches content type
          */
-        var oCM = ApplicationContextProvider.getBean(
-            com.terminalfour.content.IContentManager
-        );
-
-
-        // var item????
         var validContent = [];
+        var oCM = ApplicationContextProvider.getBean(IContentManager);
         for (var i = 0; i < mirrorContent.length; i++) {
             var item = {
                 Content: oCM.get(mirrorContent[i].ID, language),
@@ -504,7 +497,9 @@ function main(header, midder, footer) {
                 validContent.push(item);
             }
         }
-        // log("validContent.length: " + validContent.length);
+
+
+
 
         /**
          * Sort content

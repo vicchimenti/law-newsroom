@@ -31,6 +31,12 @@
 
 
 
+
+
+
+
+
+
 /**
  * from the organizer we can't post console.log() directly to the browser.
  * this function allow you to create a log message that will post to the console in the browser
@@ -48,7 +54,11 @@
 
 
 
-    
+
+ 
+
+
+ 
 /**
  * Sorts content by date, from most recent to least recent.
  * If these is no date, content is treated as least recent.

@@ -469,9 +469,14 @@ function main(header, midder, footer) {
         /**
          * Display content
          */
-         header = header || '';
-         midder = midder || '';
-         footer = footer || '';
+        header = header || '';
+        midder = midder || '';
+        footer = footer || '';
+
+
+
+
+
 
 
 

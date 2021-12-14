@@ -23,7 +23,7 @@ try {
 
     switch (choice) {
         default: header = '\
-			<div class="newsroomOrganizerWrapper major-feed col-12 col-xs-12 order-xs-2 col-md-8 col-md-push-4 order-md-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+			<div class="newsroomOrganizerWrapper major-feed col-12 col-xs-12 order-xs-2 col-lg-8 col-lg-push-4 order-lg-3" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
                 <div class="titleWrapper standardContent col-xs-12">\
                 <h2 class="organizerTitle text-center sr-only">' + titleField + '</h2></div>\
                 <div class="newsroomOrganizer standardContent card-deck border-0">\

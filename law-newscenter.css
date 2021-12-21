@@ -452,7 +452,6 @@ a.navbar-brand h1 {
     display: inline;
     font-size: 1.5rem;
     font-weight: 400;
-    white-space: pre-wrap;
     word-break: break-word;
 }
 

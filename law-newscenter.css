@@ -284,8 +284,6 @@ div.titleWrapper address a {
 @media screen and (min-width: 992px) {
     .major-feed .card-deck {
         margin-left: 2rem;
-        margin-top: 15px;
-        padding-top: 5px;
     }
     .minor-feed .card-deck {
         margin-right: 2rem;

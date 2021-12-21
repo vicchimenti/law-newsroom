@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 7.10
+ *     @version 7.11
  */
 
 
@@ -170,7 +170,7 @@ try {
     let closeFooter = '</div>';
     let summaryString = '<span class="newsroomArticleLead subtitle card-text"><p>' + gridDict.articleSummary.content + '</p></span>';
     let dateline = '<medium class="newsroomArticlePublishedDate">' + gridDict.publishedDate.content + '</medium>';
-    let beginningHTML = '<article class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" id="newsGrid' + gridDict.contentId.content + '" aria-label="' + gridDict.headline.content + '" >';
+    let beginningHTML = '<article class="gridFeedItem newsroomBlurb card shadow col-xs-12 col-lg-3" id="newsGrid' + gridDict.contentId.content + '" aria-label="' + gridDict.headline.content + '" >';
     let endingHTML = '</article>';
 
 

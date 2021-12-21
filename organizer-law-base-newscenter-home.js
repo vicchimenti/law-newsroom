@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Homepage
  *          Major, Minor, Hero Organizers
  *
- *      @version 7.15
+ *      @version 7.16
  */
 
  
@@ -481,8 +481,8 @@ function main(header, midder, footer) {
          * initialize iterators to account for starting and ending points
          * 
          */
-        let maxIterations = LIMIT <= validContent.length && LIMIT > 0 ? LIMIT : validContent.length;
-        let start = nStart <= validContent.length ? nStart - 1 : 0;
+        let maxIterations = LIMIT <= matchingOptions.length && LIMIT > 0 ? LIMIT : matchingOptions.length;
+        let start = nStart <= matchingOptions.length ? nStart - 1 : 0;
         let iterations = 0;
 
 

@@ -26,7 +26,7 @@ try {
 
     switch (choice) {
         default: header = '\
-			<div class="newsroomOrganizerWrapper minor-feed col-12 col-xs-12 order-xs-3 col-md-4 col-md-pull-8 order-md-2" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
+			<div class="newsroomOrganizerWrapper minor-feed col-12 col-xs-12 order-xs-3 col-lg-4 col-lg-pull-8 order-lg-2" id="id' + content.getID() + '" data-position-default="Main" data-position-selected="Main">\
                 <div class="contactWrapper col-xs-12">' + contactField + '</div>\
                 <div class="titleWrapper standardContent col-xs-12">\
                 <h2 class="organizerTitle text-center sr-only">' + titleField + '</h2></div>\

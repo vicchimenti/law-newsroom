@@ -49,39 +49,40 @@ div.gridOrganizerWrapper .gridFeedItem {
 }
 
 
-/* ***  Large min Defaults min 1200   *** */
+/* ***  Large min Defaults min 992   *** */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 
-    div.gridOrganizerWrapper div.gridOrganizer.standardContent {
-        justify-content: start;
+    .gridOrganizerWrapper .gridOrganizer.standardContent {
+        justify-content: space-between;
         flex-flow: unset;
         flex-direction: row;
         gap: 1rem;
       }
     
-      div.gridOrganizerWrapper .gridFeedItem {
+    .gridOrganizerWrapper .gridFeedItem {
         margin: 0;
         padding: 0;
     }
     
-    div.gridOrganizerWrapper .gridOrganizer.standardContent.card-deck > * + * {
+    .gridOrganizerWrapper .gridOrganizer.standardContent.card-group > * + * {
         margin-left: 1rem;
     }
 }
 
 
-@media screen and (max-width: 991.99px) {
+@media screen and (max-width: 991.98px) {
 
     .gridOrganizerWrapper {
         padding-bottom: 25px;
     }
 
-    div.gridOrganizer.standardContent {
+    .gridOrganizer.standardContent {
+        flex-direction: column;
         padding: 0 30px;
     }
 
-    .gridFeedItem {
-        margin-bottom: 1rem;;
+    .gridOrganizer .gridFeedItem {
+        margin-bottom: 1rem;
     }
 }

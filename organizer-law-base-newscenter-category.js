@@ -7,7 +7,7 @@
  *      Foundation for Law News Center List
  *          Category Organizer
  *
- *      @version 5.39
+ *      @version 5.42
  */
 
 
@@ -145,7 +145,6 @@ function byName(cid, elem) {
                 break;
             default:
                 elem = 'Name';
-                break;
         }
     }
 
@@ -304,6 +303,7 @@ function dynamicSort(elem) {
  * 
  * @param cid is the content type id
  * @param elements is a value assigned from an array like object of custom Elements to sort by
+ * @param cat is the category being parsed for
  * 
  */
 function byCustomElements(cid, elements, cat) {
@@ -355,7 +355,6 @@ function main(header, midder, footer) {
          * Declarations
          * 
          */
-        // var title = content.hasElement('Title') ? content.get('Title') : null;
         var choice = content.get('Article type').publish();
         var CID = new java.lang.Integer(choice.split(";")[0]);
         var LAYOUT = choice.split(";")[1];
@@ -363,29 +362,9 @@ function main(header, midder, footer) {
         var sortMethod = content.get('Sorting method').publish();
         var sElement = String(content.get('Custom element'));
         var bReverse = !content.get('Reverse order').isNull();
-        // var bPaginate = content.hasElement('Paginate?') ? !content.get('Paginate?').isNull() : null;
-        // var nPerPage = content.hasElement('Total number of items to display per page') ? content.get('Total number of items to display per page') : 0;
         var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
-
-
-
-
-        // the logic to determine layouts and links that were available to the user
-        // var bViewAll = content.hasElement('Show link to original section') ? !content.get('Show link to original section').isNull() : false;
-        // var sViewAllText = content.hasElement('Link to original section text') ? content.get('Link to original section text') : "";
-        // if (sViewAllText == "")
-        //     sViewAllText = "View All";
-
-
-
-
-        // overrides a news layout that doesn't work
-        // var bSummFirst = (LAYOUT == "v9/organizer/newsArticleSummary/Link");
-        // if (bSummFirst) {
-        //     LAYOUT = "v9/organizer/newsArticleSummary";
-        // }
 
 
 
@@ -421,9 +400,8 @@ function main(header, midder, footer) {
         /**
          * Filter content that matches content type
          */
-        var oCM = ApplicationContextProvider.getBean(IContentManager);
-        var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
         var validContent = [];
+        var oCM = ApplicationContextProvider.getBean(IContentManager);
 
         for (var i = 0; i < mirrorContent.length; i++) {
 
@@ -445,6 +423,8 @@ function main(header, midder, footer) {
          * Filter content that matches the category
          */
         var matchingTopics = [];
+        var listManager = ApplicationContextProvider.getBean(IPredefinedListManager);
+
         for (let contentItem in validContent) {
 
             let categoryValues = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
@@ -469,19 +449,19 @@ function main(header, midder, footer) {
          */
         if (sElement != "") {
 
-            // when the user selects any custom sort element
             var arrayOfElements = [];
             arrayOfElements = sElement.split(',');
             matchingTopics.sort(byCustomElements(CID, arrayOfElements, categoryName));
 
         } else {
 
-            // when the user only sorts by the default options
             matchingTopics.sort(eval(sortMethod + '(' + CID + ', sElement);'));
 
         }
-        if (bReverse)
+
+        if (bReverse) {
             matchingTopics.reverse();
+        }
 
 
 
@@ -489,123 +469,79 @@ function main(header, midder, footer) {
         /**
          * Display content
          */
-        if (!header)
-            header = "";
-        if (!midder)
-            midder = "";
-        if (!footer)
-            footer = "";
-        // if (title != "")
-        //     header = header + '<h2 class="organizerTitle">' + title + '</h2>';
-        // if (bViewAll) {
-        //     var href = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Section" output="linkurl" modifiers="nav_sections" />');
-        //     midder = midder + '<div class="boxlinkItem viewAll"><a href="' + href + '">' + sViewAllText + '</a></div>';
-        // }
+        header = header || '';
+        midder = midder || '';
+        footer = footer || '';
+
+
+
+
+
+
 
 
 
         /**
-         * Determine Pagination
+         * Gather content and write header
+         * 
          */
-        // if (bPaginate && !bSummFirst) {
-            // when the user selects a content type with Summary in the Content type and layout option while also selecting Paginate
+        document.write(header);
+        var oSW = new java.io.StringWriter();
+        var oT4SW = new T4StreamWriter(oSW);
+        var oCP = new ContentPublisher();
 
-            // var contentInfo = [];
-            // for (var i = nStart - 1; i < matchingTopics.length && !isLimitPassed(i, LIMIT); i++) {
-            //     var tci = new TargetContentInfo(matchingTopics[i].CachedContent, oSection, language);
-            //     contentInfo.push(tci);
-            // }
-            // var vector = new java.util.Vector(java.util.Arrays.asList(contentInfo));
-            // var sectionPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.SectionPublisher),
-            //     contentPublisher = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.ContentPublisher),
-            //     publishHelper = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.publish.PublishHelper),
-            //     paginator = new NavigationPaginator(sectionPublisher, contentPublisher, publishHelper);
-            // paginator.setContentPerPage((nPerPage > 0 ? nPerPage : 10));
-            // paginator.setFormatter(LAYOUT);
-            // paginator.setLinksToShow(10);
-            // var before = '<div class="paginationWrapper"><div class="pagination"><span class="paginationNumber">';
-            // var middle = '</span><span class="paginationNumber">';
-            // var after = '</span></div></div>';
-            // paginator.setPageSeparators(before, middle, after);
-            // paginator.setBeforeAndAfterHTML(header, footer);
-            // paginator.setPreview(isPreview);
-            // paginator.write(document, dbStatement, publishCache, section, language, isPreview, vector);
 
-            // eventually we may want an else if here EX: else if (bPaginate && bSummFirst) {...}
-            // that would allow when the Summary and Paginate option are both chosen
-            // however at this time I haven't been able to produce a solution that merges
-            // the paginator with the oCP but it should be possible with enough time to work it out
-            // for now we go straight to the else
-            // and we must communicate to our departments that we don't support that functionality
-            // when they try to select both summary and paginator
-            // Victor 7/2020
+
+        /**
+         * initialize iterators to account for starting and ending points
+         * 
+         */
+        let maxIterations = LIMIT <= matchingTopics.length && LIMIT > 0 ? LIMIT : matchingTopics.length;
+        let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
+        let iterations = 0;
 
 
 
 
-        // } else {
+        /**
+         * check for content in matching topics field
+         * 
+         */
+        if (matchingTopics.length > 0) {
 
             /**
-             * Gather content and write header
+             * loop through matching topics and write only items requested
              * 
              */
-            document.write(header);
-            var oSW = new java.io.StringWriter();
-            var oT4SW = new T4StreamWriter(oSW);
-            var oCP = new ContentPublisher();
+            do {
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
+                start++;
+                iterations++;
+            } while (start < matchingTopics.length && iterations < maxIterations);
 
-
+        } else {
 
             /**
-             * initialize iterators to account for starting and ending points
+             * when no matching items write all categories
              * 
              */
-            let maxIterations = LIMIT <= matchingTopics.length && LIMIT > 0 ? LIMIT : matchingTopics.length;
-            let start = nStart <= matchingTopics.length ? nStart - 1 : 0;
-            let iterations = 0;
-
-
-
-
-            /**
-             * check for content in matching topics field
-             * 
-             */
-             if (matchingTopics.length > 0) {
-
-                /**
-                 * loop through matching topics and write only items requested
-                 * 
-                 */
-                do {
-                    oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingTopics[start].Content, LAYOUT, isPreview);
-                    start++;
-                    iterations++;
-                } while (start < matchingTopics.length && iterations < maxIterations);
-
-            } else {
-
-                /**
-                 * when no matching items write all categories
-                 * 
-                 */
-                for (let story in validContent) {
-                    oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
-                }
-
+            for (let story in validContent) {
+                oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
             }
 
+        }
 
 
 
-            /**
-             * write the document
-             * 
-             */
-            document.write(oSW.toString());
-            document.write(midder);
-            document.write(footer);
-        // }
+
+        /**
+         * write the document
+         * 
+         */
+        document.write(oSW.toString());
+        document.write(midder);
+        document.write(footer);
+  
 
 
 

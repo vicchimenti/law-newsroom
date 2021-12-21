@@ -1,16 +1,16 @@
 /***
  *      @author Victor Chimenti, MSCS
- *      @file organizerLawBaseGrid.js
- *      @see Media Library ID: 2686600
- *      organizer law base grid
- *      
- *      Foundation for Law Mainzone
- *          Masonry Organizer
+ *      @file organizerLawBaseMainMasonryDev.js
+ *      @see Media Library ID: 3405416
+ *      organizer law base main masonry file
+ * 
+ *      Foundation for Mainzone Masory Organizers
+ *          with access to Newscenter Story
  *
- *      @version 3.30
+ *      @version 8.0
  */
 
-
+ 
 
 
 /***
@@ -26,6 +26,7 @@
  importClass(com.terminalfour.publish.utils.BrokerUtils);
  importClass(com.terminalfour.navigation.items.utils.NavigationPaginator);
  importClass(com.terminalfour.content.IContentManager);
+ importClass(com.terminalfour.list.IPredefinedListManager);
 
 
 
@@ -47,14 +48,14 @@
  * @param message The string that will print to the browser console
  * 
  */
- log = message => document.write('<script>eval("console.log(\'' + message + '\')");</script>');
+log = message => document.write('<script>eval("console.log(\'' + message + '\')");</script>');
 
 
 
 
 
 
- 
+
 
 
 
@@ -67,7 +68,7 @@
  * @param elem The element to use for sorting
  * 
  */
- function byDate(cid, elem) {
+function byDate(cid, elem) {
 
     if (!elem) {
 
@@ -77,9 +78,6 @@
                 break;
             case 82:
                 elem = 'Publish Date';
-                break;
-            case 5296:
-                elem = "Publish Date";
                 break;
             default:
 
@@ -101,14 +99,15 @@
         var dateA = a.Content.get(elem).getValue();
         var dateB = b.Content.get(elem).getValue();
 
-        return  (dateA && !dateB) ? -1 :
-                (!dateA && dateB) ? 1 :
+        return  (dateA && !dateB) ? 1 :
+                (!dateA && dateB) ? -1 :
                 (!dateA && !dateB) ? 0 :
                 dateB.compareTo(dateA);
     }
-
+    
     return result;
 }
+
 
 
 
@@ -127,28 +126,26 @@ function byName(cid, elem) {
 
         switch (cid) {
             case 208:
-                elem = "Post Title";
+                elem = 'Post Title';
                 break;
             case 203:
-                elem = "Name of Faculty or Staff Member";
+                elem = 'Name of Faculty or Staff Member';
                 break;
             case 243:
-                elem = "Name";
+                elem = 'Name';
                 break;
             case 82:
-                elem = "Article Title";
+                elem = 'Article Title';
                 break;
             case 364:
-                elem = "Last Name";
+                elem = 'Last Name';
                 break;
             case 548:
-                elem = "Degree Name";
-                break;
-            case 5296:
-                elem = "Headline";
+                elem = 'Degree Name';
                 break;
             default:
-                elem = "Name";
+                elem = 'Name';
+                break;
         }
     }
 
@@ -183,7 +180,7 @@ function byBoolean(cid, elem) {
 
         switch (cid) {
             case 359:
-                elem = "Service is Available";
+                elem = 'Service is Available';
                 break;
             default:
                 return byOrder(cid, elem);
@@ -196,9 +193,9 @@ function byBoolean(cid, elem) {
         var boolA = !a.Content.get(elem).isNull();
         var boolB = !b.Content.get(elem).isNull();
 
-        return  (boolA && !boolB) ? 1 :
-                (!boolA && boolB) ? -1 :
-                byOrder(cid, elem)(a, b);
+        return (boolA && !boolB) ? 1 :
+            (!boolA && boolB) ? -1 :
+            byOrder(cid, elem)(a, b);
     }
 
     return result;
@@ -225,47 +222,14 @@ function byOrder(cid, elem) {
 
 
 
-
-
-
-
-/***** Legacy Helper methods *****/
-
-/**
- * Checks a content item's status to see if it should be displayed.
- * The result depends on whether the CMS is in preview or publish, as each mode
- * displays content under different conditions:
- * - Preview: Content must be approved or pending
- * - Publish: Content must be approved
- */
-// var isValidStatus = (function() {
-//     if (isPreview)
-//         return function(status) {
-//             return status != 2;
-//         };
-//     else
-//         return function(status) {
-//             return status == 0;
-//         };
-// })();
-
 /**
  * Determines whether a number has passed a certain limit.
  * Used for checking if the total number of content items to display has been reached.
  */
-// function isLimitPassed(i, limit) {
-//     if (limit > 0) return i >= limit;
-//     else return false;
-// }
+function isLimitPassed(i, limit) {
 
-
-
-/***** End Legacy Helper methods *****/
-
-
-
-
-
+    return limit > 0 ? i >= limit : false;
+}
 
 
 
@@ -274,15 +238,16 @@ function byOrder(cid, elem) {
  * Called only when there is any custom field entered
  *
  * @param elem is a value assigned from an array like object of custom Elements to sort by
- * @param tag is the radio or tag valued from content item that is being sorted
+ * @param tag is the content item that is being sorted, in some cases this item will match a tag
  * 
  */
- function tagSort(tag, elem) {
+function tagSort(tag, elem) {
 
     return function(a, b) {
 
-        let strA = a.Content.get(elem).publish() !="" ? a.Content.get(elem).publish() : null;
-        let strB = b.Content.get(elem).publish() !="" ? b.Content.get(elem).publish() : null;
+        // assign values from the element to a string for boolean comparison
+        let strA = a.Content.get(elem).publish();
+        let strB = b.Content.get(elem).publish();
         let isMatchA = (tag.includes(strA));
         let isMatchB = (tag.includes(strB));
 
@@ -303,7 +268,7 @@ function byOrder(cid, elem) {
  * @param isPreview boolean
  * 
  */
- function getMode(isPreview) {
+function getMode(isPreview) {
 
     return isPreview ? CachedContent.CURRENT : CachedContent.APPROVED;
 }
@@ -318,7 +283,7 @@ function byOrder(cid, elem) {
  * @param elem is a value assigned from an array like object of custom Elements to sort by
  * 
  */
- function dynamicSort(elem) {
+function dynamicSort(elem) {
 
     let result = (a, b) => {
 
@@ -340,10 +305,9 @@ function byOrder(cid, elem) {
  * 
  * @param cid is the content type id
  * @param elements is a value assigned from an array like object of custom Elements to sort by
- * @param cat is the category being parsed for
  * 
  */
- function byCustomElements(cid, elements, cat) {
+function byCustomElements(cid, elements) {
 
     return function(a, b) {
 
@@ -360,18 +324,6 @@ function byOrder(cid, elem) {
                     break;
                 case 'Article Title':
                     result = byName(cid, currentElement)(a, b);
-                    break;
-                case 'Last Name':
-                    result = byName(cid, currentElement)(a, b);
-                    break;
-                case 'First Name':
-                    result = byName(cid, currentElement)(a, b);
-                    break;
-                case 'Pinned':
-                    result = byBoolean(cid, currentElement)(a, b);
-                    break;
-                case 'Faculty Status':
-                    result = tagSort(cat, currentElement)(a, b);
                     break;
                 default:
                     result = dynamicSort(currentElement)(a, b);
@@ -401,17 +353,16 @@ function main(header, midder, footer) {
          * Declarations
          * 
          */
-        var choice = content.get("Article type").publish();
+        var choice = content.get('Article type').publish();
         var CID = new java.lang.Integer(choice.split(";")[0]);
         var LAYOUT = choice.split(";")[1];
-        var SSID = String(content.get("Section")).match(/sslink_id="(\d+)"/)[1];
-        var sortMethod = content.get("Sorting method").publish();
-        var sElement = String(content.get("Custom element"));
-        var bReverse = !content.get("Reverse order").isNull();
-        var LIMIT = content.get("Total number of items to display");
+        var SSID = String(content.get('Section')).match(/sslink_id="(\d+)"/)[1];
+        var sortMethod = content.get('Sorting method').publish();
+        var sElement = String(content.get('Custom element'));
+        var bReverse = !content.get('Reverse order').isNull();
+        var LIMIT = content.get('Total number of items to display');
         var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
-        var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
-
+        let homepageOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
 
 
@@ -421,13 +372,7 @@ function main(header, midder, footer) {
          */
         var oSSLM = ServerSideLinkManager.getManager();
         var mySectionLinkID = Number(SSID);
-        var myLink = oSSLM.getLink(
-            dbStatement.getConnection(),
-            mySectionLinkID,
-            section.getID(),
-            content.getID(),
-            language
-        );
+        var myLink = oSSLM.getLink(dbStatement.getConnection(), mySectionLinkID, section.getID(), content.getID(), language);
         var sectionID = myLink.getToSectionID();
 
 
@@ -437,12 +382,7 @@ function main(header, midder, footer) {
          * Get content from section
          */
         var oChannel = publishCache.getChannel();
-        var oSection = TreeTraversalUtils.findSection(
-            oChannel,
-            section,
-            sectionID,
-            language
-        );
+        var oSection = TreeTraversalUtils.findSection(oChannel, section, sectionID, language);
         var dSequence = oSection.getContentsAndSequences();
         var mode = getMode(isPreview);
         var aSCI = oSection.getContent(oChannel, language, mode);
@@ -454,71 +394,48 @@ function main(header, midder, footer) {
 
 
 
-        
+
         /**
          * Filter content that matches content type
          */
-        var validContent = [];
-        var oCM = ApplicationContextProvider.getBean(IContentManager);
+         var oCM = ApplicationContextProvider.getBean(IContentManager);
+         var validContent = [];
+ 
+         for (var i = 0; i < mirrorContent.length; i++) {
+ 
+             var item = {
+                 Content: oCM.get(mirrorContent[i].ID, language),
+                 CachedContent: mirrorContent[i],
+                 index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
+             };
+ 
+             if (item.Content.getContentTypeID() == CID) {
+                 validContent.push(item);
+             }
+         }
+ 
+ 
+ 
+ 
+         /**
+          * Filter radio button value that matches the homepage option
+          * Parse CID to match Newscenter Story
+          */
 
-        for (var i = 0; i < mirrorContent.length; i++) {
+          log('validContent length: ' + validContent.length);
 
-            var item = {
-                Content: oCM.get(mirrorContent[i].ID, language),
-                CachedContent: mirrorContent[i],
-                index: dSequence.get(new java.lang.Integer(mirrorContent[i].ID))
-            };
-
-            if (item.Content.getContentTypeID() == CID) {
-                validContent.push(item);
-            }
-        }
-
-
-
-
-        /**
-         * Filter featured items for image
-         * to maintain valid limits and start positions
-         * current content types are
-         *      Newscenter Story ID:5296
-         *      Faculty Profile ID:5143
-         * let all other content types pass thru
-         * 
-         */
-        var matchingOptions = [];
-        
-        if (CID == 5296) {
+         var matchingOptions = [];
+         if (CID == 5296) {
 
             for (let contentItem in validContent) {
-            
-                let selectedOption = validContent[contentItem].Content.get("Main Image").publish();
-                if (selectedOption != "") {
+             
+                let selectedOption = validContent[contentItem].Content.get("Newscenter Homepage").publish();
+
+                if (homepageOption.toLowerCase().includes(selectedOption)) {
     
                     matchingOptions.push(validContent[contentItem]);
                 }
-            }
-             
-        } else if (CID == 5143) {
-
-            if (categoryName == "Faculty Profile") {
-
-                for (let contentItem in validContent) {
-
-                    matchingOptions.push(validContent[contentItem]);
-                }
-
-            } else {
-
-                for (let contentItem in validContent) {
-            
-                    let selectedOption = validContent[contentItem].Content.get("Faculty Status").publish();
-                    if (categoryName.includes(selectedOption)) {
-        
-                        matchingOptions.push(validContent[contentItem]);
-                    }
-                }
-            }
+             }
 
         } else {
 
@@ -529,26 +446,29 @@ function main(header, midder, footer) {
         }
 
 
+        log('matchingOptions: ' + matchingOptions.length);
 
+ 
+ 
+         /**
+          * Sort content
+          */
+         if (sElement != "") {
+ 
+             var arrayOfElements = [];
+             arrayOfElements = sElement.split(',');
+             matchingOptions.sort(byCustomElements(CID, arrayOfElements));
 
-        /**
-         * Sort content
-         */
-        if (sElement != "") {
+         } else {
+ 
+             matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
+             
+         }
 
-            var arrayOfElements = [];
-            arrayOfElements = sElement.split(',');
-            matchingOptions.sort(byCustomElements(CID, arrayOfElements, categoryName));
-
-        } else {
-
-            matchingOptions.sort(eval(sortMethod + '(' + CID + ', sElement);'));
-
-        }
-
-        if (bReverse) {
+         if (bReverse) {
             matchingOptions.reverse();
-        }
+         }
+
 
 
 
@@ -573,8 +493,6 @@ function main(header, midder, footer) {
         var oCP = new ContentPublisher();
 
 
-
-
         /**
          * initialize iterators to account for starting and ending points
          * 
@@ -582,6 +500,13 @@ function main(header, midder, footer) {
         let maxIterations = LIMIT <= matchingOptions.length && LIMIT > 0 ? LIMIT : matchingOptions.length;
         let start = nStart <= matchingOptions.length ? nStart - 1 : 0;
         let iterations = 0;
+
+        log('iterations: ' + iterations);
+        log('maxIterations: ' + maxIterations);
+        log('LIMIT: ' + LIMIT);
+        log('start: ' + start);
+        log('nStart: ' + nStart);
+        log('matchingOptions: ' + matchingOptions.length);
 
 
 
@@ -592,6 +517,8 @@ function main(header, midder, footer) {
          */
         if (matchingOptions.length > 0) {
 
+            log('if');
+
             /**
              * loop through matching topics and write only items requested
              * 
@@ -600,9 +527,12 @@ function main(header, midder, footer) {
                 oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingOptions[start].Content, LAYOUT, isPreview);
                 start++;
                 iterations++;
-            } while (start < matchingOptions.length && iterations < maxIterations);
+            } while (start < matchingOptions.length && iterations <= maxIterations);
 
         } else {
+
+            log('else');
+
 
             /**
              * when no matching items write all categories
@@ -611,9 +541,52 @@ function main(header, midder, footer) {
             for (let story in validContent) {
                 oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
             }
-
         }
 
+        log('iterations: ' + iterations);
+        log('maxIterations: ' + maxIterations);
+        log('LIMIT: ' + LIMIT);
+        log('start: ' + start);
+        log('nStart: ' + nStart);
+        log('matchingOptions: ' + matchingOptions.length);
+
+        /**
+         * initialize iterators to account for starting and ending points
+         * 
+         */
+        // let maxIterations = LIMIT <= validContent.length && LIMIT > 0 ? LIMIT : validContent.length;
+        // let start = nStart <= validContent.length ? nStart - 1 : 0;
+        // let iterations = 0;
+
+
+
+        /**
+         * check for content in matching topics field
+         * 
+         */
+        // if (matchingOptions.length > 0) {
+
+            /**
+             * loop through matching topics and write only items requested
+             * 
+             */
+        //     do {
+        //         oCP.write(oT4SW, dbStatement, publishCache, oSection, matchingOptions[start].Content, LAYOUT, isPreview);
+        //         start++;
+        //         iterations++;
+        //     } while (start < matchingOptions.length && iterations < maxIterations);
+
+        // } else {
+
+            /**
+             * when no matching items write all categories
+             * 
+             */
+        //     for (let story in validContent) {
+        //         oCP.write(oT4SW, dbStatement, publishCache, oSection, validContent[story].Content, LAYOUT, isPreview);
+        //     }
+
+        // }
 
 
 
@@ -624,6 +597,7 @@ function main(header, midder, footer) {
         document.write(oSW.toString());
         document.write(midder);
         document.write(footer);
+   
 
 
 

@@ -11,17 +11,15 @@
                     <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
                 </h1>
             </div>
-        </div>
+        </div> <!-- end .row -->
         <div class="row">
-
             <div class="newsroomArticleByline col-12">
                 <t4 type="content" name="Publish Date" output="selective-output" process-format="true"
                     format="<span class='newsroomArticlePublishedDate'>$value</span>" date_format="MMMM d, yyyy" />
                 <t4 type="content" name="Author" output="selective-output" modifiers="" process-format="true"
                     format="<span class='newsroomArticleAuthor'> &centerdot; By $value</span>" />
-            </div><!-- end newsroomArticleByline • -->
-
-        </div>
+            </div> <!-- end .newsroomArticleByline • -->
+        </div> <!-- end .row -->
         <div class="row">
             <div class="d-flex justify-content-center">
                 <figure class="image-wrapper">
@@ -38,113 +36,32 @@
                         </span>
                     </figcaption>
                 </figure>
-            </div>
-        </div>
-    </div>
+            </div> <!-- end .d-flex -->
+        </div> <!-- end .row -->
+    </div> <!-- end .container -->
     <div class="newsroomArticleMain container">
         <div class="row">
             <!-- 1 empty column to center content + 10 content columns (no 12th column) -->
-            <div class="col-md-2 offset-xxl-1">
+            <div class="col-md-2 offset-xxl-1 nested-share-sidebar visually-hidden">
                 <div class="newsroomArticleShare">
-                    <h3>Share this</h3>
+                    <h3>AddThis</h3>
                     <div class="addthis_inline_share_toolbox">
-                        <ul class="social nav upper-social-icons flex-row flex-md-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.facebook.com/" target="_blank"
-                                    title="Facebook (opens in a new tab)" aria-label="Share to Facebook">
-                                    <span class="icon fab fa-facebook-f fa-2x fa-fw"><span
-                                            class="icon-text">Facebook</span></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.twitter.com/" target="_blank"
-                                    title="Twitter (opens in a new tab)" aria-label="Share to Twitter">
-                                    <span class="icon fab fa-twitter fa-2x fa-fw"><span
-                                            class="icon-text">Twitter</span></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.linkedin.com" target="_blank"
-                                    title="LinkedIn (opens in a new tab)" aria-label="Share to LinkedIn">
-                                    <span class="icon fab fa-linkedin fa-2x fa-fw"><span
-                                            class="icon-text">LinkedIn</span></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.instagram.com/" target="_blank"
-                                    title="Instagram (opens in a new tab)" aria-label="Share to Instagram">
-                                    <span class="icon fab fa-instagram fa-2x fa-fw"><span
-                                            class="icon-text">Instagram</span></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="" target="_blank" title="Email (opens in a new tab)"
-                                    aria-label="Share to Email">
-                                    <span class="icon far fa-envelope fa-2x fa-fw"><span
-                                            class="icon-text">Email</span></span>
-                                </a>
-                            </li>
-                        </ul>
                     </div> <!-- end .addthis_inline_share_toolbox-->
-                </div><!-- end newsroomArticleShare -->
-            </div>
+                </div><!-- end .newsroomArticleShare -->
+            </div> <!-- end .nested-share-sidebar -->
             <div class="newsroomArticleBody col-md-8">
                 <t4 type="content" name="Article Subhead" output="selective-output" modifiers="" process-format="true"
                     format="<h2 class='newsroomArticleLead'>$value</h2>" />
                 <div class="articleText standardContent">
                     <t4 type="content" name="News Article" output="normal" modifiers="medialibrary,nav_sections" />
                 </div>
-            </div><!-- end newsroomArticleBody -->
-        </div>
+            </div> <!-- end .newsroomArticleBody -->
+        </div> <!-- end .row -->
         <div class="row">
-            <div class="newsroomArticleShare offset-md-3 col-md-9">
-                <h3>Font Awesome with custom CSS</h3>
-                <div class="addthis_inline_share_toolbox">
-                    <ul class="social nav list-inline lower-social-icons">
-                        <li class="nav-item list-inline-item">
-                            <a class="nav-link ps-xxl-0" href="https://www.facebook.com/" target="_blank"
-                                title="Facebook (opens in a new tab)" aria-label="Share to Facebook">
-                                <span class="icon fab fa-facebook-f fa-2x fa-fw"><span
-                                        class="icon-text">Facebook</span></span>
-                            </a>
-                        </li>
-                        <li class="nav-item list-inline-item">
-                            <a class="nav-link" href="https://www.twitter.com/" target="_blank"
-                                title="Twitter (opens in a new tab)" aria-label="Share to Twitter">
-                                <span class="icon fab fa-twitter fa-2x fa-fw"><span
-                                        class="icon-text">Twitter</span></span>
-                            </a>
-                        </li>
-                        <li class="nav-item list-inline-item">
-                            <a class="nav-link" href="https://www.linkedin.com" target="_blank"
-                                title="LinkedIn (opens in a new tab)" aria-label="Share to LinkedIn">
-                                <span class="icon fab fa-linkedin fa-2x fa-fw"><span
-                                        class="icon-text">LinkedIn</span></span>
-                            </a>
-                        </li>
-                        <li class="nav-item list-inline-item">
-                            <a class="nav-link" href="https://www.instagram.com/" target="_blank"
-                                title="Instagram (opens in a new tab)" aria-label="Share to Instagram">
-                                <span class="icon fab fa-instagram fa-2x fa-fw"><span
-                                        class="icon-text">Instagram</span></span>
-                            </a>
-                        </li>
-                        <li class="nav-item list-inline-item">
-                            <a class="nav-link" href="" target="_blank" title="Email (opens in a new tab)"
-                                aria-label="Share to Email">
-                                <span class="icon far fa-envelope fa-2x fa-fw"><span
-                                        class="icon-text">Email</span></span>
-                            </a>
-                        </li>
-                    </ul> <!-- end .lower-social-icons -->
-                </div> <!-- end .addthis_inline_share_toolbox-->
-            
+            <div class="newsroomArticleShare offset-md-3 col-md-9 visually-hidden">
                 <h3>AddThis</h3>
                 <div class="addthis_inline_share_toolbox"></div>
-                <h3>sharethis</h3>
-                <div class="sharethis-inline-share-buttons"></div>
-                
             </div> <!-- end .newsroomArticleShare -->
         </div> <!-- end .row -->
-    </div><!-- end newsroomArticleMain -->
-</div><!-- end newsroomArticleWrapper -->
+    </div> <!-- end .newsroomArticleMain.container -->
+</div> <!-- end .newsroomArticleWrapper -->

@@ -512,7 +512,7 @@ div.modal-body div.js-elements-container {
 /* Large devices (desktops, 992px and up) */
 
 @media screen and (min-width: 992px) {
-    .desktop-categories .nav-link {
+    #newscenterNav .navbar-nav .nav-item .nav-link {
         margin: 0;
         padding: 1rem 1rem;
     }

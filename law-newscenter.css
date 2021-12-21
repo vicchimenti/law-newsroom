@@ -519,6 +519,9 @@ div.modal-body div.js-elements-container {
         margin: 0;
         padding: 1rem 1rem;
     }
+    #newscenterNav ol.breadcrumb {
+        margin-bottom: 0;
+    }
 }
 
 

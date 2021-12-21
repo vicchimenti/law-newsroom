@@ -124,7 +124,7 @@ div.heroOrganizerWrapper.col-xs-12 {
     padding: 0;
 }
 
-div.newsroomOrganizerWrapper.major-feed {
+.newsroomOrganizerWrapper.major-feed {
     margin-bottom: 1rem;
 }
 
@@ -289,6 +289,14 @@ div.titleWrapper address a {
     }
     .minor-feed .card-deck {
         margin-right: 2rem;
+    }
+    .newsroomOrganizerWrapper.major-feed {
+        border-left: #e5e5e5;
+        border-left-style: solid;
+        border-left-width: initial;
+    }
+    .newsroomHeroFeedItem hr.articleBorderBottom {
+        margin: 0 0 1rem 0;
     }
 }
 

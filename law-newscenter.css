@@ -57,7 +57,15 @@ span.newsLink a.card-link:focus {
     text-decoration: underline;
 }
 
-.newsroomBlurb.card .newsroomArticleBlurb.card-body {
+.newsroomMinorFeedItem.newsroomBlurb.card .newsroomArticleBlurb.card-body {
+    padding: 0;
+}
+
+.newsroomMajorFeedItem.newsroomBlurb.card .newsroomArticleBlurb.card-body {
+    padding: 0;
+}
+
+.newsroomHeroFeedItem.newsroomBlurb.card .newsroomArticleBlurb.card-body {
     padding: 0;
 }
 

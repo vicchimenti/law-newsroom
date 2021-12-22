@@ -57,6 +57,10 @@ span.newsLink a.card-link:focus {
     text-decoration: underline;
 }
 
+.newsroomBlurb.card .newsroomArticleBlurb.card-body {
+    padding: 0;
+}
+
 
 /** Hero Feed  **/
 

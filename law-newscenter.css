@@ -608,6 +608,7 @@ div.modal-body div.js-elements-container {
     }
     div#navbarSupportedContent {
         margin-left: 0;
+        flex-direction: column;
     }
     .modal-body {
         font-size: x-small;

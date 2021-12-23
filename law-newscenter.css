@@ -661,19 +661,6 @@ div.modal-body div.js-elements-container {
 /* ***** Max Width 576 ***** */
 
 @media screen and (max-width: 576px) {
-    /* div.mobile-categories address {
-      font-size: 1rem;
-    }
-  
-    div.mobile-categories address a {
-      color: #088099;
-    }
-  
-    div.mobile-categories h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      padding-bottom: 1rem;
-    } */
     div.modal-body ul.list-group a small {
         font-size: .5rem;
     }
@@ -683,12 +670,6 @@ div.modal-body div.js-elements-container {
     div.modal-body ul.list-group h4 {
         font-size: 0.9rem;
     }
-    /* hr.mobile-categories {
-      color: #000000;
-    } */
-    /* li.nav-item.desktop-categories {
-      display: none;
-    } */
     li.dropdown-menu {
         border: none;
     }
@@ -703,16 +684,7 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 576 ***** */
 
-@media screen and (min-width: 576px) {
-    /* 
-    div.mobile-categories {
-      display: none;
-    }
-  
-    li.nav-item.mobile-categories {
-      display: none;
-    } */
-}
+@media screen and (min-width: 576px) {}
 
 
 /*********************

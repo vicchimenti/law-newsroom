@@ -573,7 +573,8 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 769 Max Width 991 ***** */
 
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+/* @media screen and (min-width: 768px) and (max-width: 991.98px) {
     div#navbarSupportedContent {
         margin-left: 0.5rem;
     }
@@ -586,15 +587,12 @@ div.modal-body div.js-elements-container {
     a.navbar-brand span {
         font-size: 1.15rem;
     }
-}
+} */
 
 
 /* ***** Min Width 576 Max Width 767 ***** */
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
-    /* nav#newscenterNav h2.nav-link {
-      font-size: 0.65rem;
-    } */
     a.navbar-brand h1 {
         font-size: 1.25rem;
     }

@@ -566,6 +566,10 @@ div.modal-body div.js-elements-container {
 /* ***** Min Width 769 Max Width 991 ***** */
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    div#navbarSupportedContent ul.menu {
+        flex-direction: row;
+        justify-content: center;
+    }
     div#navbarSupportedContent ul.menu li.nav-item {
         margin: 1rem;
     }

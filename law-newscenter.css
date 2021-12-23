@@ -571,7 +571,10 @@ div.modal-body div.js-elements-container {
         justify-content: center;
     }
     div#navbarSupportedContent ul.menu li.nav-item {
-        margin: 1rem;
+        margin: 0 1rem;
+    }
+    div#navbarSupportedContent ul.menu li.nav-item h2 {
+        font-size: 0.85rem;
     }
 }
 

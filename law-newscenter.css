@@ -660,7 +660,8 @@ div.modal-body div.js-elements-container {
 
 /* ***** Max Width 576 ***** */
 
-@media screen and (max-width: 576px) {
+
+/* @media screen and (max-width: 576px) {
     div.modal-body ul.list-group a small {
         font-size: .5rem;
     }
@@ -679,7 +680,7 @@ div.modal-body div.js-elements-container {
     a.navbar-brand span {
         font-size: 1.05rem;
     }
-}
+} */
 
 
 /* ***** Min Width 576 ***** */

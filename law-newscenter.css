@@ -540,7 +540,7 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 1200 Max Width 1366 ***** */
 
-@media screen and (min-width: 1200px) and (max-width: 1366px) {
+@media screen and (min-width: 1200px) and (max-width: 1365.98px) {
     nav#newscenterNav h2.nav-link {
         font-size: 0.95rem;
     }
@@ -555,7 +555,7 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 992 Max Width 1200 ***** */
 
-@media screen and (min-width: 992px) and (max-width: 1199.99px) {
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
     div#navbarSupportedContent {
         margin-left: 5rem;
     }
@@ -576,7 +576,6 @@ div.modal-body div.js-elements-container {
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
     div#navbarSupportedContent {
         margin-left: 0.5rem;
-        /* margin-right: 5rem; */
     }
     nav#newscenterNav h2.nav-link {
         font-size: 0.75rem;

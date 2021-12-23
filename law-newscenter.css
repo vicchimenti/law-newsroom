@@ -610,6 +610,9 @@ div.modal-body div.js-elements-container {
         margin-left: 0;
         flex-direction: column;
     }
+    #newscenterNav ol.breadcrumb {
+        margin: 0;
+    }
     #newscenterNav ul.menu {
         width: 100%;
     }

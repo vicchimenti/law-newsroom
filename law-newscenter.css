@@ -611,7 +611,7 @@ div.modal-body div.js-elements-container {
         flex-direction: column;
     }
     #newscenterNav ul.menu {
-        width: inherit;
+        width: 100%;
     }
     .modal-body {
         font-size: x-small;
@@ -626,7 +626,7 @@ div.modal-body div.js-elements-container {
         font-size: .65rem;
     }
     div.mobile-categories {
-        width: inherit;
+        width: 100%;
     }
     div.mobile-categories address {
         font-size: 1rem;

@@ -429,9 +429,7 @@ nav#newscenterNav .row {
 /* *****  nav borders and background  ***** */
 
 nav#newscenterNav {
-    /* background: linear-gradient(0.5turn, #f7f7f7, #ffffff, #ffffff, #f7f7f7); */
-    /* background-color: #f7f7f7; */
-    background-color: #ffffff;
+    background-color: #fff;
     border-top: 0.1rem solid #AA0000;
     border-bottom: 0.1rem solid #AA0000;
     border-radius: 0;

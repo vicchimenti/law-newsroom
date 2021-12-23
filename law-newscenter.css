@@ -592,19 +592,20 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 576 Max Width 767 ***** */
 
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+/* @media screen and (min-width: 576px) and (max-width: 767.98px) {
     a.navbar-brand h1 {
         font-size: 1.25rem;
     }
     a.navbar-brand span {
         font-size: 1.1rem;
     }
-}
+} */
 
 
 /* ***** Max Width 767 ***** */
 
-@media screen and (max-width: 767.999px) {
+@media screen and (max-width: 767.98px) {
     .law-newscenter-2268929 #pageContentWrapper {
         background-color: #ffffff;
         border-bottom: none;
@@ -615,7 +616,6 @@ div.modal-body div.js-elements-container {
     }
     div#navbarSupportedContent {
         margin-left: 0;
-        /* margin-right: 2; */
     }
     .modal-body {
         font-size: x-small;

@@ -452,7 +452,7 @@ nav#newscenterNav ol.breadcrumb li+li:before {
 }
 
 nav#newscenterNav .collapse:not(.show) {
-    display: none;
+    display: none!important;
 }
 
 

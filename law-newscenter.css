@@ -537,19 +537,6 @@ div.modal-body div.js-elements-container {
 }
 
 
-/* ***** Min Width 576 Max Width 767 ***** */
-
-
-/* @media screen and (min-width: 576px) and (max-width: 767.98px) {
-    a.navbar-brand h1 {
-        font-size: 1.25rem;
-    }
-    a.navbar-brand span {
-        font-size: 1.1rem;
-    }
-} */
-
-
 /* ***** Max Width 767 ***** */
 
 @media screen and (max-width: 991.98px) {
@@ -613,31 +600,6 @@ div.modal-body div.js-elements-container {
         display: none;
     }
 }
-
-
-/* ***** Max Width 576 ***** */
-
-
-/* @media screen and (max-width: 576px) {
-    div.modal-body ul.list-group a small {
-        font-size: .5rem;
-    }
-    div.modal-body ul.list-group a strong {
-        font-size: .5rem;
-    }
-    div.modal-body ul.list-group h4 {
-        font-size: 0.9rem;
-    }
-    li.dropdown-menu {
-        border: none;
-    }
-    a.navbar-brand h1 {
-        font-size: 1.15rem;
-    }
-    a.navbar-brand span {
-        font-size: 1.05rem;
-    }
-} */
 
 
 /* ***** Min Width 576 ***** */

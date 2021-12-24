@@ -600,3 +600,73 @@ div.modal-body div.js-elements-container {
         display: none;
     }
 }
+
+
+/*********************
+*
+*   Contact box local styles
+*
+**/
+
+
+/* ***** Contact Box ***** */
+
+.contactWrapper {
+    margin-right: 2rem;
+}
+
+.newsCenterContact {
+    color: #000000;
+    font-family: 'Montserrat';
+}
+
+.newsCenterContact .newsCenterContactHeader {
+    background: #f7f7f7;
+}
+
+.newsCenterContact address {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.newsCenterContact address p {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.newsCenterContact h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.newsCenterContact address a {
+    color: #088099;
+    text-decoration: none;
+}
+
+.newsCenterContact address a:hover {
+    text-decoration: underline;
+}
+
+.newsCenterContact address a:focus {
+    text-decoration: underline;
+}
+
+
+/** horizontal rule between articles **/
+
+hr.articleBorderBottom {
+    color: #e5e5e5;
+    height: 3px;
+    margin: 0;
+    opacity: unset;
+}
+
+
+/* Medium devices */
+
+@media screen and (max-width: 991.98px) {
+    .contactWrapper {
+        display: none;
+    }
+}

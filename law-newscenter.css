@@ -181,15 +181,6 @@ div.newsroomOrganizerWrapper.col-md-8 {
     margin: 20px 0 20px 0;
 }
 
-
-/** left right padding and margin to control image size **/
-
-
-/* div.newsroomOrganizerWrapper.col-md-8 article.newsroomMajorFeedItem {
-    margin: 0 20px 20px 20px;
-    padding: 0 20px 0 20px;
-} */
-
 div.newsroomOrganizer div.titleWrapper {
     background-color: white;
 }
@@ -253,11 +244,6 @@ div.newsroomArticle ul li.tag {
 *   Address major feed image styles 
 *
 */
-
-
-/* .newsroomMajorFeedItem img.articleImage {
-    padding: 8px 16px 0 16px;
-} */
 
 
 /** layout for byline and credits **/
@@ -337,26 +323,6 @@ div.titleWrapper address a {
 }
 
 @media screen and (max-width: 767.999px) {
-    /* .heroOrganizerWrapper {
-    padding-top: 1rem;
-  }
-
-  div.newsroomOrganizerWrapper.col-md-8 {
-    border: none;
-    margin: 0;
-  }
-
-  div.newsroomOrganizerWrapper {
-    margin: 0;
-  } */
-    /* div.heroOrganizer.standardContent {
-        margin-left: 20px;
-        padding-left: 20px;
-    } */
-    /* .newsroomMinorFeedItem.card {
-        margin: 0 20px 20px 20px;
-        padding: 0 20px 0 20px;
-    } */
     div.newsroomOrganizerWrapper h3.newsroomArticleTitle {
         font-size: 1.4rem;
     }
@@ -383,7 +349,6 @@ h1#pageTitle {
 }
 
 body {
-    /* background-color: #f7f7f7; */
     padding-top: 0;
 }
 
@@ -413,12 +378,6 @@ header#newscenterHeader.container {
     padding-right: 0;
     width: auto;
 }
-
-
-/* nav#newscenterNav .container {
-    max-width: none;
-    width: -webkit-fill-available;
-  } */
 
 nav#newscenterNav .row {
     max-width: none;

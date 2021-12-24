@@ -451,6 +451,10 @@ nav#newscenterNav ol.breadcrumb li+li:before {
     padding: 0 7px;
 }
 
+nav#newscenterNav .collapse:not(.show) {
+    display: none;
+}
+
 
 /* *****  modal customizations  ***** */
 

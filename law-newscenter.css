@@ -451,10 +451,6 @@ nav#newscenterNav ol.breadcrumb li+li:before {
     padding: 0 7px;
 }
 
-nav#newscenterNav .collapse:not(.show) {
-    display: none!important;
-}
-
 
 /* *****  modal customizations  ***** */
 
@@ -551,6 +547,9 @@ div.modal-body div.js-elements-container {
         border-radius: 0;
         border-right: none;
         border-top: 0.1rem solid #AA0000;
+    }
+    nav#newscenterNav .collapse:not(.show) {
+        display: none!important;
     }
     div#navbarSupportedContent {
         margin-left: 0;

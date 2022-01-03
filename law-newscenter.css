@@ -382,6 +382,7 @@ header#newscenterHeader.container {
 nav#newscenterNav .row {
     max-width: none;
     width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 

@@ -18,7 +18,7 @@ News Center Story and Organizer content types
 - [] Add mobile layout category
 - [x] Add mobile layout major minor
 - [x] Address numeric sorting layout
-- [] Track Category List Bug
+- [x] Track Category List Bug
 - [x] Add Centerpiece layout
 - [x] Add Centerpiece logic
 - [x] Add Events layout
@@ -28,11 +28,11 @@ News Center Story and Organizer content types
 - [x] Build Banner
 - [x] Fix internal link bug on major and minor feeds
 - [] Adjust mobile nav to and account for archives
-- [] Add aria-label or title field to fulltext link
-- [] Trim whitespace from announcement feed
-- [] Create Generic Grid Organizer for Archives
+- [x] Add aria-label or title field to fulltext link
+- [x] Trim whitespace from announcement feed
+- [x] Create Generic Grid Organizer for Archives
 - [x] Grdifeed title link
-- [] fulltext to article title
-- [] image wraper to fig on grid
-- [] cat feed
-- [] base newsceneter home iteration bug
+- [x] fulltext to article title
+- [x] image wraper to fig on grid
+- [x] cat feed
+- [x] base newsceneter home iteration bug

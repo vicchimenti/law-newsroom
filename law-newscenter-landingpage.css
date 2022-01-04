@@ -79,7 +79,7 @@ div.gridOrganizerWrapper .gridFeedItem {
 
     .gridOrganizer.standardContent {
         flex-direction: column;
-        padding: 0 30px;
+        padding: 0;
     }
 
     .gridOrganizer .gridFeedItem {

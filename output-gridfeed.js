@@ -4,13 +4,14 @@
  *     @file output-gridfeed.js
  *          Law - Newscenter Story
  *          ID: 5296
+ *          output/gridfeed
  *
  *     This new content type layout is a smart layout for news items that must obey
  *     a masonry grid layout.
  *
  *     Document will write once when the page loads
  *
- *     @version 7.11
+ *     @version 7.12
  */
 
 

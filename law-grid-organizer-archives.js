@@ -21,7 +21,7 @@
  try {
  
      /* if content exists, it'll start at 0 or later, so process this */
-     if ((contentTypeLayout.length >= 0)) {
+     if ((contentTypeLayout)) {
          var sw = new java.io.StringWriter();
          var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
          new com.terminalfour.publish.ContentPublisher().write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview);

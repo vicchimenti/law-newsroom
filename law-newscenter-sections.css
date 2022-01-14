@@ -35,6 +35,10 @@ div#MainZone div.container {
     color: #aa0000;
 }
 
+.gridOrganizerWrapper .gridOrganizer.card-group> .card {
+    flex: auto;
+}
+
 .gridFeedItem {
     margin: 15px;
     max-width: 260px;

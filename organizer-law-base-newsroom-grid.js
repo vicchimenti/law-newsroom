@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Grid
  *          Category Organizer
  *
- *      @version 6.14
+ *      @version 6.15
  */
 
 
@@ -447,7 +447,7 @@ function main(header, midder, footer) {
         var matchingTopics = [];
         for (let contentItem in validContent) {
 
-            if (categoryName == "news center archives") {
+            if (categoryName.includes("Archives")) {
 
                 matchingTopics.push(validContent[contentItem]);
 

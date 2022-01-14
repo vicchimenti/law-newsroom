@@ -456,6 +456,8 @@ function main(header, midder, footer) {
 
                 if (topicName == categoryName) {
                     matchingTopics.push(validContent[contentItem]);
+                } else if (categoryName == "News Center Archives") {
+                    matchingTopics.push(validContent[contentItem]);
                 }
             }
         }

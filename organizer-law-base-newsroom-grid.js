@@ -7,7 +7,7 @@
  *      Foundation for Law News Center Grid
  *          Category Organizer
  *
- *      @version 6.13
+ *      @version 6.14
  */
 
 
@@ -447,18 +447,24 @@ function main(header, midder, footer) {
         var matchingTopics = [];
         for (let contentItem in validContent) {
 
-            let categoryValues = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
-            for (let category in categoryValues) {
+            if (categoryName == "news center archives") {
 
-                let categoryElement = categoryValues[category].split(':');
-                let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
-                let topicName = topic.getName();
+                matchingTopics.push(validContent[contentItem]);
 
-                if (topicName == categoryName) {
-                    matchingTopics.push(validContent[contentItem]);
-                } else if (categoryName == "News Center Archives") {
-                    matchingTopics.push(validContent[contentItem]);
+            } else {
+
+                let categoryValues = validContent[contentItem].Content.get("Category").getValue().toString().split(';');
+                for (let category in categoryValues) {
+    
+                    let categoryElement = categoryValues[category].split(':');
+                    let topic = listManager.getEntry(categoryElement[0], categoryElement[1], language);
+                    let topicName = topic.getName();
+    
+                    if (topicName == categoryName) {
+                        matchingTopics.push(validContent[contentItem]);
+                    }
                 }
+
             }
         }
 

@@ -39,6 +39,11 @@ div#MainZone div.container {
     flex: auto;
 }
 
+.gridOrganizerWrapper .gridOrganizer.card-group> .card:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .gridFeedItem {
     margin: 15px;
     max-width: 260px;

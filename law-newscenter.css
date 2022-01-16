@@ -681,15 +681,15 @@ hr.articleBorderBottom {
 /* Social sharing widget styles */
 
 .addthis_inline_share_toolbox span.at-icon-wrapper {
-    border-radius: 50%;
-    height: 32px;
-    line-height: 32px;
-    width: 32px;
+    /* border-radius: 50%; */
+    height: 32px!important;
+    line-height: 32px!important;
+    width: 32px!important;
 }
 
 .addthis_inline_share_toolbox svg.at-icon {
-    height: 32px;
-    width: 32px;
+    height: 32px!important;
+    width: 32px!important;
 }
 
 

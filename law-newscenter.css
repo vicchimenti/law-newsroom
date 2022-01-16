@@ -674,3 +674,20 @@ hr.articleBorderBottom {
         display: none;
     }
 }
+
+
+
+
+/* Social sharing widget styles */
+
+.addthis_inline_share_toolbox span.at-icon-wrapper {
+    border-radius: 50%;
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+}
+
+.addthis_inline_share_toolbox svg.at-icon {
+    height: 32px;
+    width: 32px;
+}

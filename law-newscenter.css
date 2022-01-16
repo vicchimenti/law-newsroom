@@ -682,24 +682,24 @@ hr.articleBorderBottom {
 
 .addthis_inline_share_toolbox span.at-icon-wrapper {
     /* border-radius: 50%; */
-    height: 32px!important;
-    line-height: 32px!important;
-    width: 32px!important;
+    height: 64px!important;
+    line-height: 64px!important;
+    width: 64px!important;
 }
 
 .addthis_inline_share_toolbox svg.at-icon {
-    height: 32px!important;
-    width: 32px!important;
+    height: 64px!important;
+    width: 64px!important;
 }
 
-.addthis_inline_share_toolbox a.at300b {
+/* .addthis_inline_share_toolbox a.at300b {
     color:#000000;
     font-size: 1rem;
     font-weight: 500;
     height: 32px!important;
     text-decoration: none;
     width: 32px!important;
-}
+} */
 
 /*********************
 *

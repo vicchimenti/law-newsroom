@@ -692,6 +692,14 @@ hr.articleBorderBottom {
     width: 32px!important;
 }
 
+.addthis_inline_share_toolbox a.at300b {
+    color:#000000;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 32px!important;
+    text-decoration: none;
+    width: 32px!important;
+}
 
 /*********************
 *

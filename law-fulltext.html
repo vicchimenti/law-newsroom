@@ -3,23 +3,17 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <!-- <p class="newsroomArticleTopicsHeader">
-                    <t4 type="content" name="Category" output="normal" display_field="name" modifiers="htmlentities" textual-name-separator=">" delimiter=" / " />
-                </p> -->
                 <h1 id="pageTitle" class="mx-0">
                     <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
                 </h1>
             </div>
         </div>
-        <!-- end .row -->
         <div class="row">
             <div class="newsroomArticleByline col-12">
                 <t4 type="content" name="Publish Date" output="selective-output" process-format="true" format="<span class='newsroomArticlePublishedDate'>$value</span>" date_format="MMMM d, yyyy" />
                 <t4 type="content" name="Author" output="selective-output" modifiers="" process-format="true" format="<span class='newsroomArticleAuthor'> &centerdot; By $value</span>" />
             </div>
-            <!-- end .newsroomArticleByline • -->
         </div>
-        <!-- end .row -->
         <div class="row">
             <div class="d-flex justify-content-center">
                 <figure class="image-wrapper">
@@ -36,20 +30,13 @@
                     </figcaption>
                 </figure>
             </div>
-            <!-- end .d-flex -->
         </div>
-        <!-- end .row -->
     </div>
-    <!-- end .container -->
     <div class="newsroomArticleMain container">
         <div class="row">
-            <!-- 1 empty column to center content + 10 content columns (no 12th column) -->
             <div class="col-md-2 offset-xxl-1 nested-share-sidebar">
                 <div class="newsroomArticleShare">
                     <h2>Share this</h2>
-                    <!-- <div class="addthis_inline_share_toolbox">
-                    </div> -->
-                    <!-- <div class="addthis_toolbox addthis_default_style"> -->
                     <div class="addthis_inline_share_toolbox d-flex flex-column">
                         <a class="addthis_button_linkedin">LinkedIn</a>
                         <a class="addthis_button_facebook">Facebook</a>
@@ -62,26 +49,18 @@
                         <a class="addthis_button_link">Share Link</a>
                         <a class="addthis_button_email">Email</a>
                     </div>
-                    <!-- end .addthis_inline_share_toolbox-->
                 </div>
-                <!-- end .newsroomArticleShare -->
             </div>
-            <!-- end .nested-share-sidebar -->
             <div class="newsroomArticleBody col-md-8">
                 <t4 type="content" name="Article Subhead" output="selective-output" modifiers="" process-format="true" format="<h2 class='newsroomArticleLead'>$value</h2>" />
                 <div class="articleText standardContent">
                     <t4 type="content" name="News Article" output="normal" modifiers="medialibrary,nav_sections" />
                 </div>
             </div>
-            <!-- end .newsroomArticleBody -->
         </div>
-        <!-- end .row -->
         <div class="row">
             <div class="newsroomArticleShare offset-md-3 col-md-9">
                 <h2>Share this</h2>
-                <!-- <div class="addthis_inline_share_toolbox"></div> -->
-                
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
                 <div class="addthis_inline_share_toolbox">
                     <a class="addthis_button_linkedin">LinkedIn</a>
                     <a class="addthis_button_facebook">Facebook</a>
@@ -94,18 +73,7 @@
                     <a class="addthis_button_link">Share Link</a>
                     <a class="addthis_button_email">Email</a>
                 </div>
-            
-                <!-- <div class="addthis_toolbox addthis_default_style">
-                    <a class="addthis_button_linkedin"></a>
-                    <a class="addthis_button_facebook"></a>
-                    <a class="addthis_button_twitter"></a>
-                    <a class="addthis_button_email"></a>
-                </div> -->
             </div>
-            <!-- end .newsroomArticleShare -->
         </div>
-        <!-- end .row -->
     </div>
-    <!-- end .newsroomArticleMain.container -->
 </div>
-<!-- end .newsroomArticleWrapper -->

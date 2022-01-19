@@ -418,6 +418,14 @@ button.navbar-toggler {
     font-weight: 400;
 }
 
+nav#newscenterNav button.navbar-toggler:focus {
+    box-shadow: unset;
+}
+
+nav#newscenterNav button.navbar-toggler:focus-visible {
+    box-shadow: unset;
+}
+
 a.navbar-brand h1 {
     display: inline;
     font-size: 1.5rem;

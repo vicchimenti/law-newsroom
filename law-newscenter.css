@@ -418,8 +418,14 @@ button.navbar-toggler {
     font-weight: 400;
 }
 
+nav#newscenterNav button.navbar-toggler:hover {
+    text-decoration: underline;
+}
+
+
 nav#newscenterNav button.navbar-toggler:focus {
     box-shadow: unset;
+    text-decoration: underline;
 }
 
 nav#newscenterNav button.navbar-toggler:focus-visible {

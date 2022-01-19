@@ -563,6 +563,12 @@ div.modal-body div.js-elements-container {
 /* ***** Max Width 767 ***** */
 
 @media screen and (max-width: 991.98px) {
+
+    header#newscenterHeader.container {
+        padding-right: var(--bs-gutter-x,.75rem);
+        padding-left: var(--bs-gutter-x,.75rem);
+    }
+    
     .law-newscenter-2268929 #pageContentWrapper {
         background-color: #ffffff;
         border-bottom: none;
@@ -571,6 +577,7 @@ div.modal-body div.js-elements-container {
         border-right: none;
         border-top: 0.1rem solid #AA0000;
     }
+
     nav#newscenterNav .collapse:not(.show) {
         display: none!important;
     }

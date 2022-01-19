@@ -569,6 +569,10 @@ div.modal-body div.js-elements-container {
         padding-left: var(--bs-gutter-x,.75rem);
     }
 
+    header#newscenterHeader .container .col-12 .row {
+        margin: 0;
+    }
+
     .law-newscenter-2268929 #pageContentWrapper {
         background-color: #ffffff;
         border-bottom: none;

@@ -411,6 +411,14 @@ a.navbar-brand {
     font-weight: 400;
 }
 
+nav#newscenterNav a.navbar-brand:hover {
+    text-decoration: underline;
+}
+
+nav#newscenterNav a.navbar-brand:focus {
+    text-decoration: underline;
+}
+
 button.navbar-toggler {
     color: #AA0000;
     font-family: "Montserrat", sans-serif;
@@ -432,7 +440,7 @@ nav#newscenterNav button.navbar-toggler:focus-visible {
     box-shadow: unset;
 }
 
-a.navbar-brand h1 {
+nav#newscenterNav a.navbar-brand h1 {
     display: inline;
     font-size: 1.5rem;
     font-weight: 400;

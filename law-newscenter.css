@@ -548,7 +548,7 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 769 Max Width 991 ***** */
 
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
+/* @media screen and (min-width: 768px) and (max-width: 991.98px) {
     div#navbarSupportedContent ul.menu {
         flex-direction: row;
         justify-content: center;
@@ -556,10 +556,10 @@ div.modal-body div.js-elements-container {
     div#navbarSupportedContent ul.menu li.nav-item {
         margin: 0 0.75rem;
     }
-    /* div#navbarSupportedContent ul.menu li.nav-item h2 {
+    div#navbarSupportedContent ul.menu li.nav-item h2 {
         font-size: 0.85rem;
-    } */
-}
+    }
+} */
 
 
 /* ***** Max Width 991 ***** */

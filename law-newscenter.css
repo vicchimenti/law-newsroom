@@ -360,9 +360,9 @@ body.law-newscenterMain-2077081 {
     display: none;
 }
 
-div#navbarSupportedContent {
+/* div#navbarSupportedContent {
     margin-left: 10rem;
-}
+} */
 
 
 /* *****  full width nav banner  ***** */
@@ -399,7 +399,8 @@ nav#newscenterNav {
 
 nav#newscenterNav h2.nav-link {
     color: #000000;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 
@@ -443,7 +444,7 @@ nav#newscenterNav button.navbar-toggler:focus-visible {
 nav#newscenterNav a.navbar-brand h1 {
     display: inline;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
     word-break: break-word;
 }
 
@@ -519,7 +520,7 @@ div.modal-body div.js-elements-container {
 
 /* ***** Min Width 1200 Max Width 1366 ***** */
 
-@media screen and (min-width: 1200px) and (max-width: 1365.98px) {
+/* @media screen and (min-width: 1200px) and (max-width: 1365.98px) {
     nav#newscenterNav h2.nav-link {
         font-size: 0.95rem;
     }
@@ -529,19 +530,19 @@ div.modal-body div.js-elements-container {
     a.navbar-brand span {
         font-size: 1.4rem;
     }
-}
+} */
 
 
 /* ***** Min Width 992 Max Width 1200 ***** */
 
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+/* @media screen and (min-width: 992px) and (max-width: 1199.98px) {
     div#navbarSupportedContent {
         margin-left: 5rem;
     }
     nav#newscenterNav h2.nav-link {
         font-size: 0.85rem;
     }
-}
+} */
 
 
 /* ***** Min Width 769 Max Width 991 ***** */
@@ -554,9 +555,9 @@ div.modal-body div.js-elements-container {
     div#navbarSupportedContent ul.menu li.nav-item {
         margin: 0 0.75rem;
     }
-    div#navbarSupportedContent ul.menu li.nav-item h2 {
+    /* div#navbarSupportedContent ul.menu li.nav-item h2 {
         font-size: 0.85rem;
-    }
+    } */
 }
 
 

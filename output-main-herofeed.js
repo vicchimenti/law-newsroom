@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.6
+ *      @version 4.7
  */
 
 
@@ -133,8 +133,6 @@ try {
     let openFooter = '<div class="card-footer bg-transparent border-0">';
     let closeFooter = '</div>';
     let borderBottom = '<hr class="articleBorderBottom">';
-    // let openImageWrapper = '<figure class="figure hidden visually-hidden hidden">';
-    // let closeImageWrapper = '</figure>';
     let beginningHTML = '<article class="mainHeroItem col-xs-12 col-lg-3 card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
     let endingHTML = '</article>';
 
@@ -180,8 +178,6 @@ try {
         imageString = (info.check()) ?
             '<img src="' + heroDict.frontPageImage.content + '" class="mainHeroImage card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
             '<img src="' + heroDict.frontPageImage.content + '" class="mainHeroImage card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
-
-        // openImageWrapper = '<figure class="figure">';
     }
 
 

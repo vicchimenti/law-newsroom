@@ -239,8 +239,17 @@ div.newsroomArticle ul li.tag {
 }
 
 .newsroomArticleWrapper .newsroomArticleBody .articleText.standardContent ul li:before {
-    content: unset;
+    font-family: 'seattle-u';
+    font-size: 13px !important;
+    content: '\25FC';
+    color: #01a3b0;
+    padding-right: 15px;
+    display: table-cell;
+    position: relative;
+    top: -1px;
 }
+
+
 
 
 /***

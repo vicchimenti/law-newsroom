@@ -127,13 +127,13 @@ try {
      * */
     let openCardBody = '<div class="card-body">';
     let closeCardBody = '</div>';
-    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let openHidden = '<div class="searchSortFields visually-hidden hidden">';
     let closeHidden = '</div>';
-    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    let imageString = '<span class="imageString hidden visually-hidden hidden" />No Image Provided</span>';
     let openFooter = '<div class="card-footer bg-transparent border-0">';
     let closeFooter = '</div>';
     let borderBottom = '<hr class="articleBorderBottom">';
-    // let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    // let openImageWrapper = '<figure class="figure hidden visually-hidden hidden">';
     // let closeImageWrapper = '</figure>';
     let beginningHTML = '<article class="mainHeroItem col-xs-12 col-lg-3 card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
     let endingHTML = '</article>';
@@ -157,8 +157,8 @@ try {
      * 
      * */
     let pinnedItem = (heroDict.pinned.content) ?
-        '<div class="visually-hidden"><span class="articlePinned">' + heroDict.pinned.content + '</span></div>' :
-        '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+        '<div class="visually-hidden hidden"><span class="articlePinned">' + heroDict.pinned.content + '</span></div>' :
+        '<div class="visually-hidden hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 

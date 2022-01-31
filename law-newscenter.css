@@ -238,6 +238,10 @@ div.newsroomArticle ul li.tag {
     content: none;
 }
 
+.newsroomArticleWrapper .newsroomArticleBody .articleText.standardContent ul li:before {
+    content: unset;
+}
+
 
 /***
 *

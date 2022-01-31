@@ -7,7 +7,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.9
+ *      @version 3.10
  */
 
 
@@ -126,10 +126,10 @@ try {
      * */
     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
     let closeCardBody = '</div></div>';
-    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let openHidden = '<div class="searchSortFields visually-hidden hidden">';
     let closeHidden = '</div>';
-    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    let imageString = '<span class="imageString hidden visually-hidden hidden" />No Image Provided</span>';
+    let openImageWrapper = '<figure class="figure hidden visually-hidden hidden">';
     let closeImageWrapper = '</figure>';
     let beginningHTML = '<article class="newsroomHeroFeedItem newsroomBlurb col-12 col-xs-12 card border-0" id="hero' + heroDict.contentId.content + '" aria-label="' + heroDict.headline.content + '">';
     let endingHTML = '<hr class="articleBorderBottom"></article>';
@@ -153,8 +153,8 @@ try {
      * 
      * */
     let pinnedItem = (heroDict.pinned.content) ?
-        '<div class="visually-hidden"><span class="articlePinned">' + heroDict.pinned.content + '</span></div>' :
-        '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+        '<div class="visually-hidden hidden"><span class="articlePinned">' + heroDict.pinned.content + '</span></div>' :
+        '<div class="visually-hidden hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 

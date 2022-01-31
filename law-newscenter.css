@@ -238,9 +238,14 @@ div.newsroomArticle ul li.tag {
     content: none;
 }
 
+.newsroomArticleWrapper .newsroomArticleBody .articleText.standardContent ul li {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
 .newsroomArticleWrapper .newsroomArticleBody .articleText.standardContent ul li:before {
     font-family: 'seattle-u';
-    font-size: 13px !important;
+    font-size: 1.4rem!important;
     content: '\25FC';
     color: #01a3b0;
     padding-right: 15px;

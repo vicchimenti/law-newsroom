@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.39
+ *     @version 2.40
  */
 
 
@@ -160,10 +160,10 @@ try {
 
     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
     let closeCardBody = '</div></div>';
-    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let openHidden = '<div class="searchSortFields visually-hidden hidden">';
     let closeHidden = '</div>';
-    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    let imageString = '<span class="imageString hidden visually-hidden hidden" />No Image Provided</span>';
+    let openImageWrapper = '<figure class="figure hidden visually-hidden hidden">';
     let closeImageWrapper = '</figure>';
     let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     let hyphen = " | ";
@@ -236,7 +236,7 @@ try {
         let listItems = assignList(arrayOfCats);
 
         // Print any tags that were selected
-        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
 
 
@@ -250,7 +250,7 @@ try {
         '<span class="newsLink"><a href="' + majorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.sectionLinkText.content + '"><em>' + majorDict.sectionLinkText.content + '</em></a></span>' :
         (majorDict.externalLink.content && majorDict.externalLinkText.content) ?
         '<span class="newsLink"><a href="' + majorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + majorDict.externalLinkText.content + '"><em>' + majorDict.externalLinkText.content + '</em></a></span>' :
-        '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+        '<span class="newsLink visually-hidden hidden">No Proper Link Provided</span>';
 
 
 
@@ -260,8 +260,8 @@ try {
      * 
      * */
     let pinnedItem = (majorDict.pinned.content) ?
-        '<div class="visually-hidden"><span class="articlePinned">' + majorDict.pinned.content + '</span></div>' :
-        '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+        '<div class="visually-hidden hidden"><span class="articlePinned">' + majorDict.pinned.content + '</span></div>' :
+        '<div class="visually-hidden hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 

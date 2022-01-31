@@ -11,7 +11,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 7.12
+ *     @version 7.13
  */
 
 
@@ -161,10 +161,10 @@ try {
      * */
     let openCardBody = '<div class="newsroomArticleBlurb card-body"><div class="row px-0">';
     let closeCardBody = '</div></div>';
-    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let openHidden = '<div class="searchSortFields visually-hidden hidden">';
     let closeHidden = '</div>';
-    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<figure class="figure newsroomImageWrapper visually-hidden">';
+    let imageString = '<span class="imageString hidden visually-hidden hidden" />No Image Provided</span>';
+    let openImageWrapper = '<figure class="figure newsroomImageWrapper visually-hidden hidden">';
     let closeImageWrapper = '</figure>';
     let listOfCats = '<div class="newsroomArticle tags hidden">No Tags Entered</div>';
     let openFooter = '<div class="card-footer">'
@@ -207,7 +207,7 @@ try {
         '<span class="newsLink credits"><a class="card-link" target="_blank" href="' + gridDict.sectionLink.content + '" title="Visit ' + gridDict.sectionLinkText.content + '"><em>' + gridDict.sectionLinkText.content + '</em></a></span>' :
         (gridDict.externalLink.content && gridDict.externalLinkText.content) ?
         '<span class="newsLink credits"><a class="card-link" target="_blank" href="' + gridDict.externalLink.content + '" title="Visit ' + gridDict.externalLinkText.content + '"><em>' + gridDict.externalLinkText.content + '</em></a></span>' :
-        '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+        '<span class="newsLink visually-hidden hidden">No Proper Link Provided</span>';
 
 
 

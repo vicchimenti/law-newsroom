@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 6.7
+ *     @version 6.8
  */
 
 
@@ -128,7 +128,7 @@ try {
      * */
     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row mx-0 px-0">';
     let closeCardBody = '</div></div>';
-    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let openHidden = '<div class="searchSortFields visually-hidden hidden">';
     let closeHidden = '</div>';
     let listOfCats = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     let hyphen = " | ";
@@ -201,7 +201,7 @@ try {
         let listItems = assignList(arrayOfCats);
 
         // Print any tags that were selected
-        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
 
 
@@ -237,7 +237,7 @@ try {
         '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.sectionLink.content + '" title="Visit ' + catDict.sectionLinkText.content + '"><em>' + catDict.sectionLinkText.content + '</em></a></span>' :
         (catDict.externalLink.content && catDict.externalLinkText.content) ?
         '<span class="newsLink px-0 mx-0"><a class="card-link" target="_blank" href="' + catDict.externalLink.content + '" title="Visit ' + catDict.externalLinkText.content + '"><em>' + catDict.externalLinkText.content + '</em></a></span>' :
-        '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+        '<span class="newsLink visually-hidden hidden">No Proper Link Provided</span>';
 
 
 

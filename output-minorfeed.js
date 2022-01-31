@@ -10,7 +10,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.22
+ *     @version 2.23
  */
 
 
@@ -124,7 +124,7 @@ try {
      * */
     let openCardBody = '<div class="newsroomArticleBlurb container card-body"><div class="row px-0">';
     let closeCardBody = '</div></div>';
-    let openHidden = '<div class="searchSortFields visually-hidden">';
+    let openHidden = '<div class="searchSortFields visually-hidden hidden">';
     let closeHidden = '</div>';
     let hyphen = " | ";
     let events = "Events";
@@ -196,7 +196,7 @@ try {
         let listItems = assignList(arrayOfCats);
 
         // Print any tags that were selected
-        listOfCats = '<div class="newsroomArticle tags topics visually-hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+        listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
     }
 
 
@@ -210,7 +210,7 @@ try {
         '<span class="newsLink"><a href="' + minorDict.sectionLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.sectionLinkText.content + '"><em>' + minorDict.sectionLinkText.content + '</em></a></span>' :
         (minorDict.externalLink.content && minorDict.externalLinkText.content) ?
         '<span class="newsLink"><a href="' + minorDict.externalLink.content + '" class="card-link" target="_blank" title="Visit ' + minorDict.externalLinkText.content + '"><em>' + minorDict.externalLinkText.content + '</em></a></span>' :
-        '<span class="newsLink visually-hidden">No Proper Link Provided</span>';
+        '<span class="newsLink visually-hidden hidden">No Proper Link Provided</span>';
 
 
 
@@ -232,7 +232,7 @@ try {
      * */
     let summaryString = (minorDict.articleSummary.content) ?
         '<p class="newsroomArticleLead card-text">' + minorDict.articleSummary.content + '</p>' :
-        '<p class="newsroomArticleLead card-text visually-hidden">No Summary Provided</p>';
+        '<p class="newsroomArticleLead card-text visually-hidden hidden">No Summary Provided</p>';
 
 
 
@@ -242,8 +242,8 @@ try {
      * 
      * */
     let pinnedItem = (minorDict.pinned.content) ?
-        '<div class="visually-hidden"><span class="articlePinned">' + minorDict.pinned.content + '</span></div>' :
-        '<div class="visually-hidden"><span class="articlePinned">No Pin Entered</span></div>';
+        '<div class="visually-hidden hidden"><span class="articlePinned">' + minorDict.pinned.content + '</span></div>' :
+        '<div class="visually-hidden hidden"><span class="articlePinned">No Pin Entered</span></div>';
 
 
 

@@ -367,7 +367,7 @@ function main(header, midder, footer) {
         let LIMIT = content.get("Total number of items to display");
         let nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
         let categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
-        let categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
+        let featuredOption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Featured" output="normal" display_field="name" />');
 
 
 

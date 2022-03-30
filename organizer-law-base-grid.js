@@ -357,16 +357,17 @@ function main(header, midder, footer) {
          * Declarations
          * 
          */
-        var choice = content.get("Article type").publish();
-        var CID = new java.lang.Integer(choice.split(";")[0]);
-        var LAYOUT = choice.split(";")[1];
-        var SSID = String(content.get("Section")).match(/sslink_id="(\d+)"/)[1];
-        var sortMethod = content.get("Sorting method").publish();
-        var sElement = String(content.get("Custom element"));
-        var bReverse = !content.get("Reverse order").isNull();
-        var LIMIT = content.get("Total number of items to display");
-        var nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
-        var categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
+        let choice = content.get("Article type").publish();
+        let CID = new java.lang.Integer(choice.split(";")[0]);
+        let LAYOUT = choice.split(";")[1];
+        let SSID = String(content.get("Section")).match(/sslink_id="(\d+)"/)[1];
+        let sortMethod = content.get("Sorting method").publish();
+        let sElement = String(content.get("Custom element"));
+        let bReverse = !content.get("Reverse order").isNull();
+        let LIMIT = content.get("Total number of items to display");
+        let nStart = content.get('Start Number') > 0 ? content.get('Start Number') : 1;
+        let categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
+        let categoryName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Article type" output="normal" display_field="name" />');
 
 
 

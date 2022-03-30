@@ -7,7 +7,7 @@
  *      Foundation for Law Mainzone
  *          Masonry Organizer
  *
- *      @version 3.31
+ *      @version 3.32
  */
 
 
@@ -592,3 +592,12 @@ function main(header, midder, footer) {
         log("Error Thrown: " + e);
     }
 }
+
+
+/***
+ *      @author Victor Chimenti, MSCS
+ *      @file organizerLawBaseGrid.js
+ *      @see Media Library ID: 2686600
+ *      organizer law base grid
+ *      
+ */

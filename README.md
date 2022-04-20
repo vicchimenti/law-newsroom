@@ -1,4 +1,4 @@
-# School of Law News Center
+# [School of Law News Center](https://law.seattleu.edu/about/newscenter/)
 
 News Center Story and Organizer content types
 
